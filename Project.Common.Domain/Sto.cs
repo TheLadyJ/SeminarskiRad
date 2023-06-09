@@ -27,6 +27,8 @@ namespace Project.Common.Domain
 
         public string IdCondition => $"RbStola = {RbStola}";
 
+        public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID";
+
         public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Sto s = new Sto();
@@ -36,6 +38,22 @@ namespace Project.Common.Domain
             s.Proizvodjac = new Proizvodjac
             {
                 ProizvodjacID = (int)reader["ProizvodnjacID"]
+            };
+            return s;
+        }
+
+        public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
+        {
+            Sto s = new Sto();
+            s.RbStola = (int)reader["RbStola"];
+            s.Kapacitet = (int)reader["Kapacitet"];
+            s.CenaStola = (double)reader["CenaStola"];
+            s.Proizvodjac = new Proizvodjac
+            {
+                ProizvodjacID = reader.GetInt32(4),
+                NazivProizvodjaca = reader.GetString(5),
+                Telefon = reader.GetString(6),
+                Email = reader.GetString(7)
             };
             return s;
         }

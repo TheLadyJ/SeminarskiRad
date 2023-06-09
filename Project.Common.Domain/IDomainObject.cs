@@ -12,10 +12,12 @@ namespace Project.Common.Domain
         string TableName { get; }
         string InsertValues { get; }
         string UpdateValues { get; }
+        string Join { get; }
 
         string SearchCondition { get; set; }
         string IdCondition { get; }
 
         IDomainObject ReadObjectRow(SqlDataReader reader);
+        IDomainObject ReadObjectRowJoin(SqlDataReader reader);
     }
 }

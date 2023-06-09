@@ -50,6 +50,34 @@ namespace Project.Server.Repository.DatabaseRepository
             return result;
         }
 
+        private List<IDomainObject> ReadListJoin(SqlCommand command, IDomainObject obj)
+        {
+            List<IDomainObject> result = new List<IDomainObject>();
+            using (SqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    IDomainObject rowObject = obj.ReadObjectRowJoin(reader);
+                    result.Add(rowObject);
+                }
+            }
+            return result;
+        }
+
+
+        public void Insert(IDomainObject obj)
+        {
+            SqlCommand command = broker.CreateCommand();
+            command.CommandText = $"insert into {obj.TableName} values ({obj.InsertValues})";
+            command.ExecuteNonQuery();
+        }
+        public void Update(IDomainObject obj)
+        {
+            SqlCommand command = broker.CreateCommand();
+            command.CommandText = $"update {obj.TableName} set {obj.UpdateValues} where {obj.IdCondition}";
+            command.ExecuteNonQuery();
+        }
+
         public void Delete(IDomainObject obj)
         {
             SqlCommand command = broker.CreateCommand();
@@ -64,13 +92,13 @@ namespace Project.Server.Repository.DatabaseRepository
             return ReadList(command, obj);
         }
 
-
-        public void Insert(IDomainObject obj)
+        public List<IDomainObject> GetAllJoin(IDomainObject obj)
         {
             SqlCommand command = broker.CreateCommand();
-            command.CommandText = $"insert into {obj.TableName} values ({obj.InsertValues})";
-            command.ExecuteNonQuery();
+            command.CommandText = $"select * from {obj.TableName} {obj.Join}";
+            return ReadListJoin(command, obj);
         }
+
 
         public List<IDomainObject> Search(IDomainObject obj)
         {
@@ -79,11 +107,14 @@ namespace Project.Server.Repository.DatabaseRepository
             return ReadList(command, obj);
         }
 
-        public void Update(IDomainObject obj)
+
+        public List<IDomainObject> SearchJoin(IDomainObject obj)
         {
             SqlCommand command = broker.CreateCommand();
-            command.CommandText = $"update {obj.TableName} set {obj.UpdateValues} where {obj.IdCondition}";
-            command.ExecuteNonQuery();
+            command.CommandText = $"select * from {obj.TableName} {obj.Join} where {obj.SearchCondition}";
+            return ReadListJoin(command, obj);
         }
+
+
     }
 }

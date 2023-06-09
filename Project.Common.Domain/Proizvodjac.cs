@@ -26,6 +26,8 @@ namespace Project.Common.Domain
 
         public string IdCondition => $"ProizvodnjacID = {ProizvodjacID}";
 
+        public string Join => "";
+
         public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Proizvodjac p = new Proizvodjac();
@@ -34,6 +36,11 @@ namespace Project.Common.Domain
             p.Telefon = (string)reader["Telefon"];
             p.Email = (string)reader["Email"];
             return p;
+        }
+
+        public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
+        {
+            return ReadObjectRow(reader);
         }
     }
 }

@@ -26,6 +26,8 @@ namespace Project.Common.Domain
 
         public string SearchCondition { get ; set ; }
 
+        public string Join => "";
+
         public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             KeteringFirma kf = new KeteringFirma();
@@ -34,6 +36,11 @@ namespace Project.Common.Domain
             kf.Telefon = (string)reader["Telefon"];
             kf.Email = (string)reader["Email"];
             return kf;
+        }
+
+        public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
+        {
+            return ReadObjectRow(reader);
         }
     }
 }

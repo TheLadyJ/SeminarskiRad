@@ -24,12 +24,19 @@ namespace Project.Common.Domain
 
         public string IdCondition => $"TipProslaveID = {TipProslaveID}";
 
+        public string Join => "";
+
         public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             TipProslave tp = new TipProslave();
             tp.TipProslaveID = (int)reader["TipProslaveID"];
             tp.NazivTipaProslave = (string)reader["NazivTipaProslave"];
             return tp;
+        }
+
+        public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
+        {
+            return ReadObjectRow(reader);
         }
     }
 }

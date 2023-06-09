@@ -29,6 +29,8 @@ namespace Project.Common.Domain
 
         public string SearchCondition { get; set; }
 
+        public string Join => "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
+
         public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             KeteringMeni km = new KeteringMeni();
@@ -44,5 +46,21 @@ namespace Project.Common.Domain
             return km;
         }
 
+        public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
+        {
+            KeteringMeni km = new KeteringMeni();
+            km.KeteringMeniID = (int)reader["KeteringMeniID"];
+            km.Predjelo = (string)reader["Predjelo"];
+            km.GlavnoJelo = (string)reader["GlavnoJelo"];
+            km.Dezert = (string)reader["Dezert"];
+            km.CenaHranePoOsobi = (double)reader["CenaHranePoOsobi"];
+            km.KeteringFirma = new KeteringFirma
+            {
+                KeteringFirmaID = reader.GetInt32(5),
+                NazivFirme = (string)reader["NazivFirme"],
+                Telefon = (string)reader["Telefon"]
+            };
+            return km;
+        }
     }
 }

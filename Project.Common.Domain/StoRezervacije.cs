@@ -22,6 +22,9 @@ namespace Project.Common.Domain
 
         public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID}, RbStola = {Sto.RbStola}";
 
+        public string Join => "join Rezervacija on Rezervacija.RezervacijaID = StoRezervacije.RezervacijaID " +
+                                "join Sto on Sto.RbStola=StoRezervacije.RbStola";
+
         public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             StoRezervacije sr = new StoRezervacije();
@@ -35,5 +38,48 @@ namespace Project.Common.Domain
             };
             return sr;
         }
-    }
+
+        public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
+        {
+            StoRezervacije sr = new StoRezervacije();
+            sr.Rezervacija = new Rezervacija
+            {
+                RezervacijaID = reader.GetInt32(2),
+                Datum = reader.GetDateTime(3),
+                TipProslave = new TipProslave
+                {
+                    TipProslaveID = reader.GetInt32(4)
+                },
+                UkupnaCena = reader.GetDouble(5),
+                Radnik = new Radnik
+                {
+                    RadnikID = reader.GetInt32(6)
+                },
+                Klijent = new Klijent
+                {
+                    KlijentID = reader.GetInt32(7)
+                },
+                Mesto = new Mesto
+                {
+                    MestoID = reader.GetInt32(8)
+                },
+                KeteringMeni = new KeteringMeni
+                {
+                    KeteringMeniID = reader.GetInt32(9)
+                }
+            };
+            sr.Sto = new Sto
+            {
+                RbStola = (int)reader["RbStola"],
+                Kapacitet = (int)reader["Kapacitet"],
+                CenaStola = (double)reader["CenaStola"],
+                Proizvodjac = new Proizvodjac
+                {
+                    ProizvodjacID = (int)reader["ProizvodjacID"],
+                }
+            };
+    
+            return sr;
+        }
+}
 }

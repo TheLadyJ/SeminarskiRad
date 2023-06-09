@@ -25,6 +25,8 @@ namespace Project.Common.Domain
         public string UpdateValues => $"Ime = '{Ime}', Prezime = '{Prezime}', Telefon = '{Telefon}', Email = '{Email}'";
         public string SearchCondition { get; set; }
 
+        public string Join => "";
+
         public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Klijent k = new Klijent();
@@ -34,6 +36,11 @@ namespace Project.Common.Domain
             k.Telefon = (string)reader["Telefon"];
             k.Email = (string)reader["Email"];
             return k;
+        }
+
+        public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
+        {
+            return ReadObjectRow(reader);
         }
     }
 }

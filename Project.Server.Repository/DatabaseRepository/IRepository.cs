@@ -7,13 +7,15 @@ using System.Threading.Tasks;
 
 namespace Project.Server.Repository.DatabaseRepository
 {
-    public interface IRepository<T> where T : class
+    public interface IRepository<IDomainObject>
     {
-        List<T> GetAll(IDomainObject obj);
-        void Insert(T obj);
-        void Update(T obj);
-        void Delete(T obj);
-        List<T> Search(IDomainObject obj);
+        List<IDomainObject> GetAll(IDomainObject obj);
+        List<IDomainObject> GetAllJoin(IDomainObject obj);
+        void Insert(IDomainObject obj);
+        void Update(IDomainObject obj);
+        void Delete(IDomainObject obj);
+        List<IDomainObject> Search(IDomainObject obj);
+        List<IDomainObject> SearchJoin(IDomainObject obj);
         void OpenConnection();
         void CloseConnection();
         void BeginTransaction();

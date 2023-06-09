@@ -20,6 +20,8 @@ namespace Project.Server.Main
                 socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         }
 
+      
+
         public bool Start()
         {
             try

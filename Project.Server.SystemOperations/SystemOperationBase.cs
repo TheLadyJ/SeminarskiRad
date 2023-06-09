@@ -11,24 +11,29 @@ namespace Project.Server.SystemOperations
     public abstract class SystemOperationBase
     {
         protected IRepository<IDomainObject> repository = new GenericDbRepository();
+
+        private static object lockObject = new object();
         public void ExecuteTemplate()
         {
-            try
+            lock (lockObject)
             {
-                repository.OpenConnection();
-                repository.BeginTransaction();
-                Execute();
-                repository.Commit();
+                try
+                {
+                    repository.OpenConnection();
+                    repository.BeginTransaction();
+                    Execute();
+                    repository.Commit();
 
-            }
-            catch (Exception ex)
-            {
-                repository.Rollback();
-                throw;
-            }
-            finally
-            {
-                repository.CloseConnection();
+                }
+                catch (Exception ex)
+                {
+                    repository.Rollback();
+                    throw;
+                }
+                finally
+                {
+                    repository.CloseConnection();
+                } 
             }
         }
         protected abstract void Execute();

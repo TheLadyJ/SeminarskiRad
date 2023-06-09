@@ -20,8 +20,7 @@ namespace Project.Server.SystemOperations.RadnikSO
         protected override void Execute()
         {
             List<Radnik> radnici = repository.GetAll(new Radnik()).OfType<Radnik>().ToList();
-            Result = radnici.FirstOrDefault(r => r.KorisnickoIme == Radnik.KorisnickoIme && r.Lozinka == Radnik.Lozinka);
-            
+            Result = radnici.FirstOrDefault(r => r.KorisnickoIme == Radnik.KorisnickoIme && r.Lozinka == Radnik.Lozinka); 
         }
     }
 }

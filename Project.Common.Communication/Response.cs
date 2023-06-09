@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.Common.Communication
 {
+    [Serializable]
     public class Response
     {
         public string Message { get; set; }

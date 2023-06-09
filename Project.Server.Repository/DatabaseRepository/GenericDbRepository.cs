@@ -15,7 +15,7 @@ namespace Project.Server.Repository.DatabaseRepository
 
         public void OpenConnection()
         {
-            throw new NotImplementedException();
+            broker.OpenConnection();
         }
         public void BeginTransaction()
         {

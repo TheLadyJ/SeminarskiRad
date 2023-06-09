@@ -107,20 +107,23 @@
             // unesiNoviStoToolStripMenuItem
             // 
             this.unesiNoviStoToolStripMenuItem.Name = "unesiNoviStoToolStripMenuItem";
-            this.unesiNoviStoToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+            this.unesiNoviStoToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.unesiNoviStoToolStripMenuItem.Text = "Unesi novi sto";
+            this.unesiNoviStoToolStripMenuItem.Click += new System.EventHandler(this.unesiNoviStoToolStripMenuItem_Click);
             // 
             // pretraziStoToolStripMenuItem
             // 
             this.pretraziStoToolStripMenuItem.Name = "pretraziStoToolStripMenuItem";
-            this.pretraziStoToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+            this.pretraziStoToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.pretraziStoToolStripMenuItem.Text = "Pretraži sto";
+            this.pretraziStoToolStripMenuItem.Click += new System.EventHandler(this.pretraziStoToolStripMenuItem_Click);
             // 
             // obrisiStoToolStripMenuItem
             // 
             this.obrisiStoToolStripMenuItem.Name = "obrisiStoToolStripMenuItem";
-            this.obrisiStoToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
+            this.obrisiStoToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
             this.obrisiStoToolStripMenuItem.Text = "Obriši sto";
+            this.obrisiStoToolStripMenuItem.Click += new System.EventHandler(this.obrisiStoToolStripMenuItem_Click);
             // 
             // rezervacijeToolStripMenuItem
             // 

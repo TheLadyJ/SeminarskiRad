@@ -83,6 +83,30 @@
     <Compile Include="UserControls\UCKlijent\UCPretraziKlijetnta.Designer.cs">
       <DependentUpon>UCPretraziKlijetnta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.Designer.cs">
+      <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCSto\UCObrisiSto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCSto\UCObrisiSto.Designer.cs">
+      <DependentUpon>UCObrisiSto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCSto\UCPretraziSto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCSto\UCPretraziSto.Designer.cs">
+      <DependentUpon>UCPretraziSto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCSto\UCUnesiNoviSto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCSto\UCUnesiNoviSto.Designer.cs">
+      <DependentUpon>UCUnesiNoviSto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmPrijavljivanje.resx">
       <DependentUpon>FrmPrijavljivanje.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,6 +131,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCKlijent\UCPretraziKlijetnta.resx">
       <DependentUpon>UCPretraziKlijetnta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.resx">
+      <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCSto\UCObrisiSto.resx">
+      <DependentUpon>UCObrisiSto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCSto\UCPretraziSto.resx">
+      <DependentUpon>UCPretraziSto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCSto\UCUnesiNoviSto.resx">
+      <DependentUpon>UCUnesiNoviSto.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -139,6 +175,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\UCKlijent.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UCSto.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UCRezervacija.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

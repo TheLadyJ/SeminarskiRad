@@ -136,7 +136,7 @@
             this.btnPrikaziDetaljno.Name = "btnPrikaziDetaljno";
             this.btnPrikaziDetaljno.Size = new System.Drawing.Size(242, 32);
             this.btnPrikaziDetaljno.TabIndex = 19;
-            this.btnPrikaziDetaljno.Text = "Prikaži klijenta detaljno";
+            this.btnPrikaziDetaljno.Text = "Prikaži klijenta detaljnije";
             this.btnPrikaziDetaljno.UseVisualStyleBackColor = true;
             // 
             // txtEmailPrikazi

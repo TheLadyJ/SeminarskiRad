@@ -1,4 +1,5 @@
 ﻿using Project.Client.Forms.UserControls.UCKlijent;
+using Project.Client.Forms.UserControls.UCSto;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +18,12 @@ namespace Project.Client.Forms
         {
             InitializeComponent();
         }
+
+        private void FrmRadnikovaGlavna_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+        }
+
         private void ChangePanel(UserControl userControl)
         {
             pnlMain.Controls.Clear();
@@ -41,10 +48,21 @@ namespace Project.Client.Forms
             ChangePanel(new UCObrisiKlijenta());
 
         }
-
-        private void FrmRadnikovaGlavna_Load(object sender, EventArgs e)
+        private void unesiNoviStoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            ChangePanel(new UCUnesiNoviSto());
+        }
+
+        private void pretraziStoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePanel(new UCPretraziSto());
+
+        }
+
+        private void obrisiStoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePanel(new UCObrisiSto());
+
         }
     }
 }

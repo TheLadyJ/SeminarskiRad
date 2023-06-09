@@ -106,9 +106,13 @@ namespace Project.Client.Forms
             this.Controls.Add(this.txtKorisnikoIme);
             this.Controls.Add(this.lblLozinka);
             this.Controls.Add(this.lblKorisnickoIme);
+            this.MaximizeBox = false;
             this.Name = "FrmPrijavljivanje";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Prijavljivanje radnika";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrijavljivanje_FormClosed);
+            this.Load += new System.EventHandler(this.FrmPrijavljivanje_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip = new System.Windows.Forms.ToolStripMenuItem();
             this.kreirajNovogKlijentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pretraziKlijentaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -42,6 +41,7 @@
             this.kreirajNovuRezervacijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izmeniRezervacijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.obrisiRezervacijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlMain = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,16 +59,6 @@
             this.menuStrip1.Size = new System.Drawing.Size(879, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = global::Project.Client.Forms.Properties.Resources.PrijavljivanjePozadina;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(879, 500);
-            this.panel1.TabIndex = 1;
             // 
             // menuStrip
             // 
@@ -95,12 +85,14 @@
             this.pretraziKlijentaToolStripMenuItem.Name = "pretraziKlijentaToolStripMenuItem";
             this.pretraziKlijentaToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.pretraziKlijentaToolStripMenuItem.Text = "Pretraži klijenta";
+            this.pretraziKlijentaToolStripMenuItem.Click += new System.EventHandler(this.pretraziKlijentaToolStripMenuItem_Click);
             // 
             // obrisiKlijentaToolStripMenuItem
             // 
             this.obrisiKlijentaToolStripMenuItem.Name = "obrisiKlijentaToolStripMenuItem";
             this.obrisiKlijentaToolStripMenuItem.Size = new System.Drawing.Size(237, 24);
             this.obrisiKlijentaToolStripMenuItem.Text = "Obriši klijenta";
+            this.obrisiKlijentaToolStripMenuItem.Click += new System.EventHandler(this.obrisiKlijentaToolStripMenuItem_Click);
             // 
             // stoToolStripMenuItem
             // 
@@ -115,19 +107,19 @@
             // unesiNoviStoToolStripMenuItem
             // 
             this.unesiNoviStoToolStripMenuItem.Name = "unesiNoviStoToolStripMenuItem";
-            this.unesiNoviStoToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.unesiNoviStoToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
             this.unesiNoviStoToolStripMenuItem.Text = "Unesi novi sto";
             // 
             // pretraziStoToolStripMenuItem
             // 
             this.pretraziStoToolStripMenuItem.Name = "pretraziStoToolStripMenuItem";
-            this.pretraziStoToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.pretraziStoToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
             this.pretraziStoToolStripMenuItem.Text = "Pretraži sto";
             // 
             // obrisiStoToolStripMenuItem
             // 
             this.obrisiStoToolStripMenuItem.Name = "obrisiStoToolStripMenuItem";
-            this.obrisiStoToolStripMenuItem.Size = new System.Drawing.Size(198, 24);
+            this.obrisiStoToolStripMenuItem.Size = new System.Drawing.Size(184, 24);
             this.obrisiStoToolStripMenuItem.Text = "Obriši sto";
             // 
             // rezervacijeToolStripMenuItem
@@ -158,16 +150,30 @@
             this.obrisiRezervacijuToolStripMenuItem.Size = new System.Drawing.Size(256, 24);
             this.obrisiRezervacijuToolStripMenuItem.Text = "Obriši rezervaciju";
             // 
+            // pnlMain
+            // 
+            this.pnlMain.BackgroundImage = global::Project.Client.Forms.Properties.Resources.PrijavljivanjePozadina;
+            this.pnlMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlMain.Location = new System.Drawing.Point(0, 28);
+            this.pnlMain.Name = "pnlMain";
+            this.pnlMain.Size = new System.Drawing.Size(879, 500);
+            this.pnlMain.TabIndex = 1;
+            // 
             // FrmRadnikovaGlavna
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(879, 528);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "FrmRadnikovaGlavna";
-            this.Text = "FrmRadnikovaGlavna";
+            this.ShowIcon = false;
+            this.Text = "Glavna forma";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.FrmRadnikovaGlavna_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -178,7 +184,7 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.ToolStripMenuItem menuStrip;
         private System.Windows.Forms.ToolStripMenuItem kreirajNovogKlijentaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pretraziKlijentaToolStripMenuItem;

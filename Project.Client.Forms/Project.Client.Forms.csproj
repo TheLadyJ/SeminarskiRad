@@ -71,6 +71,12 @@
     <Compile Include="UserControls\UCKlijent\UCKreirajNovogKlijenta.Designer.cs">
       <DependentUpon>UCKreirajNovogKlijenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCKlijent\UCObrisiKlijenta.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCKlijent\UCObrisiKlijenta.Designer.cs">
+      <DependentUpon>UCObrisiKlijenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCKlijent\UCPretraziKlijetnta.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +101,9 @@
     </Compile>
     <EmbeddedResource Include="UserControls\UCKlijent\UCKreirajNovogKlijenta.resx">
       <DependentUpon>UCKreirajNovogKlijenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCKlijent\UCObrisiKlijenta.resx">
+      <DependentUpon>UCObrisiKlijenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCKlijent\UCPretraziKlijetnta.resx">
       <DependentUpon>UCPretraziKlijetnta.cs</DependentUpon>

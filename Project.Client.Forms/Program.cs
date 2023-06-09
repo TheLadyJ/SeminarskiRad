@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Client.Forms.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,30 @@ namespace Project.Client.Forms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmPrijavljivanje());
+
+            while (true)
+            {
+                try
+                {
+                    FrmPrijavljivanje frmPrijavljivanje = new FrmPrijavljivanje();
+                    frmPrijavljivanje.ShowDialog();
+                    DialogResult result = frmPrijavljivanje.DialogResult;
+                    frmPrijavljivanje.Dispose();
+
+                    if (result == DialogResult.OK)
+                    {
+                        Application.Run(new FrmRadnikovaGlavna());
+                    }
+                    if (result == DialogResult.Cancel)
+                    {
+                        break;
+                    }
+                }
+                catch (ServerCommunicationException)
+                {
+                    MessageBox.Show("Greska pri radu sa serverom!");
+                }
+            }
         }
     }
 }

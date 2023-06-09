@@ -10,13 +10,11 @@ using System.Windows.Forms;
 
 namespace Project.Client.Forms.UserControls.UCKlijent
 {
-    public partial class UCPretraziKlijetnta : UserControl
+    public partial class UCObrisiKlijenta : UserControl
     {
-
-        public UCPretraziKlijetnta()
+        public UCObrisiKlijenta()
         {
             InitializeComponent();
         }
-
     }
 }

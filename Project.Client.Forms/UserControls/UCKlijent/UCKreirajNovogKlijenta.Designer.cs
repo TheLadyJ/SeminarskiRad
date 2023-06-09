@@ -30,13 +30,13 @@
         {
             this.gbKreirajKlijenta = new System.Windows.Forms.GroupBox();
             this.btnKreirajKlijenta = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblTelefon = new System.Windows.Forms.Label();
             this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblPrezime = new System.Windows.Forms.Label();
             this.txtPrezime = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblIme = new System.Windows.Forms.Label();
             this.txtIme = new System.Windows.Forms.TextBox();
             this.gbKreirajKlijenta.SuspendLayout();
             this.SuspendLayout();
@@ -46,103 +46,112 @@
             this.gbKreirajKlijenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.gbKreirajKlijenta.BackColor = System.Drawing.Color.Transparent;
             this.gbKreirajKlijenta.Controls.Add(this.btnKreirajKlijenta);
-            this.gbKreirajKlijenta.Controls.Add(this.label4);
+            this.gbKreirajKlijenta.Controls.Add(this.lblEmail);
             this.gbKreirajKlijenta.Controls.Add(this.txtEmail);
-            this.gbKreirajKlijenta.Controls.Add(this.label3);
+            this.gbKreirajKlijenta.Controls.Add(this.lblTelefon);
             this.gbKreirajKlijenta.Controls.Add(this.txtTelefon);
-            this.gbKreirajKlijenta.Controls.Add(this.label2);
+            this.gbKreirajKlijenta.Controls.Add(this.lblPrezime);
             this.gbKreirajKlijenta.Controls.Add(this.txtPrezime);
-            this.gbKreirajKlijenta.Controls.Add(this.label1);
+            this.gbKreirajKlijenta.Controls.Add(this.lblIme);
             this.gbKreirajKlijenta.Controls.Add(this.txtIme);
             this.gbKreirajKlijenta.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.gbKreirajKlijenta.ForeColor = System.Drawing.Color.White;
-            this.gbKreirajKlijenta.Location = new System.Drawing.Point(113, 87);
+            this.gbKreirajKlijenta.Location = new System.Drawing.Point(42, 22);
             this.gbKreirajKlijenta.Name = "gbKreirajKlijenta";
-            this.gbKreirajKlijenta.Size = new System.Drawing.Size(703, 408);
+            this.gbKreirajKlijenta.Size = new System.Drawing.Size(854, 536);
             this.gbKreirajKlijenta.TabIndex = 0;
             this.gbKreirajKlijenta.TabStop = false;
             this.gbKreirajKlijenta.Text = "Kreiranje novog klijenta";
             // 
             // btnKreirajKlijenta
             // 
+            this.btnKreirajKlijenta.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnKreirajKlijenta.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnKreirajKlijenta.ForeColor = System.Drawing.Color.IndianRed;
-            this.btnKreirajKlijenta.Location = new System.Drawing.Point(235, 325);
+            this.btnKreirajKlijenta.ForeColor = System.Drawing.Color.SlateBlue;
+            this.btnKreirajKlijenta.Location = new System.Drawing.Point(331, 377);
             this.btnKreirajKlijenta.Name = "btnKreirajKlijenta";
             this.btnKreirajKlijenta.Size = new System.Drawing.Size(226, 38);
             this.btnKreirajKlijenta.TabIndex = 8;
             this.btnKreirajKlijenta.Text = "Kreiraj novog klijenta";
             this.btnKreirajKlijenta.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // lblEmail
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label4.Location = new System.Drawing.Point(148, 250);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 19);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Email:";
+            this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblEmail.Location = new System.Drawing.Point(244, 302);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(56, 19);
+            this.lblEmail.TabIndex = 7;
+            this.lblEmail.Text = "Email:";
             // 
             // txtEmail
             // 
+            this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtEmail.Location = new System.Drawing.Point(275, 242);
+            this.txtEmail.Location = new System.Drawing.Point(371, 294);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(242, 27);
             this.txtEmail.TabIndex = 6;
             // 
-            // label3
+            // lblTelefon
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(148, 196);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 19);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Telefon:";
+            this.lblTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTelefon.AutoSize = true;
+            this.lblTelefon.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblTelefon.ForeColor = System.Drawing.Color.White;
+            this.lblTelefon.Location = new System.Drawing.Point(244, 248);
+            this.lblTelefon.Name = "lblTelefon";
+            this.lblTelefon.Size = new System.Drawing.Size(68, 19);
+            this.lblTelefon.TabIndex = 5;
+            this.lblTelefon.Text = "Telefon:";
             // 
             // txtTelefon
             // 
+            this.txtTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtTelefon.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtTelefon.Location = new System.Drawing.Point(275, 188);
+            this.txtTelefon.Location = new System.Drawing.Point(371, 240);
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(242, 27);
             this.txtTelefon.TabIndex = 4;
             // 
-            // label2
+            // lblPrezime
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(148, 140);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 19);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Prezime:";
+            this.lblPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblPrezime.AutoSize = true;
+            this.lblPrezime.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblPrezime.Location = new System.Drawing.Point(244, 192);
+            this.lblPrezime.Name = "lblPrezime";
+            this.lblPrezime.Size = new System.Drawing.Size(74, 19);
+            this.lblPrezime.TabIndex = 3;
+            this.lblPrezime.Text = "Prezime:";
             // 
             // txtPrezime
             // 
+            this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtPrezime.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtPrezime.Location = new System.Drawing.Point(275, 132);
+            this.txtPrezime.Location = new System.Drawing.Point(371, 184);
             this.txtPrezime.Name = "txtPrezime";
             this.txtPrezime.Size = new System.Drawing.Size(242, 27);
             this.txtPrezime.TabIndex = 2;
             // 
-            // label1
+            // lblIme
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(148, 87);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Ime:";
+            this.lblIme.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblIme.AutoSize = true;
+            this.lblIme.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.lblIme.Location = new System.Drawing.Point(244, 139);
+            this.lblIme.Name = "lblIme";
+            this.lblIme.Size = new System.Drawing.Size(43, 19);
+            this.lblIme.TabIndex = 1;
+            this.lblIme.Text = "Ime:";
             // 
             // txtIme
             // 
+            this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txtIme.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtIme.Location = new System.Drawing.Point(275, 79);
+            this.txtIme.Location = new System.Drawing.Point(371, 131);
             this.txtIme.Name = "txtIme";
             this.txtIme.Size = new System.Drawing.Size(242, 27);
             this.txtIme.TabIndex = 0;
@@ -166,13 +175,13 @@
 
         private System.Windows.Forms.GroupBox gbKreirajKlijenta;
         private System.Windows.Forms.Button btnKreirajKlijenta;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblTelefon;
         private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPrezime;
         private System.Windows.Forms.TextBox txtPrezime;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblIme;
         private System.Windows.Forms.TextBox txtIme;
     }
 }

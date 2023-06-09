@@ -77,7 +77,7 @@ namespace Project.Client.Forms.GUIController
 
         }
 
-        internal void ZatvoriKonekciju()
+        internal void ZatvoriKonekciju(FrmPrijavljivanje frmPrijavljivanje)
         {
             Communication.Instance.Close();
         }

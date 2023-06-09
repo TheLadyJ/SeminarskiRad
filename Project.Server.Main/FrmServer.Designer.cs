@@ -81,6 +81,7 @@
             this.txtStatusServera.ForeColor = System.Drawing.Color.Salmon;
             this.txtStatusServera.Location = new System.Drawing.Point(276, 227);
             this.txtStatusServera.Name = "txtStatusServera";
+            this.txtStatusServera.ReadOnly = true;
             this.txtStatusServera.Size = new System.Drawing.Size(310, 26);
             this.txtStatusServera.TabIndex = 8;
             this.txtStatusServera.Text = "Nije pokrenut";

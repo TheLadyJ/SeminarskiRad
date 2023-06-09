@@ -28,7 +28,12 @@ namespace Project.Client.Forms
 
         private void FrmPrijavljivanje_FormClosed(object sender, FormClosedEventArgs e)
         {
-            prijaviRadnikaController.ZatvoriKonekciju();
+            prijaviRadnikaController.ZatvoriKonekciju(this);
+        }
+
+        private void FrmPrijavljivanje_Load(object sender, EventArgs e)
+        {
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
     }
 }

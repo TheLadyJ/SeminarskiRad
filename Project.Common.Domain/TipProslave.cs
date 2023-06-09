@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Project.Common.Domain
+{
+    public class TipProslave : IDomainObject
+    {
+        public int TipProslaveID { get; set; }
+        public string NazivTipaProslave { get; set; }
+
+        public List<Rezervacija> Rezervacije { get; set; }
+
+        public string TableName => "TipProslave";
+
+        public string InsertValues => $"'{NazivTipaProslave}'";
+
+        public string UpdateValues => $"NazivTipaProslave = '{NazivTipaProslave}'";
+
+        public string SearchCondition { get; set; }
+
+        public string IdCondition => $"TipProslaveID = {TipProslaveID}";
+
+        public IDomainObject ReadObjectRow(SqlDataReader reader)
+        {
+            TipProslave tp = new TipProslave();
+            tp.TipProslaveID = (int)reader["TipProslaveID"];
+            tp.NazivTipaProslave = (string)reader["NazivTipaProslave"];
+            return tp;
+        }
+    }
+}

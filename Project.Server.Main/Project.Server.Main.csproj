@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClientHandler.cs" />
+    <Compile Include="ClientsSession\ClientsSessionData.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +56,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Server.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -75,6 +78,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.Common.Communication\Project.Common.Communication.csproj">
+      <Project>{ADA7C72E-AE38-4847-9ED8-98F2A3672FEB}</Project>
+      <Name>Project.Common.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.Common.Domain\Project.Common.Domain.csproj">
+      <Project>{FF1BC8DF-A96C-4F06-90C2-0715D3C6A676}</Project>
+      <Name>Project.Common.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.Server.ApplicationLogic\Project.Server.ApplicationLogic.csproj">
+      <Project>{650E034C-F480-41D0-910D-F073C165D3F9}</Project>
+      <Name>Project.Server.ApplicationLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

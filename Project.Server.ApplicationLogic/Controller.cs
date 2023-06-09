@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Project.Common.Domain;
+using Project.Server.SystemOperations;
+using Project.Server.SystemOperations.RadnikSO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +27,13 @@ namespace Project.Server.ApplicationLogic
                 }
                 return instance;
             }
+        }
+
+        public Radnik PrijaviRadnika(Radnik radnik)
+        {
+            SystemOperationBase so = new PrijaviRadnikaSO(radnik);
+            so.ExecuteTemplate();
+            return (Radnik)so.Result;
         }
     }
 }

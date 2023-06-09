@@ -44,5 +44,15 @@
     <Compile Include="Controller.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Project.Common.Domain\Project.Common.Domain.csproj">
+      <Project>{FF1BC8DF-A96C-4F06-90C2-0715D3C6A676}</Project>
+      <Name>Project.Common.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.Server.SystemOperations\Project.Server.SystemOperations.csproj">
+      <Project>{41F06045-AAD6-4888-BCBD-139D9BE5B50D}</Project>
+      <Name>Project.Server.SystemOperations</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

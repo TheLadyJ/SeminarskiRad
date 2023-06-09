@@ -15,7 +15,7 @@ namespace Project.Server.DatabseBroker
 
         public Broker()
         {
-            connection = new SqlConnection(@"");
+            connection = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=SeminarskiRad;Integrated Security=True;Connect Timeout=30;Encrypt=False;");
         }
 
         public void OpenConnection()

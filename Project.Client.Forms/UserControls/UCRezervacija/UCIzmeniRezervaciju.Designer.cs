@@ -1,6 +1,6 @@
 ﻿namespace Project.Client.Forms.UserControls.UCRezervacija
 {
-	partial class UCKreirajNovuRezervaciju
+	partial class UCIzmeniRezervaciju
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -30,12 +30,12 @@
 		{
 			this.SuspendLayout();
 			// 
-			// UCKreirajNovuRezervaciju
+			// UCIzmeniRezervaciju
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.Name = "UCKreirajNovuRezervaciju";
-			this.Size = new System.Drawing.Size(1279, 713);
+			this.Name = "UCIzmeniRezervaciju";
+			this.Size = new System.Drawing.Size(1604, 918);
 			this.ResumeLayout(false);
 
 		}

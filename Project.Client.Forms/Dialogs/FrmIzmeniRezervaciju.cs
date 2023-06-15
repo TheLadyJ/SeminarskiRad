@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project.Client.Forms.UserControls.UCRezervacija
+namespace Project.Client.Forms.Dialogs
 {
-	public partial class UCKreirajNovuRezervaciju : UserControl
+	public partial class FrmIzmeniRezervaciju : Form
 	{
-		public UCKreirajNovuRezervaciju()
+		public FrmIzmeniRezervaciju()
 		{
 			InitializeComponent();
+		}
+
+		private void FrmIzmeniRezervaciju_Load(object sender, EventArgs e)
+		{
+			this.FormBorderStyle = FormBorderStyle.FixedSingle;
 		}
 	}
 }

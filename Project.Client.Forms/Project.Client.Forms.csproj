@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\FrmIzaberiKeteringMeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmIzaberiKeteringMeni.Designer.cs">
+      <DependentUpon>FrmIzaberiKeteringMeni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\FrmIzmeniRezervaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmIzmeniRezervaciju.Designer.cs">
+      <DependentUpon>FrmIzmeniRezervaciju.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exceptions\ServerCommunicationException.cs" />
     <Compile Include="Exceptions\SystemOperationException.cs" />
     <Compile Include="FrmPrijavljivanje.cs">
@@ -83,11 +95,41 @@
     <Compile Include="UserControls\UCKlijent\UCPretraziKlijetnta.Designer.cs">
       <DependentUpon>UCPretraziKlijetnta.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCIzmeniRezervaciju.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCIzmeniRezervaciju.Designer.cs">
+      <DependentUpon>UCIzmeniRezervaciju.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.Designer.cs">
       <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretragaRezervacija.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretragaRezervacija.Designer.cs">
+      <DependentUpon>UCPretragaRezervacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaBrisanje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaBrisanje.Designer.cs">
+      <DependentUpon>UCPretraziRezervacijuZaBrisanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaIzmenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaIzmenu.Designer.cs">
+      <DependentUpon>UCPretraziRezervacijuZaIzmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCRadSaRezervacijom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCRadSaRezervacijom.Designer.cs">
+      <DependentUpon>UCRadSaRezervacijom.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCSto\UCObrisiSto.cs">
       <SubType>UserControl</SubType>
@@ -107,6 +149,12 @@
     <Compile Include="UserControls\UCSto\UCUnesiNoviSto.Designer.cs">
       <DependentUpon>UCUnesiNoviSto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dialogs\FrmIzaberiKeteringMeni.resx">
+      <DependentUpon>FrmIzaberiKeteringMeni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\FrmIzmeniRezervaciju.resx">
+      <DependentUpon>FrmIzmeniRezervaciju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrijavljivanje.resx">
       <DependentUpon>FrmPrijavljivanje.cs</DependentUpon>
     </EmbeddedResource>
@@ -132,8 +180,23 @@
     <EmbeddedResource Include="UserControls\UCKlijent\UCPretraziKlijetnta.resx">
       <DependentUpon>UCPretraziKlijetnta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCIzmeniRezervaciju.resx">
+      <DependentUpon>UCIzmeniRezervaciju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.resx">
       <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCPretragaRezervacija.resx">
+      <DependentUpon>UCPretragaRezervacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaBrisanje.resx">
+      <DependentUpon>UCPretraziRezervacijuZaBrisanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaIzmenu.resx">
+      <DependentUpon>UCPretraziRezervacijuZaIzmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCRadSaRezervacijom.resx">
+      <DependentUpon>UCRadSaRezervacijom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCSto\UCObrisiSto.resx">
       <DependentUpon>UCObrisiSto.cs</DependentUpon>
@@ -157,9 +220,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dialogs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\PrijavljivanjePozadina.jpg" />
   </ItemGroup>

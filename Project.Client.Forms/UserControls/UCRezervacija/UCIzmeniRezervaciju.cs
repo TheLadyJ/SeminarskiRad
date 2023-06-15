@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Project.Client.Forms.UserControls.UCRezervacija
 {
-	public partial class UCKreirajNovuRezervaciju : UserControl
+	public partial class UCIzmeniRezervaciju : UserControl
 	{
-		public UCKreirajNovuRezervaciju()
+		public UCIzmeniRezervaciju()
 		{
 			InitializeComponent();
+		}
+
+		private void ucRadSaRezervacijom_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnIzmeniRezervaciju_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

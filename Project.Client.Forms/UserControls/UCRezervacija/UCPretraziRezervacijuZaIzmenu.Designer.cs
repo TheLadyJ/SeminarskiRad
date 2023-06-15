@@ -38,7 +38,7 @@
 			this.btnIzmeniRezervaciju.AutoSize = true;
 			this.btnIzmeniRezervaciju.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnIzmeniRezervaciju.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			this.btnIzmeniRezervaciju.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(44)))), ((int)(((byte)(126)))));
+			this.btnIzmeniRezervaciju.ForeColor = System.Drawing.Color.Brown;
 			this.btnIzmeniRezervaciju.Location = new System.Drawing.Point(1188, 813);
 			this.btnIzmeniRezervaciju.Name = "btnIzmeniRezervaciju";
 			this.btnIzmeniRezervaciju.Size = new System.Drawing.Size(267, 50);
@@ -51,15 +51,16 @@
 			this.ucPretragaRezervacija1.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.ucPretragaRezervacija1.AutoSize = true;
 			this.ucPretragaRezervacija1.BackColor = System.Drawing.Color.Transparent;
-			this.ucPretragaRezervacija1.Location = new System.Drawing.Point(0, 0);
+			this.ucPretragaRezervacija1.Location = new System.Drawing.Point(3, 3);
 			this.ucPretragaRezervacija1.Name = "ucPretragaRezervacija1";
-			this.ucPretragaRezervacija1.Size = new System.Drawing.Size(1498, 914);
+			this.ucPretragaRezervacija1.Size = new System.Drawing.Size(1490, 895);
 			this.ucPretragaRezervacija1.TabIndex = 27;
 			// 
 			// UCPretraziRezervacijuZaIzmenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.UCRezervacija;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Controls.Add(this.btnIzmeniRezervaciju);
 			this.Controls.Add(this.ucPretragaRezervacija1);

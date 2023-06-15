@@ -151,7 +151,7 @@
 			// lblKeteringMeniVrednost
 			// 
 			this.lblKeteringMeniVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblKeteringMeniVrednost.BackColor = System.Drawing.SystemColors.Window;
+			this.lblKeteringMeniVrednost.BackColor = System.Drawing.Color.White;
 			this.lblKeteringMeniVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblKeteringMeniVrednost.Location = new System.Drawing.Point(977, 276);
 			this.lblKeteringMeniVrednost.Name = "lblKeteringMeniVrednost";
@@ -208,11 +208,11 @@
 			// lblRadnikVrednost
 			// 
 			this.lblRadnikVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblRadnikVrednost.BackColor = System.Drawing.SystemColors.Window;
+			this.lblRadnikVrednost.BackColor = System.Drawing.Color.White;
 			this.lblRadnikVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblRadnikVrednost.Location = new System.Drawing.Point(242, 54);
+			this.lblRadnikVrednost.Location = new System.Drawing.Point(242, 53);
 			this.lblRadnikVrednost.Name = "lblRadnikVrednost";
-			this.lblRadnikVrednost.Size = new System.Drawing.Size(383, 25);
+			this.lblRadnikVrednost.Size = new System.Drawing.Size(383, 27);
 			this.lblRadnikVrednost.TabIndex = 15;
 			this.lblRadnikVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
@@ -251,7 +251,7 @@
 			// lblUkupnaCenaVrednost
 			// 
 			this.lblUkupnaCenaVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblUkupnaCenaVrednost.BackColor = System.Drawing.SystemColors.Window;
+			this.lblUkupnaCenaVrednost.BackColor = System.Drawing.Color.White;
 			this.lblUkupnaCenaVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblUkupnaCenaVrednost.Location = new System.Drawing.Point(977, 408);
 			this.lblUkupnaCenaVrednost.Name = "lblUkupnaCenaVrednost";

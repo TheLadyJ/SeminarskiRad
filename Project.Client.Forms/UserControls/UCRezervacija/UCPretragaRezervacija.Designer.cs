@@ -29,7 +29,6 @@
 		private void InitializeComponent()
 		{
 			this.txtUkupnaCena = new System.Windows.Forms.TextBox();
-			this.txtKeteringMeni = new System.Windows.Forms.TextBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.btnPretrazi = new System.Windows.Forms.Button();
 			this.chbUkupnaCena = new System.Windows.Forms.CheckBox();
@@ -45,6 +44,7 @@
 			this.lblDatumVremeNapomena = new System.Windows.Forms.Label();
 			this.txtDatumVreme = new System.Windows.Forms.TextBox();
 			this.gbUnosStola = new System.Windows.Forms.GroupBox();
+			this.lblKeteringMeniVrednost = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.gbUnosStola.SuspendLayout();
 			this.SuspendLayout();
@@ -57,15 +57,6 @@
 			this.txtUkupnaCena.Name = "txtUkupnaCena";
 			this.txtUkupnaCena.Size = new System.Drawing.Size(399, 28);
 			this.txtUkupnaCena.TabIndex = 34;
-			// 
-			// txtKeteringMeni
-			// 
-			this.txtKeteringMeni.Location = new System.Drawing.Point(1045, 55);
-			this.txtKeteringMeni.Margin = new System.Windows.Forms.Padding(4);
-			this.txtKeteringMeni.MinimumSize = new System.Drawing.Size(398, 28);
-			this.txtKeteringMeni.Name = "txtKeteringMeni";
-			this.txtKeteringMeni.Size = new System.Drawing.Size(399, 28);
-			this.txtKeteringMeni.TabIndex = 33;
 			// 
 			// dataGridView1
 			// 
@@ -217,8 +208,8 @@
 			// gbUnosStola
 			// 
 			this.gbUnosStola.BackColor = System.Drawing.Color.Transparent;
+			this.gbUnosStola.Controls.Add(this.lblKeteringMeniVrednost);
 			this.gbUnosStola.Controls.Add(this.txtUkupnaCena);
-			this.gbUnosStola.Controls.Add(this.txtKeteringMeni);
 			this.gbUnosStola.Controls.Add(this.dataGridView1);
 			this.gbUnosStola.Controls.Add(this.btnPretrazi);
 			this.gbUnosStola.Controls.Add(this.chbUkupnaCena);
@@ -245,6 +236,17 @@
 			this.gbUnosStola.TabStop = false;
 			this.gbUnosStola.Text = "Rezervacija";
 			// 
+			// lblKeteringMeniVrednost
+			// 
+			this.lblKeteringMeniVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblKeteringMeniVrednost.BackColor = System.Drawing.SystemColors.Window;
+			this.lblKeteringMeniVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblKeteringMeniVrednost.Location = new System.Drawing.Point(1045, 58);
+			this.lblKeteringMeniVrednost.Name = "lblKeteringMeniVrednost";
+			this.lblKeteringMeniVrednost.Size = new System.Drawing.Size(399, 27);
+			this.lblKeteringMeniVrednost.TabIndex = 35;
+			this.lblKeteringMeniVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// UCPretragaRezervacija
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,7 +265,6 @@
 		#endregion
 
 		private System.Windows.Forms.TextBox txtUkupnaCena;
-		private System.Windows.Forms.TextBox txtKeteringMeni;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.Button btnPretrazi;
 		private System.Windows.Forms.CheckBox chbUkupnaCena;
@@ -279,5 +280,6 @@
 		private System.Windows.Forms.Label lblDatumVremeNapomena;
 		private System.Windows.Forms.TextBox txtDatumVreme;
 		private System.Windows.Forms.GroupBox gbUnosStola;
+		private System.Windows.Forms.Label lblKeteringMeniVrednost;
 	}
 }

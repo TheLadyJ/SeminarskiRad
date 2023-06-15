@@ -49,10 +49,10 @@
 			// 
 			this.ucRadSaRezervacijom.BackColor = System.Drawing.Color.Transparent;
 			this.ucRadSaRezervacijom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ucRadSaRezervacijom.Location = new System.Drawing.Point(4, 4);
+			this.ucRadSaRezervacijom.Location = new System.Drawing.Point(4, 0);
 			this.ucRadSaRezervacijom.Margin = new System.Windows.Forms.Padding(4);
 			this.ucRadSaRezervacijom.Name = "ucRadSaRezervacijom";
-			this.ucRadSaRezervacijom.Size = new System.Drawing.Size(1465, 778);
+			this.ucRadSaRezervacijom.Size = new System.Drawing.Size(1411, 778);
 			this.ucRadSaRezervacijom.TabIndex = 0;
 			this.ucRadSaRezervacijom.Load += new System.EventHandler(this.ucRadSaRezervacijom_Load);
 			// 

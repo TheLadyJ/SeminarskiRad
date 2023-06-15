@@ -1,5 +1,6 @@
 ﻿using Project.Client.Forms.GUIController;
 using Project.Client.Forms.UserControls.UCKlijent;
+using Project.Client.Forms.UserControls.UCRezervacija;
 using Project.Client.Forms.UserControls.UCSto;
 using System;
 using System.Collections.Generic;
@@ -66,5 +67,20 @@ namespace Project.Client.Forms
 
         }
 
-    }
+		private void kreirajNovuRezervacijuToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ChangePanel(new UCKreirajNovuRezervaciju());
+
+		}
+
+		private void izmeniRezervacijuToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ChangePanel(new UCPretraziRezervacijuZaIzmenu());
+		}
+
+		private void obrisiRezervacijuToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			ChangePanel(new UCPretraziRezervacijuZaBrisanje());
+		}
+	}
 }

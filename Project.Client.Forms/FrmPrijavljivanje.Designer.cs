@@ -30,91 +30,98 @@ namespace Project.Client.Forms
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblKorisnickoIme = new System.Windows.Forms.Label();
-            this.lblLozinka = new System.Windows.Forms.Label();
-            this.txtKorisnikoIme = new System.Windows.Forms.TextBox();
-            this.txtLozinka = new System.Windows.Forms.TextBox();
-            this.btnPrijaviSe = new System.Windows.Forms.Button();
-            this.SuspendLayout();
-            // 
-            // lblKorisnickoIme
-            // 
-            this.lblKorisnickoIme.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblKorisnickoIme.AutoSize = true;
-            this.lblKorisnickoIme.BackColor = System.Drawing.Color.Transparent;
-            this.lblKorisnickoIme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblKorisnickoIme.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblKorisnickoIme.Location = new System.Drawing.Point(49, 86);
-            this.lblKorisnickoIme.Name = "lblKorisnickoIme";
-            this.lblKorisnickoIme.Size = new System.Drawing.Size(120, 18);
-            this.lblKorisnickoIme.TabIndex = 0;
-            this.lblKorisnickoIme.Text = "Korisničko ime:";
-            // 
-            // lblLozinka
-            // 
-            this.lblLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblLozinka.AutoSize = true;
-            this.lblLozinka.BackColor = System.Drawing.Color.Transparent;
-            this.lblLozinka.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.lblLozinka.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblLozinka.Location = new System.Drawing.Point(49, 142);
-            this.lblLozinka.Name = "lblLozinka";
-            this.lblLozinka.Size = new System.Drawing.Size(68, 18);
-            this.lblLozinka.TabIndex = 1;
-            this.lblLozinka.Text = "Lozinka:";
-            // 
-            // txtKorisnikoIme
-            // 
-            this.txtKorisnikoIme.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtKorisnikoIme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtKorisnikoIme.Location = new System.Drawing.Point(207, 83);
-            this.txtKorisnikoIme.Name = "txtKorisnikoIme";
-            this.txtKorisnikoIme.Size = new System.Drawing.Size(228, 26);
-            this.txtKorisnikoIme.TabIndex = 2;
-            // 
-            // txtLozinka
-            // 
-            this.txtLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtLozinka.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.txtLozinka.Location = new System.Drawing.Point(207, 136);
-            this.txtLozinka.Name = "txtLozinka";
-            this.txtLozinka.Size = new System.Drawing.Size(228, 26);
-            this.txtLozinka.TabIndex = 3;
-            // 
-            // btnPrijaviSe
-            // 
-            this.btnPrijaviSe.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnPrijaviSe.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.btnPrijaviSe.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.btnPrijaviSe.Location = new System.Drawing.Point(120, 219);
-            this.btnPrijaviSe.Name = "btnPrijaviSe";
-            this.btnPrijaviSe.Size = new System.Drawing.Size(207, 41);
-            this.btnPrijaviSe.TabIndex = 4;
-            this.btnPrijaviSe.Text = "Prijavi se";
-            this.btnPrijaviSe.UseVisualStyleBackColor = true;
-            this.btnPrijaviSe.Click += new System.EventHandler(this.btnPrijaviSe_Click);
-            // 
-            // FrmPrijavljivanje
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.PrijavljivanjePozadina;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(465, 330);
-            this.Controls.Add(this.btnPrijaviSe);
-            this.Controls.Add(this.txtLozinka);
-            this.Controls.Add(this.txtKorisnikoIme);
-            this.Controls.Add(this.lblLozinka);
-            this.Controls.Add(this.lblKorisnickoIme);
-            this.MaximizeBox = false;
-            this.Name = "FrmPrijavljivanje";
-            this.ShowIcon = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Prijavljivanje radnika";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrijavljivanje_FormClosed);
-            this.Load += new System.EventHandler(this.FrmPrijavljivanje_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
+			this.lblKorisnickoIme = new System.Windows.Forms.Label();
+			this.lblLozinka = new System.Windows.Forms.Label();
+			this.txtKorisnikoIme = new System.Windows.Forms.TextBox();
+			this.txtLozinka = new System.Windows.Forms.TextBox();
+			this.btnPrijaviSe = new System.Windows.Forms.Button();
+			this.SuspendLayout();
+			// 
+			// lblKorisnickoIme
+			// 
+			this.lblKorisnickoIme.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblKorisnickoIme.AutoSize = true;
+			this.lblKorisnickoIme.BackColor = System.Drawing.Color.Transparent;
+			this.lblKorisnickoIme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.lblKorisnickoIme.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblKorisnickoIme.Location = new System.Drawing.Point(65, 106);
+			this.lblKorisnickoIme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblKorisnickoIme.Name = "lblKorisnickoIme";
+			this.lblKorisnickoIme.Size = new System.Drawing.Size(135, 19);
+			this.lblKorisnickoIme.TabIndex = 0;
+			this.lblKorisnickoIme.Text = "Korisničko ime:";
+			// 
+			// lblLozinka
+			// 
+			this.lblLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblLozinka.AutoSize = true;
+			this.lblLozinka.BackColor = System.Drawing.Color.Transparent;
+			this.lblLozinka.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.lblLozinka.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+			this.lblLozinka.Location = new System.Drawing.Point(65, 175);
+			this.lblLozinka.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblLozinka.Name = "lblLozinka";
+			this.lblLozinka.Size = new System.Drawing.Size(75, 19);
+			this.lblLozinka.TabIndex = 1;
+			this.lblLozinka.Text = "Lozinka:";
+			// 
+			// txtKorisnikoIme
+			// 
+			this.txtKorisnikoIme.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.txtKorisnikoIme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.txtKorisnikoIme.Location = new System.Drawing.Point(276, 102);
+			this.txtKorisnikoIme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtKorisnikoIme.Name = "txtKorisnikoIme";
+			this.txtKorisnikoIme.Size = new System.Drawing.Size(303, 28);
+			this.txtKorisnikoIme.TabIndex = 2;
+			// 
+			// txtLozinka
+			// 
+			this.txtLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.txtLozinka.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.txtLozinka.Location = new System.Drawing.Point(276, 167);
+			this.txtLozinka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtLozinka.Name = "txtLozinka";
+			this.txtLozinka.Size = new System.Drawing.Size(303, 28);
+			this.txtLozinka.TabIndex = 3;
+			// 
+			// btnPrijaviSe
+			// 
+			this.btnPrijaviSe.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.btnPrijaviSe.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnPrijaviSe.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.btnPrijaviSe.ForeColor = System.Drawing.Color.DarkSlateBlue;
+			this.btnPrijaviSe.Location = new System.Drawing.Point(160, 270);
+			this.btnPrijaviSe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnPrijaviSe.Name = "btnPrijaviSe";
+			this.btnPrijaviSe.Size = new System.Drawing.Size(276, 50);
+			this.btnPrijaviSe.TabIndex = 4;
+			this.btnPrijaviSe.Text = "Prijavi se";
+			this.btnPrijaviSe.UseVisualStyleBackColor = false;
+			this.btnPrijaviSe.Click += new System.EventHandler(this.btnPrijaviSe_Click);
+			// 
+			// FrmPrijavljivanje
+			// 
+			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.PrijavljivanjePozadina;
+			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ClientSize = new System.Drawing.Size(620, 406);
+			this.Controls.Add(this.btnPrijaviSe);
+			this.Controls.Add(this.txtLozinka);
+			this.Controls.Add(this.txtKorisnikoIme);
+			this.Controls.Add(this.lblLozinka);
+			this.Controls.Add(this.lblKorisnickoIme);
+			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.MaximizeBox = false;
+			this.Name = "FrmPrijavljivanje";
+			this.ShowIcon = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.Text = "Prijavljivanje radnika";
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrijavljivanje_FormClosed);
+			this.Load += new System.EventHandler(this.FrmPrijavljivanje_Load);
+			this.ResumeLayout(false);
+			this.PerformLayout();
 
         }
 

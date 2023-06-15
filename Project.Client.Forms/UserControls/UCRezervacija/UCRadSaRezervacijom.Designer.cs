@@ -56,7 +56,6 @@
 			// 
 			// gbUnosStola
 			// 
-			this.gbUnosStola.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.gbUnosStola.BackColor = System.Drawing.Color.Transparent;
 			this.gbUnosStola.Controls.Add(this.dgvStolovi);
 			this.gbUnosStola.Controls.Add(this.btnObrisiStolove);
@@ -81,73 +80,67 @@
 			this.gbUnosStola.Controls.Add(this.lblDatumVreme);
 			this.gbUnosStola.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.gbUnosStola.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(65)))), ((int)(((byte)(177)))));
-			this.gbUnosStola.Location = new System.Drawing.Point(61, 70);
+			this.gbUnosStola.Location = new System.Drawing.Point(4, 4);
 			this.gbUnosStola.Margin = new System.Windows.Forms.Padding(4);
 			this.gbUnosStola.Name = "gbUnosStola";
 			this.gbUnosStola.Padding = new System.Windows.Forms.Padding(4);
-			this.gbUnosStola.Size = new System.Drawing.Size(1442, 757);
+			this.gbUnosStola.Size = new System.Drawing.Size(1390, 757);
 			this.gbUnosStola.TabIndex = 1;
 			this.gbUnosStola.TabStop = false;
 			this.gbUnosStola.Text = "Rezervacija";
 			// 
 			// dgvStolovi
 			// 
-			this.dgvStolovi.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvStolovi.Location = new System.Drawing.Point(29, 358);
 			this.dgvStolovi.Name = "dgvStolovi";
 			this.dgvStolovi.RowHeadersWidth = 51;
 			this.dgvStolovi.RowTemplate.Height = 24;
-			this.dgvStolovi.Size = new System.Drawing.Size(613, 349);
+			this.dgvStolovi.Size = new System.Drawing.Size(598, 349);
 			this.dgvStolovi.TabIndex = 24;
 			// 
 			// btnObrisiStolove
 			// 
-			this.btnObrisiStolove.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.btnObrisiStolove.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnObrisiStolove.Location = new System.Drawing.Point(378, 286);
 			this.btnObrisiStolove.Name = "btnObrisiStolove";
-			this.btnObrisiStolove.Size = new System.Drawing.Size(264, 38);
+			this.btnObrisiStolove.Size = new System.Drawing.Size(249, 38);
 			this.btnObrisiStolove.TabIndex = 23;
 			this.btnObrisiStolove.Text = "Obriši sto/stolove";
 			this.btnObrisiStolove.UseVisualStyleBackColor = false;
 			// 
 			// btnDodajSto
 			// 
-			this.btnDodajSto.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.btnDodajSto.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnDodajSto.Location = new System.Drawing.Point(29, 286);
 			this.btnDodajSto.Name = "btnDodajSto";
-			this.btnDodajSto.Size = new System.Drawing.Size(264, 38);
+			this.btnDodajSto.Size = new System.Drawing.Size(249, 38);
 			this.btnDodajSto.TabIndex = 22;
 			this.btnDodajSto.Text = "Dodaj sto";
 			this.btnDodajSto.UseVisualStyleBackColor = false;
 			// 
 			// btnDetaljiKeteringMenija
 			// 
-			this.btnDetaljiKeteringMenija.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.btnDetaljiKeteringMenija.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnDetaljiKeteringMenija.Location = new System.Drawing.Point(1050, 286);
 			this.btnDetaljiKeteringMenija.Name = "btnDetaljiKeteringMenija";
-			this.btnDetaljiKeteringMenija.Size = new System.Drawing.Size(327, 38);
+			this.btnDetaljiKeteringMenija.Size = new System.Drawing.Size(312, 38);
 			this.btnDetaljiKeteringMenija.TabIndex = 21;
 			this.btnDetaljiKeteringMenija.Text = "Pogledaj detalje izabranog menija";
 			this.btnDetaljiKeteringMenija.UseVisualStyleBackColor = false;
 			// 
 			// lblKeteringMeniVrednost
 			// 
-			this.lblKeteringMeniVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblKeteringMeniVrednost.BackColor = System.Drawing.SystemColors.Window;
 			this.lblKeteringMeniVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblKeteringMeniVrednost.Location = new System.Drawing.Point(979, 208);
 			this.lblKeteringMeniVrednost.Name = "lblKeteringMeniVrednost";
-			this.lblKeteringMeniVrednost.Size = new System.Drawing.Size(398, 27);
+			this.lblKeteringMeniVrednost.Size = new System.Drawing.Size(383, 27);
 			this.lblKeteringMeniVrednost.TabIndex = 20;
 			this.lblKeteringMeniVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblKeteringMeni
 			// 
-			this.lblKeteringMeni.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblKeteringMeni.AutoSize = true;
 			this.lblKeteringMeni.Location = new System.Drawing.Point(721, 216);
 			this.lblKeteringMeni.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -158,29 +151,26 @@
 			// 
 			// btnIzaberiKeteringMeni
 			// 
-			this.btnIzaberiKeteringMeni.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.btnIzaberiKeteringMeni.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(725, 286);
 			this.btnIzaberiKeteringMeni.Name = "btnIzaberiKeteringMeni";
-			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(264, 38);
+			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(249, 38);
 			this.btnIzaberiKeteringMeni.TabIndex = 18;
 			this.btnIzaberiKeteringMeni.Text = "Izaberi ketering meni";
 			this.btnIzaberiKeteringMeni.UseVisualStyleBackColor = false;
 			// 
 			// cbMesto
 			// 
-			this.cbMesto.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.cbMesto.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.cbMesto.FormattingEnabled = true;
 			this.cbMesto.Location = new System.Drawing.Point(244, 184);
 			this.cbMesto.Margin = new System.Windows.Forms.Padding(4);
 			this.cbMesto.Name = "cbMesto";
-			this.cbMesto.Size = new System.Drawing.Size(398, 27);
+			this.cbMesto.Size = new System.Drawing.Size(383, 27);
 			this.cbMesto.TabIndex = 17;
 			// 
 			// lblMesto
 			// 
-			this.lblMesto.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblMesto.AutoSize = true;
 			this.lblMesto.Location = new System.Drawing.Point(36, 192);
 			this.lblMesto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -191,18 +181,16 @@
 			// 
 			// lblRadnikVrednost
 			// 
-			this.lblRadnikVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblRadnikVrednost.BackColor = System.Drawing.SystemColors.Window;
 			this.lblRadnikVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblRadnikVrednost.Location = new System.Drawing.Point(244, 53);
 			this.lblRadnikVrednost.Name = "lblRadnikVrednost";
-			this.lblRadnikVrednost.Size = new System.Drawing.Size(398, 27);
+			this.lblRadnikVrednost.Size = new System.Drawing.Size(383, 27);
 			this.lblRadnikVrednost.TabIndex = 15;
 			this.lblRadnikVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblRadnik
 			// 
-			this.lblRadnik.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblRadnik.AutoSize = true;
 			this.lblRadnik.Location = new System.Drawing.Point(36, 63);
 			this.lblRadnik.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -213,17 +201,15 @@
 			// 
 			// cbKlijent
 			// 
-			this.cbKlijent.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.cbKlijent.FormattingEnabled = true;
 			this.cbKlijent.Location = new System.Drawing.Point(979, 54);
 			this.cbKlijent.Margin = new System.Windows.Forms.Padding(4);
 			this.cbKlijent.Name = "cbKlijent";
-			this.cbKlijent.Size = new System.Drawing.Size(398, 27);
+			this.cbKlijent.Size = new System.Drawing.Size(383, 27);
 			this.cbKlijent.TabIndex = 13;
 			// 
 			// lblKlijent
 			// 
-			this.lblKlijent.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblKlijent.AutoSize = true;
 			this.lblKlijent.Location = new System.Drawing.Point(721, 64);
 			this.lblKlijent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -234,28 +220,25 @@
 			// 
 			// lblUkupnaCenaVrednost
 			// 
-			this.lblUkupnaCenaVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblUkupnaCenaVrednost.BackColor = System.Drawing.SystemColors.Window;
 			this.lblUkupnaCenaVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblUkupnaCenaVrednost.Location = new System.Drawing.Point(979, 457);
 			this.lblUkupnaCenaVrednost.Name = "lblUkupnaCenaVrednost";
-			this.lblUkupnaCenaVrednost.Size = new System.Drawing.Size(398, 27);
+			this.lblUkupnaCenaVrednost.Size = new System.Drawing.Size(383, 27);
 			this.lblUkupnaCenaVrednost.TabIndex = 11;
 			this.lblUkupnaCenaVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// cbTipProslave
 			// 
-			this.cbTipProslave.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.cbTipProslave.FormattingEnabled = true;
 			this.cbTipProslave.Location = new System.Drawing.Point(244, 115);
 			this.cbTipProslave.Margin = new System.Windows.Forms.Padding(4);
 			this.cbTipProslave.Name = "cbTipProslave";
-			this.cbTipProslave.Size = new System.Drawing.Size(398, 27);
+			this.cbTipProslave.Size = new System.Drawing.Size(383, 27);
 			this.cbTipProslave.TabIndex = 10;
 			// 
 			// lblTipProslave
 			// 
-			this.lblTipProslave.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblTipProslave.AutoSize = true;
 			this.lblTipProslave.Location = new System.Drawing.Point(36, 123);
 			this.lblTipProslave.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -266,18 +249,16 @@
 			// 
 			// lblUkupnaCenaNapomena
 			// 
-			this.lblUkupnaCenaNapomena.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblUkupnaCenaNapomena.Font = new System.Drawing.Font("Century Gothic", 8.150944F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.lblUkupnaCenaNapomena.Location = new System.Drawing.Point(723, 503);
 			this.lblUkupnaCenaNapomena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblUkupnaCenaNapomena.Name = "lblUkupnaCenaNapomena";
-			this.lblUkupnaCenaNapomena.Size = new System.Drawing.Size(218, 57);
+			this.lblUkupnaCenaNapomena.Size = new System.Drawing.Size(203, 57);
 			this.lblUkupnaCenaNapomena.TabIndex = 8;
 			this.lblUkupnaCenaNapomena.Text = "(Izračunato na osnovu cene svih stolova i keteringa za sve goste)";
 			// 
 			// lblDatumVremeNapomena
 			// 
-			this.lblDatumVremeNapomena.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblDatumVremeNapomena.AutoSize = true;
 			this.lblDatumVremeNapomena.Font = new System.Drawing.Font("Century Gothic", 8.150944F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.lblDatumVremeNapomena.Location = new System.Drawing.Point(722, 153);
@@ -289,16 +270,14 @@
 			// 
 			// txtDatumVreme
 			// 
-			this.txtDatumVreme.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtDatumVreme.Location = new System.Drawing.Point(979, 112);
 			this.txtDatumVreme.Margin = new System.Windows.Forms.Padding(4);
 			this.txtDatumVreme.Name = "txtDatumVreme";
-			this.txtDatumVreme.Size = new System.Drawing.Size(398, 28);
+			this.txtDatumVreme.Size = new System.Drawing.Size(383, 28);
 			this.txtDatumVreme.TabIndex = 3;
 			// 
 			// lblUkupnaCena
 			// 
-			this.lblUkupnaCena.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblUkupnaCena.AutoSize = true;
 			this.lblUkupnaCena.Location = new System.Drawing.Point(723, 465);
 			this.lblUkupnaCena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -309,7 +288,6 @@
 			// 
 			// lblDatumVreme
 			// 
-			this.lblDatumVreme.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblDatumVreme.AutoSize = true;
 			this.lblDatumVreme.Location = new System.Drawing.Point(721, 123);
 			this.lblDatumVreme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -322,11 +300,12 @@
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Transparent;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Controls.Add(this.gbUnosStola);
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCRadSaRezervacijom";
-			this.Size = new System.Drawing.Size(1559, 892);
+			this.Size = new System.Drawing.Size(1410, 772);
 			this.gbUnosStola.ResumeLayout(false);
 			this.gbUnosStola.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStolovi)).EndInit();
@@ -358,5 +337,5 @@
         private System.Windows.Forms.Button btnDodajSto;
         private System.Windows.Forms.DataGridView dgvStolovi;
         private System.Windows.Forms.Button btnObrisiStolove;
-    }
+	}
 }

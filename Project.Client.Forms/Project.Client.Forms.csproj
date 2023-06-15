@@ -95,6 +95,24 @@
     <Compile Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.Designer.cs">
       <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretragaRezervacije.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretragaRezervacije.Designer.cs">
+      <DependentUpon>UCPretragaRezervacije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaBrisanje.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaBrisanje.Designer.cs">
+      <DependentUpon>UCPretraziRezervacijuZaBrisanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaIzmenu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaIzmenu.Designer.cs">
+      <DependentUpon>UCPretraziRezervacijuZaIzmenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UCRezervacija\UCRadSaRezervacijom.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +167,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.resx">
       <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCPretragaRezervacije.resx">
+      <DependentUpon>UCPretragaRezervacije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaBrisanje.resx">
+      <DependentUpon>UCPretraziRezervacijuZaBrisanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaIzmenu.resx">
+      <DependentUpon>UCPretraziRezervacijuZaIzmenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCRezervacija\UCRadSaRezervacijom.resx">
       <DependentUpon>UCRadSaRezervacijom.cs</DependentUpon>

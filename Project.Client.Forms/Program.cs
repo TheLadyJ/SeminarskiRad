@@ -23,15 +23,19 @@ namespace Project.Client.Forms
                 try
                 {
                     FrmPrijavljivanje frmPrijavljivanje = new FrmPrijavljivanje();
+                    if (frmPrijavljivanje.DialogResult == DialogResult.Abort)
+                    {
+                        break;
+                    }
+
                     frmPrijavljivanje.ShowDialog();
-                    DialogResult result = frmPrijavljivanje.DialogResult;
                     frmPrijavljivanje.Dispose();
 
-                    if (result == DialogResult.OK)
+                    if (frmPrijavljivanje.DialogResult == DialogResult.OK)
                     {
                         Application.Run(new FrmRadnikovaGlavna());
                     }
-                    if (result == DialogResult.Cancel)
+                    if (frmPrijavljivanje.DialogResult == DialogResult.Cancel)
                     {
                         break;
                     }

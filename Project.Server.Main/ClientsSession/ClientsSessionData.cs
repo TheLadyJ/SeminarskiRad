@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Project.Server.Main.ClientsSession
 {
-    public class ClientsSessionData
+    public  class ClientsSessionData
     {
         private ClientsSessionData() { }
         private static ClientsSessionData instance;
@@ -19,19 +19,19 @@ namespace Project.Server.Main.ClientsSession
             }
         }
 
-        public List<ClientHandler> Clients { get; private set; } = new List<ClientHandler>();
+        public  List<ClientHandler> Clients { get; private set; } = new List<ClientHandler>();
 
-        public void AddClientHAndler(ClientHandler client)
+        public  void AddClientHandler(ClientHandler client)
         {
             Clients.Add(client);
         }
 
-        public void RemoveClientHAndler(ClientHandler client)
+        public  void RemoveClientHandler(ClientHandler client)
         {
             Clients.Remove(client);
         }
 
-        public void ClearClientHandlerList()
+        public  void ClearClientHandlerList()
         {
             Clients.Clear();
         }

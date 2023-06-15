@@ -17,10 +17,10 @@ namespace Project.Server.Main
 
         public Server()
         {
-                socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         }
 
-      
+
 
         public bool Start()
         {
@@ -41,9 +41,10 @@ namespace Project.Server.Main
 
         public void Stop()
         {
-            if(socket != null)
+            if (socket != null)
             {
                 socket.Close();
+
                 List<ClientHandler> clients = ClientsSessionData.Instance.Clients;
                 foreach (ClientHandler handler in clients.ToList())
                 {
@@ -52,26 +53,38 @@ namespace Project.Server.Main
             }
         }
 
-
         public void HandleClients()
         {
             try
             {
                 while (true)
                 {
+
                     Socket klijentskiSocket = socket.Accept();
                     ClientHandler client = new ClientHandler(klijentskiSocket);
-                    ClientsSessionData.Instance.AddClientHAndler(client);
+                    client.PrijavljenRadnik += Handler_PrijavljenRadnik;
+                    client.OdjavljenRadnik += Handler_OdjavljenRadnik;
 
                     Thread nitKlijenta = new Thread(client.HandleRequests);
                     nitKlijenta.IsBackground = false;
                     nitKlijenta.Start();
+
                 }
             }
             catch (SocketException ex)
             {
                 Debug.WriteLine(">>>" + ex.Message);
             }
+        }
+
+        public void Handler_PrijavljenRadnik(object sender, EventArgs args)
+        {
+            ClientsSessionData.Instance.Clients.Add((ClientHandler)sender);
+        }
+
+        public void Handler_OdjavljenRadnik(object sender, EventArgs args)
+        { 
+            ClientsSessionData.Instance.Clients.Remove((ClientHandler)sender);
         }
     }
 }

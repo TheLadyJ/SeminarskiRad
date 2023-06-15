@@ -18,6 +18,9 @@ namespace Project.Server.Main
 
         private Socket socket;
         private CommunicationHelper helper;
+        private Radnik Radnik;
+        public EventHandler OdjavljenRadnik;
+        public EventHandler PrijavljenRadnik;
         public ClientHandler(Socket socket)
         {
             this.socket = socket;
@@ -38,7 +41,7 @@ namespace Project.Server.Main
                     socket.Shutdown(SocketShutdown.Both);
                     socket.Close();
                     socket = null;
-                    ClientsSessionData.Instance.RemoveClientHAndler(this);
+                    OdjavljenRadnik?.Invoke(this, EventArgs.Empty);
                 }
             }
         }
@@ -98,10 +101,22 @@ namespace Project.Server.Main
                 response.IsSuccessful = false;
                 response.Message = "Uneti podaci nisu validni!";
             }
+            else if (VecPrijavljen((Radnik)response.Result))
+            {
+                response.Message = "Radnik je vec prijavljen!";
+                response.Result = null;
+            }
             else
             {
                 response.Message = "Uspešno ste se prijavili!";
+                Radnik = (Radnik)response.Result;
+                PrijavljenRadnik?.Invoke(this, EventArgs.Empty);
             }
+        }
+
+        private bool VecPrijavljen(Radnik radnik)
+        {
+            return ClientsSessionData.Instance.Clients.Any(handler=>handler.Radnik==radnik);
         }
     }
 }

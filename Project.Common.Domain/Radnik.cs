@@ -45,5 +45,14 @@ namespace Project.Common.Domain
         {
             return ReadObjectRow(reader);
         }
+
+        public override bool Equals(object obj)
+        {
+            if(obj is Radnik radnik)
+            {
+                return radnik.RadnikID == RadnikID;
+            }
+            return false;
+        }
     }
 }

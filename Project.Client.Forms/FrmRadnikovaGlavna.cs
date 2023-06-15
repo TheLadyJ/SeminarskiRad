@@ -1,4 +1,5 @@
-﻿using Project.Client.Forms.UserControls.UCKlijent;
+﻿using Project.Client.Forms.GUIController;
+using Project.Client.Forms.UserControls.UCKlijent;
 using Project.Client.Forms.UserControls.UCSto;
 using System;
 using System.Collections.Generic;
@@ -64,5 +65,6 @@ namespace Project.Client.Forms
             ChangePanel(new UCObrisiSto());
 
         }
+
     }
 }

@@ -43,6 +43,7 @@
 			this.btnIzmeniRezervaciju.TabIndex = 23;
 			this.btnIzmeniRezervaciju.Text = "Izmeni rezervaciju";
 			this.btnIzmeniRezervaciju.UseVisualStyleBackColor = false;
+			this.btnIzmeniRezervaciju.Click += new System.EventHandler(this.btnIzmeniRezervaciju_Click);
 			// 
 			// ucRadSaRezervacijom
 			// 
@@ -53,6 +54,7 @@
 			this.ucRadSaRezervacijom.Name = "ucRadSaRezervacijom";
 			this.ucRadSaRezervacijom.Size = new System.Drawing.Size(1465, 778);
 			this.ucRadSaRezervacijom.TabIndex = 0;
+			this.ucRadSaRezervacijom.Load += new System.EventHandler(this.ucRadSaRezervacijom_Load);
 			// 
 			// UCIzmeniRezervaciju
 			// 

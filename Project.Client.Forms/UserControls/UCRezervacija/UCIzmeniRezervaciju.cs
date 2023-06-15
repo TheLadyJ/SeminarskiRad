@@ -16,5 +16,15 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 		{
 			InitializeComponent();
 		}
+
+		private void ucRadSaRezervacijom_Load(object sender, EventArgs e)
+		{
+
+		}
+
+		private void btnIzmeniRezervaciju_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

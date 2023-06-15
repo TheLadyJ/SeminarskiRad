@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Client.Forms.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,12 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 		public UCPretragaRezervacija()
 		{
 			InitializeComponent();
+		}
+
+		private void btnIzaberiKeteringMeni_Click(object sender, EventArgs e)
+		{
+			FrmIzaberiKeteringMeni frmIzaberiKeteringMeni = new FrmIzaberiKeteringMeni();
+			frmIzaberiKeteringMeni.ShowDialog();
 		}
 	}
 }

@@ -38,7 +38,6 @@
 			this.chbDatumVreme = new System.Windows.Forms.CheckBox();
 			this.chbMesto = new System.Windows.Forms.CheckBox();
 			this.chbKlijent = new System.Windows.Forms.CheckBox();
-			this.btnDetaljiKeteringMenija = new System.Windows.Forms.Button();
 			this.btnIzaberiKeteringMeni = new System.Windows.Forms.Button();
 			this.cbMesto = new System.Windows.Forms.ComboBox();
 			this.cbKlijent = new System.Windows.Forms.ComboBox();
@@ -151,29 +150,18 @@
 			this.chbKlijent.Text = "Klijent:";
 			this.chbKlijent.UseVisualStyleBackColor = true;
 			// 
-			// btnDetaljiKeteringMenija
-			// 
-			this.btnDetaljiKeteringMenija.BackColor = System.Drawing.Color.White;
-			this.btnDetaljiKeteringMenija.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.btnDetaljiKeteringMenija.Location = new System.Drawing.Point(1100, 119);
-			this.btnDetaljiKeteringMenija.MinimumSize = new System.Drawing.Size(334, 38);
-			this.btnDetaljiKeteringMenija.Name = "btnDetaljiKeteringMenija";
-			this.btnDetaljiKeteringMenija.Size = new System.Drawing.Size(344, 41);
-			this.btnDetaljiKeteringMenija.TabIndex = 21;
-			this.btnDetaljiKeteringMenija.Text = "Pogledaj detalje izabranog menija";
-			this.btnDetaljiKeteringMenija.UseVisualStyleBackColor = false;
-			// 
 			// btnIzaberiKeteringMeni
 			// 
 			this.btnIzaberiKeteringMeni.BackColor = System.Drawing.Color.White;
 			this.btnIzaberiKeteringMeni.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(800, 119);
+			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(1180, 119);
 			this.btnIzaberiKeteringMeni.MinimumSize = new System.Drawing.Size(264, 38);
 			this.btnIzaberiKeteringMeni.Name = "btnIzaberiKeteringMeni";
 			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(264, 41);
 			this.btnIzaberiKeteringMeni.TabIndex = 18;
 			this.btnIzaberiKeteringMeni.Text = "Izaberi ketering meni";
 			this.btnIzaberiKeteringMeni.UseVisualStyleBackColor = false;
+			this.btnIzaberiKeteringMeni.Click += new System.EventHandler(this.btnIzaberiKeteringMeni_Click);
 			// 
 			// cbMesto
 			// 
@@ -239,7 +227,6 @@
 			this.gbUnosStola.Controls.Add(this.chbDatumVreme);
 			this.gbUnosStola.Controls.Add(this.chbMesto);
 			this.gbUnosStola.Controls.Add(this.chbKlijent);
-			this.gbUnosStola.Controls.Add(this.btnDetaljiKeteringMenija);
 			this.gbUnosStola.Controls.Add(this.btnIzaberiKeteringMeni);
 			this.gbUnosStola.Controls.Add(this.cbMesto);
 			this.gbUnosStola.Controls.Add(this.cbKlijent);
@@ -285,7 +272,6 @@
 		private System.Windows.Forms.CheckBox chbDatumVreme;
 		private System.Windows.Forms.CheckBox chbMesto;
 		private System.Windows.Forms.CheckBox chbKlijent;
-		private System.Windows.Forms.Button btnDetaljiKeteringMenija;
 		private System.Windows.Forms.Button btnIzaberiKeteringMeni;
 		private System.Windows.Forms.ComboBox cbMesto;
 		private System.Windows.Forms.ComboBox cbKlijent;

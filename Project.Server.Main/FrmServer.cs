@@ -34,8 +34,8 @@ namespace Project.Server.Main
                 btnPokreniServer.Enabled = false;
                 btnZaustaviServer.Enabled = true;
 
-                txtStatusServera.Text = "Pokrenut";
-                txtStatusServera.ForeColor = btnPokreniServer.ForeColor;
+                lblStatusServeraVrednost.Text = "Pokrenut";
+				lblStatusServeraVrednost.ForeColor = btnPokreniServer.ForeColor;
 
                 try
                 {
@@ -63,10 +63,10 @@ namespace Project.Server.Main
             btnPokreniServer.Enabled = true;
             btnZaustaviServer.Enabled = false;
 
-            txtStatusServera.Text = "Zaustavljen";
-            txtStatusServera.ForeColor = btnZaustaviServer.ForeColor;
+			lblStatusServeraVrednost.Text = "Zaustavljen";
+			lblStatusServeraVrednost.ForeColor = btnZaustaviServer.ForeColor;
 
-        }
+		}
         private void FrmServer_FormClosed(object sender, FormClosedEventArgs e)
         {
             Environment.Exit(0);

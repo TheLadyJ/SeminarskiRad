@@ -38,12 +38,12 @@
 			this.btnIzmeniRezervaciju.AutoSize = true;
 			this.btnIzmeniRezervaciju.BackColor = System.Drawing.Color.White;
 			this.btnIzmeniRezervaciju.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			this.btnIzmeniRezervaciju.ForeColor = System.Drawing.Color.Brown;
-			this.btnIzmeniRezervaciju.Location = new System.Drawing.Point(1188, 813);
+			this.btnIzmeniRezervaciju.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(44)))), ((int)(((byte)(126)))));
+			this.btnIzmeniRezervaciju.Location = new System.Drawing.Point(1103, 813);
 			this.btnIzmeniRezervaciju.Name = "btnIzmeniRezervaciju";
-			this.btnIzmeniRezervaciju.Size = new System.Drawing.Size(267, 50);
+			this.btnIzmeniRezervaciju.Size = new System.Drawing.Size(352, 50);
 			this.btnIzmeniRezervaciju.TabIndex = 26;
-			this.btnIzmeniRezervaciju.Text = "Izmeni rezervaciju";
+			this.btnIzmeniRezervaciju.Text = "Izmeni odabranu rezervaciju";
 			this.btnIzmeniRezervaciju.UseVisualStyleBackColor = false;
 			this.btnIzmeniRezervaciju.Click += new System.EventHandler(this.btnIzmeniRezervaciju_Click);
 			// 

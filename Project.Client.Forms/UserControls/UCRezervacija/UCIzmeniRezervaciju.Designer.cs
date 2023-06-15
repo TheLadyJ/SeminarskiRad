@@ -36,7 +36,7 @@
 			// 
 			this.btnIzmeniRezervaciju.BackColor = System.Drawing.Color.White;
 			this.btnIzmeniRezervaciju.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			this.btnIzmeniRezervaciju.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(44)))), ((int)(((byte)(126)))));
+			this.btnIzmeniRezervaciju.ForeColor = System.Drawing.Color.Brown;
 			this.btnIzmeniRezervaciju.Location = new System.Drawing.Point(1100, 655);
 			this.btnIzmeniRezervaciju.Name = "btnIzmeniRezervaciju";
 			this.btnIzmeniRezervaciju.Size = new System.Drawing.Size(267, 50);

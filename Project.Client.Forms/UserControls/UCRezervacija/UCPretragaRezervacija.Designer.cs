@@ -51,7 +51,7 @@
 			// 
 			// txtUkupnaCena
 			// 
-			this.txtUkupnaCena.Location = new System.Drawing.Point(1045, 214);
+			this.txtUkupnaCena.Location = new System.Drawing.Point(1045, 194);
 			this.txtUkupnaCena.Margin = new System.Windows.Forms.Padding(4);
 			this.txtUkupnaCena.MinimumSize = new System.Drawing.Size(398, 28);
 			this.txtUkupnaCena.Name = "txtUkupnaCena";
@@ -61,19 +61,19 @@
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			this.dataGridView1.Location = new System.Drawing.Point(36, 433);
+			this.dataGridView1.Location = new System.Drawing.Point(36, 418);
 			this.dataGridView1.MinimumSize = new System.Drawing.Size(1407, 319);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(1408, 319);
+			this.dataGridView1.Size = new System.Drawing.Size(1408, 334);
 			this.dataGridView1.TabIndex = 32;
 			// 
 			// btnPretrazi
 			// 
 			this.btnPretrazi.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnPretrazi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(44)))), ((int)(((byte)(126)))));
-			this.btnPretrazi.Location = new System.Drawing.Point(1000, 360);
+			this.btnPretrazi.Location = new System.Drawing.Point(1000, 339);
 			this.btnPretrazi.MinimumSize = new System.Drawing.Size(443, 51);
 			this.btnPretrazi.Name = "btnPretrazi";
 			this.btnPretrazi.Size = new System.Drawing.Size(444, 51);
@@ -84,7 +84,7 @@
 			// chbUkupnaCena
 			// 
 			this.chbUkupnaCena.AutoSize = true;
-			this.chbUkupnaCena.Location = new System.Drawing.Point(800, 222);
+			this.chbUkupnaCena.Location = new System.Drawing.Point(800, 202);
 			this.chbUkupnaCena.Name = "chbUkupnaCena";
 			this.chbUkupnaCena.Size = new System.Drawing.Size(146, 23);
 			this.chbUkupnaCena.TabIndex = 30;
@@ -104,7 +104,7 @@
 			// chbTipProslave
 			// 
 			this.chbTipProslave.AutoSize = true;
-			this.chbTipProslave.Location = new System.Drawing.Point(36, 324);
+			this.chbTipProslave.Location = new System.Drawing.Point(36, 284);
 			this.chbTipProslave.Name = "chbTipProslave";
 			this.chbTipProslave.Size = new System.Drawing.Size(134, 23);
 			this.chbTipProslave.TabIndex = 28;
@@ -114,7 +114,7 @@
 			// chbDatumVreme
 			// 
 			this.chbDatumVreme.AutoSize = true;
-			this.chbDatumVreme.Location = new System.Drawing.Point(36, 219);
+			this.chbDatumVreme.Location = new System.Drawing.Point(36, 196);
 			this.chbDatumVreme.Name = "chbDatumVreme";
 			this.chbDatumVreme.Size = new System.Drawing.Size(156, 23);
 			this.chbDatumVreme.TabIndex = 27;
@@ -124,7 +124,7 @@
 			// chbMesto
 			// 
 			this.chbMesto.AutoSize = true;
-			this.chbMesto.Location = new System.Drawing.Point(35, 137);
+			this.chbMesto.Location = new System.Drawing.Point(35, 125);
 			this.chbMesto.Name = "chbMesto";
 			this.chbMesto.Size = new System.Drawing.Size(85, 23);
 			this.chbMesto.TabIndex = 26;
@@ -145,7 +145,7 @@
 			// 
 			this.btnIzaberiKeteringMeni.BackColor = System.Drawing.Color.White;
 			this.btnIzaberiKeteringMeni.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(1180, 119);
+			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(1180, 107);
 			this.btnIzaberiKeteringMeni.MinimumSize = new System.Drawing.Size(264, 38);
 			this.btnIzaberiKeteringMeni.Name = "btnIzaberiKeteringMeni";
 			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(264, 41);
@@ -158,7 +158,7 @@
 			// 
 			this.cbMesto.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.cbMesto.FormattingEnabled = true;
-			this.cbMesto.Location = new System.Drawing.Point(301, 135);
+			this.cbMesto.Location = new System.Drawing.Point(301, 123);
 			this.cbMesto.Margin = new System.Windows.Forms.Padding(4);
 			this.cbMesto.MinimumSize = new System.Drawing.Size(398, 0);
 			this.cbMesto.Name = "cbMesto";
@@ -168,7 +168,7 @@
 			// cbKlijent
 			// 
 			this.cbKlijent.FormattingEnabled = true;
-			this.cbKlijent.Location = new System.Drawing.Point(301, 56);
+			this.cbKlijent.Location = new System.Drawing.Point(301, 61);
 			this.cbKlijent.Margin = new System.Windows.Forms.Padding(4);
 			this.cbKlijent.MinimumSize = new System.Drawing.Size(398, 0);
 			this.cbKlijent.Name = "cbKlijent";
@@ -178,7 +178,7 @@
 			// cbTipProslave
 			// 
 			this.cbTipProslave.FormattingEnabled = true;
-			this.cbTipProslave.Location = new System.Drawing.Point(301, 322);
+			this.cbTipProslave.Location = new System.Drawing.Point(301, 282);
 			this.cbTipProslave.Margin = new System.Windows.Forms.Padding(4);
 			this.cbTipProslave.MinimumSize = new System.Drawing.Size(398, 0);
 			this.cbTipProslave.Name = "cbTipProslave";
@@ -189,7 +189,7 @@
 			// 
 			this.lblDatumVremeNapomena.AutoSize = true;
 			this.lblDatumVremeNapomena.Font = new System.Drawing.Font("Century Gothic", 8.150944F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.lblDatumVremeNapomena.Location = new System.Drawing.Point(32, 263);
+			this.lblDatumVremeNapomena.Location = new System.Drawing.Point(32, 240);
 			this.lblDatumVremeNapomena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblDatumVremeNapomena.Name = "lblDatumVremeNapomena";
 			this.lblDatumVremeNapomena.Size = new System.Drawing.Size(228, 17);
@@ -198,7 +198,7 @@
 			// 
 			// txtDatumVreme
 			// 
-			this.txtDatumVreme.Location = new System.Drawing.Point(301, 214);
+			this.txtDatumVreme.Location = new System.Drawing.Point(301, 191);
 			this.txtDatumVreme.Margin = new System.Windows.Forms.Padding(4);
 			this.txtDatumVreme.MinimumSize = new System.Drawing.Size(398, 27);
 			this.txtDatumVreme.Name = "txtDatumVreme";

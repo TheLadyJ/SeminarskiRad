@@ -95,11 +95,11 @@
     <Compile Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.Designer.cs">
       <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCRezervacija\UCPretragaRezervacije.cs">
+    <Compile Include="UserControls\UCRezervacija\UCPretragaRezervacija.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UCRezervacija\UCPretragaRezervacije.Designer.cs">
-      <DependentUpon>UCPretragaRezervacije.cs</DependentUpon>
+    <Compile Include="UserControls\UCRezervacija\UCPretragaRezervacija.Designer.cs">
+      <DependentUpon>UCPretragaRezervacija.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaBrisanje.cs">
       <SubType>UserControl</SubType>
@@ -168,8 +168,8 @@
     <EmbeddedResource Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.resx">
       <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCRezervacija\UCPretragaRezervacije.resx">
-      <DependentUpon>UCPretragaRezervacije.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCPretragaRezervacija.resx">
+      <DependentUpon>UCPretragaRezervacija.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaBrisanje.resx">
       <DependentUpon>UCPretraziRezervacijuZaBrisanje.cs</DependentUpon>

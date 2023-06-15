@@ -10,12 +10,11 @@ using System.Windows.Forms;
 
 namespace Project.Client.Forms.UserControls.UCRezervacija
 {
-	public partial class UCPretragaRezervacije : UserControl
+	public partial class UCPretragaRezervacija : UserControl
 	{
-		public UCPretragaRezervacije()
+		public UCPretragaRezervacija()
 		{
 			InitializeComponent();
 		}
-
 	}
 }

@@ -29,46 +29,50 @@
 		private void InitializeComponent()
 		{
 			this.btnIzmeniRezervaciju = new System.Windows.Forms.Button();
-			this.ucPretragaRezervacije1 = new Project.Client.Forms.UserControls.UCRezervacija.UCPretragaRezervacije();
+			this.ucPretragaRezervacija1 = new Project.Client.Forms.UserControls.UCRezervacija.UCPretragaRezervacija();
 			this.SuspendLayout();
 			// 
 			// btnIzmeniRezervaciju
 			// 
 			this.btnIzmeniRezervaciju.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.btnIzmeniRezervaciju.AutoSize = true;
 			this.btnIzmeniRezervaciju.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnIzmeniRezervaciju.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.btnIzmeniRezervaciju.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(44)))), ((int)(((byte)(126)))));
-			this.btnIzmeniRezervaciju.Location = new System.Drawing.Point(1231, 814);
+			this.btnIzmeniRezervaciju.Location = new System.Drawing.Point(1188, 813);
 			this.btnIzmeniRezervaciju.Name = "btnIzmeniRezervaciju";
 			this.btnIzmeniRezervaciju.Size = new System.Drawing.Size(267, 50);
 			this.btnIzmeniRezervaciju.TabIndex = 26;
 			this.btnIzmeniRezervaciju.Text = "Izmeni rezervaciju";
 			this.btnIzmeniRezervaciju.UseVisualStyleBackColor = false;
 			// 
-			// ucPretragaRezervacije1
+			// ucPretragaRezervacija1
 			// 
-			this.ucPretragaRezervacije1.BackColor = System.Drawing.Color.Transparent;
-			this.ucPretragaRezervacije1.Location = new System.Drawing.Point(50, 25);
-			this.ucPretragaRezervacije1.Name = "ucPretragaRezervacije1";
-			this.ucPretragaRezervacije1.Size = new System.Drawing.Size(1490, 884);
-			this.ucPretragaRezervacije1.TabIndex = 27;
+			this.ucPretragaRezervacija1.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.ucPretragaRezervacija1.AutoSize = true;
+			this.ucPretragaRezervacija1.BackColor = System.Drawing.Color.Transparent;
+			this.ucPretragaRezervacija1.Location = new System.Drawing.Point(0, 0);
+			this.ucPretragaRezervacija1.Name = "ucPretragaRezervacija1";
+			this.ucPretragaRezervacija1.Size = new System.Drawing.Size(1498, 914);
+			this.ucPretragaRezervacija1.TabIndex = 27;
 			// 
 			// UCPretraziRezervacijuZaIzmenu
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.UCRezervacija;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Controls.Add(this.btnIzmeniRezervaciju);
-			this.Controls.Add(this.ucPretragaRezervacije1);
+			this.Controls.Add(this.ucPretragaRezervacija1);
+			this.MinimumSize = new System.Drawing.Size(1498, 914);
 			this.Name = "UCPretraziRezervacijuZaIzmenu";
-			this.Size = new System.Drawing.Size(1591, 937);
+			this.Size = new System.Drawing.Size(1498, 914);
 			this.ResumeLayout(false);
+			this.PerformLayout();
 
 		}
 
 		#endregion
 		private System.Windows.Forms.Button btnIzmeniRezervaciju;
-		private UCPretragaRezervacije ucPretragaRezervacije1;
+		private UCPretragaRezervacija ucPretragaRezervacija1;
 	}
 }

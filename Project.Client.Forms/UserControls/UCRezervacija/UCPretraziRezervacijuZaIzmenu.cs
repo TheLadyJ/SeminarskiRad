@@ -16,5 +16,6 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 		{
 			InitializeComponent();
 		}
+
 	}
 }

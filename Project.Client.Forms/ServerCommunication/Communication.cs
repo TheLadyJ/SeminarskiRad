@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -73,6 +74,10 @@ namespace Project.Client.Forms.ServerCommunication
                 };
                 helper.Send(r);
             }
+            catch (NullReferenceException ex)
+            {
+                throw new NullReferenceException(ex.Message);
+            }
             catch (IOException ex)
             {
                 throw new ServerCommunicationException(ex.Message);
@@ -91,11 +96,8 @@ namespace Project.Client.Forms.ServerCommunication
         public void Close()
         {
             if (socket == null) return;
-            Request request = new Request
-            {
-                Operation = Operation.Kraj,
-            };
-            helper.Send(request);
+            SendRequest(Operation.Kraj);
+            GetResponse();
 
             socket.Shutdown(SocketShutdown.Both);
             socket.Close();

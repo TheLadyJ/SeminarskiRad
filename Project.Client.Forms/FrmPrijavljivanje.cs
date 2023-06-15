@@ -17,7 +17,7 @@ namespace Project.Client.Forms
         public FrmPrijavljivanje()
         {
             InitializeComponent();
-            prijaviRadnikaController = new PrijaviRadnikaController();
+            prijaviRadnikaController = new PrijaviRadnikaController(this);
 
         }
 

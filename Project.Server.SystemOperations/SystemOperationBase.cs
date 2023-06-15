@@ -38,6 +38,6 @@ namespace Project.Server.SystemOperations
         }
         protected abstract void Execute();
 
-        public object Result { get; protected set; }
+        public object Result { get; protected set; } = null;
     }
 }

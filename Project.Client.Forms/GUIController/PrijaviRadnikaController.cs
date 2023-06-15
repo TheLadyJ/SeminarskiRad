@@ -20,7 +20,7 @@ namespace Project.Client.Forms.GUIController
     {
         public Radnik Radnik { get; set; }
 
-        public PrijaviRadnikaController() 
+        public PrijaviRadnikaController(FrmPrijavljivanje frmPrijavljivanje) 
         {
             try
             {
@@ -29,6 +29,7 @@ namespace Project.Client.Forms.GUIController
             catch(Exception ex)
             {
                 MessageBox.Show("Greška prilikom povezivanja sa serverom");
+                frmPrijavljivanje.DialogResult = DialogResult.Abort;
             }
         }
 
@@ -43,11 +44,20 @@ namespace Project.Client.Forms.GUIController
                 popunjeno = false;
                 frmPrijavljivanje.TxtKorisnikoIme.BackColor = Color.Violet;
             }
+            else
+            {
+                frmPrijavljivanje.TxtKorisnikoIme.BackColor = Color.White;
+            }
             if (string.IsNullOrEmpty(lozinka))
             {
                 popunjeno = false;
                 frmPrijavljivanje.TxtLozinka.BackColor = Color.Violet;
             }
+            else
+            {
+                frmPrijavljivanje.TxtLozinka.BackColor = Color.White;
+            }
+
             if (!popunjeno) return;
 
             try
@@ -69,6 +79,10 @@ namespace Project.Client.Forms.GUIController
             catch (SystemOperationException e)
             {
                 MessageBox.Show(e.Message);
+            }
+            catch (NullReferenceException ex)
+            {
+                MessageBox.Show("Trenutno nije moguće obaviti prijavljivanje.");
             }
             catch (SocketException ex)
             {

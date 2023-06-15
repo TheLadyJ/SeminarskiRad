@@ -36,7 +36,7 @@
 			// 
 			this.btnKreirajNovuRezervaciju.AllowDrop = true;
 			this.btnKreirajNovuRezervaciju.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnKreirajNovuRezervaciju.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnKreirajNovuRezervaciju.BackColor = System.Drawing.Color.White;
 			this.btnKreirajNovuRezervaciju.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.btnKreirajNovuRezervaciju.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(44)))), ((int)(((byte)(126)))));
 			this.btnKreirajNovuRezervaciju.Location = new System.Drawing.Point(1142, 697);

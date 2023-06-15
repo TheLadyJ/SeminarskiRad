@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dialogs\FrmIzmeniRezervaciju.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\FrmIzmeniRezervaciju.Designer.cs">
+      <DependentUpon>FrmIzmeniRezervaciju.cs</DependentUpon>
+    </Compile>
     <Compile Include="Exceptions\ServerCommunicationException.cs" />
     <Compile Include="Exceptions\SystemOperationException.cs" />
     <Compile Include="FrmPrijavljivanje.cs">
@@ -137,6 +143,9 @@
     <Compile Include="UserControls\UCSto\UCUnesiNoviSto.Designer.cs">
       <DependentUpon>UCUnesiNoviSto.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Dialogs\FrmIzmeniRezervaciju.resx">
+      <DependentUpon>FrmIzmeniRezervaciju.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrijavljivanje.resx">
       <DependentUpon>FrmPrijavljivanje.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,9 +211,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Dialogs\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\PrijavljivanjePozadina.jpg" />
   </ItemGroup>

@@ -36,7 +36,7 @@
 			// 
 			this.btnObrisiRezervaciju.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.btnObrisiRezervaciju.AutoSize = true;
-			this.btnObrisiRezervaciju.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnObrisiRezervaciju.BackColor = System.Drawing.Color.White;
 			this.btnObrisiRezervaciju.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.btnObrisiRezervaciju.ForeColor = System.Drawing.Color.Brown;
 			this.btnObrisiRezervaciju.Location = new System.Drawing.Point(1187, 810);

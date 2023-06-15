@@ -101,7 +101,8 @@
 			// 
 			// btnObrisiStolove
 			// 
-			this.btnObrisiStolove.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnObrisiStolove.BackColor = System.Drawing.Color.White;
+			this.btnObrisiStolove.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnObrisiStolove.Location = new System.Drawing.Point(378, 286);
 			this.btnObrisiStolove.Name = "btnObrisiStolove";
 			this.btnObrisiStolove.Size = new System.Drawing.Size(249, 38);
@@ -111,7 +112,8 @@
 			// 
 			// btnDodajSto
 			// 
-			this.btnDodajSto.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnDodajSto.BackColor = System.Drawing.Color.White;
+			this.btnDodajSto.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnDodajSto.Location = new System.Drawing.Point(29, 286);
 			this.btnDodajSto.Name = "btnDodajSto";
 			this.btnDodajSto.Size = new System.Drawing.Size(249, 38);
@@ -121,10 +123,11 @@
 			// 
 			// btnDetaljiKeteringMenija
 			// 
-			this.btnDetaljiKeteringMenija.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.btnDetaljiKeteringMenija.Location = new System.Drawing.Point(1050, 286);
+			this.btnDetaljiKeteringMenija.BackColor = System.Drawing.Color.White;
+			this.btnDetaljiKeteringMenija.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.btnDetaljiKeteringMenija.Location = new System.Drawing.Point(1043, 286);
 			this.btnDetaljiKeteringMenija.Name = "btnDetaljiKeteringMenija";
-			this.btnDetaljiKeteringMenija.Size = new System.Drawing.Size(312, 38);
+			this.btnDetaljiKeteringMenija.Size = new System.Drawing.Size(319, 38);
 			this.btnDetaljiKeteringMenija.TabIndex = 21;
 			this.btnDetaljiKeteringMenija.Text = "Pogledaj detalje izabranog menija";
 			this.btnDetaljiKeteringMenija.UseVisualStyleBackColor = false;
@@ -151,7 +154,8 @@
 			// 
 			// btnIzaberiKeteringMeni
 			// 
-			this.btnIzaberiKeteringMeni.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnIzaberiKeteringMeni.BackColor = System.Drawing.Color.White;
+			this.btnIzaberiKeteringMeni.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(725, 286);
 			this.btnIzaberiKeteringMeni.Name = "btnIzaberiKeteringMeni";
 			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(249, 38);

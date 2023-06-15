@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms
 {
     partial class FrmRadnikovaGlavna
     {
@@ -205,5 +207,7 @@
         private System.Windows.Forms.ToolStripMenuItem kreirajNovuRezervacijuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izmeniRezervacijuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem obrisiRezervacijuToolStripMenuItem;
-    }
+
+		public Panel PnlMain { get => pnlMain; set => pnlMain = value; }
+	}
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Client.Forms.Dialogs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,5 +18,10 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			InitializeComponent();
 		}
 
+		private void btnIzmeniRezervaciju_Click(object sender, EventArgs e)
+		{
+			FrmIzmeniRezervaciju frmIzmeniRezervaciju = new FrmIzmeniRezervaciju();
+			frmIzmeniRezervaciju.ShowDialog();
+		}
 	}
 }

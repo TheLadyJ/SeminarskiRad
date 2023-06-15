@@ -54,26 +54,29 @@
 			// 
 			this.txtUkupnaCena.Location = new System.Drawing.Point(1045, 214);
 			this.txtUkupnaCena.Margin = new System.Windows.Forms.Padding(4);
+			this.txtUkupnaCena.MinimumSize = new System.Drawing.Size(398, 28);
 			this.txtUkupnaCena.Name = "txtUkupnaCena";
-			this.txtUkupnaCena.Size = new System.Drawing.Size(398, 28);
+			this.txtUkupnaCena.Size = new System.Drawing.Size(399, 28);
 			this.txtUkupnaCena.TabIndex = 34;
 			// 
 			// txtKeteringMeni
 			// 
 			this.txtKeteringMeni.Location = new System.Drawing.Point(1045, 55);
 			this.txtKeteringMeni.Margin = new System.Windows.Forms.Padding(4);
+			this.txtKeteringMeni.MinimumSize = new System.Drawing.Size(398, 28);
 			this.txtKeteringMeni.Name = "txtKeteringMeni";
-			this.txtKeteringMeni.Size = new System.Drawing.Size(398, 28);
+			this.txtKeteringMeni.Size = new System.Drawing.Size(399, 28);
 			this.txtKeteringMeni.TabIndex = 33;
 			// 
 			// dataGridView1
 			// 
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Location = new System.Drawing.Point(36, 433);
+			this.dataGridView1.MinimumSize = new System.Drawing.Size(1407, 319);
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.RowHeadersWidth = 51;
 			this.dataGridView1.RowTemplate.Height = 24;
-			this.dataGridView1.Size = new System.Drawing.Size(1407, 319);
+			this.dataGridView1.Size = new System.Drawing.Size(1408, 319);
 			this.dataGridView1.TabIndex = 32;
 			// 
 			// btnPretrazi
@@ -81,8 +84,9 @@
 			this.btnPretrazi.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnPretrazi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(44)))), ((int)(((byte)(126)))));
 			this.btnPretrazi.Location = new System.Drawing.Point(1000, 360);
+			this.btnPretrazi.MinimumSize = new System.Drawing.Size(443, 51);
 			this.btnPretrazi.Name = "btnPretrazi";
-			this.btnPretrazi.Size = new System.Drawing.Size(443, 51);
+			this.btnPretrazi.Size = new System.Drawing.Size(444, 51);
 			this.btnPretrazi.TabIndex = 31;
 			this.btnPretrazi.Text = "Pretraži rezervaciju na osnovu kriterijuma";
 			this.btnPretrazi.UseVisualStyleBackColor = false;
@@ -149,20 +153,24 @@
 			// 
 			// btnDetaljiKeteringMenija
 			// 
-			this.btnDetaljiKeteringMenija.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.btnDetaljiKeteringMenija.Location = new System.Drawing.Point(1109, 126);
+			this.btnDetaljiKeteringMenija.BackColor = System.Drawing.Color.White;
+			this.btnDetaljiKeteringMenija.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.btnDetaljiKeteringMenija.Location = new System.Drawing.Point(1100, 119);
+			this.btnDetaljiKeteringMenija.MinimumSize = new System.Drawing.Size(334, 38);
 			this.btnDetaljiKeteringMenija.Name = "btnDetaljiKeteringMenija";
-			this.btnDetaljiKeteringMenija.Size = new System.Drawing.Size(334, 38);
+			this.btnDetaljiKeteringMenija.Size = new System.Drawing.Size(344, 41);
 			this.btnDetaljiKeteringMenija.TabIndex = 21;
 			this.btnDetaljiKeteringMenija.Text = "Pogledaj detalje izabranog menija";
 			this.btnDetaljiKeteringMenija.UseVisualStyleBackColor = false;
 			// 
 			// btnIzaberiKeteringMeni
 			// 
-			this.btnIzaberiKeteringMeni.BackColor = System.Drawing.Color.WhiteSmoke;
-			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(800, 126);
+			this.btnIzaberiKeteringMeni.BackColor = System.Drawing.Color.White;
+			this.btnIzaberiKeteringMeni.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(800, 119);
+			this.btnIzaberiKeteringMeni.MinimumSize = new System.Drawing.Size(264, 38);
 			this.btnIzaberiKeteringMeni.Name = "btnIzaberiKeteringMeni";
-			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(264, 38);
+			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(264, 41);
 			this.btnIzaberiKeteringMeni.TabIndex = 18;
 			this.btnIzaberiKeteringMeni.Text = "Izaberi ketering meni";
 			this.btnIzaberiKeteringMeni.UseVisualStyleBackColor = false;
@@ -173,8 +181,9 @@
 			this.cbMesto.FormattingEnabled = true;
 			this.cbMesto.Location = new System.Drawing.Point(301, 135);
 			this.cbMesto.Margin = new System.Windows.Forms.Padding(4);
+			this.cbMesto.MinimumSize = new System.Drawing.Size(398, 0);
 			this.cbMesto.Name = "cbMesto";
-			this.cbMesto.Size = new System.Drawing.Size(398, 27);
+			this.cbMesto.Size = new System.Drawing.Size(399, 27);
 			this.cbMesto.TabIndex = 17;
 			// 
 			// cbKlijent
@@ -182,8 +191,9 @@
 			this.cbKlijent.FormattingEnabled = true;
 			this.cbKlijent.Location = new System.Drawing.Point(301, 56);
 			this.cbKlijent.Margin = new System.Windows.Forms.Padding(4);
+			this.cbKlijent.MinimumSize = new System.Drawing.Size(398, 0);
 			this.cbKlijent.Name = "cbKlijent";
-			this.cbKlijent.Size = new System.Drawing.Size(398, 27);
+			this.cbKlijent.Size = new System.Drawing.Size(399, 27);
 			this.cbKlijent.TabIndex = 13;
 			// 
 			// cbTipProslave
@@ -191,8 +201,9 @@
 			this.cbTipProslave.FormattingEnabled = true;
 			this.cbTipProslave.Location = new System.Drawing.Point(301, 322);
 			this.cbTipProslave.Margin = new System.Windows.Forms.Padding(4);
+			this.cbTipProslave.MinimumSize = new System.Drawing.Size(398, 0);
 			this.cbTipProslave.Name = "cbTipProslave";
-			this.cbTipProslave.Size = new System.Drawing.Size(398, 27);
+			this.cbTipProslave.Size = new System.Drawing.Size(399, 27);
 			this.cbTipProslave.TabIndex = 10;
 			// 
 			// lblDatumVremeNapomena
@@ -210,8 +221,9 @@
 			// 
 			this.txtDatumVreme.Location = new System.Drawing.Point(301, 214);
 			this.txtDatumVreme.Margin = new System.Windows.Forms.Padding(4);
+			this.txtDatumVreme.MinimumSize = new System.Drawing.Size(398, 27);
 			this.txtDatumVreme.Name = "txtDatumVreme";
-			this.txtDatumVreme.Size = new System.Drawing.Size(398, 28);
+			this.txtDatumVreme.Size = new System.Drawing.Size(399, 28);
 			this.txtDatumVreme.TabIndex = 3;
 			// 
 			// gbUnosStola
@@ -241,7 +253,7 @@
 			this.gbUnosStola.MaximumSize = new System.Drawing.Size(1474, 867);
 			this.gbUnosStola.Name = "gbUnosStola";
 			this.gbUnosStola.Padding = new System.Windows.Forms.Padding(4);
-			this.gbUnosStola.Size = new System.Drawing.Size(1474, 867);
+			this.gbUnosStola.Size = new System.Drawing.Size(1474, 866);
 			this.gbUnosStola.TabIndex = 3;
 			this.gbUnosStola.TabStop = false;
 			this.gbUnosStola.Text = "Rezervacija";

@@ -19,14 +19,19 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"RezervacijaID = {Rezervacija.RezervacijaID}, RbStola = {Sto.RbStola}";
 
-        public string SearchCondition { get; set; }
+        public string SearchCondition => "";
 
-        public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID}, RbStola = {Sto.RbStola}";
+		public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID}, RbStola = {Sto.RbStola}";
 
         public string Join => "join Rezervacija on Rezervacija.RezervacijaID = StoRezervacije.RezervacijaID " +
                                 "join Sto on Sto.RbStola=StoRezervacije.RbStola";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+			
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             StoRezervacije sr = new StoRezervacije();
             sr.Rezervacija = new Rezervacija

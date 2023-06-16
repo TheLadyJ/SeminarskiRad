@@ -23,13 +23,18 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"NazivProizvodjaca = '{NazivProizvodjaca}', Telefon = '{Telefon}', Email = '{Email}'";
 
-        public string SearchCondition { get; set; }
+        public string SearchCondition => "";
 
-        public string IdCondition => $"ProizvodnjacID = {ProizvodjacID}";
+		public string IdCondition => $"ProizvodnjacID = {ProizvodjacID}";
 
         public string Join => "";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Proizvodjac p = new Proizvodjac();
             p.ProizvodjacID = (int)reader["ProizvodjacID"];

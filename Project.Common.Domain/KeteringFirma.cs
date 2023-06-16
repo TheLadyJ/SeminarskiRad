@@ -24,11 +24,16 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"NazivFirme = '{NazivFirme}', Telefon = '{Telefon}', Email = '{Email}'";
 
-        public string SearchCondition { get ; set ; }
+        public string SearchCondition => "";
 
-        public string Join => "";
+		public string Join => "";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+			
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             KeteringFirma kf = new KeteringFirma();
             kf.KeteringFirmaID = (int)reader["KeteringFirmaID"];

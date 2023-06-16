@@ -28,11 +28,16 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Predjelo = '{Predjelo}', GlavnoJelo = '{GlavnoJelo}', Dezert = '{Dezert}', CenaHranePoOsobi = {CenaHranePoOsobi}, KeteringFirmaID = {KeteringFirma.KeteringFirmaID}";
 
-        public string SearchCondition { get; set; }
+        public string SearchCondition => "";
 
-        public string Join => "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
+		public string Join => "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+			
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             KeteringMeni km = new KeteringMeni();
             km.KeteringMeniID = (int)reader["KeteringMeniID"];

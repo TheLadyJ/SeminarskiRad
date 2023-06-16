@@ -27,9 +27,9 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Datum = {Datum}, TipProslaveID = {TipProslave.TipProslaveID}, UkupnaCena = {UkupnaCena}, RadnikID = {Radnik.RadnikID}, KlijentID = {Klijent.KlijentID}, MestoID = {Mesto.MestoID}, KeteringMeniID = {KeteringMeni.KeteringMeniID}";
 
-        public string SearchCondition { get; set; }
+        public string SearchCondition => "";
 
-        public string IdCondition => $"RezervacijaID = {RezervacijaID}";
+		public string IdCondition => $"RezervacijaID = {RezervacijaID}";
 
         public string Join => "join TipProslave on TipProslave.TipProslaveID = Rezervacija.TipProslaveID " +
                                 "join Radnik on Radnik.RadnikID = Rezervacija.RadnikID " +
@@ -38,7 +38,12 @@ namespace Project.Common.Domain
                                 "join KeteringMeni on KeteringMeni.KeteringMeniID = Rezervacija.KeteringMeniID" +
                                 "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Rezervacija r = new Rezervacija();
             r.RezervacijaID = (int)reader["RezervacijaID"];

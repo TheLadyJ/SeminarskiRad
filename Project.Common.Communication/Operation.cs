@@ -10,6 +10,8 @@ namespace Project.Common.Communication
     {
         Kraj,
         PrijaviRadnika,
-		KreirajKlijenta
+		KreirajKlijenta,
+		PretraziKlijenta,
+		VratiSveKlijente
 	}
 }

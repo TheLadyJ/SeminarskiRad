@@ -24,13 +24,18 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Ime = '{Ime}', Prezime = '{Prezime}', KorisnickoIme = '{KorisnickoIme}', Lozinka = '{Lozinka}'";
 
-        public string SearchCondition { get; set; }
+        public string SearchCondition => "";
 
-        public string IdCondition => $"RadnikID = {RadnikID}";
+		public string IdCondition => $"RadnikID = {RadnikID}";
 
         public string Join => "";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Radnik r = new Radnik();
             r.RadnikID = (int)reader["RadnikID"];
@@ -54,5 +59,6 @@ namespace Project.Common.Domain
             }
             return false;
         }
-    }
+		
+	}
 }

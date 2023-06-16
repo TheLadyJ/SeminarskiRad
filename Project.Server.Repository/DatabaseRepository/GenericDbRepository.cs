@@ -104,6 +104,7 @@ namespace Project.Server.Repository.DatabaseRepository
         {
             SqlCommand command = broker.CreateCommand();
             command.CommandText = $"select * from {obj.TableName} where {obj.SearchCondition}";
+            obj.AddParameters(command);
             return ReadList(command, obj);
         }
 

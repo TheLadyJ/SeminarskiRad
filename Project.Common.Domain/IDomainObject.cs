@@ -14,10 +14,11 @@ namespace Project.Common.Domain
         string UpdateValues { get; }
         string Join { get; }
 
-        string SearchCondition { get; set; }
+        string SearchCondition { get; }
         string IdCondition { get; }
 
         IDomainObject ReadObjectRow(SqlDataReader reader);
         IDomainObject ReadObjectRowJoin(SqlDataReader reader);
-    }
+        void AddParameters(SqlCommand command);
+	}
 }

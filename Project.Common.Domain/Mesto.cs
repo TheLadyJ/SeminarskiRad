@@ -23,13 +23,18 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Grad = '{Grad}', PostanskiBroj = {PostanskiBroj}, Adresa = '{Adresa}'";
 
-        public string SearchCondition { get; set; }
+        public string SearchCondition => "";
 
-        public string IdCondition => $"MestoID = {MestoID}";
+		public string IdCondition => $"MestoID = {MestoID}";
 
         public string Join => "";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+			
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Mesto m = new Mesto();
             m.MestoID = (int)reader["MestoID"];

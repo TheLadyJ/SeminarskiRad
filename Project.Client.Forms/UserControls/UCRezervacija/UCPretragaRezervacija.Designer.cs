@@ -28,6 +28,10 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.txtUkupnaCena = new System.Windows.Forms.TextBox();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.btnPretrazi = new System.Windows.Forms.Button();
@@ -51,6 +55,7 @@
 			// 
 			// txtUkupnaCena
 			// 
+			this.txtUkupnaCena.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.txtUkupnaCena.Location = new System.Drawing.Point(1045, 194);
 			this.txtUkupnaCena.Margin = new System.Windows.Forms.Padding(4);
 			this.txtUkupnaCena.MinimumSize = new System.Drawing.Size(398, 28);
@@ -60,11 +65,42 @@
 			// 
 			// dataGridView1
 			// 
+			this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dataGridView1.Location = new System.Drawing.Point(36, 418);
 			this.dataGridView1.MinimumSize = new System.Drawing.Size(1407, 319);
 			this.dataGridView1.Name = "dataGridView1";
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.dataGridView1.RowHeadersWidth = 51;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+			this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.dataGridView1.RowTemplate.Height = 24;
 			this.dataGridView1.Size = new System.Drawing.Size(1408, 334);
 			this.dataGridView1.TabIndex = 32;
@@ -156,7 +192,7 @@
 			// 
 			// cbMesto
 			// 
-			this.cbMesto.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.cbMesto.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.cbMesto.FormattingEnabled = true;
 			this.cbMesto.Location = new System.Drawing.Point(301, 123);
 			this.cbMesto.Margin = new System.Windows.Forms.Padding(4);
@@ -167,6 +203,7 @@
 			// 
 			// cbKlijent
 			// 
+			this.cbKlijent.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.cbKlijent.FormattingEnabled = true;
 			this.cbKlijent.Location = new System.Drawing.Point(301, 61);
 			this.cbKlijent.Margin = new System.Windows.Forms.Padding(4);
@@ -177,6 +214,7 @@
 			// 
 			// cbTipProslave
 			// 
+			this.cbTipProslave.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.cbTipProslave.FormattingEnabled = true;
 			this.cbTipProslave.Location = new System.Drawing.Point(301, 282);
 			this.cbTipProslave.Margin = new System.Windows.Forms.Padding(4);
@@ -198,6 +236,7 @@
 			// 
 			// txtDatumVreme
 			// 
+			this.txtDatumVreme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.txtDatumVreme.Location = new System.Drawing.Point(301, 191);
 			this.txtDatumVreme.Margin = new System.Windows.Forms.Padding(4);
 			this.txtDatumVreme.MinimumSize = new System.Drawing.Size(398, 27);
@@ -241,6 +280,7 @@
 			this.lblKeteringMeniVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblKeteringMeniVrednost.BackColor = System.Drawing.SystemColors.Window;
 			this.lblKeteringMeniVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblKeteringMeniVrednost.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
 			this.lblKeteringMeniVrednost.Location = new System.Drawing.Point(1045, 58);
 			this.lblKeteringMeniVrednost.Name = "lblKeteringMeniVrednost";
 			this.lblKeteringMeniVrednost.Size = new System.Drawing.Size(399, 27);

@@ -21,13 +21,18 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"NazivTipaProslave = '{NazivTipaProslave}'";
 
-        public string SearchCondition { get; set; }
+        public string SearchCondition => "";
 
-        public string IdCondition => $"TipProslaveID = {TipProslaveID}";
+		public string IdCondition => $"TipProslaveID = {TipProslaveID}";
 
         public string Join => "";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+			
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             TipProslave tp = new TipProslave();
             tp.TipProslaveID = (int)reader["TipProslaveID"];

@@ -80,6 +80,15 @@ namespace Project.Server.Main
 					case Operation.KreirajKlijenta:
 						KreirajKlijenta(response, request);
 						break;
+					case Operation.VratiSveKlijente:
+						VratiSveKlijente(response);
+						break;
+					case Operation.PretraziKlijenta:
+						PretraziKlijenta(response,request);
+						break;
+                    case Operation.ObrisiKlijenta:
+						ObrisiKlijenta(response,request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -95,6 +104,57 @@ namespace Project.Server.Main
             }
             return response;
         }
+
+		private void ObrisiKlijenta(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.ObrisiKlijenta((Klijent)request.RequestObject);
+				response.Message = "Sistem je obrisao klijenta.";
+				
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da obriše klijenta.";
+			}
+		}
+
+		private void PretraziKlijenta(Response response, Request request)
+		{
+			try
+			{
+				List<Klijent> sviKlijenti = Controller.Instance.PretraziKlijenta((Klijent)request.RequestObject);
+				response.Result = sviKlijenti;
+                if(sviKlijenti!=null && sviKlijenti.Count!=0)
+                {
+				    response.Message = "Sistem je našao klijente po zadatoj vrednosti.";
+                }
+                else
+                {
+					response.Message = "Sistem ne može da nađe klijenta po zadatoj vrednosti.";
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da nađe klijenta po zadatoj vrednosti.";
+			}
+		}
+
+		private void VratiSveKlijente(Response response)
+		{
+			try
+			{
+				List<Klijent> sviKlijenti = Controller.Instance.VratiSveKlijente();
+                response.Result = sviKlijenti;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih klijenata.";
+			}
+		}
 
 		private void KreirajKlijenta(Response response, Request request)
 		{
@@ -141,7 +201,7 @@ namespace Project.Server.Main
 
         private bool VecPrijavljen(Radnik radnik)
         {
-            return ClientsSessionData.Instance.Clients.Any(handler=>handler.Radnik==radnik);
+            return ClientsSessionData.Instance.Clients.Any(handler=>handler.Radnik.RadnikID == radnik.RadnikID);
         }
     }
 }

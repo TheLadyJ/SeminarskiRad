@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Client.Forms.GUIController.KlijentGUIController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,28 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 {
     public partial class UCPretraziKlijetnta : UserControl
     {
-
+        private PretraziKlijentaController pretraziKlijentaController;
         public UCPretraziKlijetnta()
         {
             InitializeComponent();
-        }
+			pretraziKlijentaController = new PretraziKlijentaController(this);
 
-    }
+		}
+
+		private void btnPretraziKlijenta_Click(object sender, EventArgs e)
+		{
+			pretraziKlijentaController.PretraziKlijenta();
+		}
+
+		private void btnPrikaziDetaljno_Click(object sender, EventArgs e)
+		{
+			pretraziKlijentaController.PrikaziDetaljno();
+
+		}
+
+		private void UCPretraziKlijetnta_Load(object sender, EventArgs e)
+		{
+			pretraziKlijentaController.UcitajSveKlijente();
+		}
+	}
 }

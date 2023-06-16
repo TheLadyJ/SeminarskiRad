@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbBrisanjeStola = new System.Windows.Forms.GroupBox();
 			this.btnObrisiSto = new System.Windows.Forms.Button();
 			this.dgvStolovi = new System.Windows.Forms.DataGridView();
@@ -62,9 +64,9 @@
 			this.gbBrisanjeStola.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.gbBrisanjeStola.ForeColor = System.Drawing.Color.White;
 			this.gbBrisanjeStola.Location = new System.Drawing.Point(4, 4);
-			this.gbBrisanjeStola.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gbBrisanjeStola.Margin = new System.Windows.Forms.Padding(4);
 			this.gbBrisanjeStola.Name = "gbBrisanjeStola";
-			this.gbBrisanjeStola.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gbBrisanjeStola.Padding = new System.Windows.Forms.Padding(4);
 			this.gbBrisanjeStola.Size = new System.Drawing.Size(1273, 740);
 			this.gbBrisanjeStola.TabIndex = 2;
 			this.gbBrisanjeStola.TabStop = false;
@@ -76,7 +78,7 @@
 			this.btnObrisiSto.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnObrisiSto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(63)))), ((int)(((byte)(37)))));
 			this.btnObrisiSto.Location = new System.Drawing.Point(476, 208);
-			this.btnObrisiSto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnObrisiSto.Margin = new System.Windows.Forms.Padding(4);
 			this.btnObrisiSto.Name = "btnObrisiSto";
 			this.btnObrisiSto.Size = new System.Drawing.Size(361, 43);
 			this.btnObrisiSto.TabIndex = 19;
@@ -86,11 +88,26 @@
 			// dgvStolovi
 			// 
 			this.dgvStolovi.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.dgvStolovi.BackgroundColor = System.Drawing.Color.White;
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvStolovi.DefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvStolovi.Location = new System.Drawing.Point(79, 289);
-			this.dgvStolovi.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.dgvStolovi.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvStolovi.Name = "dgvStolovi";
 			this.dgvStolovi.RowHeadersWidth = 45;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvStolovi.Size = new System.Drawing.Size(1120, 402);
 			this.dgvStolovi.TabIndex = 18;
 			// 
@@ -99,7 +116,7 @@
 			this.chbProizvodjac.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.chbProizvodjac.AutoSize = true;
 			this.chbProizvodjac.Location = new System.Drawing.Point(660, 132);
-			this.chbProizvodjac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chbProizvodjac.Margin = new System.Windows.Forms.Padding(4);
 			this.chbProizvodjac.Name = "chbProizvodjac";
 			this.chbProizvodjac.Size = new System.Drawing.Size(123, 23);
 			this.chbProizvodjac.TabIndex = 17;
@@ -111,7 +128,7 @@
 			this.chbCenaStola.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.chbCenaStola.AutoSize = true;
 			this.chbCenaStola.Location = new System.Drawing.Point(660, 71);
-			this.chbCenaStola.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chbCenaStola.Margin = new System.Windows.Forms.Padding(4);
 			this.chbCenaStola.Name = "chbCenaStola";
 			this.chbCenaStola.Size = new System.Drawing.Size(124, 23);
 			this.chbCenaStola.TabIndex = 16;
@@ -123,7 +140,7 @@
 			this.chbKapacitet.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.chbKapacitet.AutoSize = true;
 			this.chbKapacitet.Location = new System.Drawing.Point(79, 133);
-			this.chbKapacitet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chbKapacitet.Margin = new System.Windows.Forms.Padding(4);
 			this.chbKapacitet.Name = "chbKapacitet";
 			this.chbKapacitet.Size = new System.Drawing.Size(114, 23);
 			this.chbKapacitet.TabIndex = 15;
@@ -135,7 +152,7 @@
 			this.chbRedniBroj.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.chbRedniBroj.AutoSize = true;
 			this.chbRedniBroj.Location = new System.Drawing.Point(79, 71);
-			this.chbRedniBroj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.chbRedniBroj.Margin = new System.Windows.Forms.Padding(4);
 			this.chbRedniBroj.Name = "chbRedniBroj";
 			this.chbRedniBroj.Size = new System.Drawing.Size(118, 23);
 			this.chbRedniBroj.TabIndex = 14;
@@ -146,7 +163,7 @@
 			// 
 			this.txtRedniBroj.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtRedniBroj.Location = new System.Drawing.Point(256, 66);
-			this.txtRedniBroj.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtRedniBroj.Margin = new System.Windows.Forms.Padding(4);
 			this.txtRedniBroj.Name = "txtRedniBroj";
 			this.txtRedniBroj.Size = new System.Drawing.Size(360, 28);
 			this.txtRedniBroj.TabIndex = 12;
@@ -156,7 +173,7 @@
 			this.cbProizvodjac.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.cbProizvodjac.FormattingEnabled = true;
 			this.cbProizvodjac.Location = new System.Drawing.Point(837, 127);
-			this.cbProizvodjac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cbProizvodjac.Margin = new System.Windows.Forms.Padding(4);
 			this.cbProizvodjac.Name = "cbProizvodjac";
 			this.cbProizvodjac.Size = new System.Drawing.Size(360, 27);
 			this.cbProizvodjac.TabIndex = 11;
@@ -165,7 +182,7 @@
 			// 
 			this.txtCenaStola.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtCenaStola.Location = new System.Drawing.Point(837, 69);
-			this.txtCenaStola.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtCenaStola.Margin = new System.Windows.Forms.Padding(4);
 			this.txtCenaStola.Name = "txtCenaStola";
 			this.txtCenaStola.Size = new System.Drawing.Size(360, 28);
 			this.txtCenaStola.TabIndex = 10;
@@ -174,7 +191,7 @@
 			// 
 			this.txtKapacitet.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtKapacitet.Location = new System.Drawing.Point(256, 128);
-			this.txtKapacitet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtKapacitet.Margin = new System.Windows.Forms.Padding(4);
 			this.txtKapacitet.Name = "txtKapacitet";
 			this.txtKapacitet.Size = new System.Drawing.Size(360, 28);
 			this.txtKapacitet.TabIndex = 9;
@@ -185,7 +202,7 @@
 			this.btnPretraziSto.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnPretraziSto.ForeColor = System.Drawing.Color.RoyalBlue;
 			this.btnPretraziSto.Location = new System.Drawing.Point(79, 208);
-			this.btnPretraziSto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnPretraziSto.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPretraziSto.Name = "btnPretraziSto";
 			this.btnPretraziSto.Size = new System.Drawing.Size(361, 43);
 			this.btnPretraziSto.TabIndex = 6;
@@ -200,7 +217,7 @@
 			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.UCSto;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Controls.Add(this.gbBrisanjeStola);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCObrisiSto";
 			this.Size = new System.Drawing.Size(1284, 752);
 			this.gbBrisanjeStola.ResumeLayout(false);

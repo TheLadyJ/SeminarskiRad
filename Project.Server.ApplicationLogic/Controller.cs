@@ -56,5 +56,46 @@ namespace Project.Server.ApplicationLogic
 				throw;
 			}
 		}
-    }
+
+		public List<Klijent> VratiSveKlijente()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSveKlijenteSO();
+				so.ExecuteTemplate();
+                return (List<Klijent>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Klijent> PretraziKlijenta(Klijent klijent)
+		{
+			try
+			{
+				SystemOperationBase so = new PretraziKlijentaSO(klijent);
+				so.ExecuteTemplate();
+				return (List<Klijent>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public void ObrisiKlijenta(Klijent klijent)
+		{
+			try
+			{
+				SystemOperationBase so = new ObrisiKlijentaSO(klijent);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+	}
 }

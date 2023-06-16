@@ -24,13 +24,18 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Kapacitet = {Kapacitet}, CenaStola = {CenaStola}, ProizvodnjacID = {Proizvodjac.ProizvodjacID}";
 
-        public string SearchCondition { get; set; }
+        public string SearchCondition => "";
 
-        public string IdCondition => $"RbStola = {RbStola}";
+		public string IdCondition => $"RbStola = {RbStola}";
 
         public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID";
 
-        public IDomainObject ReadObjectRow(SqlDataReader reader)
+		public void AddParameters(SqlCommand command)
+		{
+			
+		}
+
+		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Sto s = new Sto();
             s.RbStola = (int)reader["RbStola"];

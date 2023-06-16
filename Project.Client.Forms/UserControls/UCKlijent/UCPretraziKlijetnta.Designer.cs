@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCKlijent
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCKlijent
 {
     partial class UCPretraziKlijetnta
     {
@@ -28,7 +30,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbKreirajKlijenta = new System.Windows.Forms.GroupBox();
+			this.lblEmailPrikaziVrednost = new System.Windows.Forms.Label();
+			this.lblTelefonPrikaziVrednost = new System.Windows.Forms.Label();
+			this.lblPrezimePrikaziVrednost = new System.Windows.Forms.Label();
+			this.lblImePrikaziVrednost = new System.Windows.Forms.Label();
 			this.lblEmail = new System.Windows.Forms.Label();
 			this.lblTelefon = new System.Windows.Forms.Label();
 			this.lblPrezime = new System.Windows.Forms.Label();
@@ -44,10 +51,6 @@
 			this.txtPrezime = new System.Windows.Forms.TextBox();
 			this.txtTelefon = new System.Windows.Forms.TextBox();
 			this.txtIme = new System.Windows.Forms.TextBox();
-			this.lblImePrikaziVrednost = new System.Windows.Forms.Label();
-			this.lblPrezimePrikaziVrednost = new System.Windows.Forms.Label();
-			this.lblTelefonPrikaziVrednost = new System.Windows.Forms.Label();
-			this.lblEmailPrikaziVrednost = new System.Windows.Forms.Label();
 			this.gbKreirajKlijenta.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
 			this.SuspendLayout();
@@ -85,6 +88,58 @@
 			this.gbKreirajKlijenta.TabIndex = 3;
 			this.gbKreirajKlijenta.TabStop = false;
 			this.gbKreirajKlijenta.Text = "Pretraga klijenta";
+			// 
+			// lblEmailPrikaziVrednost
+			// 
+			this.lblEmailPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblEmailPrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
+			this.lblEmailPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblEmailPrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.lblEmailPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
+			this.lblEmailPrikaziVrednost.Location = new System.Drawing.Point(273, 630);
+			this.lblEmailPrikaziVrednost.Name = "lblEmailPrikaziVrednost";
+			this.lblEmailPrikaziVrednost.Size = new System.Drawing.Size(323, 27);
+			this.lblEmailPrikaziVrednost.TabIndex = 39;
+			this.lblEmailPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblTelefonPrikaziVrednost
+			// 
+			this.lblTelefonPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblTelefonPrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
+			this.lblTelefonPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblTelefonPrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.lblTelefonPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
+			this.lblTelefonPrikaziVrednost.Location = new System.Drawing.Point(273, 572);
+			this.lblTelefonPrikaziVrednost.Name = "lblTelefonPrikaziVrednost";
+			this.lblTelefonPrikaziVrednost.Size = new System.Drawing.Size(323, 27);
+			this.lblTelefonPrikaziVrednost.TabIndex = 38;
+			this.lblTelefonPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblPrezimePrikaziVrednost
+			// 
+			this.lblPrezimePrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblPrezimePrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
+			this.lblPrezimePrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblPrezimePrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.lblPrezimePrikaziVrednost.ForeColor = System.Drawing.Color.Black;
+			this.lblPrezimePrikaziVrednost.Location = new System.Drawing.Point(273, 509);
+			this.lblPrezimePrikaziVrednost.Name = "lblPrezimePrikaziVrednost";
+			this.lblPrezimePrikaziVrednost.Size = new System.Drawing.Size(323, 27);
+			this.lblPrezimePrikaziVrednost.TabIndex = 37;
+			this.lblPrezimePrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblImePrikaziVrednost
+			// 
+			this.lblImePrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblImePrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
+			this.lblImePrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblImePrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.lblImePrikaziVrednost.ForeColor = System.Drawing.Color.Black;
+			this.lblImePrikaziVrednost.Location = new System.Drawing.Point(273, 456);
+			this.lblImePrikaziVrednost.Name = "lblImePrikaziVrednost";
+			this.lblImePrikaziVrednost.Size = new System.Drawing.Size(323, 27);
+			this.lblImePrikaziVrednost.TabIndex = 36;
+			this.lblImePrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblEmail
 			// 
@@ -137,7 +192,7 @@
 			// btnPrikaziDetaljno
 			// 
 			this.btnPrikaziDetaljno.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnPrikaziDetaljno.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnPrikaziDetaljno.BackColor = System.Drawing.Color.White;
 			this.btnPrikaziDetaljno.ForeColor = System.Drawing.Color.SlateBlue;
 			this.btnPrikaziDetaljno.Location = new System.Drawing.Point(273, 389);
 			this.btnPrikaziDetaljno.Margin = new System.Windows.Forms.Padding(4);
@@ -146,11 +201,12 @@
 			this.btnPrikaziDetaljno.TabIndex = 19;
 			this.btnPrikaziDetaljno.Text = "Prikaži klijenta detaljnije";
 			this.btnPrikaziDetaljno.UseVisualStyleBackColor = false;
+			this.btnPrikaziDetaljno.Click += new System.EventHandler(this.btnPrikaziDetaljno_Click);
 			// 
 			// btnPretraziKlijenta
 			// 
 			this.btnPretraziKlijenta.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnPretraziKlijenta.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnPretraziKlijenta.BackColor = System.Drawing.Color.White;
 			this.btnPretraziKlijenta.ForeColor = System.Drawing.Color.MediumVioletRed;
 			this.btnPretraziKlijenta.Location = new System.Drawing.Point(273, 316);
 			this.btnPretraziKlijenta.Margin = new System.Windows.Forms.Padding(4);
@@ -159,16 +215,22 @@
 			this.btnPretraziKlijenta.TabIndex = 14;
 			this.btnPretraziKlijenta.Text = "Pretraži klijenta";
 			this.btnPretraziKlijenta.UseVisualStyleBackColor = false;
+			this.btnPretraziKlijenta.Click += new System.EventHandler(this.btnPretraziKlijenta_Click);
 			// 
 			// dgvKlijenti
 			// 
 			this.dgvKlijenti.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.dgvKlijenti.BackgroundColor = System.Drawing.Color.White;
 			this.dgvKlijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvKlijenti.Location = new System.Drawing.Point(689, 54);
 			this.dgvKlijenti.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvKlijenti.Name = "dgvKlijenti";
 			this.dgvKlijenti.ReadOnly = true;
 			this.dgvKlijenti.RowHeadersWidth = 45;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			this.dgvKlijenti.RowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvKlijenti.Size = new System.Drawing.Size(383, 629);
 			this.dgvKlijenti.TabIndex = 13;
 			// 
@@ -233,86 +295,46 @@
 			// txtEmail
 			// 
 			this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtEmail.ForeColor = System.Drawing.Color.Black;
 			this.txtEmail.Location = new System.Drawing.Point(273, 247);
 			this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
 			this.txtEmail.Name = "txtEmail";
-			this.txtEmail.Size = new System.Drawing.Size(321, 28);
+			this.txtEmail.Size = new System.Drawing.Size(321, 26);
 			this.txtEmail.TabIndex = 6;
 			// 
 			// txtPrezime
 			// 
 			this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtPrezime.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.txtPrezime.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtPrezime.ForeColor = System.Drawing.Color.Black;
 			this.txtPrezime.Location = new System.Drawing.Point(273, 127);
 			this.txtPrezime.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPrezime.Name = "txtPrezime";
-			this.txtPrezime.Size = new System.Drawing.Size(321, 28);
+			this.txtPrezime.Size = new System.Drawing.Size(321, 26);
 			this.txtPrezime.TabIndex = 4;
 			// 
 			// txtTelefon
 			// 
 			this.txtTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtTelefon.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.txtTelefon.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtTelefon.ForeColor = System.Drawing.Color.Black;
 			this.txtTelefon.Location = new System.Drawing.Point(273, 190);
 			this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
 			this.txtTelefon.Name = "txtTelefon";
-			this.txtTelefon.Size = new System.Drawing.Size(321, 28);
+			this.txtTelefon.Size = new System.Drawing.Size(321, 26);
 			this.txtTelefon.TabIndex = 2;
 			// 
 			// txtIme
 			// 
 			this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtIme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.txtIme.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtIme.ForeColor = System.Drawing.Color.Black;
 			this.txtIme.Location = new System.Drawing.Point(273, 74);
 			this.txtIme.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIme.Name = "txtIme";
-			this.txtIme.Size = new System.Drawing.Size(321, 28);
+			this.txtIme.Size = new System.Drawing.Size(321, 26);
 			this.txtIme.TabIndex = 0;
-			// 
-			// lblImePrikaziVrednost
-			// 
-			this.lblImePrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblImePrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
-			this.lblImePrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblImePrikaziVrednost.Location = new System.Drawing.Point(273, 456);
-			this.lblImePrikaziVrednost.Name = "lblImePrikaziVrednost";
-			this.lblImePrikaziVrednost.Size = new System.Drawing.Size(323, 27);
-			this.lblImePrikaziVrednost.TabIndex = 36;
-			this.lblImePrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblPrezimePrikaziVrednost
-			// 
-			this.lblPrezimePrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblPrezimePrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
-			this.lblPrezimePrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblPrezimePrikaziVrednost.Location = new System.Drawing.Point(273, 509);
-			this.lblPrezimePrikaziVrednost.Name = "lblPrezimePrikaziVrednost";
-			this.lblPrezimePrikaziVrednost.Size = new System.Drawing.Size(323, 27);
-			this.lblPrezimePrikaziVrednost.TabIndex = 37;
-			this.lblPrezimePrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblTelefonPrikaziVrednost
-			// 
-			this.lblTelefonPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblTelefonPrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
-			this.lblTelefonPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblTelefonPrikaziVrednost.Location = new System.Drawing.Point(273, 572);
-			this.lblTelefonPrikaziVrednost.Name = "lblTelefonPrikaziVrednost";
-			this.lblTelefonPrikaziVrednost.Size = new System.Drawing.Size(323, 27);
-			this.lblTelefonPrikaziVrednost.TabIndex = 38;
-			this.lblTelefonPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblEmailPrikaziVrednost
-			// 
-			this.lblEmailPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblEmailPrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
-			this.lblEmailPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblEmailPrikaziVrednost.Location = new System.Drawing.Point(273, 630);
-			this.lblEmailPrikaziVrednost.Name = "lblEmailPrikaziVrednost";
-			this.lblEmailPrikaziVrednost.Size = new System.Drawing.Size(323, 27);
-			this.lblEmailPrikaziVrednost.TabIndex = 39;
-			this.lblEmailPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// UCPretraziKlijetnta
 			// 
@@ -324,6 +346,7 @@
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCPretraziKlijetnta";
 			this.Size = new System.Drawing.Size(1163, 735);
+			this.Load += new System.EventHandler(this.UCPretraziKlijetnta_Load);
 			this.gbKreirajKlijenta.ResumeLayout(false);
 			this.gbKreirajKlijenta.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).EndInit();
@@ -353,5 +376,26 @@
 		private System.Windows.Forms.Label lblTelefonPrikaziVrednost;
 		private System.Windows.Forms.Label lblPrezimePrikaziVrednost;
 		private System.Windows.Forms.Label lblImePrikaziVrednost;
+
+		public GroupBox GbKreirajKlijenta { get => gbKreirajKlijenta; set => gbKreirajKlijenta = value; }
+		public Label LblEmail { get => lblEmail; set => lblEmail = value; }
+		public Label LblTelefon { get => lblTelefon; set => lblTelefon = value; }
+		public Label LblPrezime { get => lblPrezime; set => lblPrezime = value; }
+		public Label LblIme { get => lblIme; set => lblIme = value; }
+		public Button BtnPrikaziDetaljno { get => btnPrikaziDetaljno; set => btnPrikaziDetaljno = value; }
+		public Button BtnPretraziKlijenta { get => btnPretraziKlijenta; set => btnPretraziKlijenta = value; }
+		public DataGridView DgvKlijenti { get => dgvKlijenti; set => dgvKlijenti = value; }
+		public CheckBox ChbPrezime { get => chbPrezime; set => chbPrezime = value; }
+		public CheckBox ChbEmail { get => chbEmail; set => chbEmail = value; }
+		public CheckBox ChbTelefon { get => chbTelefon; set => chbTelefon = value; }
+		public CheckBox ChbIme { get => chbIme; set => chbIme = value; }
+		public TextBox TxtEmail { get => txtEmail; set => txtEmail = value; }
+		public TextBox TxtPrezime { get => txtPrezime; set => txtPrezime = value; }
+		public TextBox TxtTelefon { get => txtTelefon; set => txtTelefon = value; }
+		public TextBox TxtIme { get => txtIme; set => txtIme = value; }
+		public Label LblEmailPrikaziVrednost { get => lblEmailPrikaziVrednost; set => lblEmailPrikaziVrednost = value; }
+		public Label LblTelefonPrikaziVrednost { get => lblTelefonPrikaziVrednost; set => lblTelefonPrikaziVrednost = value; }
+		public Label LblPrezimePrikaziVrednost { get => lblPrezimePrikaziVrednost; set => lblPrezimePrikaziVrednost = value; }
+		public Label LblImePrikaziVrednost { get => lblImePrikaziVrednost; set => lblImePrikaziVrednost = value; }
 	}
 }

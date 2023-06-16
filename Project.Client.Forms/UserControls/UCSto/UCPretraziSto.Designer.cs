@@ -28,7 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbPretragaStola = new System.Windows.Forms.GroupBox();
+			this.lblProizvodjacPrikaziVrednost = new System.Windows.Forms.Label();
+			this.lblCenaStolaPrikaziVrednost = new System.Windows.Forms.Label();
+			this.lblKapacitetPrikaziVrednost = new System.Windows.Forms.Label();
+			this.lblRedniBrojPrikaziVrednost = new System.Windows.Forms.Label();
 			this.dgvStolovi = new System.Windows.Forms.DataGridView();
 			this.chbProizvodjac = new System.Windows.Forms.CheckBox();
 			this.chbCenaStola = new System.Windows.Forms.CheckBox();
@@ -44,10 +52,6 @@
 			this.lblProizvodjac = new System.Windows.Forms.Label();
 			this.lblCenaStola = new System.Windows.Forms.Label();
 			this.lblKapacitet = new System.Windows.Forms.Label();
-			this.lblRedniBrojPrikaziVrednost = new System.Windows.Forms.Label();
-			this.lblKapacitetPrikaziVrednost = new System.Windows.Forms.Label();
-			this.lblCenaStolaPrikaziVrednost = new System.Windows.Forms.Label();
-			this.lblProizvodjacPrikaziVrednost = new System.Windows.Forms.Label();
 			this.gbPretragaStola.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStolovi)).BeginInit();
 			this.SuspendLayout();
@@ -86,14 +90,89 @@
 			this.gbPretragaStola.TabStop = false;
 			this.gbPretragaStola.Text = "Pretraga stola";
 			// 
+			// lblProizvodjacPrikaziVrednost
+			// 
+			this.lblProizvodjacPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblProizvodjacPrikaziVrednost.BackColor = System.Drawing.Color.White;
+			this.lblProizvodjacPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblProizvodjacPrikaziVrednost.Location = new System.Drawing.Point(241, 631);
+			this.lblProizvodjacPrikaziVrednost.Name = "lblProizvodjacPrikaziVrednost";
+			this.lblProizvodjacPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
+			this.lblProizvodjacPrikaziVrednost.TabIndex = 24;
+			this.lblProizvodjacPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblCenaStolaPrikaziVrednost
+			// 
+			this.lblCenaStolaPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblCenaStolaPrikaziVrednost.BackColor = System.Drawing.Color.White;
+			this.lblCenaStolaPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblCenaStolaPrikaziVrednost.Location = new System.Drawing.Point(241, 570);
+			this.lblCenaStolaPrikaziVrednost.Name = "lblCenaStolaPrikaziVrednost";
+			this.lblCenaStolaPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
+			this.lblCenaStolaPrikaziVrednost.TabIndex = 23;
+			this.lblCenaStolaPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblKapacitetPrikaziVrednost
+			// 
+			this.lblKapacitetPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblKapacitetPrikaziVrednost.BackColor = System.Drawing.Color.White;
+			this.lblKapacitetPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblKapacitetPrikaziVrednost.Location = new System.Drawing.Point(241, 511);
+			this.lblKapacitetPrikaziVrednost.Name = "lblKapacitetPrikaziVrednost";
+			this.lblKapacitetPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
+			this.lblKapacitetPrikaziVrednost.TabIndex = 22;
+			this.lblKapacitetPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblRedniBrojPrikaziVrednost
+			// 
+			this.lblRedniBrojPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblRedniBrojPrikaziVrednost.BackColor = System.Drawing.Color.White;
+			this.lblRedniBrojPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblRedniBrojPrikaziVrednost.Location = new System.Drawing.Point(240, 452);
+			this.lblRedniBrojPrikaziVrednost.Name = "lblRedniBrojPrikaziVrednost";
+			this.lblRedniBrojPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
+			this.lblRedniBrojPrikaziVrednost.TabIndex = 21;
+			this.lblRedniBrojPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// dgvStolovi
 			// 
 			this.dgvStolovi.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.dgvStolovi.BackgroundColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvStolovi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvStolovi.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvStolovi.Location = new System.Drawing.Point(673, 31);
 			this.dgvStolovi.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvStolovi.Name = "dgvStolovi";
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvStolovi.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvStolovi.RowHeadersWidth = 45;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvStolovi.Size = new System.Drawing.Size(436, 641);
 			this.dgvStolovi.TabIndex = 18;
 			// 
@@ -251,50 +330,6 @@
 			this.lblKapacitet.Size = new System.Drawing.Size(92, 19);
 			this.lblKapacitet.TabIndex = 0;
 			this.lblKapacitet.Text = "Kapacitet:";
-			// 
-			// lblRedniBrojPrikaziVrednost
-			// 
-			this.lblRedniBrojPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblRedniBrojPrikaziVrednost.BackColor = System.Drawing.Color.White;
-			this.lblRedniBrojPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblRedniBrojPrikaziVrednost.Location = new System.Drawing.Point(240, 452);
-			this.lblRedniBrojPrikaziVrednost.Name = "lblRedniBrojPrikaziVrednost";
-			this.lblRedniBrojPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
-			this.lblRedniBrojPrikaziVrednost.TabIndex = 21;
-			this.lblRedniBrojPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblKapacitetPrikaziVrednost
-			// 
-			this.lblKapacitetPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblKapacitetPrikaziVrednost.BackColor = System.Drawing.Color.White;
-			this.lblKapacitetPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblKapacitetPrikaziVrednost.Location = new System.Drawing.Point(241, 511);
-			this.lblKapacitetPrikaziVrednost.Name = "lblKapacitetPrikaziVrednost";
-			this.lblKapacitetPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
-			this.lblKapacitetPrikaziVrednost.TabIndex = 22;
-			this.lblKapacitetPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblCenaStolaPrikaziVrednost
-			// 
-			this.lblCenaStolaPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblCenaStolaPrikaziVrednost.BackColor = System.Drawing.Color.White;
-			this.lblCenaStolaPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblCenaStolaPrikaziVrednost.Location = new System.Drawing.Point(241, 570);
-			this.lblCenaStolaPrikaziVrednost.Name = "lblCenaStolaPrikaziVrednost";
-			this.lblCenaStolaPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
-			this.lblCenaStolaPrikaziVrednost.TabIndex = 23;
-			this.lblCenaStolaPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblProizvodjacPrikaziVrednost
-			// 
-			this.lblProizvodjacPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblProizvodjacPrikaziVrednost.BackColor = System.Drawing.Color.White;
-			this.lblProizvodjacPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-			this.lblProizvodjacPrikaziVrednost.Location = new System.Drawing.Point(241, 631);
-			this.lblProizvodjacPrikaziVrednost.Name = "lblProizvodjacPrikaziVrednost";
-			this.lblProizvodjacPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
-			this.lblProizvodjacPrikaziVrednost.TabIndex = 24;
-			this.lblProizvodjacPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// UCPretraziSto
 			// 

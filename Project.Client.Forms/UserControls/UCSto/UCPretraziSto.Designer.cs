@@ -92,6 +92,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.lblProizvodjacPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblProizvodjacPrikaziVrednost.BackColor = System.Drawing.Color.White;
 			this.lblProizvodjacPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblProizvodjacPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblProizvodjacPrikaziVrednost.Location = new System.Drawing.Point(249, 567);
 			this.lblProizvodjacPrikaziVrednost.Name = "lblProizvodjacPrikaziVrednost";
 			this.lblProizvodjacPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
@@ -103,6 +104,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.lblCenaStolaPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblCenaStolaPrikaziVrednost.BackColor = System.Drawing.Color.White;
 			this.lblCenaStolaPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblCenaStolaPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblCenaStolaPrikaziVrednost.Location = new System.Drawing.Point(249, 506);
 			this.lblCenaStolaPrikaziVrednost.Name = "lblCenaStolaPrikaziVrednost";
 			this.lblCenaStolaPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
@@ -114,6 +116,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.lblKapacitetPrikaziVrednost.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblKapacitetPrikaziVrednost.BackColor = System.Drawing.Color.White;
 			this.lblKapacitetPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+			this.lblKapacitetPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblKapacitetPrikaziVrednost.Location = new System.Drawing.Point(249, 447);
 			this.lblKapacitetPrikaziVrednost.Name = "lblKapacitetPrikaziVrednost";
 			this.lblKapacitetPrikaziVrednost.Size = new System.Drawing.Size(360, 27);

@@ -101,6 +101,9 @@ namespace Project.Server.Main
 					case Operation.PretraziSto:
 						PretraziSto(response, request);
 						break;
+					case Operation.ObrisiSto:
+						ObrisiSto(response, request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -116,6 +119,21 @@ namespace Project.Server.Main
             }
             return response;
         }
+
+		private void ObrisiSto(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.ObrisiSto((Sto)request.RequestObject);
+				response.Message = "Sistem je obrisao sto.";
+
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da obriše odabrani sto.";
+			}
+		}
 
 		private void PretraziSto(Response response, Request request)
 		{

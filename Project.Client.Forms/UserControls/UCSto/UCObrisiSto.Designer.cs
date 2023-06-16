@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCSto
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCSto
 {
     partial class UCObrisiSto
     {
@@ -29,18 +31,11 @@
         private void InitializeComponent()
         {
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbBrisanjeStola = new System.Windows.Forms.GroupBox();
+			this.lblNapomena = new System.Windows.Forms.Label();
 			this.btnObrisiSto = new System.Windows.Forms.Button();
 			this.dgvStolovi = new System.Windows.Forms.DataGridView();
-			this.chbProizvodjac = new System.Windows.Forms.CheckBox();
-			this.chbCenaStola = new System.Windows.Forms.CheckBox();
-			this.chbKapacitet = new System.Windows.Forms.CheckBox();
-			this.chbRedniBroj = new System.Windows.Forms.CheckBox();
-			this.txtRedniBroj = new System.Windows.Forms.TextBox();
-			this.cbProizvodjac = new System.Windows.Forms.ComboBox();
-			this.txtCenaStola = new System.Windows.Forms.TextBox();
-			this.txtKapacitet = new System.Windows.Forms.TextBox();
+			this.txtKriterijum = new System.Windows.Forms.TextBox();
 			this.btnPretraziSto = new System.Windows.Forms.Button();
 			this.gbBrisanjeStola.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStolovi)).BeginInit();
@@ -50,16 +45,10 @@
 			// 
 			this.gbBrisanjeStola.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.gbBrisanjeStola.BackColor = System.Drawing.Color.Transparent;
+			this.gbBrisanjeStola.Controls.Add(this.lblNapomena);
 			this.gbBrisanjeStola.Controls.Add(this.btnObrisiSto);
 			this.gbBrisanjeStola.Controls.Add(this.dgvStolovi);
-			this.gbBrisanjeStola.Controls.Add(this.chbProizvodjac);
-			this.gbBrisanjeStola.Controls.Add(this.chbCenaStola);
-			this.gbBrisanjeStola.Controls.Add(this.chbKapacitet);
-			this.gbBrisanjeStola.Controls.Add(this.chbRedniBroj);
-			this.gbBrisanjeStola.Controls.Add(this.txtRedniBroj);
-			this.gbBrisanjeStola.Controls.Add(this.cbProizvodjac);
-			this.gbBrisanjeStola.Controls.Add(this.txtCenaStola);
-			this.gbBrisanjeStola.Controls.Add(this.txtKapacitet);
+			this.gbBrisanjeStola.Controls.Add(this.txtKriterijum);
 			this.gbBrisanjeStola.Controls.Add(this.btnPretraziSto);
 			this.gbBrisanjeStola.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.gbBrisanjeStola.ForeColor = System.Drawing.Color.White;
@@ -72,142 +61,72 @@
 			this.gbBrisanjeStola.TabStop = false;
 			this.gbBrisanjeStola.Text = "Brisanje stola";
 			// 
+			// lblNapomena
+			// 
+			this.lblNapomena.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblNapomena.AutoSize = true;
+			this.lblNapomena.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.lblNapomena.Location = new System.Drawing.Point(226, 115);
+			this.lblNapomena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblNapomena.Name = "lblNapomena";
+			this.lblNapomena.Size = new System.Drawing.Size(477, 21);
+			this.lblNapomena.TabIndex = 26;
+			this.lblNapomena.Text = "(Moguće je pretražiti po kapacitetu, ceni ili proizvođaču)";
+			// 
 			// btnObrisiSto
 			// 
 			this.btnObrisiSto.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnObrisiSto.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnObrisiSto.BackColor = System.Drawing.Color.White;
 			this.btnObrisiSto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(63)))), ((int)(((byte)(37)))));
-			this.btnObrisiSto.Location = new System.Drawing.Point(476, 208);
+			this.btnObrisiSto.Location = new System.Drawing.Point(820, 637);
 			this.btnObrisiSto.Margin = new System.Windows.Forms.Padding(4);
 			this.btnObrisiSto.Name = "btnObrisiSto";
 			this.btnObrisiSto.Size = new System.Drawing.Size(361, 43);
 			this.btnObrisiSto.TabIndex = 19;
 			this.btnObrisiSto.Text = "Obriši sto";
 			this.btnObrisiSto.UseVisualStyleBackColor = false;
+			this.btnObrisiSto.Click += new System.EventHandler(this.btnObrisiSto_Click);
 			// 
 			// dgvStolovi
 			// 
 			this.dgvStolovi.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.dgvStolovi.BackgroundColor = System.Drawing.Color.White;
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvStolovi.DefaultCellStyle = dataGridViewCellStyle1;
-			this.dgvStolovi.Location = new System.Drawing.Point(79, 289);
+			this.dgvStolovi.Location = new System.Drawing.Point(91, 191);
 			this.dgvStolovi.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvStolovi.Name = "dgvStolovi";
 			this.dgvStolovi.RowHeadersWidth = 45;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle2;
-			this.dgvStolovi.Size = new System.Drawing.Size(1120, 402);
+			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dgvStolovi.Size = new System.Drawing.Size(1090, 400);
 			this.dgvStolovi.TabIndex = 18;
 			// 
-			// chbProizvodjac
+			// txtKriterijum
 			// 
-			this.chbProizvodjac.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.chbProizvodjac.AutoSize = true;
-			this.chbProizvodjac.Location = new System.Drawing.Point(660, 132);
-			this.chbProizvodjac.Margin = new System.Windows.Forms.Padding(4);
-			this.chbProizvodjac.Name = "chbProizvodjac";
-			this.chbProizvodjac.Size = new System.Drawing.Size(123, 23);
-			this.chbProizvodjac.TabIndex = 17;
-			this.chbProizvodjac.Text = "Proizvođač";
-			this.chbProizvodjac.UseVisualStyleBackColor = true;
-			// 
-			// chbCenaStola
-			// 
-			this.chbCenaStola.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.chbCenaStola.AutoSize = true;
-			this.chbCenaStola.Location = new System.Drawing.Point(660, 71);
-			this.chbCenaStola.Margin = new System.Windows.Forms.Padding(4);
-			this.chbCenaStola.Name = "chbCenaStola";
-			this.chbCenaStola.Size = new System.Drawing.Size(124, 23);
-			this.chbCenaStola.TabIndex = 16;
-			this.chbCenaStola.Text = "Cena stola:";
-			this.chbCenaStola.UseVisualStyleBackColor = true;
-			// 
-			// chbKapacitet
-			// 
-			this.chbKapacitet.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.chbKapacitet.AutoSize = true;
-			this.chbKapacitet.Location = new System.Drawing.Point(79, 133);
-			this.chbKapacitet.Margin = new System.Windows.Forms.Padding(4);
-			this.chbKapacitet.Name = "chbKapacitet";
-			this.chbKapacitet.Size = new System.Drawing.Size(114, 23);
-			this.chbKapacitet.TabIndex = 15;
-			this.chbKapacitet.Text = "Kapacitet:";
-			this.chbKapacitet.UseVisualStyleBackColor = true;
-			// 
-			// chbRedniBroj
-			// 
-			this.chbRedniBroj.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.chbRedniBroj.AutoSize = true;
-			this.chbRedniBroj.Location = new System.Drawing.Point(79, 71);
-			this.chbRedniBroj.Margin = new System.Windows.Forms.Padding(4);
-			this.chbRedniBroj.Name = "chbRedniBroj";
-			this.chbRedniBroj.Size = new System.Drawing.Size(118, 23);
-			this.chbRedniBroj.TabIndex = 14;
-			this.chbRedniBroj.Text = "Redni broj:";
-			this.chbRedniBroj.UseVisualStyleBackColor = true;
-			// 
-			// txtRedniBroj
-			// 
-			this.txtRedniBroj.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtRedniBroj.Location = new System.Drawing.Point(256, 66);
-			this.txtRedniBroj.Margin = new System.Windows.Forms.Padding(4);
-			this.txtRedniBroj.Name = "txtRedniBroj";
-			this.txtRedniBroj.Size = new System.Drawing.Size(360, 28);
-			this.txtRedniBroj.TabIndex = 12;
-			// 
-			// cbProizvodjac
-			// 
-			this.cbProizvodjac.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.cbProizvodjac.FormattingEnabled = true;
-			this.cbProizvodjac.Location = new System.Drawing.Point(837, 127);
-			this.cbProizvodjac.Margin = new System.Windows.Forms.Padding(4);
-			this.cbProizvodjac.Name = "cbProizvodjac";
-			this.cbProizvodjac.Size = new System.Drawing.Size(360, 27);
-			this.cbProizvodjac.TabIndex = 11;
-			// 
-			// txtCenaStola
-			// 
-			this.txtCenaStola.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtCenaStola.Location = new System.Drawing.Point(837, 69);
-			this.txtCenaStola.Margin = new System.Windows.Forms.Padding(4);
-			this.txtCenaStola.Name = "txtCenaStola";
-			this.txtCenaStola.Size = new System.Drawing.Size(360, 28);
-			this.txtCenaStola.TabIndex = 10;
-			// 
-			// txtKapacitet
-			// 
-			this.txtKapacitet.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtKapacitet.Location = new System.Drawing.Point(256, 128);
-			this.txtKapacitet.Margin = new System.Windows.Forms.Padding(4);
-			this.txtKapacitet.Name = "txtKapacitet";
-			this.txtKapacitet.Size = new System.Drawing.Size(360, 28);
-			this.txtKapacitet.TabIndex = 9;
+			this.txtKriterijum.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.txtKriterijum.Location = new System.Drawing.Point(91, 69);
+			this.txtKriterijum.Margin = new System.Windows.Forms.Padding(4);
+			this.txtKriterijum.Name = "txtKriterijum";
+			this.txtKriterijum.Size = new System.Drawing.Size(663, 28);
+			this.txtKriterijum.TabIndex = 12;
 			// 
 			// btnPretraziSto
 			// 
 			this.btnPretraziSto.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnPretraziSto.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnPretraziSto.BackColor = System.Drawing.Color.White;
 			this.btnPretraziSto.ForeColor = System.Drawing.Color.RoyalBlue;
-			this.btnPretraziSto.Location = new System.Drawing.Point(79, 208);
+			this.btnPretraziSto.Location = new System.Drawing.Point(820, 69);
 			this.btnPretraziSto.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPretraziSto.Name = "btnPretraziSto";
 			this.btnPretraziSto.Size = new System.Drawing.Size(361, 43);
 			this.btnPretraziSto.TabIndex = 6;
 			this.btnPretraziSto.Text = "Pretraži sto";
 			this.btnPretraziSto.UseVisualStyleBackColor = false;
+			this.btnPretraziSto.Click += new System.EventHandler(this.btnPretraziSto_Click);
 			// 
 			// UCObrisiSto
 			// 
@@ -220,6 +139,7 @@
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCObrisiSto";
 			this.Size = new System.Drawing.Size(1284, 752);
+			this.Load += new System.EventHandler(this.UCObrisiSto_Load);
 			this.gbBrisanjeStola.ResumeLayout(false);
 			this.gbBrisanjeStola.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStolovi)).EndInit();
@@ -231,15 +151,16 @@
 
         private System.Windows.Forms.GroupBox gbBrisanjeStola;
         private System.Windows.Forms.DataGridView dgvStolovi;
-        private System.Windows.Forms.CheckBox chbProizvodjac;
-        private System.Windows.Forms.CheckBox chbCenaStola;
-        private System.Windows.Forms.CheckBox chbKapacitet;
-        private System.Windows.Forms.CheckBox chbRedniBroj;
-        private System.Windows.Forms.TextBox txtRedniBroj;
-        private System.Windows.Forms.ComboBox cbProizvodjac;
-        private System.Windows.Forms.TextBox txtCenaStola;
-        private System.Windows.Forms.TextBox txtKapacitet;
+        private System.Windows.Forms.TextBox txtKriterijum;
         private System.Windows.Forms.Button btnPretraziSto;
         private System.Windows.Forms.Button btnObrisiSto;
-    }
+		private System.Windows.Forms.Label lblNapomena;
+
+		public GroupBox GbBrisanjeStola { get => gbBrisanjeStola; set => gbBrisanjeStola = value; }
+		public DataGridView DgvStolovi { get => dgvStolovi; set => dgvStolovi = value; }
+		public TextBox TxtKriterijum { get => txtKriterijum; set => txtKriterijum = value; }
+		public Button BtnPretraziSto { get => btnPretraziSto; set => btnPretraziSto = value; }
+		public Button BtnObrisiSto { get => btnObrisiSto; set => btnObrisiSto = value; }
+		public Label LblNapomena { get => lblNapomena; set => lblNapomena = value; }
+	}
 }

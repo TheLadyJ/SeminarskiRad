@@ -84,5 +84,18 @@ namespace Project.Server.ApplicationLogic
 				throw;
 			}
 		}
+
+		public void ObrisiKlijenta(Klijent klijent)
+		{
+			try
+			{
+				SystemOperationBase so = new ObrisiKlijentaSO(klijent);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 	}
 }

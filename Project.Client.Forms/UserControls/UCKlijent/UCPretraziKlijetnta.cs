@@ -23,12 +23,18 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 
 		private void btnPretraziKlijenta_Click(object sender, EventArgs e)
 		{
-
+			pretraziKlijentaController.PretraziKlijenta();
 		}
 
 		private void btnPrikaziDetaljno_Click(object sender, EventArgs e)
 		{
+			pretraziKlijentaController.PrikaziDetaljno();
 
+		}
+
+		private void UCPretraziKlijetnta_Load(object sender, EventArgs e)
+		{
+			pretraziKlijentaController.UcitajSveKlijente();
 		}
 	}
 }

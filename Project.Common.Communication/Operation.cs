@@ -12,6 +12,7 @@ namespace Project.Common.Communication
         PrijaviRadnika,
 		KreirajKlijenta,
 		PretraziKlijenta,
-		VratiSveKlijente
+		VratiSveKlijente,
+		ObrisiKlijenta
 	}
 }

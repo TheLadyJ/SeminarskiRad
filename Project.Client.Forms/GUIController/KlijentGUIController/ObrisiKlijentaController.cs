@@ -17,13 +17,13 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 	{
 		private UCObrisiKlijenta uCObrisiKlijenta;
 		private Klijent klijent = new Klijent();
-		private List<Klijent> nadjeniKlijenti = new List<Klijent>();
 
 		public ObrisiKlijentaController(UCObrisiKlijenta uCObrisiKlijenta)
 		{
 			this.uCObrisiKlijenta = uCObrisiKlijenta;
 			DodajCheckBoxITextBoxHandlers();
 		}
+
 
 		private void DodajCheckBoxITextBoxHandlers()
 		{
@@ -40,6 +40,7 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 
 		private void SakrijKolone()
 		{
+			uCObrisiKlijenta.DgvKlijenti.Columns["KlijentID"].Visible = false;
 			uCObrisiKlijenta.DgvKlijenti.Columns["TableName"].Visible = false;
 			uCObrisiKlijenta.DgvKlijenti.Columns["InsertValues"].Visible = false;
 			uCObrisiKlijenta.DgvKlijenti.Columns["IdCondition"].Visible = false;
@@ -79,7 +80,7 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 			{
 				Response response = Communication.Instance.SendRequestGetResponse(Operation.PretraziKlijenta, klijent);
 				MessageBox.Show(response.Message);
-				nadjeniKlijenti = (List<Klijent>)response.Result;
+				List<Klijent> nadjeniKlijenti = (List<Klijent>)response.Result;
 				UcitajDgvKlijenti(nadjeniKlijenti);
 			}
 			catch (SystemOperationException e)
@@ -91,7 +92,34 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 
 		internal void ObrisiKlijenta()
 		{
-			throw new NotImplementedException();
+			if (uCObrisiKlijenta.DgvKlijenti.SelectedRows.Count == 0)
+			{
+				MessageBox.Show("Morate izabrati nekog klijenta za brisanje.");
+			}
+			else if (uCObrisiKlijenta.DgvKlijenti.SelectedRows.Count > 1)
+			{
+				MessageBox.Show("Možete izabrati samo jednog klijenta za brisanje.");
+			}
+			else
+			{
+				Klijent klijentZaBrisanje = (Klijent)uCObrisiKlijenta.DgvKlijenti.SelectedRows[0].DataBoundItem;
+				ObrisiOdabranogKlijenta(klijentZaBrisanje);
+			}
+		}
+
+		private void ObrisiOdabranogKlijenta(Klijent klijentZaBrisanje)
+		{
+			try
+			{
+				Response response = Communication.Instance.SendRequestGetResponse(Operation.ObrisiKlijenta, klijentZaBrisanje);
+				MessageBox.Show(response.Message);
+			}
+			catch (SystemOperationException e)
+			{
+				MessageBox.Show(e.Message);
+			}
+			UcitajSveKlijente();
+
 		}
 
 		internal void HandleImeCheckedChanged(object sender, EventArgs e)

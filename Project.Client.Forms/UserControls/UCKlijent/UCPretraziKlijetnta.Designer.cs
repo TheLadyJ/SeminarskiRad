@@ -30,7 +30,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbKreirajKlijenta = new System.Windows.Forms.GroupBox();
 			this.lblEmailPrikaziVrednost = new System.Windows.Forms.Label();
 			this.lblTelefonPrikaziVrednost = new System.Windows.Forms.Label();
@@ -95,6 +95,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblEmailPrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
 			this.lblEmailPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblEmailPrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.lblEmailPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblEmailPrikaziVrednost.Location = new System.Drawing.Point(273, 630);
 			this.lblEmailPrikaziVrednost.Name = "lblEmailPrikaziVrednost";
 			this.lblEmailPrikaziVrednost.Size = new System.Drawing.Size(323, 27);
@@ -107,6 +108,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblTelefonPrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
 			this.lblTelefonPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblTelefonPrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.lblTelefonPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblTelefonPrikaziVrednost.Location = new System.Drawing.Point(273, 572);
 			this.lblTelefonPrikaziVrednost.Name = "lblTelefonPrikaziVrednost";
 			this.lblTelefonPrikaziVrednost.Size = new System.Drawing.Size(323, 27);
@@ -119,6 +121,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblPrezimePrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
 			this.lblPrezimePrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblPrezimePrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.lblPrezimePrikaziVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblPrezimePrikaziVrednost.Location = new System.Drawing.Point(273, 509);
 			this.lblPrezimePrikaziVrednost.Name = "lblPrezimePrikaziVrednost";
 			this.lblPrezimePrikaziVrednost.Size = new System.Drawing.Size(323, 27);
@@ -131,6 +134,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblImePrikaziVrednost.BackColor = System.Drawing.SystemColors.Window;
 			this.lblImePrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblImePrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.lblImePrikaziVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblImePrikaziVrednost.Location = new System.Drawing.Point(273, 456);
 			this.lblImePrikaziVrednost.Name = "lblImePrikaziVrednost";
 			this.lblImePrikaziVrednost.Size = new System.Drawing.Size(323, 27);
@@ -188,7 +192,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// btnPrikaziDetaljno
 			// 
 			this.btnPrikaziDetaljno.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnPrikaziDetaljno.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnPrikaziDetaljno.BackColor = System.Drawing.Color.White;
 			this.btnPrikaziDetaljno.ForeColor = System.Drawing.Color.SlateBlue;
 			this.btnPrikaziDetaljno.Location = new System.Drawing.Point(273, 389);
 			this.btnPrikaziDetaljno.Margin = new System.Windows.Forms.Padding(4);
@@ -202,7 +206,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// btnPretraziKlijenta
 			// 
 			this.btnPretraziKlijenta.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnPretraziKlijenta.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnPretraziKlijenta.BackColor = System.Drawing.Color.White;
 			this.btnPretraziKlijenta.ForeColor = System.Drawing.Color.MediumVioletRed;
 			this.btnPretraziKlijenta.Location = new System.Drawing.Point(273, 316);
 			this.btnPretraziKlijenta.Margin = new System.Windows.Forms.Padding(4);
@@ -223,10 +227,10 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.dgvKlijenti.Name = "dgvKlijenti";
 			this.dgvKlijenti.ReadOnly = true;
 			this.dgvKlijenti.RowHeadersWidth = 45;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			this.dgvKlijenti.RowsDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			this.dgvKlijenti.RowsDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvKlijenti.Size = new System.Drawing.Size(383, 629);
 			this.dgvKlijenti.TabIndex = 13;
 			// 
@@ -292,6 +296,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// 
 			this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtEmail.ForeColor = System.Drawing.Color.Black;
 			this.txtEmail.Location = new System.Drawing.Point(273, 247);
 			this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
 			this.txtEmail.Name = "txtEmail";
@@ -302,6 +307,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// 
 			this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtPrezime.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtPrezime.ForeColor = System.Drawing.Color.Black;
 			this.txtPrezime.Location = new System.Drawing.Point(273, 127);
 			this.txtPrezime.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPrezime.Name = "txtPrezime";
@@ -312,6 +318,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// 
 			this.txtTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtTelefon.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtTelefon.ForeColor = System.Drawing.Color.Black;
 			this.txtTelefon.Location = new System.Drawing.Point(273, 190);
 			this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
 			this.txtTelefon.Name = "txtTelefon";
@@ -322,6 +329,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// 
 			this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtIme.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtIme.ForeColor = System.Drawing.Color.Black;
 			this.txtIme.Location = new System.Drawing.Point(273, 74);
 			this.txtIme.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIme.Name = "txtIme";
@@ -338,6 +346,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCPretraziKlijetnta";
 			this.Size = new System.Drawing.Size(1163, 735);
+			this.Load += new System.EventHandler(this.UCPretraziKlijetnta_Load);
 			this.gbKreirajKlijenta.ResumeLayout(false);
 			this.gbKreirajKlijenta.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).EndInit();

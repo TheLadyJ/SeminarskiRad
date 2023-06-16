@@ -86,6 +86,9 @@ namespace Project.Server.Main
 					case Operation.PretraziKlijenta:
 						PretraziKlijenta(response,request);
 						break;
+                    case Operation.ObrisiKlijenta:
+						ObrisiKlijenta(response,request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -101,6 +104,21 @@ namespace Project.Server.Main
             }
             return response;
         }
+
+		private void ObrisiKlijenta(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.ObrisiKlijenta((Klijent)request.RequestObject);
+				response.Message = "Sistem je obrisao klijenta.";
+				
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da obriše klijenta.";
+			}
+		}
 
 		private void PretraziKlijenta(Response response, Request request)
 		{
@@ -183,7 +201,7 @@ namespace Project.Server.Main
 
         private bool VecPrijavljen(Radnik radnik)
         {
-            return ClientsSessionData.Instance.Clients.Any(handler=>handler.Radnik==radnik);
+            return ClientsSessionData.Instance.Clients.Any(handler=>handler.Radnik.RadnikID == radnik.RadnikID);
         }
     }
 }

@@ -15,6 +15,8 @@ namespace Project.Common.Communication
 		VratiSveKlijente,
 		PretraziKlijenta,
 		ObrisiKlijenta,
-		VratiProizvodjace
+		VratiProizvodjace,
+		VratiSveStolove,
+		PretraziSto
 	}
 }

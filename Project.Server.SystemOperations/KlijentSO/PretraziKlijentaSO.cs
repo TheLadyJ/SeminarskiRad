@@ -18,7 +18,7 @@ namespace Project.Server.SystemOperations.KlijentSO
 
 		protected override void Execute()
 		{
-			Result = repository.Search(klijent).OfType<Klijent>().ToList();
+			Result = repository.Search(klijent, "").OfType<Klijent>().ToList();
 		}
 	}
 }

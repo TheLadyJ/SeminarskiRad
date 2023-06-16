@@ -24,15 +24,24 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Kapacitet = {Kapacitet}, CenaStola = {CenaStola}, ProizvodnjacID = {Proizvodjac.ProizvodjacID}";
 
-        public string SearchCondition => "";
+        public string SearchCondition =>    $"CAST(Kapacitet AS VARCHAR(100)) LIKE '%' + @Kriterijum + '%' OR " +
+											$"CAST(CenaStola AS VARCHAR(100)) LIKE '%' + @Kriterijum + '%' OR " + 
+											$"NazivProizvodjaca LIKE '%' + @Kriterijum + '%'";
 
 		public string IdCondition => $"RbStola = {RbStola}";
 
         public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID";
 
-		public void AddParameters(SqlCommand command)
+		public void AddParameters(SqlCommand command, string kriterijum)
 		{
-			
+			if (kriterijum != null)
+			{
+				command.Parameters.AddWithValue("@Kriterijum", kriterijum);
+			}
+			else
+			{
+				command.Parameters.AddWithValue("@Kriterijum", "");
+			}
 		}
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)

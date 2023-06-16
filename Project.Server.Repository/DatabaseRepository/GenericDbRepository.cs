@@ -100,20 +100,21 @@ namespace Project.Server.Repository.DatabaseRepository
         }
 
 
-        public List<IDomainObject> Search(IDomainObject obj)
+        public List<IDomainObject> Search(IDomainObject obj, string kriterijum)
         {
             SqlCommand command = broker.CreateCommand();
             command.CommandText = $"select * from {obj.TableName} where {obj.SearchCondition}";
-            obj.AddParameters(command);
+            obj.AddParameters(command, kriterijum);
             return ReadList(command, obj);
         }
 
 
-        public List<IDomainObject> SearchJoin(IDomainObject obj)
+        public List<IDomainObject> SearchJoin(IDomainObject obj, string kriterijum)
         {
             SqlCommand command = broker.CreateCommand();
             command.CommandText = $"select * from {obj.TableName} {obj.Join} where {obj.SearchCondition}";
-            return ReadListJoin(command, obj);
+			obj.AddParameters(command, kriterijum);
+			return ReadListJoin(command, obj);
         }
 
 

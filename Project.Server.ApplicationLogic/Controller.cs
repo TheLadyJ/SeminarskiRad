@@ -125,5 +125,33 @@ namespace Project.Server.ApplicationLogic
 				throw;
 			}
 		}
+
+		public List<Sto> VratiSveStolove()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSveStoloveSO();
+				so.ExecuteTemplate();
+				return (List<Sto>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Sto> PretraziSto(string kriterijum)
+		{
+			try
+			{
+				SystemOperationBase so = new PretraziStoSO(kriterijum);
+				so.ExecuteTemplate();
+				return (List<Sto>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 	}
 }

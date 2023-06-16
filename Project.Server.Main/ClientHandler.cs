@@ -95,6 +95,12 @@ namespace Project.Server.Main
 					case Operation.VratiProizvodjace:
 						VratiProizvodjace(response);
 						break;
+					case Operation.VratiSveStolove:
+						VratiSveStolove(response);
+						break;
+					case Operation.PretraziSto:
+						PretraziSto(response, request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -110,6 +116,42 @@ namespace Project.Server.Main
             }
             return response;
         }
+
+		private void PretraziSto(Response response, Request request)
+		{
+			try
+			{
+				List<Sto> nadjeniStolovi = Controller.Instance.PretraziSto((string)request.RequestObject);
+				response.Result = nadjeniStolovi;
+				if (nadjeniStolovi != null && nadjeniStolovi.Count != 0)
+				{
+					response.Message = "Sistem je našao stolove po zadatoj vrednosti.";
+				}
+				else
+				{
+					response.Message = "Sistem ne može da nađe stolove po zadatoj vrednosti.";
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom pretrage stolova.";
+			}
+		}
+
+		private void VratiSveStolove(Response response)
+		{
+			try
+			{
+				List<Sto> stolovi = Controller.Instance.VratiSveStolove();
+				response.Result = stolovi;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih stolova.";
+			}
+		}
 
 		private void VratiProizvodjace(Response response)
 		{
@@ -157,9 +199,9 @@ namespace Project.Server.Main
 		{
 			try
 			{
-				List<Klijent> sviKlijenti = Controller.Instance.PretraziKlijenta((Klijent)request.RequestObject);
-				response.Result = sviKlijenti;
-                if(sviKlijenti!=null && sviKlijenti.Count!=0)
+				List<Klijent> nadjeniKlijenti = Controller.Instance.PretraziKlijenta((Klijent)request.RequestObject);
+				response.Result = nadjeniKlijenti;
+                if(nadjeniKlijenti!=null && nadjeniKlijenti.Count!=0)
                 {
 				    response.Message = "Sistem je našao klijente po zadatoj vrednosti.";
                 }
@@ -171,7 +213,7 @@ namespace Project.Server.Main
 			catch (Exception)
 			{
 				response.IsSuccessful = false;
-				response.Message = "Sistem ne može da nađe klijenta po zadatoj vrednosti.";
+				response.Message = "Došlo je do greške prilikom pretrage klijenata.";
 			}
 		}
 
@@ -224,7 +266,7 @@ namespace Project.Server.Main
 					PrijavljenRadnik?.Invoke(this, EventArgs.Empty);
 				}
 			}
-            catch (Exception e)
+            catch (Exception)
             {
 				response.IsSuccessful = false;
 				response.Message = "Došlo je do greške prilikom prijavljivanja.";

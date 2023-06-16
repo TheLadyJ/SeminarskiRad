@@ -1,4 +1,6 @@
 ﻿using Project.Client.Forms.GUIController;
+using Project.Client.Forms.GUIController.RadnikGUIController;
+using Project.Client.Forms.ServerCommunication;
 using Project.Client.Forms.UserControls.UCKlijent;
 using Project.Client.Forms.UserControls.UCRezervacija;
 using Project.Client.Forms.UserControls.UCSto;
@@ -16,10 +18,12 @@ namespace Project.Client.Forms
 {
     public partial class FrmRadnikovaGlavna : Form
     {
-        public FrmRadnikovaGlavna()
+        private RadnikovaGlavnaController radnikovaGlavnaController;
+		public FrmRadnikovaGlavna()
         {
             InitializeComponent();
-        }
+            radnikovaGlavnaController = new RadnikovaGlavnaController();
+		}
 
         private void FrmRadnikovaGlavna_Load(object sender, EventArgs e)
         {
@@ -82,6 +86,11 @@ namespace Project.Client.Forms
 		private void obrisiRezervacijuToolStripMenuItem_Click(object sender, EventArgs e)
 		{
 			ChangePanel(new UCPretraziRezervacijuZaBrisanje());
+		}
+
+		private void FrmRadnikovaGlavna_FormClosed(object sender, FormClosedEventArgs e)
+		{
+            radnikovaGlavnaController.ZatvoriKonekciju();
 		}
 	}
 }

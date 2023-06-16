@@ -77,7 +77,10 @@ namespace Project.Server.Main
                     case Operation.PrijaviRadnika:
                         PrijaviRadnika(response, request);
                         break;
-                    case Operation.Kraj:
+					case Operation.KreirajKlijenta:
+						KreirajKlijenta(response, request);
+						break;
+					case Operation.Kraj:
                         kraj = true;
                         break;
                     default:
@@ -93,25 +96,47 @@ namespace Project.Server.Main
             return response;
         }
 
-        private void PrijaviRadnika(Response response, Request request)
+		private void KreirajKlijenta(Response response, Request request)
+		{
+            try
+            {
+                Controller.Instance.KreirajKlijenta((Klijent)request.RequestObject);
+				response.Message = "Sistem je zapamtio klijenta.";
+			}
+			catch (Exception)
+            {
+				response.Message = "Sistem ne može da zapamti klijenta.";
+			}
+		}
+
+		private void PrijaviRadnika(Response response, Request request)
         {
-            response.Result = Controller.Instance.PrijaviRadnika((Radnik)request.RequestObject);
-            if (response.Result == null)
+            try
             {
-                response.IsSuccessful = false;
-                response.Message = "Uneti podaci nisu validni!";
-            }
-            else if (VecPrijavljen((Radnik)response.Result))
+                response.Result = Controller.Instance.PrijaviRadnika((Radnik)request.RequestObject);
+				if (response.Result == null)
+				{
+					response.IsSuccessful = false;
+					response.Message = "Uneti podaci nisu validni!";
+				}
+				else if (VecPrijavljen((Radnik)response.Result))
+				{
+					response.Message = "Radnik je vec prijavljen!";
+					response.Result = null;
+				}
+				else
+				{
+					response.Message = "Uspešno ste se prijavili!";
+					Radnik = (Radnik)response.Result;
+					PrijavljenRadnik?.Invoke(this, EventArgs.Empty);
+				}
+			}
+            catch (Exception e)
             {
-                response.Message = "Radnik je vec prijavljen!";
-                response.Result = null;
-            }
-            else
-            {
-                response.Message = "Uspešno ste se prijavili!";
-                Radnik = (Radnik)response.Result;
-                PrijavljenRadnik?.Invoke(this, EventArgs.Empty);
-            }
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom prijavljivanja.";
+			}
+            
         }
 
         private bool VecPrijavljen(Radnik radnik)

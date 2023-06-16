@@ -9,6 +9,7 @@ namespace Project.Common.Communication
     public enum Operation
     {
         Kraj,
-        PrijaviRadnika
-    }
+        PrijaviRadnika,
+		KreirajKlijenta
+	}
 }

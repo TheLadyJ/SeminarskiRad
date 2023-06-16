@@ -58,7 +58,7 @@ namespace Project.Client.Forms
             this.rezervacijeToolStripMenuItem});
 			this.menuStrip1.Location = new System.Drawing.Point(0, 0);
 			this.menuStrip1.Name = "menuStrip1";
-			this.menuStrip1.Size = new System.Drawing.Size(1172, 30);
+			this.menuStrip1.Size = new System.Drawing.Size(1172, 29);
 			this.menuStrip1.TabIndex = 0;
 			this.menuStrip1.Text = "menuStrip1";
 			// 
@@ -163,10 +163,10 @@ namespace Project.Client.Forms
 			this.pnlMain.BackgroundImage = global::Project.Client.Forms.Properties.Resources.PrijavljivanjePozadina;
 			this.pnlMain.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlMain.Location = new System.Drawing.Point(0, 30);
+			this.pnlMain.Location = new System.Drawing.Point(0, 29);
 			this.pnlMain.Margin = new System.Windows.Forms.Padding(4);
 			this.pnlMain.Name = "pnlMain";
-			this.pnlMain.Size = new System.Drawing.Size(1172, 620);
+			this.pnlMain.Size = new System.Drawing.Size(1172, 621);
 			this.pnlMain.TabIndex = 1;
 			// 
 			// FrmRadnikovaGlavna
@@ -183,6 +183,7 @@ namespace Project.Client.Forms
 			this.ShowIcon = false;
 			this.Text = "Glavna forma";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmRadnikovaGlavna_FormClosed);
 			this.Load += new System.EventHandler(this.FrmRadnikovaGlavna_Load);
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();

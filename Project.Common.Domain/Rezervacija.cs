@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Project.Common.Domain
 {
-    public class Rezervacija : IDomainObject
+	[Serializable]
+	public class Rezervacija : IDomainObject
     {
         public int RezervacijaID { get; set; }
         public DateTime Datum { get; set; }

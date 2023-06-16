@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCKlijent
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCKlijent
 {
     partial class UCKreirajNovogKlijenta
     {
@@ -57,9 +59,9 @@
 			this.gbKreirajKlijenta.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.gbKreirajKlijenta.ForeColor = System.Drawing.Color.White;
 			this.gbKreirajKlijenta.Location = new System.Drawing.Point(4, 4);
-			this.gbKreirajKlijenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gbKreirajKlijenta.Margin = new System.Windows.Forms.Padding(4);
 			this.gbKreirajKlijenta.Name = "gbKreirajKlijenta";
-			this.gbKreirajKlijenta.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gbKreirajKlijenta.Padding = new System.Windows.Forms.Padding(4);
 			this.gbKreirajKlijenta.Size = new System.Drawing.Size(1139, 660);
 			this.gbKreirajKlijenta.TabIndex = 0;
 			this.gbKreirajKlijenta.TabStop = false;
@@ -72,12 +74,13 @@
 			this.btnKreirajKlijenta.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnKreirajKlijenta.ForeColor = System.Drawing.Color.SlateBlue;
 			this.btnKreirajKlijenta.Location = new System.Drawing.Point(441, 464);
-			this.btnKreirajKlijenta.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnKreirajKlijenta.Margin = new System.Windows.Forms.Padding(4);
 			this.btnKreirajKlijenta.Name = "btnKreirajKlijenta";
 			this.btnKreirajKlijenta.Size = new System.Drawing.Size(301, 47);
 			this.btnKreirajKlijenta.TabIndex = 8;
 			this.btnKreirajKlijenta.Text = "Kreiraj novog klijenta";
 			this.btnKreirajKlijenta.UseVisualStyleBackColor = false;
+			this.btnKreirajKlijenta.Click += new System.EventHandler(this.btnKreirajKlijenta_Click);
 			// 
 			// lblEmail
 			// 
@@ -96,7 +99,7 @@
 			this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.txtEmail.Location = new System.Drawing.Point(495, 362);
-			this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
 			this.txtEmail.Name = "txtEmail";
 			this.txtEmail.Size = new System.Drawing.Size(321, 30);
 			this.txtEmail.TabIndex = 6;
@@ -119,7 +122,7 @@
 			this.txtTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtTelefon.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.txtTelefon.Location = new System.Drawing.Point(495, 295);
-			this.txtTelefon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
 			this.txtTelefon.Name = "txtTelefon";
 			this.txtTelefon.Size = new System.Drawing.Size(321, 30);
 			this.txtTelefon.TabIndex = 4;
@@ -141,7 +144,7 @@
 			this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtPrezime.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.txtPrezime.Location = new System.Drawing.Point(495, 226);
-			this.txtPrezime.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtPrezime.Margin = new System.Windows.Forms.Padding(4);
 			this.txtPrezime.Name = "txtPrezime";
 			this.txtPrezime.Size = new System.Drawing.Size(321, 30);
 			this.txtPrezime.TabIndex = 2;
@@ -163,7 +166,7 @@
 			this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtIme.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.txtIme.Location = new System.Drawing.Point(495, 161);
-			this.txtIme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtIme.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIme.Name = "txtIme";
 			this.txtIme.Size = new System.Drawing.Size(321, 30);
 			this.txtIme.TabIndex = 0;
@@ -175,7 +178,7 @@
 			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.UCKlijent;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Controls.Add(this.gbKreirajKlijenta);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCKreirajNovogKlijenta";
 			this.Size = new System.Drawing.Size(1151, 675);
 			this.gbKreirajKlijenta.ResumeLayout(false);
@@ -196,5 +199,16 @@
         private System.Windows.Forms.TextBox txtPrezime;
         private System.Windows.Forms.Label lblIme;
         private System.Windows.Forms.TextBox txtIme;
-    }
+
+		public GroupBox GbKreirajKlijenta { get => gbKreirajKlijenta; set => gbKreirajKlijenta = value; }
+		public Button BtnKreirajKlijenta { get => btnKreirajKlijenta; set => btnKreirajKlijenta = value; }
+		public Label LblEmail { get => lblEmail; set => lblEmail = value; }
+		public TextBox TxtEmail { get => txtEmail; set => txtEmail = value; }
+		public Label LblTelefon { get => lblTelefon; set => lblTelefon = value; }
+		public TextBox TxtTelefon { get => txtTelefon; set => txtTelefon = value; }
+		public Label LblPrezime { get => lblPrezime; set => lblPrezime = value; }
+		public TextBox TxtPrezime { get => txtPrezime; set => txtPrezime = value; }
+		public Label LblIme { get => lblIme; set => lblIme = value; }
+		public TextBox TxtIme { get => txtIme; set => txtIme = value; }
+	}
 }

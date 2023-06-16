@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Project.Common.Domain
 {
-    public class Sto : IDomainObject
+    [Serializable]
+	public class Sto : IDomainObject
     {
         public int RbStola { get; set; }
         public int Kapacitet { get; set; }

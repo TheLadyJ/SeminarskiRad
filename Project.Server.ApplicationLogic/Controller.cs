@@ -1,5 +1,6 @@
 ﻿using Project.Common.Domain;
 using Project.Server.SystemOperations;
+using Project.Server.SystemOperations.KlijentSO;
 using Project.Server.SystemOperations.RadnikSO;
 using System;
 using System.Collections.Generic;
@@ -31,9 +32,29 @@ namespace Project.Server.ApplicationLogic
 
         public Radnik PrijaviRadnika(Radnik radnik)
         {
-            SystemOperationBase so = new PrijaviRadnikaSO(radnik);
-            so.ExecuteTemplate();
-            return (Radnik)so.Result;
+            try
+            {
+                SystemOperationBase so = new PrijaviRadnikaSO(radnik);
+                so.ExecuteTemplate();
+                return (Radnik)so.Result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
+
+        public void KreirajKlijenta(Klijent klijent)
+        {
+			try
+			{
+				SystemOperationBase so = new KreirajKlijentaSO(klijent);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
     }
 }

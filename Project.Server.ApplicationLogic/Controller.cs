@@ -1,5 +1,6 @@
 ﻿using Project.Common.Domain;
 using Project.Server.SystemOperations;
+using Project.Server.SystemOperations.KlijentSO;
 using Project.Server.SystemOperations.RadnikSO;
 using System;
 using System.Collections.Generic;
@@ -45,7 +46,15 @@ namespace Project.Server.ApplicationLogic
 
         public void KreirajKlijenta(Klijent klijent)
         {
-
-        }
+			try
+			{
+				SystemOperationBase so = new KreirajKlijentaSO(klijent);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
     }
 }

@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,20 +21,24 @@ namespace Project.Client.Forms.GUIController
     {
         public Radnik Radnik { get; set; }
 
-        public PrijaviRadnikaController(FrmPrijavljivanje frmPrijavljivanje) 
+        private FrmPrijavljivanje frmPrijavljivanje;
+
+
+		public PrijaviRadnikaController(FrmPrijavljivanje frmPrijavljivanje) 
         {
+            this.frmPrijavljivanje = frmPrijavljivanje;
             try
             {
                 Communication.Instance.Connect();
             }
-            catch(Exception ex)
+            catch(SocketException ex)
             {
-                MessageBox.Show("Greška prilikom povezivanja sa serverom");
-                frmPrijavljivanje.DialogResult = DialogResult.Abort;
-            }
+				MessageBox.Show("Greška prilikom povezivanja sa serverom");
+				frmPrijavljivanje.DialogResult = DialogResult.Abort;
+			}
         }
 
-        public void PrijaviRadnika(FrmPrijavljivanje frmPrijavljivanje)
+        public void PrijaviRadnika()
         {
             string korisnickoIme = frmPrijavljivanje.TxtKorisnikoIme.Text;
             string lozinka = frmPrijavljivanje.TxtLozinka.Text;
@@ -91,9 +96,9 @@ namespace Project.Client.Forms.GUIController
 
         }
 
-        internal void ZatvoriKonekciju(FrmPrijavljivanje frmPrijavljivanje)
-        {
-            Communication.Instance.Close();
-        }
+        //internal void ZatvoriKonekciju()
+        //{
+        //    Communication.Instance.Close();
+        //}
     }
 }

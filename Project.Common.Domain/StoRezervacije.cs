@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Project.Common.Domain
 {
-    public class StoRezervacije : IDomainObject
+    [Serializable]
+	public class StoRezervacije : IDomainObject
     {
         public Rezervacija Rezervacija { get; set; }
         public Sto Sto { get; set; }

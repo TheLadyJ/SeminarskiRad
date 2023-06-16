@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project.Common.Domain
 {
+    [Serializable]
     public class Klijent : IDomainObject
     {
         public int KlijentID { get; set; }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project.Common.Domain
 {
+    [Serializable]
     public class KeteringMeni : IDomainObject
     {
         public int KeteringMeniID { get; set; }

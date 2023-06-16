@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Client.Forms.GUIController.KlijentGUIController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,16 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 {
     public partial class UCKreirajNovogKlijenta : UserControl
     {
+        private KreirajKlijentaController kreirajKlijentaController;
         public UCKreirajNovogKlijenta()
         {
             InitializeComponent();
-        }
-    }
+            kreirajKlijentaController = new KreirajKlijentaController(this);
+		}
+
+		private void btnKreirajKlijenta_Click(object sender, EventArgs e)
+		{
+            kreirajKlijentaController.KreirajKlijenta();
+		}
+	}
 }

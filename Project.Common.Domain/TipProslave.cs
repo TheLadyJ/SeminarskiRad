@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Project.Common.Domain
 {
-    public class TipProslave : IDomainObject
+    [Serializable]
+	public class TipProslave : IDomainObject
     {
         public int TipProslaveID { get; set; }
         public string NazivTipaProslave { get; set; }

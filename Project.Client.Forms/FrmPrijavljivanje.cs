@@ -23,12 +23,12 @@ namespace Project.Client.Forms
 
         private void btnPrijaviSe_Click(object sender, EventArgs e)
         {
-            prijaviRadnikaController.PrijaviRadnika(this);
+            prijaviRadnikaController.PrijaviRadnika();
         }
 
         private void FrmPrijavljivanje_FormClosed(object sender, FormClosedEventArgs e)
         {
-            prijaviRadnikaController.ZatvoriKonekciju(this);
+            //prijaviRadnikaController.ZatvoriKonekciju();
         }
 
         private void FrmPrijavljivanje_Load(object sender, EventArgs e)

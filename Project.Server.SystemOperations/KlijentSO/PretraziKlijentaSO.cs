@@ -9,16 +9,16 @@ namespace Project.Server.SystemOperations.KlijentSO
 {
 	public class PretraziKlijentaSO : SystemOperationBase
 	{
-		private Klijent klijent;
+		private string kriterijum;
 
-		public PretraziKlijentaSO(Klijent klijent)
+		public PretraziKlijentaSO(string kriterijum)
 		{
-			this.klijent = klijent;
+			this.kriterijum = kriterijum;
 		}
 
 		protected override void Execute()
 		{
-			Result = repository.Search(klijent, "").OfType<Klijent>().ToList();
+			Result = repository.Search(new Klijent(), kriterijum).OfType<Klijent>().ToList();
 		}
 	}
 }

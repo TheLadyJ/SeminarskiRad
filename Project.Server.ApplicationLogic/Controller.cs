@@ -72,11 +72,11 @@ namespace Project.Server.ApplicationLogic
 			}
 		}
 
-		public List<Klijent> PretraziKlijenta(Klijent klijent)
+		public List<Klijent> PretraziKlijenta(string kriterijum)
 		{
 			try
 			{
-				SystemOperationBase so = new PretraziKlijentaSO(klijent);
+				SystemOperationBase so = new PretraziKlijentaSO(kriterijum);
 				so.ExecuteTemplate();
 				return (List<Klijent>)so.Result;
 			}

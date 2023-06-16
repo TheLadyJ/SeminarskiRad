@@ -34,14 +34,10 @@ namespace Project.Common.Domain
 
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
-			if (kriterijum != null)
-			{
-				command.Parameters.AddWithValue("@Kriterijum", kriterijum);
-			}
-			else
-			{
-				command.Parameters.AddWithValue("@Kriterijum", "");
-			}
+			if (kriterijum != null)			
+				command.Parameters.AddWithValue("@Kriterijum", kriterijum);			
+			else		
+				command.Parameters.AddWithValue("@Kriterijum", "");			
 		}
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)

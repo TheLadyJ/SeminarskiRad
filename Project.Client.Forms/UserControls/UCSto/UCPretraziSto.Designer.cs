@@ -34,7 +34,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbPretragaStola = new System.Windows.Forms.GroupBox();
-			this.label2 = new System.Windows.Forms.Label();
+			this.lblNapomena = new System.Windows.Forms.Label();
 			this.lblProizvodjacPrikaziVrednost = new System.Windows.Forms.Label();
 			this.lblCenaStolaPrikaziVrednost = new System.Windows.Forms.Label();
 			this.lblKapacitetPrikaziVrednost = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			// 
 			this.gbPretragaStola.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.gbPretragaStola.BackColor = System.Drawing.Color.Transparent;
-			this.gbPretragaStola.Controls.Add(this.label2);
+			this.gbPretragaStola.Controls.Add(this.lblNapomena);
 			this.gbPretragaStola.Controls.Add(this.lblProizvodjacPrikaziVrednost);
 			this.gbPretragaStola.Controls.Add(this.lblCenaStolaPrikaziVrednost);
 			this.gbPretragaStola.Controls.Add(this.lblKapacitetPrikaziVrednost);
@@ -75,17 +75,17 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.gbPretragaStola.TabStop = false;
 			this.gbPretragaStola.Text = "Pretraga stola";
 			// 
-			// label2
+			// lblNapomena
 			// 
-			this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.label2.AutoSize = true;
-			this.label2.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.label2.Location = new System.Drawing.Point(118, 131);
-			this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.label2.Name = "label2";
-			this.label2.Size = new System.Drawing.Size(477, 21);
-			this.label2.TabIndex = 25;
-			this.label2.Text = "(Moguće je pretražiti po kapacitetu, ceni ili proizvođaču)";
+			this.lblNapomena.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblNapomena.AutoSize = true;
+			this.lblNapomena.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.lblNapomena.Location = new System.Drawing.Point(118, 131);
+			this.lblNapomena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblNapomena.Name = "lblNapomena";
+			this.lblNapomena.Size = new System.Drawing.Size(477, 21);
+			this.lblNapomena.TabIndex = 25;
+			this.lblNapomena.Text = "(Moguće je pretražiti po kapacitetu, ceni ili proizvođaču)";
 			// 
 			// lblProizvodjacPrikaziVrednost
 			// 
@@ -256,7 +256,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 		private System.Windows.Forms.Label lblProizvodjacPrikaziVrednost;
 		private System.Windows.Forms.Label lblCenaStolaPrikaziVrednost;
 		private System.Windows.Forms.Label lblKapacitetPrikaziVrednost;
-		private System.Windows.Forms.Label label2;
+		private System.Windows.Forms.Label lblNapomena;
 
 		public GroupBox GbPretragaStola { get => gbPretragaStola; set => gbPretragaStola = value; }
 		public Button BtnPretraziSto { get => btnPretraziSto; set => btnPretraziSto = value; }
@@ -269,6 +269,6 @@ namespace Project.Client.Forms.UserControls.UCSto
 		public Label LblProizvodjacPrikaziVrednost { get => lblProizvodjacPrikaziVrednost; set => lblProizvodjacPrikaziVrednost = value; }
 		public Label LblCenaStolaPrikaziVrednost { get => lblCenaStolaPrikaziVrednost; set => lblCenaStolaPrikaziVrednost = value; }
 		public Label LblKapacitetPrikaziVrednost { get => lblKapacitetPrikaziVrednost; set => lblKapacitetPrikaziVrednost = value; }
-		public Label Label2 { get => label2; set => label2 = value; }
+		public Label Label2 { get => lblNapomena; set => lblNapomena = value; }
 	}
 }

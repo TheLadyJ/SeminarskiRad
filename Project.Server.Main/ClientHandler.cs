@@ -199,7 +199,7 @@ namespace Project.Server.Main
 		{
 			try
 			{
-				List<Klijent> nadjeniKlijenti = Controller.Instance.PretraziKlijenta((Klijent)request.RequestObject);
+				List<Klijent> nadjeniKlijenti = Controller.Instance.PretraziKlijenta((string)request.RequestObject);
 				response.Result = nadjeniKlijenti;
                 if(nadjeniKlijenti!=null && nadjeniKlijenti.Count!=0)
                 {

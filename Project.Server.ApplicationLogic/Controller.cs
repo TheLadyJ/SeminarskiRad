@@ -31,9 +31,21 @@ namespace Project.Server.ApplicationLogic
 
         public Radnik PrijaviRadnika(Radnik radnik)
         {
-            SystemOperationBase so = new PrijaviRadnikaSO(radnik);
-            so.ExecuteTemplate();
-            return (Radnik)so.Result;
+            try
+            {
+                SystemOperationBase so = new PrijaviRadnikaSO(radnik);
+                so.ExecuteTemplate();
+                return (Radnik)so.Result;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public void KreirajKlijenta(Klijent klijent)
+        {
+
         }
     }
 }

@@ -14,8 +14,8 @@ namespace Project.Server.Repository.DatabaseRepository
         void Insert(IDomainObject obj);
         void Update(IDomainObject obj);
         void Delete(IDomainObject obj);
-        List<IDomainObject> Search(IDomainObject obj);
-        List<IDomainObject> SearchJoin(IDomainObject obj);
+        List<IDomainObject> Search(IDomainObject obj, string kriterijum);
+        List<IDomainObject> SearchJoin(IDomainObject obj, string kriterijum);
         void OpenConnection();
         void CloseConnection();
         void BeginTransaction();

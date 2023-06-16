@@ -21,7 +21,6 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 		public PretraziKlijentaController(UCPretraziKlijetnta uCPretraziKlijetnta)
 		{
 			this.uCPretraziKlijetnta = uCPretraziKlijetnta;
-			DodajCheckBoxITextBoxHandlers();
 		}
 
 		private void SakrijKolone()
@@ -67,7 +66,8 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 		{
 			try
 			{
-				Response response = Communication.Instance.SendRequestGetResponse(Operation.PretraziKlijenta, klijent);
+				string kriterijum = uCPretraziKlijetnta.TxtKriterijum.Text;
+				Response response = Communication.Instance.SendRequestGetResponse(Operation.PretraziKlijenta, kriterijum);
 				MessageBox.Show(response.Message);
 				List<Klijent> nadjeniKlijenti = (List<Klijent>)response.Result;
 				UcitajDgvKlijenti(nadjeniKlijenti);
@@ -111,67 +111,6 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 			catch (Exception)
 			{
 				MessageBox.Show("Sistem ne može da učita podatke o klijentu.");
-			}
-		}
-
-		private void DodajCheckBoxITextBoxHandlers()
-		{
-			uCPretraziKlijetnta.ChbIme.CheckedChanged += HandleImeCheckedChanged;
-			uCPretraziKlijetnta.ChbPrezime.CheckedChanged += HandlePrezimeCheckedChanged;
-			uCPretraziKlijetnta.ChbEmail.CheckedChanged += HandleEmailCheckedChanged;
-			uCPretraziKlijetnta.ChbTelefon.CheckedChanged += HandleTelefonCheckedChanged;
-
-			uCPretraziKlijetnta.TxtIme.TextChanged += HandleImeCheckedChanged;
-			uCPretraziKlijetnta.TxtPrezime.TextChanged += HandlePrezimeCheckedChanged;
-			uCPretraziKlijetnta.TxtEmail.TextChanged += HandleEmailCheckedChanged;
-			uCPretraziKlijetnta.TxtTelefon.TextChanged += HandleTelefonCheckedChanged;
-		}
-
-		internal void HandleImeCheckedChanged(object sender, EventArgs e)
-		{
-			if (uCPretraziKlijetnta.ChbIme.Checked)
-			{
-				klijent.Ime = uCPretraziKlijetnta.TxtIme.Text;
-			}
-			else
-			{
-				klijent.Ime = null;
-			}
-		}
-
-		internal void HandlePrezimeCheckedChanged(object sender, EventArgs e)
-		{
-			if (uCPretraziKlijetnta.ChbPrezime.Checked)
-			{
-				klijent.Prezime = uCPretraziKlijetnta.TxtPrezime.Text;
-			}
-			else
-			{
-				klijent.Prezime = null;
-			}
-		}
-
-		internal void HandleEmailCheckedChanged(object sender, EventArgs e)
-		{
-			if (uCPretraziKlijetnta.ChbEmail.Checked)
-			{
-				klijent.Email = uCPretraziKlijetnta.TxtEmail.Text;
-			}
-			else
-			{
-				klijent.Email = null;
-			}
-		}
-
-		internal void HandleTelefonCheckedChanged(object sender, EventArgs e)
-		{
-			if (uCPretraziKlijetnta.ChbTelefon.Checked)
-			{
-				klijent.Telefon = uCPretraziKlijetnta.TxtTelefon.Text;
-			}
-			else
-			{
-				klijent.Telefon = null;
 			}
 		}
 	}

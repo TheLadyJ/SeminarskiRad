@@ -32,7 +32,7 @@ namespace Project.Common.Domain
 
 		public string Join => "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
-		public void AddParameters(SqlCommand command)
+		public void AddParameters(SqlCommand command, string kriterijum)
 		{
 			
 		}

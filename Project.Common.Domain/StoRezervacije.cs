@@ -26,7 +26,7 @@ namespace Project.Common.Domain
         public string Join => "join Rezervacija on Rezervacija.RezervacijaID = StoRezervacije.RezervacijaID " +
                                 "join Sto on Sto.RbStola=StoRezervacije.RbStola";
 
-		public void AddParameters(SqlCommand command)
+		public void AddParameters(SqlCommand command, string kriterijum)
 		{
 			
 		}

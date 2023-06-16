@@ -72,11 +72,11 @@ namespace Project.Server.ApplicationLogic
 			}
 		}
 
-		public List<Klijent> PretraziKlijenta(Klijent klijent)
+		public List<Klijent> PretraziKlijenta(string kriterijum)
 		{
 			try
 			{
-				SystemOperationBase so = new PretraziKlijentaSO(klijent);
+				SystemOperationBase so = new PretraziKlijentaSO(kriterijum);
 				so.ExecuteTemplate();
 				return (List<Klijent>)so.Result;
 			}
@@ -119,6 +119,34 @@ namespace Project.Server.ApplicationLogic
 				SystemOperationBase so = new VratiProizvodjaceSO();
 				so.ExecuteTemplate();
 				return (List<Proizvodjac>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Sto> VratiSveStolove()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSveStoloveSO();
+				so.ExecuteTemplate();
+				return (List<Sto>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Sto> PretraziSto(string kriterijum)
+		{
+			try
+			{
+				SystemOperationBase so = new PretraziStoSO(kriterijum);
+				so.ExecuteTemplate();
+				return (List<Sto>)so.Result;
 			}
 			catch (Exception)
 			{

@@ -38,7 +38,7 @@ namespace Project.Common.Domain
                                 "join KeteringMeni on KeteringMeni.KeteringMeniID = Rezervacija.KeteringMeniID" +
                                 "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
-		public void AddParameters(SqlCommand command)
+		public void AddParameters(SqlCommand command, string kriterijum)
 		{
 
 		}

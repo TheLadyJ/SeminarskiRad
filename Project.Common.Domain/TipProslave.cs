@@ -27,7 +27,7 @@ namespace Project.Common.Domain
 
         public string Join => "";
 
-		public void AddParameters(SqlCommand command)
+		public void AddParameters(SqlCommand command, string kriterijum)
 		{
 			
 		}

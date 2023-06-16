@@ -25,7 +25,7 @@ namespace Project.Server.SystemOperations
                     repository.Commit();
 
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     repository.Rollback();
                     throw;

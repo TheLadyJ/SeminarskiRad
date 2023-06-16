@@ -5,20 +5,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project.Server.SystemOperations.KlijentSO
+namespace Project.Server.SystemOperations.StoSO
 {
-	public class PretraziKlijentaSO : SystemOperationBase
+	public class PretraziStoSO : SystemOperationBase
 	{
 		private string kriterijum;
 
-		public PretraziKlijentaSO(string kriterijum)
+		public PretraziStoSO(string kriterijum)
 		{
 			this.kriterijum = kriterijum;
 		}
 
 		protected override void Execute()
 		{
-			Result = repository.Search(new Klijent(), kriterijum).OfType<Klijent>().ToList();
+			Result = repository.SearchJoin(new Sto(), kriterijum).OfType<Sto>().ToList();
 		}
 	}
 }

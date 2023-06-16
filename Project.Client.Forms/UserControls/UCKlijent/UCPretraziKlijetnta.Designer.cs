@@ -43,14 +43,8 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnPrikaziDetaljno = new System.Windows.Forms.Button();
 			this.btnPretraziKlijenta = new System.Windows.Forms.Button();
 			this.dgvKlijenti = new System.Windows.Forms.DataGridView();
-			this.chbPrezime = new System.Windows.Forms.CheckBox();
-			this.chbEmail = new System.Windows.Forms.CheckBox();
-			this.chbTelefon = new System.Windows.Forms.CheckBox();
-			this.chbIme = new System.Windows.Forms.CheckBox();
-			this.txtEmail = new System.Windows.Forms.TextBox();
-			this.txtPrezime = new System.Windows.Forms.TextBox();
-			this.txtTelefon = new System.Windows.Forms.TextBox();
-			this.txtIme = new System.Windows.Forms.TextBox();
+			this.txtKriterijum = new System.Windows.Forms.TextBox();
+			this.lblNapomena = new System.Windows.Forms.Label();
 			this.gbKreirajKlijenta.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
 			this.SuspendLayout();
@@ -59,6 +53,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// 
 			this.gbKreirajKlijenta.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.gbKreirajKlijenta.BackColor = System.Drawing.Color.Transparent;
+			this.gbKreirajKlijenta.Controls.Add(this.lblNapomena);
 			this.gbKreirajKlijenta.Controls.Add(this.lblEmailPrikaziVrednost);
 			this.gbKreirajKlijenta.Controls.Add(this.lblTelefonPrikaziVrednost);
 			this.gbKreirajKlijenta.Controls.Add(this.lblPrezimePrikaziVrednost);
@@ -70,14 +65,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.gbKreirajKlijenta.Controls.Add(this.btnPrikaziDetaljno);
 			this.gbKreirajKlijenta.Controls.Add(this.btnPretraziKlijenta);
 			this.gbKreirajKlijenta.Controls.Add(this.dgvKlijenti);
-			this.gbKreirajKlijenta.Controls.Add(this.chbPrezime);
-			this.gbKreirajKlijenta.Controls.Add(this.chbEmail);
-			this.gbKreirajKlijenta.Controls.Add(this.chbTelefon);
-			this.gbKreirajKlijenta.Controls.Add(this.chbIme);
-			this.gbKreirajKlijenta.Controls.Add(this.txtEmail);
-			this.gbKreirajKlijenta.Controls.Add(this.txtPrezime);
-			this.gbKreirajKlijenta.Controls.Add(this.txtTelefon);
-			this.gbKreirajKlijenta.Controls.Add(this.txtIme);
+			this.gbKreirajKlijenta.Controls.Add(this.txtKriterijum);
 			this.gbKreirajKlijenta.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.gbKreirajKlijenta.ForeColor = System.Drawing.Color.White;
 			this.gbKreirajKlijenta.Location = new System.Drawing.Point(4, 4);
@@ -96,7 +84,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblEmailPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblEmailPrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
 			this.lblEmailPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
-			this.lblEmailPrikaziVrednost.Location = new System.Drawing.Point(273, 630);
+			this.lblEmailPrikaziVrednost.Location = new System.Drawing.Point(273, 591);
 			this.lblEmailPrikaziVrednost.Name = "lblEmailPrikaziVrednost";
 			this.lblEmailPrikaziVrednost.Size = new System.Drawing.Size(323, 27);
 			this.lblEmailPrikaziVrednost.TabIndex = 39;
@@ -109,7 +97,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblTelefonPrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblTelefonPrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
 			this.lblTelefonPrikaziVrednost.ForeColor = System.Drawing.Color.Black;
-			this.lblTelefonPrikaziVrednost.Location = new System.Drawing.Point(273, 572);
+			this.lblTelefonPrikaziVrednost.Location = new System.Drawing.Point(273, 533);
 			this.lblTelefonPrikaziVrednost.Name = "lblTelefonPrikaziVrednost";
 			this.lblTelefonPrikaziVrednost.Size = new System.Drawing.Size(323, 27);
 			this.lblTelefonPrikaziVrednost.TabIndex = 38;
@@ -122,7 +110,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblPrezimePrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblPrezimePrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
 			this.lblPrezimePrikaziVrednost.ForeColor = System.Drawing.Color.Black;
-			this.lblPrezimePrikaziVrednost.Location = new System.Drawing.Point(273, 509);
+			this.lblPrezimePrikaziVrednost.Location = new System.Drawing.Point(273, 470);
 			this.lblPrezimePrikaziVrednost.Name = "lblPrezimePrikaziVrednost";
 			this.lblPrezimePrikaziVrednost.Size = new System.Drawing.Size(323, 27);
 			this.lblPrezimePrikaziVrednost.TabIndex = 37;
@@ -135,7 +123,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblImePrikaziVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblImePrikaziVrednost.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
 			this.lblImePrikaziVrednost.ForeColor = System.Drawing.Color.Black;
-			this.lblImePrikaziVrednost.Location = new System.Drawing.Point(273, 456);
+			this.lblImePrikaziVrednost.Location = new System.Drawing.Point(273, 417);
 			this.lblImePrikaziVrednost.Name = "lblImePrikaziVrednost";
 			this.lblImePrikaziVrednost.Size = new System.Drawing.Size(323, 27);
 			this.lblImePrikaziVrednost.TabIndex = 36;
@@ -146,7 +134,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblEmail.AutoSize = true;
 			this.lblEmail.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.lblEmail.Location = new System.Drawing.Point(84, 638);
+			this.lblEmail.Location = new System.Drawing.Point(84, 599);
 			this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblEmail.Name = "lblEmail";
 			this.lblEmail.Size = new System.Drawing.Size(58, 19);
@@ -158,7 +146,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblTelefon.AutoSize = true;
 			this.lblTelefon.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.lblTelefon.Location = new System.Drawing.Point(84, 580);
+			this.lblTelefon.Location = new System.Drawing.Point(84, 541);
 			this.lblTelefon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblTelefon.Name = "lblTelefon";
 			this.lblTelefon.Size = new System.Drawing.Size(73, 19);
@@ -170,7 +158,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblPrezime.AutoSize = true;
 			this.lblPrezime.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.lblPrezime.Location = new System.Drawing.Point(84, 517);
+			this.lblPrezime.Location = new System.Drawing.Point(84, 478);
 			this.lblPrezime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblPrezime.Name = "lblPrezime";
 			this.lblPrezime.Size = new System.Drawing.Size(79, 19);
@@ -182,7 +170,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblIme.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblIme.AutoSize = true;
 			this.lblIme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.lblIme.Location = new System.Drawing.Point(84, 464);
+			this.lblIme.Location = new System.Drawing.Point(84, 425);
 			this.lblIme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblIme.Name = "lblIme";
 			this.lblIme.Size = new System.Drawing.Size(46, 19);
@@ -194,7 +182,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnPrikaziDetaljno.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.btnPrikaziDetaljno.BackColor = System.Drawing.Color.White;
 			this.btnPrikaziDetaljno.ForeColor = System.Drawing.Color.SlateBlue;
-			this.btnPrikaziDetaljno.Location = new System.Drawing.Point(273, 389);
+			this.btnPrikaziDetaljno.Location = new System.Drawing.Point(273, 350);
 			this.btnPrikaziDetaljno.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPrikaziDetaljno.Name = "btnPrikaziDetaljno";
 			this.btnPrikaziDetaljno.Size = new System.Drawing.Size(323, 39);
@@ -208,7 +196,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnPretraziKlijenta.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.btnPretraziKlijenta.BackColor = System.Drawing.Color.White;
 			this.btnPretraziKlijenta.ForeColor = System.Drawing.Color.MediumVioletRed;
-			this.btnPretraziKlijenta.Location = new System.Drawing.Point(273, 316);
+			this.btnPretraziKlijenta.Location = new System.Drawing.Point(273, 183);
 			this.btnPretraziKlijenta.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPretraziKlijenta.Name = "btnPretraziKlijenta";
 			this.btnPretraziKlijenta.Size = new System.Drawing.Size(323, 39);
@@ -234,107 +222,28 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.dgvKlijenti.Size = new System.Drawing.Size(383, 629);
 			this.dgvKlijenti.TabIndex = 13;
 			// 
-			// chbPrezime
+			// txtKriterijum
 			// 
-			this.chbPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.chbPrezime.AutoSize = true;
-			this.chbPrezime.BackColor = System.Drawing.Color.Transparent;
-			this.chbPrezime.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.chbPrezime.Location = new System.Drawing.Point(88, 132);
-			this.chbPrezime.Margin = new System.Windows.Forms.Padding(4);
-			this.chbPrezime.Name = "chbPrezime";
-			this.chbPrezime.Size = new System.Drawing.Size(101, 23);
-			this.chbPrezime.TabIndex = 12;
-			this.chbPrezime.Text = "Prezime:";
-			this.chbPrezime.UseVisualStyleBackColor = false;
+			this.txtKriterijum.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.txtKriterijum.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			this.txtKriterijum.ForeColor = System.Drawing.Color.Black;
+			this.txtKriterijum.Location = new System.Drawing.Point(88, 103);
+			this.txtKriterijum.Margin = new System.Windows.Forms.Padding(4);
+			this.txtKriterijum.Name = "txtKriterijum";
+			this.txtKriterijum.Size = new System.Drawing.Size(508, 26);
+			this.txtKriterijum.TabIndex = 0;
 			// 
-			// chbEmail
+			// lblNapomena
 			// 
-			this.chbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.chbEmail.AutoSize = true;
-			this.chbEmail.BackColor = System.Drawing.Color.Transparent;
-			this.chbEmail.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.chbEmail.ForeColor = System.Drawing.Color.White;
-			this.chbEmail.Location = new System.Drawing.Point(88, 252);
-			this.chbEmail.Margin = new System.Windows.Forms.Padding(4);
-			this.chbEmail.Name = "chbEmail";
-			this.chbEmail.Size = new System.Drawing.Size(80, 23);
-			this.chbEmail.TabIndex = 11;
-			this.chbEmail.Text = "Email:";
-			this.chbEmail.UseVisualStyleBackColor = false;
-			// 
-			// chbTelefon
-			// 
-			this.chbTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.chbTelefon.AutoSize = true;
-			this.chbTelefon.BackColor = System.Drawing.Color.Transparent;
-			this.chbTelefon.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.chbTelefon.ForeColor = System.Drawing.Color.White;
-			this.chbTelefon.Location = new System.Drawing.Point(88, 194);
-			this.chbTelefon.Margin = new System.Windows.Forms.Padding(4);
-			this.chbTelefon.Name = "chbTelefon";
-			this.chbTelefon.Size = new System.Drawing.Size(95, 23);
-			this.chbTelefon.TabIndex = 10;
-			this.chbTelefon.Text = "Telefon:";
-			this.chbTelefon.UseVisualStyleBackColor = false;
-			// 
-			// chbIme
-			// 
-			this.chbIme.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.chbIme.AutoSize = true;
-			this.chbIme.BackColor = System.Drawing.Color.Transparent;
-			this.chbIme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.chbIme.Location = new System.Drawing.Point(88, 79);
-			this.chbIme.Margin = new System.Windows.Forms.Padding(4);
-			this.chbIme.Name = "chbIme";
-			this.chbIme.Size = new System.Drawing.Size(68, 23);
-			this.chbIme.TabIndex = 9;
-			this.chbIme.Text = "Ime:";
-			this.chbIme.UseVisualStyleBackColor = false;
-			// 
-			// txtEmail
-			// 
-			this.txtEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtEmail.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
-			this.txtEmail.ForeColor = System.Drawing.Color.Black;
-			this.txtEmail.Location = new System.Drawing.Point(273, 247);
-			this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
-			this.txtEmail.Name = "txtEmail";
-			this.txtEmail.Size = new System.Drawing.Size(321, 26);
-			this.txtEmail.TabIndex = 6;
-			// 
-			// txtPrezime
-			// 
-			this.txtPrezime.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtPrezime.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
-			this.txtPrezime.ForeColor = System.Drawing.Color.Black;
-			this.txtPrezime.Location = new System.Drawing.Point(273, 127);
-			this.txtPrezime.Margin = new System.Windows.Forms.Padding(4);
-			this.txtPrezime.Name = "txtPrezime";
-			this.txtPrezime.Size = new System.Drawing.Size(321, 26);
-			this.txtPrezime.TabIndex = 4;
-			// 
-			// txtTelefon
-			// 
-			this.txtTelefon.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtTelefon.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
-			this.txtTelefon.ForeColor = System.Drawing.Color.Black;
-			this.txtTelefon.Location = new System.Drawing.Point(273, 190);
-			this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
-			this.txtTelefon.Name = "txtTelefon";
-			this.txtTelefon.Size = new System.Drawing.Size(321, 26);
-			this.txtTelefon.TabIndex = 2;
-			// 
-			// txtIme
-			// 
-			this.txtIme.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.txtIme.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
-			this.txtIme.ForeColor = System.Drawing.Color.Black;
-			this.txtIme.Location = new System.Drawing.Point(273, 74);
-			this.txtIme.Margin = new System.Windows.Forms.Padding(4);
-			this.txtIme.Name = "txtIme";
-			this.txtIme.Size = new System.Drawing.Size(321, 26);
-			this.txtIme.TabIndex = 0;
+			this.lblNapomena.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblNapomena.AutoSize = true;
+			this.lblNapomena.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.lblNapomena.Location = new System.Drawing.Point(84, 148);
+			this.lblNapomena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblNapomena.Name = "lblNapomena";
+			this.lblNapomena.Size = new System.Drawing.Size(526, 21);
+			this.lblNapomena.TabIndex = 40;
+			this.lblNapomena.Text = "(Moguće je pretražiti po imenu, prezimenu, telefonu ili email-u)";
 			// 
 			// UCPretraziKlijetnta
 			// 
@@ -364,18 +273,12 @@ namespace Project.Client.Forms.UserControls.UCKlijent
         private System.Windows.Forms.Button btnPrikaziDetaljno;
         private System.Windows.Forms.Button btnPretraziKlijenta;
         private System.Windows.Forms.DataGridView dgvKlijenti;
-        private System.Windows.Forms.CheckBox chbPrezime;
-        private System.Windows.Forms.CheckBox chbEmail;
-        private System.Windows.Forms.CheckBox chbTelefon;
-        private System.Windows.Forms.CheckBox chbIme;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtPrezime;
-        private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.TextBox txtIme;
+        private System.Windows.Forms.TextBox txtKriterijum;
 		private System.Windows.Forms.Label lblEmailPrikaziVrednost;
 		private System.Windows.Forms.Label lblTelefonPrikaziVrednost;
 		private System.Windows.Forms.Label lblPrezimePrikaziVrednost;
 		private System.Windows.Forms.Label lblImePrikaziVrednost;
+		private Label lblNapomena;
 
 		public GroupBox GbKreirajKlijenta { get => gbKreirajKlijenta; set => gbKreirajKlijenta = value; }
 		public Label LblEmail { get => lblEmail; set => lblEmail = value; }
@@ -385,14 +288,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 		public Button BtnPrikaziDetaljno { get => btnPrikaziDetaljno; set => btnPrikaziDetaljno = value; }
 		public Button BtnPretraziKlijenta { get => btnPretraziKlijenta; set => btnPretraziKlijenta = value; }
 		public DataGridView DgvKlijenti { get => dgvKlijenti; set => dgvKlijenti = value; }
-		public CheckBox ChbPrezime { get => chbPrezime; set => chbPrezime = value; }
-		public CheckBox ChbEmail { get => chbEmail; set => chbEmail = value; }
-		public CheckBox ChbTelefon { get => chbTelefon; set => chbTelefon = value; }
-		public CheckBox ChbIme { get => chbIme; set => chbIme = value; }
-		public TextBox TxtEmail { get => txtEmail; set => txtEmail = value; }
-		public TextBox TxtPrezime { get => txtPrezime; set => txtPrezime = value; }
-		public TextBox TxtTelefon { get => txtTelefon; set => txtTelefon = value; }
-		public TextBox TxtIme { get => txtIme; set => txtIme = value; }
+		public TextBox TxtKriterijum { get => txtKriterijum; set => txtKriterijum = value; }
 		public Label LblEmailPrikaziVrednost { get => lblEmailPrikaziVrednost; set => lblEmailPrikaziVrednost = value; }
 		public Label LblTelefonPrikaziVrednost { get => lblTelefonPrikaziVrednost; set => lblTelefonPrikaziVrednost = value; }
 		public Label LblPrezimePrikaziVrednost { get => lblPrezimePrikaziVrednost; set => lblPrezimePrikaziVrednost = value; }

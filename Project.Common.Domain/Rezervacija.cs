@@ -123,5 +123,22 @@ namespace Project.Common.Domain
             };
             return r;
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+			if (obj is Rezervacija r)
+			{
+				return r.RezervacijaID == RezervacijaID;
+			}
+			return false;
+		}
+		public override string ToString()
+		{
+			return $"Rezervacija za klijenta: {Klijent}; Tip Proslave: {TipProslave}; Mesto: {Mesto}; Datum i vreme: {Datum}";
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

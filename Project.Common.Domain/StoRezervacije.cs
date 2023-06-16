@@ -87,5 +87,22 @@ namespace Project.Common.Domain
     
             return sr;
         }
-}
+
+		public override bool Equals(object obj)
+		{
+			if (obj is StoRezervacije sr)
+			{
+				return (sr.Sto.RbStola == Sto.RbStola && sr.Rezervacija.RezervacijaID == Rezervacija.RezervacijaID);
+			}
+			return false;
+		}
+		public override string ToString()
+		{
+			return $"Sto: [{Sto}] za rezervaciju [{Rezervacija}]";
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

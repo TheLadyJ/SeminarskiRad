@@ -44,5 +44,22 @@ namespace Project.Common.Domain
         {
             return ReadObjectRow(reader);
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+			if (obj is TipProslave tp)
+			{
+				return tp.TipProslaveID == TipProslaveID;
+			}
+			return false;
+		}
+		public override string ToString()
+		{
+			return NazivTipaProslave;
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

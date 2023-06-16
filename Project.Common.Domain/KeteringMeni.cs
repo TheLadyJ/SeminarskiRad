@@ -68,5 +68,22 @@ namespace Project.Common.Domain
             };
             return km;
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+			if (obj is KeteringMeni km)
+			{
+				return km.KeteringMeniID == KeteringMeniID;
+			}
+			return false;
+		}
+		public override string ToString()
+		{
+			return $"{Predjelo}, {GlavnoJelo}, {Dezert}";
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

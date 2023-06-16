@@ -59,6 +59,15 @@ namespace Project.Common.Domain
             }
             return false;
         }
-		
+
+		public override string ToString()
+		{
+			return $"{Ime} {Prezime}";
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+
 	}
 }

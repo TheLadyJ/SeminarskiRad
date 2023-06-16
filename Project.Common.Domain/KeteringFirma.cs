@@ -33,6 +33,7 @@ namespace Project.Common.Domain
 			
 		}
 
+
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             KeteringFirma kf = new KeteringFirma();
@@ -47,5 +48,22 @@ namespace Project.Common.Domain
         {
             return ReadObjectRow(reader);
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+            if(obj is KeteringFirma kf)
+            {
+                return kf.KeteringFirmaID == KeteringFirmaID;
+            }
+            return false;
+		}
+		public override string ToString()
+		{
+            return NazivFirme;
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

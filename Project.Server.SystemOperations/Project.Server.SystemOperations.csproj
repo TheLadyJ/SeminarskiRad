@@ -46,6 +46,8 @@
     <Compile Include="KlijentSO\PretraziKlijentaSO.cs" />
     <Compile Include="KlijentSO\VratiSveKlijenteSO.cs" />
     <Compile Include="RadnikSO\PrijaviRadnikaSO.cs" />
+    <Compile Include="StoSO\UnesiStoSO.cs" />
+    <Compile Include="StoSO\VratiProizvodjaceSO.cs" />
     <Compile Include="SystemOperationBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

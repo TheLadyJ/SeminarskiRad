@@ -61,5 +61,22 @@ namespace Project.Common.Domain
         {
             return ReadObjectRow(reader);
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+			if (obj is Klijent k)
+			{
+				return k.KlijentID == KlijentID;
+			}
+			return false;
+		}
+		public override string ToString()
+		{
+			return $"{Ime} {Prezime}";
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

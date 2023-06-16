@@ -51,7 +51,7 @@
     <Compile Include="Radnik.cs" />
     <Compile Include="Rezervacija.cs" />
     <Compile Include="Sto.cs" />
-    <Compile Include="StoRezervacije.cs" />
+    <Compile Include="RezervisanSto.cs" />
     <Compile Include="TipProslave.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -8,23 +8,23 @@ using System.Threading.Tasks;
 namespace Project.Common.Domain
 {
     [Serializable]
-	public class StoRezervacije : IDomainObject
+	public class RezervisanSto : IDomainObject
     {
         public Rezervacija Rezervacija { get; set; }
         public Sto Sto { get; set; }
 
         public string TableName => "StoRezervacije";
 
-        public string InsertValues => $"{Rezervacija.RezervacijaID}, {Sto.RbStola}";
+        public string InsertValues => $"{Rezervacija.RezervacijaID}, {Sto.StoID}";
 
-        public string UpdateValues => $"RezervacijaID = {Rezervacija.RezervacijaID}, RbStola = {Sto.RbStola}";
+        public string UpdateValues => $"RezervacijaID = {Rezervacija.RezervacijaID}, StoID = {Sto.StoID}";
 
         public string SearchCondition => "";
 
-		public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID}, RbStola = {Sto.RbStola}";
+		public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID}, StoID = {Sto.StoID}";
 
         public string Join => "join Rezervacija on Rezervacija.RezervacijaID = StoRezervacije.RezervacijaID " +
-                                "join Sto on Sto.RbStola=StoRezervacije.RbStola";
+								"join Sto on Sto.StoID=StoRezervacije.StoID";
 
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
@@ -33,21 +33,21 @@ namespace Project.Common.Domain
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
-            StoRezervacije sr = new StoRezervacije();
+            RezervisanSto sr = new RezervisanSto();
             sr.Rezervacija = new Rezervacija
             {
                 RezervacijaID = (int)reader["RezervacijaID"]
             };
             sr.Sto = new Sto
             {
-                RbStola = (int)reader["RbStola"]
+                StoID = (int)reader["StoID"]
             };
             return sr;
         }
 
         public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
         {
-            StoRezervacije sr = new StoRezervacije();
+            RezervisanSto sr = new RezervisanSto();
             sr.Rezervacija = new Rezervacija
             {
                 RezervacijaID = reader.GetInt32(2),
@@ -76,7 +76,7 @@ namespace Project.Common.Domain
             };
             sr.Sto = new Sto
             {
-                RbStola = (int)reader["RbStola"],
+                StoID = (int)reader["StoID"],
                 Kapacitet = (int)reader["Kapacitet"],
                 CenaStola = (double)reader["CenaStola"],
                 Proizvodjac = new Proizvodjac
@@ -90,9 +90,9 @@ namespace Project.Common.Domain
 
 		public override bool Equals(object obj)
 		{
-			if (obj is StoRezervacije sr)
+			if (obj is RezervisanSto sr)
 			{
-				return (sr.Sto.RbStola == Sto.RbStola && sr.Rezervacija.RezervacijaID == Rezervacija.RezervacijaID);
+				return (sr.Sto.StoID == Sto.StoID && sr.Rezervacija.RezervacijaID == Rezervacija.RezervacijaID);
 			}
 			return false;
 		}

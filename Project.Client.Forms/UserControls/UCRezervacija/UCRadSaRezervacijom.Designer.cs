@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCRezervacija
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCRezervacija
 {
     partial class UCRadSaRezervacijom
     {
@@ -418,5 +420,29 @@
         private System.Windows.Forms.Button btnObrisiStolove;
 		private System.Windows.Forms.ComboBox cbStolovi;
 		private System.Windows.Forms.Label lblSto;
+
+		public GroupBox GbUnosStola { get => gbUnosStola; set => gbUnosStola = value; }
+		public Label LblUkupnaCenaNapomena { get => lblUkupnaCenaNapomena; set => lblUkupnaCenaNapomena = value; }
+		public Label LblDatumVremeNapomena { get => lblDatumVremeNapomena; set => lblDatumVremeNapomena = value; }
+		public TextBox TxtDatumVreme { get => txtDatumVreme; set => txtDatumVreme = value; }
+		public Label LblUkupnaCena { get => lblUkupnaCena; set => lblUkupnaCena = value; }
+		public Label LblDatumVreme { get => lblDatumVreme; set => lblDatumVreme = value; }
+		public ComboBox CbTipProslave { get => cbTipProslave; set => cbTipProslave = value; }
+		public Label LblTipProslave { get => lblTipProslave; set => lblTipProslave = value; }
+		public Label LblUkupnaCenaVrednost { get => lblUkupnaCenaVrednost; set => lblUkupnaCenaVrednost = value; }
+		public Label LblRadnikVrednost { get => lblRadnikVrednost; set => lblRadnikVrednost = value; }
+		public Label LblRadnik { get => lblRadnik; set => lblRadnik = value; }
+		public ComboBox CbKlijent { get => cbKlijent; set => cbKlijent = value; }
+		public Label LblKlijent { get => lblKlijent; set => lblKlijent = value; }
+		public ComboBox CbMesto { get => cbMesto; set => cbMesto = value; }
+		public Label LblMesto { get => lblMesto; set => lblMesto = value; }
+		public Button BtnIzaberiKeteringMeni { get => btnIzaberiKeteringMeni; set => btnIzaberiKeteringMeni = value; }
+		public Label LblKeteringMeniVrednost { get => lblKeteringMeniVrednost; set => lblKeteringMeniVrednost = value; }
+		public Label LblKeteringMeni { get => lblKeteringMeni; set => lblKeteringMeni = value; }
+		public Button BtnDodajSto { get => btnDodajSto; set => btnDodajSto = value; }
+		public DataGridView DgvStolovi { get => dgvStolovi; set => dgvStolovi = value; }
+		public Button BtnObrisiStolove { get => btnObrisiStolove; set => btnObrisiStolove = value; }
+		public ComboBox CbStolovi { get => cbStolovi; set => cbStolovi = value; }
+		public Label LblSto { get => lblSto; set => lblSto = value; }
 	}
 }

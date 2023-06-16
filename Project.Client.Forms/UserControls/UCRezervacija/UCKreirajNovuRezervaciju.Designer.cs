@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCRezervacija
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCRezervacija
 {
 	partial class UCKreirajNovuRezervaciju
 	{
@@ -45,6 +47,7 @@
 			this.btnKreirajNovuRezervaciju.TabIndex = 24;
 			this.btnKreirajNovuRezervaciju.Text = "Kreiraj novu rezervaciju";
 			this.btnKreirajNovuRezervaciju.UseVisualStyleBackColor = false;
+			this.btnKreirajNovuRezervaciju.Click += new System.EventHandler(this.btnKreirajNovuRezervaciju_Click);
 			// 
 			// ucRadSaRezervacijom1
 			// 
@@ -69,6 +72,7 @@
 			this.Controls.Add(this.ucRadSaRezervacijom1);
 			this.Name = "UCKreirajNovuRezervaciju";
 			this.Size = new System.Drawing.Size(1597, 908);
+			this.Load += new System.EventHandler(this.UCKreirajNovuRezervaciju_Load);
 			this.ResumeLayout(false);
 
 		}
@@ -77,5 +81,8 @@
 
 		private System.Windows.Forms.Button btnKreirajNovuRezervaciju;
 		private UCRadSaRezervacijom ucRadSaRezervacijom1;
+
+		public Button BtnKreirajNovuRezervaciju { get => btnKreirajNovuRezervaciju; set => btnKreirajNovuRezervaciju = value; }
+		public UCRadSaRezervacijom UcRadSaRezervacijom { get => ucRadSaRezervacijom1; set => ucRadSaRezervacijom1 = value; }
 	}
 }

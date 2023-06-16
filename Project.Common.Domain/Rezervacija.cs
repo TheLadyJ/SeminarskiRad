@@ -19,7 +19,7 @@ namespace Project.Common.Domain
         public Mesto Mesto { get; set; }
         public KeteringMeni KeteringMeni { get; set; }
 
-        public List<StoRezervacije> StoloviRezervacije { get; set; }
+        public List<RezervisanSto> StoloviRezervacije { get; set; }
 
         public string TableName => "Rezervacija";
 

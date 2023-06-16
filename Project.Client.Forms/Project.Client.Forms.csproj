@@ -77,6 +77,7 @@
     <Compile Include="GUIController\KlijentGUIController\PretraziKlijentaController.cs" />
     <Compile Include="GUIController\PrijaviRadnikaController.cs" />
     <Compile Include="GUIController\RadnikGUIController\RadnikovaGlavnaController.cs" />
+    <Compile Include="GUIController\RezervacijaGUIController\KreirajRezervacijuController.cs" />
     <Compile Include="GUIController\StoGUIController\ObrisiStoController.cs" />
     <Compile Include="GUIController\StoGUIController\PretraziStoController.cs" />
     <Compile Include="GUIController\StoGUIController\UnseiNoviStoController.cs" />

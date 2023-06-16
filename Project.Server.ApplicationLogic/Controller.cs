@@ -153,5 +153,18 @@ namespace Project.Server.ApplicationLogic
 				throw;
 			}
 		}
+
+		public void ObrisiSto(Sto sto)
+		{
+			try
+			{
+				SystemOperationBase so = new ObrisiStoSO(sto);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 	}
 }

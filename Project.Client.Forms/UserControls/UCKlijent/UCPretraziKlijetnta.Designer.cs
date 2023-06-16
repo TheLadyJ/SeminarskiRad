@@ -32,6 +32,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
         {
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbKreirajKlijenta = new System.Windows.Forms.GroupBox();
+			this.lblNapomena = new System.Windows.Forms.Label();
 			this.lblEmailPrikaziVrednost = new System.Windows.Forms.Label();
 			this.lblTelefonPrikaziVrednost = new System.Windows.Forms.Label();
 			this.lblPrezimePrikaziVrednost = new System.Windows.Forms.Label();
@@ -44,7 +45,6 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnPretraziKlijenta = new System.Windows.Forms.Button();
 			this.dgvKlijenti = new System.Windows.Forms.DataGridView();
 			this.txtKriterijum = new System.Windows.Forms.TextBox();
-			this.lblNapomena = new System.Windows.Forms.Label();
 			this.gbKreirajKlijenta.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvKlijenti)).BeginInit();
 			this.SuspendLayout();
@@ -76,6 +76,18 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.gbKreirajKlijenta.TabIndex = 3;
 			this.gbKreirajKlijenta.TabStop = false;
 			this.gbKreirajKlijenta.Text = "Pretraga klijenta";
+			// 
+			// lblNapomena
+			// 
+			this.lblNapomena.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.lblNapomena.AutoSize = true;
+			this.lblNapomena.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			this.lblNapomena.Location = new System.Drawing.Point(70, 142);
+			this.lblNapomena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+			this.lblNapomena.Name = "lblNapomena";
+			this.lblNapomena.Size = new System.Drawing.Size(526, 21);
+			this.lblNapomena.TabIndex = 40;
+			this.lblNapomena.Text = "(Moguće je pretražiti po imenu, prezimenu, telefonu ili email-u)";
 			// 
 			// lblEmailPrikaziVrednost
 			// 
@@ -232,18 +244,6 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.txtKriterijum.Name = "txtKriterijum";
 			this.txtKriterijum.Size = new System.Drawing.Size(508, 26);
 			this.txtKriterijum.TabIndex = 0;
-			// 
-			// lblNapomena
-			// 
-			this.lblNapomena.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.lblNapomena.AutoSize = true;
-			this.lblNapomena.Font = new System.Drawing.Font("Century Gothic", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.lblNapomena.Location = new System.Drawing.Point(84, 148);
-			this.lblNapomena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-			this.lblNapomena.Name = "lblNapomena";
-			this.lblNapomena.Size = new System.Drawing.Size(526, 21);
-			this.lblNapomena.TabIndex = 40;
-			this.lblNapomena.Text = "(Moguće je pretražiti po imenu, prezimenu, telefonu ili email-u)";
 			// 
 			// UCPretraziKlijetnta
 			// 

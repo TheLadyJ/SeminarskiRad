@@ -2,6 +2,7 @@
 using Project.Server.SystemOperations;
 using Project.Server.SystemOperations.KlijentSO;
 using Project.Server.SystemOperations.RadnikSO;
+using Project.Server.SystemOperations.StoSO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -91,6 +92,33 @@ namespace Project.Server.ApplicationLogic
 			{
 				SystemOperationBase so = new ObrisiKlijentaSO(klijent);
 				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public void UnesiSto(Sto sto)
+		{
+			try
+			{
+				SystemOperationBase so = new UnesiStoSO(sto);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Proizvodjac> VratiProizvodjace()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiProizvodjaceSO();
+				so.ExecuteTemplate();
+				return (List<Proizvodjac>)so.Result;
 			}
 			catch (Exception)
 			{

@@ -48,5 +48,22 @@ namespace Project.Common.Domain
         {
             return ReadObjectRow(reader);
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+			if (obj is Mesto m)
+			{
+				return m.MestoID == MestoID;
+			}
+			return false;
+		}
+		public override string ToString()
+		{
+			return $"{Adresa}, {Grad}, {PostanskiBroj}";
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

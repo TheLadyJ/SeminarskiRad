@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCSto
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCSto
 {
     partial class UCUnesiNoviSto
     {
@@ -57,9 +59,9 @@
 			this.gbUnosStola.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.gbUnosStola.ForeColor = System.Drawing.Color.White;
 			this.gbUnosStola.Location = new System.Drawing.Point(4, 4);
-			this.gbUnosStola.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gbUnosStola.Margin = new System.Windows.Forms.Padding(4);
 			this.gbUnosStola.Name = "gbUnosStola";
-			this.gbUnosStola.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.gbUnosStola.Padding = new System.Windows.Forms.Padding(4);
 			this.gbUnosStola.Size = new System.Drawing.Size(1157, 689);
 			this.gbUnosStola.TabIndex = 0;
 			this.gbUnosStola.TabStop = false;
@@ -95,19 +97,20 @@
 			this.btnUnesiNoviSto.BackColor = System.Drawing.Color.WhiteSmoke;
 			this.btnUnesiNoviSto.ForeColor = System.Drawing.Color.RoyalBlue;
 			this.btnUnesiNoviSto.Location = new System.Drawing.Point(393, 506);
-			this.btnUnesiNoviSto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnUnesiNoviSto.Margin = new System.Windows.Forms.Padding(4);
 			this.btnUnesiNoviSto.Name = "btnUnesiNoviSto";
 			this.btnUnesiNoviSto.Size = new System.Drawing.Size(391, 44);
 			this.btnUnesiNoviSto.TabIndex = 6;
 			this.btnUnesiNoviSto.Text = "Unesi novi sto";
 			this.btnUnesiNoviSto.UseVisualStyleBackColor = false;
+			this.btnUnesiNoviSto.Click += new System.EventHandler(this.btnUnesiNoviSto_Click);
 			// 
 			// cbProizvodjac
 			// 
 			this.cbProizvodjac.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.cbProizvodjac.FormattingEnabled = true;
 			this.cbProizvodjac.Location = new System.Drawing.Point(495, 377);
-			this.cbProizvodjac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.cbProizvodjac.Margin = new System.Windows.Forms.Padding(4);
 			this.cbProizvodjac.Name = "cbProizvodjac";
 			this.cbProizvodjac.Size = new System.Drawing.Size(417, 27);
 			this.cbProizvodjac.TabIndex = 5;
@@ -116,7 +119,7 @@
 			// 
 			this.txtCenaStola.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtCenaStola.Location = new System.Drawing.Point(495, 262);
-			this.txtCenaStola.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtCenaStola.Margin = new System.Windows.Forms.Padding(4);
 			this.txtCenaStola.Name = "txtCenaStola";
 			this.txtCenaStola.Size = new System.Drawing.Size(417, 28);
 			this.txtCenaStola.TabIndex = 4;
@@ -125,7 +128,7 @@
 			// 
 			this.txtKapacitet.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtKapacitet.Location = new System.Drawing.Point(495, 145);
-			this.txtKapacitet.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtKapacitet.Margin = new System.Windows.Forms.Padding(4);
 			this.txtKapacitet.Name = "txtKapacitet";
 			this.txtKapacitet.Size = new System.Drawing.Size(417, 28);
 			this.txtKapacitet.TabIndex = 3;
@@ -170,9 +173,10 @@
 			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.UCSto;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Controls.Add(this.gbUnosStola);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCUnesiNoviSto";
 			this.Size = new System.Drawing.Size(1170, 707);
+			this.Load += new System.EventHandler(this.UCUnesiNoviSto_Load);
 			this.gbUnosStola.ResumeLayout(false);
 			this.gbUnosStola.PerformLayout();
 			this.ResumeLayout(false);
@@ -191,5 +195,16 @@
         private System.Windows.Forms.TextBox txtKapacitet;
         private System.Windows.Forms.Label lblCenaStolaNapomena;
         private System.Windows.Forms.Label lblKapacitetNapomena;
-    }
+
+		public GroupBox GbUnosStola { get => gbUnosStola; set => gbUnosStola = value; }
+		public Label LblProizvodjac { get => lblProizvodjac; set => lblProizvodjac = value; }
+		public Label LblCenaStola { get => lblCenaStola; set => lblCenaStola = value; }
+		public Label LblKapacitet { get => lblKapacitet; set => lblKapacitet = value; }
+		public Button BtnUnesiNoviSto { get => btnUnesiNoviSto; set => btnUnesiNoviSto = value; }
+		public ComboBox CbProizvodjac { get => cbProizvodjac; set => cbProizvodjac = value; }
+		public TextBox TxtCenaStola { get => txtCenaStola; set => txtCenaStola = value; }
+		public TextBox TxtKapacitet { get => txtKapacitet; set => txtKapacitet = value; }
+		public Label LblCenaStolaNapomena { get => lblCenaStolaNapomena; set => lblCenaStolaNapomena = value; }
+		public Label LblKapacitetNapomena { get => lblKapacitetNapomena; set => lblKapacitetNapomena = value; }
+	}
 }

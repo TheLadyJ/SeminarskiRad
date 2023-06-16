@@ -63,5 +63,22 @@ namespace Project.Common.Domain
             };
             return s;
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+			if (obj is Sto s)
+			{
+				return s.RbStola == RbStola;
+			}
+			return false;
+		}
+		public override string ToString()
+		{
+			return $"Proizvodjac: {Proizvodjac}, Kapacitet: {Kapacitet}, Cena stola: {CenaStola}";
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

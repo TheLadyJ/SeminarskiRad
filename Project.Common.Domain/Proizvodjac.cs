@@ -48,5 +48,22 @@ namespace Project.Common.Domain
         {
             return ReadObjectRow(reader);
         }
-    }
+
+		public override bool Equals(object obj)
+		{
+			if (obj is Proizvodjac p)
+			{
+				return p.ProizvodjacID == ProizvodjacID;
+			}
+			return false;
+		}
+		public override string ToString()
+		{
+			return NazivProizvodjaca;
+		}
+		public override int GetHashCode()
+		{
+			return base.GetHashCode();
+		}
+	}
 }

@@ -89,6 +89,12 @@ namespace Project.Server.Main
                     case Operation.ObrisiKlijenta:
 						ObrisiKlijenta(response,request);
 						break;
+                    case Operation.UnesiSto:
+						UnesiSto(response,request);
+						break;
+					case Operation.VratiProizvodjace:
+						VratiProizvodjace(response);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -104,6 +110,33 @@ namespace Project.Server.Main
             }
             return response;
         }
+
+		private void VratiProizvodjace(Response response)
+		{
+			try
+			{
+				List<Proizvodjac> proizvodjaci = Controller.Instance.VratiProizvodjace();
+				response.Result = proizvodjaci;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja proizvodjaca.";
+			}
+		}
+
+		private void UnesiSto(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.UnesiSto((Sto)request.RequestObject);
+				response.Message = "Sistem je zapamtio sto.";
+			}
+			catch (Exception)
+			{
+				response.Message = "Sistem ne može da zapamti sto.";
+			}
+		}
 
 		private void ObrisiKlijenta(Response response, Request request)
 		{

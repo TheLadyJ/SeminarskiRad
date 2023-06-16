@@ -41,7 +41,7 @@
 			this.btnPokreniServer.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnPokreniServer.ForeColor = System.Drawing.Color.RoyalBlue;
 			this.btnPokreniServer.Location = new System.Drawing.Point(152, 169);
-			this.btnPokreniServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnPokreniServer.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPokreniServer.Name = "btnPokreniServer";
 			this.btnPokreniServer.Size = new System.Drawing.Size(276, 50);
 			this.btnPokreniServer.TabIndex = 5;
@@ -56,7 +56,7 @@
 			this.btnZaustaviServer.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnZaustaviServer.ForeColor = System.Drawing.Color.OrangeRed;
 			this.btnZaustaviServer.Location = new System.Drawing.Point(505, 169);
-			this.btnZaustaviServer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnZaustaviServer.Margin = new System.Windows.Forms.Padding(4);
 			this.btnZaustaviServer.Name = "btnZaustaviServer";
 			this.btnZaustaviServer.Size = new System.Drawing.Size(276, 50);
 			this.btnZaustaviServer.TabIndex = 6;
@@ -103,8 +103,9 @@
 			this.Controls.Add(this.lblStatusServera);
 			this.Controls.Add(this.btnZaustaviServer);
 			this.Controls.Add(this.btnPokreniServer);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "FrmServer";
+			this.ShowIcon = false;
 			this.Text = "Server";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmServer_FormClosed);
 			this.Load += new System.EventHandler(this.FrmServer_Load);

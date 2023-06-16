@@ -70,7 +70,7 @@ namespace Project.Client.Forms
 			this.txtKorisnikoIme.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtKorisnikoIme.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.txtKorisnikoIme.Location = new System.Drawing.Point(276, 102);
-			this.txtKorisnikoIme.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtKorisnikoIme.Margin = new System.Windows.Forms.Padding(4);
 			this.txtKorisnikoIme.Name = "txtKorisnikoIme";
 			this.txtKorisnikoIme.Size = new System.Drawing.Size(303, 28);
 			this.txtKorisnikoIme.TabIndex = 2;
@@ -80,8 +80,9 @@ namespace Project.Client.Forms
 			this.txtLozinka.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.txtLozinka.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.txtLozinka.Location = new System.Drawing.Point(276, 167);
-			this.txtLozinka.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txtLozinka.Margin = new System.Windows.Forms.Padding(4);
 			this.txtLozinka.Name = "txtLozinka";
+			this.txtLozinka.PasswordChar = '•';
 			this.txtLozinka.Size = new System.Drawing.Size(303, 28);
 			this.txtLozinka.TabIndex = 3;
 			// 
@@ -92,7 +93,7 @@ namespace Project.Client.Forms
 			this.btnPrijaviSe.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnPrijaviSe.ForeColor = System.Drawing.Color.DarkSlateBlue;
 			this.btnPrijaviSe.Location = new System.Drawing.Point(160, 270);
-			this.btnPrijaviSe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btnPrijaviSe.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPrijaviSe.Name = "btnPrijaviSe";
 			this.btnPrijaviSe.Size = new System.Drawing.Size(276, 50);
 			this.btnPrijaviSe.TabIndex = 4;
@@ -112,7 +113,7 @@ namespace Project.Client.Forms
 			this.Controls.Add(this.txtKorisnikoIme);
 			this.Controls.Add(this.lblLozinka);
 			this.Controls.Add(this.lblKorisnickoIme);
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.MaximizeBox = false;
 			this.Name = "FrmPrijavljivanje";
 			this.ShowIcon = false;

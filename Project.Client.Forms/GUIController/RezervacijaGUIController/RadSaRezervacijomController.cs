@@ -74,6 +74,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 		#region Ucitavanje DgvStolovi
 		private void SakrijKolone(DataGridView dgv)
 		{
+			dgv.Columns["Id"].Visible = false;
 			dgv.Columns["Rezervacija"].Visible = false;
 			dgv.Columns["TableName"].Visible = false;
 			dgv.Columns["InsertValues"].Visible = false;

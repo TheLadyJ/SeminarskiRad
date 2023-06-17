@@ -29,6 +29,8 @@ namespace Project.Common.Domain
 
         public string Join => "";
 
+		public string Id => $"MestoID";
+
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
 			
@@ -64,6 +66,11 @@ namespace Project.Common.Domain
 		public override int GetHashCode()
 		{
 			return base.GetHashCode();
+		}
+
+		public void SetId(object id)
+		{
+			MestoID = (int)id;
 		}
 	}
 }

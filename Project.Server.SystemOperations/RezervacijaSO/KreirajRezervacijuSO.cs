@@ -19,6 +19,11 @@ namespace Project.Server.SystemOperations.RezervacijaSO
 		protected override void Execute()
 		{
 			repository.Insert(rezervacija);
+			foreach(RezervisanSto rezervisanSto in rezervacija.RezervisaniStolovi)
+			{
+				rezervisanSto.Rezervacija = rezervacija;
+				repository.Insert(rezervisanSto);
+			}
 		}
 	}
 }

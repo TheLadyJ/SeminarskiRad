@@ -17,9 +17,9 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
     {
 		RadSaRezervacijomController radSaRezervacijomController;
 
-		public KeteringMeni IzabraniMeni { get; set; }
+		public KeteringMeni IzabraniMeni { get; set; } = new KeteringMeni();
 
-		public List<RezervisanSto> RezervisaniStolovi { get; set; }
+		public List<RezervisanSto> RezervisaniStolovi { get; set; } = new List<RezervisanSto>();
         public UCRadSaRezervacijom()
         {
             InitializeComponent();

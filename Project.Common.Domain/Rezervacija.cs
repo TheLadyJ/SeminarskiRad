@@ -19,11 +19,11 @@ namespace Project.Common.Domain
         public Mesto Mesto { get; set; }
         public KeteringMeni KeteringMeni { get; set; }
 
-        public List<RezervisanSto> StoloviRezervacije { get; set; }
+        public List<RezervisanSto> RezervisaniStolovi { get; set; }
 
         public string TableName => "Rezervacija";
 
-        public string InsertValues => $"{Datum}, {TipProslave.TipProslaveID}, {UkupnaCena}, {Radnik.RadnikID}, {Klijent.KlijentID}, {Mesto.MestoID}, {KeteringMeni.KeteringMeniID}";
+        public string InsertValues => $"'{Datum}', {TipProslave.TipProslaveID}, {UkupnaCena}, {Mesto.MestoID}, {Radnik.RadnikID}, {Klijent.KlijentID}, {KeteringMeni.KeteringMeniID}";
 
         public string UpdateValues => $"Datum = {Datum}, TipProslaveID = {TipProslave.TipProslaveID}, UkupnaCena = {UkupnaCena}, RadnikID = {Radnik.RadnikID}, KlijentID = {Klijent.KlijentID}, MestoID = {Mesto.MestoID}, KeteringMeniID = {KeteringMeni.KeteringMeniID}";
 
@@ -37,6 +37,8 @@ namespace Project.Common.Domain
                                 "join Mesto on Mesto.MestoID = Rezervacija.MestoID " +
                                 "join KeteringMeni on KeteringMeni.KeteringMeniID = Rezervacija.KeteringMeniID" +
                                 "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
+
+		public string Id => $"RezervacijaID";
 
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
@@ -139,6 +141,11 @@ namespace Project.Common.Domain
 		public override int GetHashCode()
 		{
 			return base.GetHashCode();
+		}
+
+		public void SetId(object id)
+		{
+            RezervacijaID = (int)id;
 		}
 	}
 }

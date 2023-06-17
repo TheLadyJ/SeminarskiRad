@@ -32,6 +32,8 @@ namespace Project.Common.Domain
 
         public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID";
 
+        public string Id => $"StoID";
+
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
 			if (kriterijum != null)			
@@ -84,6 +86,11 @@ namespace Project.Common.Domain
 		public override int GetHashCode()
 		{
 			return base.GetHashCode();
+		}
+
+		public void SetId(object id)
+		{
+            StoID = (int)id;
 		}
 	}
 }

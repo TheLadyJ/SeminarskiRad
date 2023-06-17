@@ -14,18 +14,20 @@ namespace Project.Common.Domain
         public Sto Sto { get; set; }
         public int RbStola { get; set; }
 
-        public string TableName => "StoRezervacije";
+        public string TableName => "RezervisanSto";
 
-        public string InsertValues => $"{Rezervacija.RezervacijaID}, {Sto.StoID}";
+        public string InsertValues => $"{Rezervacija.RezervacijaID}, {Sto.StoID}, {RbStola}";
 
         public string UpdateValues => $"RezervacijaID = {Rezervacija.RezervacijaID}, StoID = {Sto.StoID}";
 
         public string SearchCondition => "";
 
-		public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID}, StoID = {Sto.StoID}";
+		public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID}, StoID = {Sto.StoID}, RbStola = {RbStola}";
 
-        public string Join => "join Rezervacija on Rezervacija.RezervacijaID = StoRezervacije.RezervacijaID " +
-								"join Sto on Sto.StoID=StoRezervacije.StoID";
+        public string Join => "join Rezervacija on Rezervacija.RezervacijaID = RezervisanSto.RezervacijaID " +
+								"join Sto on Sto.StoID=RezervisanSto.StoID";
+
+		public string Id => $"RbStola";
 
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
@@ -108,6 +110,11 @@ namespace Project.Common.Domain
 		public override int GetHashCode()
 		{
 			return base.GetHashCode();
+		}
+
+		public void SetId(object id)
+		{
+            RbStola = (int)id;
 		}
 	}
 }

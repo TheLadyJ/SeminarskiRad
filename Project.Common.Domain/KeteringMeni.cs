@@ -32,6 +32,8 @@ namespace Project.Common.Domain
 
 		public string Join => "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
+        public string Id => $"KeteringMeniID";
+
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
 			
@@ -84,6 +86,11 @@ namespace Project.Common.Domain
 		public override int GetHashCode()
 		{
 			return base.GetHashCode();
+		}
+
+		public void SetId(object id)
+		{
+            KeteringMeniID = (int)id;
 		}
 	}
 }

@@ -69,6 +69,12 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				valid = false;
 			}
 
+			if (String.IsNullOrEmpty(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblKeteringMeniVrednost.Text))
+			{
+				message += "Rezervacija mora da sadrži ketering meni.\n";
+				valid = false;
+			}
+
 
 			if (String.IsNullOrEmpty(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtDatumVreme.Text))
 			{
@@ -102,6 +108,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				UkupnaCena = Double.Parse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblUkupnaCenaVrednost.Text),
 				Mesto = (Mesto)uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbMesto.SelectedItem,
 				KeteringMeni = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.IzabraniMeni,
+				RezervisaniStolovi = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.RezervisaniStolovi
 			};
 		}
 

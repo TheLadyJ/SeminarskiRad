@@ -22,7 +22,8 @@ namespace Project.Server.Main
 
         private void FrmServer_Load(object sender, EventArgs e)
         {
-            btnPokreniServer.Enabled = true;
+			this.FormBorderStyle = FormBorderStyle.FixedSingle;
+			btnPokreniServer.Enabled = true;
             btnZaustaviServer.Enabled = false;
         }
 

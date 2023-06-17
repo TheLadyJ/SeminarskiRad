@@ -1,4 +1,5 @@
 ﻿using Project.Client.Forms.Dialogs;
+using Project.Client.Forms.GUIController.RezervacijaGUIController;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,20 +14,32 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 {
     public partial class UCRadSaRezervacijom : UserControl
     {
-        public UCRadSaRezervacijom()
+		RadSaRezervacijomController radSaRezervacijomController;
+		public UCRadSaRezervacijom()
         {
             InitializeComponent();
-        }
+			radSaRezervacijomController = new RadSaRezervacijomController(this);
+
+		}
 
 		private void btnIzaberiKeteringMeni_Click(object sender, EventArgs e)
 		{
-            FrmIzaberiKeteringMeni frmIzaberiKeteringMeni = new FrmIzaberiKeteringMeni();
-            frmIzaberiKeteringMeni.ShowDialog();
+			radSaRezervacijomController.IzaberiKeteringMeni();
 		}
 
 		private void btnDodajSto_Click(object sender, EventArgs e)
 		{
+			radSaRezervacijomController.DodajSto();
+		}
 
+		private void btnObrisiStolove_Click(object sender, EventArgs e)
+		{
+			radSaRezervacijomController.ObrisiStolove();
+		}
+
+		private void UCRadSaRezervacijom_Load(object sender, EventArgs e)
+		{
+			radSaRezervacijomController.UcitajSvaComboBoxPolja();
 		}
 	}
 }

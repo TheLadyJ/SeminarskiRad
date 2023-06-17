@@ -79,7 +79,7 @@ namespace Project.Common.Domain
 		}
 		public override string ToString()
 		{
-			return $"Proizvodjac: {Proizvodjac}, Kapacitet: {Kapacitet}, Cena stola: {CenaStola}";
+			return $"Kapacitet: {Kapacitet}, Cena: {CenaStola} ({Proizvodjac})";
 		}
 		public override int GetHashCode()
 		{

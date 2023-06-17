@@ -72,7 +72,6 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.Controls.Add(this.ucRadSaRezervacijom1);
 			this.Name = "UCKreirajNovuRezervaciju";
 			this.Size = new System.Drawing.Size(1597, 908);
-			this.Load += new System.EventHandler(this.UCKreirajNovuRezervaciju_Load);
 			this.ResumeLayout(false);
 
 		}

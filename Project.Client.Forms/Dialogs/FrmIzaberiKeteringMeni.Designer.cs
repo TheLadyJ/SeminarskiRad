@@ -106,6 +106,7 @@
 			this.Controls.Add(this.lblKeteringFirma);
 			this.Name = "FrmIzaberiKeteringMeni";
 			this.ShowIcon = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Izaberi ketering meni";
 			this.Load += new System.EventHandler(this.FrmIzaberiKeteringMeni_Load);
 			((System.ComponentModel.ISupportInitialize)(this.dgvMeni)).EndInit();

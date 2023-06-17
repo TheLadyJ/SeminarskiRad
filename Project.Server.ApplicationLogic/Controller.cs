@@ -1,8 +1,10 @@
 ﻿using Project.Common.Domain;
 using Project.Server.SystemOperations;
 using Project.Server.SystemOperations.KlijentSO;
+using Project.Server.SystemOperations.MestoSO;
 using Project.Server.SystemOperations.RadnikSO;
 using Project.Server.SystemOperations.StoSO;
+using Project.Server.SystemOperations.TipProslaveSO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -160,6 +162,34 @@ namespace Project.Server.ApplicationLogic
 			{
 				SystemOperationBase so = new ObrisiStoSO(sto);
 				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Mesto> VratiSvaMesta()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSvaMestaSO();
+				so.ExecuteTemplate();
+				return (List<Mesto>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<TipProslave> VratiSveTipoveProslave()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSveTipoveProslaveSO();
+				so.ExecuteTemplate();
+				return (List<TipProslave>)so.Result;
 			}
 			catch (Exception)
 			{

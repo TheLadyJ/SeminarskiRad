@@ -30,10 +30,9 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbUnosStola = new System.Windows.Forms.GroupBox();
 			this.cbStolovi = new System.Windows.Forms.ComboBox();
 			this.lblSto = new System.Windows.Forms.Label();
@@ -123,40 +122,32 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			// 
 			this.dgvStolovi.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.dgvStolovi.BackgroundColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvStolovi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvStolovi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvStolovi.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvStolovi.Location = new System.Drawing.Point(27, 322);
 			this.dgvStolovi.Name = "dgvStolovi";
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvStolovi.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvStolovi.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
 			this.dgvStolovi.RowHeadersWidth = 51;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle6.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle6;
 			this.dgvStolovi.RowTemplate.Height = 24;
 			this.dgvStolovi.Size = new System.Drawing.Size(598, 384);
 			this.dgvStolovi.TabIndex = 24;
@@ -172,6 +163,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.btnObrisiStolove.TabIndex = 23;
 			this.btnObrisiStolove.Text = "Obriši sto/stolove";
 			this.btnObrisiStolove.UseVisualStyleBackColor = false;
+			this.btnObrisiStolove.Click += new System.EventHandler(this.btnObrisiStolove_Click);
 			// 
 			// btnDodajSto
 			// 
@@ -388,6 +380,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCRadSaRezervacijom";
 			this.Size = new System.Drawing.Size(1415, 786);
+			this.Load += new System.EventHandler(this.UCRadSaRezervacijom_Load);
 			this.gbUnosStola.ResumeLayout(false);
 			this.gbUnosStola.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStolovi)).EndInit();

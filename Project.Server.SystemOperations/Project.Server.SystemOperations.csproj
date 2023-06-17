@@ -45,6 +45,7 @@
     <Compile Include="KlijentSO\ObrisiKlijentaSO.cs" />
     <Compile Include="KlijentSO\PretraziKlijentaSO.cs" />
     <Compile Include="KlijentSO\VratiSveKlijenteSO.cs" />
+    <Compile Include="MestoSO\VratiSvaMestaSO.cs" />
     <Compile Include="RadnikSO\PrijaviRadnikaSO.cs" />
     <Compile Include="StoSO\ObrisiStoSO.cs" />
     <Compile Include="StoSO\PretraziStoSO.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="StoSO\VratiSveStoloveSO.cs" />
     <Compile Include="SystemOperationBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipProslaveSO\VratiSveTipoveProslaveSO.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Project.Common.Domain\Project.Common.Domain.csproj">

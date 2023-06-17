@@ -106,6 +106,7 @@
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "FrmServer";
 			this.ShowIcon = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Server";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmServer_FormClosed);
 			this.Load += new System.EventHandler(this.FrmServer_Load);

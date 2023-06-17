@@ -104,6 +104,12 @@ namespace Project.Server.Main
 					case Operation.ObrisiSto:
 						ObrisiSto(response, request);
 						break;
+					case Operation.VratiSvaMesta:
+						VratiSvaMesta(response);
+						break;
+					case Operation.VratiSveTipoveProslave:
+						VratiSveTipoveProslave(response);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -120,6 +126,39 @@ namespace Project.Server.Main
             return response;
         }
 
+		#region Mesto i TipProslave
+
+		private void VratiSvaMesta(Response response)
+		{
+			try
+			{
+				List<Mesto> mesta = Controller.Instance.VratiSvaMesta();
+				response.Result = mesta;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih mesta.";
+			}
+		}
+
+		private void VratiSveTipoveProslave(Response response)
+		{
+			try
+			{
+				List<TipProslave> tipoviProslave = Controller.Instance.VratiSveTipoveProslave();
+				response.Result = tipoviProslave;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih tipova proslava.";
+			}
+		}
+
+		#endregion
+
+		#region Sto i proizvodjac
 		private void ObrisiSto(Response response, Request request)
 		{
 			try
@@ -171,6 +210,7 @@ namespace Project.Server.Main
 			}
 		}
 
+
 		private void VratiProizvodjace(Response response)
 		{
 			try
@@ -197,6 +237,10 @@ namespace Project.Server.Main
 				response.Message = "Sistem ne može da zapamti sto.";
 			}
 		}
+
+		#endregion
+
+		#region Klijent
 
 		private void ObrisiKlijenta(Response response, Request request)
 		{
@@ -262,6 +306,9 @@ namespace Project.Server.Main
 			}
 		}
 
+		#endregion
+
+		#region Radnik
 		private void PrijaviRadnika(Response response, Request request)
         {
             try
@@ -296,5 +343,7 @@ namespace Project.Server.Main
         {
             return ClientsSessionData.Instance.Clients.Any(handler=>handler.Radnik.RadnikID == radnik.RadnikID);
         }
-    }
+
+		#endregion
+	}
 }

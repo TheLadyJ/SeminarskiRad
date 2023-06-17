@@ -20,10 +20,6 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			kreirajRezervacijuController = new KreirajRezervacijuController(this);
 		}
 
-		private void UCKreirajNovuRezervaciju_Load(object sender, EventArgs e)
-		{
-			kreirajRezervacijuController.UcitajStoloveIKlijente();
-		}
 
 		private void btnKreirajNovuRezervaciju_Click(object sender, EventArgs e)
 		{

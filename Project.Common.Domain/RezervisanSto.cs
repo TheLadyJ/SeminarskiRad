@@ -12,6 +12,7 @@ namespace Project.Common.Domain
     {
         public Rezervacija Rezervacija { get; set; }
         public Sto Sto { get; set; }
+        public int RbStola { get; set; }
 
         public string TableName => "StoRezervacije";
 
@@ -42,7 +43,9 @@ namespace Project.Common.Domain
             {
                 StoID = (int)reader["StoID"]
             };
-            return sr;
+            sr.RbStola = (int)reader["RbStola"];
+
+			return sr;
         }
 
         public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
@@ -84,8 +87,10 @@ namespace Project.Common.Domain
                     ProizvodjacID = (int)reader["ProizvodjacID"],
                 }
             };
-    
-            return sr;
+			sr.RbStola = (int)reader["RbStola"];
+
+
+			return sr;
         }
 
 		public override bool Equals(object obj)
@@ -98,7 +103,7 @@ namespace Project.Common.Domain
 		}
 		public override string ToString()
 		{
-			return $"Sto: [{Sto}] za rezervaciju [{Rezervacija}]";
+			return $"Sto: [{Sto}] za rezervaciju: [{Rezervacija}], redni broj: {RbStola}";
 		}
 		public override int GetHashCode()
 		{

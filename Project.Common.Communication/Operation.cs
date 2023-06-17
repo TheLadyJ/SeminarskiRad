@@ -18,6 +18,8 @@ namespace Project.Common.Communication
 		VratiProizvodjace,
 		VratiSveStolove,
 		PretraziSto,
-		ObrisiSto
+		ObrisiSto,
+		VratiSvaMesta,
+		VratiSveTipoveProslave
 	}
 }

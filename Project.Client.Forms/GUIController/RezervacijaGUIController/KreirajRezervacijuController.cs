@@ -21,9 +21,5 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			throw new NotImplementedException();
 		}
 
-		internal void UcitajStoloveIKlijente()
-		{
-			uCKreirajNovuRezervaciju.UcRadSaRezervacijom.
-		}
 	}
 }

@@ -103,7 +103,7 @@ namespace Project.Common.Domain
             {
                 MestoID = reader.GetInt32(20),
                 Grad = reader.GetString(21),
-                PostanskiBroj = reader.GetInt32(22),
+                PostanskiBroj = reader.GetString(22),
                 Adresa = reader.GetString(23),
             };
             r.KeteringMeni = new KeteringMeni

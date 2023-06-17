@@ -20,6 +20,9 @@ namespace Project.Common.Communication
 		PretraziSto,
 		ObrisiSto,
 		VratiSvaMesta,
-		VratiSveTipoveProslave
+		VratiSveTipoveProslave,
+		VratiSveKeteringFirme,
+		VratiMenijeFirme,
+		KreirajRezervaciju
 	}
 }

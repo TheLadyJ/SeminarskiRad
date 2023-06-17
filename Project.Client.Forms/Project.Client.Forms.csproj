@@ -72,6 +72,7 @@
     <Compile Include="FrmRadnikovaGlavna.Designer.cs">
       <DependentUpon>FrmRadnikovaGlavna.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUIController\KeteringMeniGUIController\IzabreiKeteringMeniController.cs" />
     <Compile Include="GUIController\KlijentGUIController\ObrisiKlijentaController.cs" />
     <Compile Include="GUIController\KlijentGUIController\KreirajKlijentaController.cs" />
     <Compile Include="GUIController\KlijentGUIController\PretraziKlijentaController.cs" />
@@ -242,6 +243,10 @@
     <ProjectReference Include="..\Project.Common.Domain\Project.Common.Domain.csproj">
       <Project>{FF1BC8DF-A96C-4F06-90C2-0715D3C6A676}</Project>
       <Name>Project.Common.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.Server.ApplicationLogic\Project.Server.ApplicationLogic.csproj">
+      <Project>{650E034C-F480-41D0-910D-F073C165D3F9}</Project>
+      <Name>Project.Server.ApplicationLogic</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

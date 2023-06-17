@@ -151,6 +151,8 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.dgvStolovi.RowTemplate.Height = 24;
 			this.dgvStolovi.Size = new System.Drawing.Size(598, 384);
 			this.dgvStolovi.TabIndex = 24;
+			this.dgvStolovi.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvStolovi_RowsAdded);
+			this.dgvStolovi.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvStolovi_RowsRemoved);
 			// 
 			// btnObrisiStolove
 			// 
@@ -184,11 +186,13 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.lblKeteringMeniVrednost.BackColor = System.Drawing.Color.White;
 			this.lblKeteringMeniVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblKeteringMeniVrednost.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			this.lblKeteringMeniVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblKeteringMeniVrednost.Location = new System.Drawing.Point(977, 276);
 			this.lblKeteringMeniVrednost.Name = "lblKeteringMeniVrednost";
 			this.lblKeteringMeniVrednost.Size = new System.Drawing.Size(383, 27);
 			this.lblKeteringMeniVrednost.TabIndex = 20;
 			this.lblKeteringMeniVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblKeteringMeniVrednost.TextChanged += new System.EventHandler(this.lblKeteringMeniVrednost_TextChanged);
 			// 
 			// lblKeteringMeni
 			// 
@@ -242,6 +246,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.lblRadnikVrednost.BackColor = System.Drawing.Color.White;
 			this.lblRadnikVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblRadnikVrednost.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			this.lblRadnikVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblRadnikVrednost.Location = new System.Drawing.Point(242, 53);
 			this.lblRadnikVrednost.Name = "lblRadnikVrednost";
 			this.lblRadnikVrednost.Size = new System.Drawing.Size(383, 27);
@@ -287,6 +292,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.lblUkupnaCenaVrednost.BackColor = System.Drawing.Color.White;
 			this.lblUkupnaCenaVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblUkupnaCenaVrednost.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			this.lblUkupnaCenaVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblUkupnaCenaVrednost.Location = new System.Drawing.Point(977, 408);
 			this.lblUkupnaCenaVrednost.Name = "lblUkupnaCenaVrednost";
 			this.lblUkupnaCenaVrednost.Size = new System.Drawing.Size(383, 27);

@@ -10,7 +10,7 @@ namespace Project.Common.Domain
 	[Serializable]
 	public class Rezervacija : IDomainObject
     {
-        public int RezervacijaID { get; set; }
+        public int RezervacijaID { get; set; } = -1;
         public DateTime Datum { get; set; }
         public TipProslave TipProslave { get; set; }
         public double UkupnaCena { get; set; }

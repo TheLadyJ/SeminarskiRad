@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Project.Client.Forms.GUIController.KeteringMeniGUIController;
+using Project.Common.Domain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,14 +14,28 @@ namespace Project.Client.Forms.Dialogs
 {
 	public partial class FrmIzaberiKeteringMeni : Form
 	{
-		public FrmIzaberiKeteringMeni()
+        public KeteringMeni IzabraniMeni { get; set; }
+		private IzabreiKeteringMeniController IzabreiKeteringMeniController;
+        public FrmIzaberiKeteringMeni()
 		{
 			InitializeComponent();
+			IzabreiKeteringMeniController = new IzabreiKeteringMeniController(this);
 		}
 
 		private void FrmIzaberiKeteringMeni_Load(object sender, EventArgs e)
 		{
+			IzabreiKeteringMeniController.UcitajListuKeteringFirmi();
 			this.FormBorderStyle = FormBorderStyle.FixedSingle;
+		}
+
+		private void btnPrikazi_Click(object sender, EventArgs e)
+		{
+			IzabreiKeteringMeniController.PrikaziMenijeFirme();
+		}
+
+		private void btnOdabir_Click(object sender, EventArgs e)
+		{
+			IzabreiKeteringMeniController.IzvrsiOdabirMenija();
 		}
 	}
 }

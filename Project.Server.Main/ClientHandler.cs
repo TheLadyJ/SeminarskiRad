@@ -110,6 +110,15 @@ namespace Project.Server.Main
 					case Operation.VratiSveTipoveProslave:
 						VratiSveTipoveProslave(response);
 						break;
+					case Operation.VratiSveKeteringFirme:
+						VratiSveKeteringFirme(response);
+						break;
+					case Operation.VratiMenijeFirme:
+						VratiMenijeFirme(response, request);
+						break;
+					case Operation.KreirajRezervaciju:
+						KreirajRezervaciju(response, request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -125,6 +134,55 @@ namespace Project.Server.Main
             }
             return response;
         }
+
+		#region Rezervacija
+		private void KreirajRezervaciju(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.KreirajRezervaciju((Rezervacija)request.RequestObject);
+				response.Message = "Sistem je zapamtio rezervaciju.";
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da zapamti podatke o rezervaciji.";
+			}
+		}
+
+		#endregion
+
+		#region KeteringFirma i KeteringMeni
+		private void VratiMenijeFirme(Response response, Request request)
+		{
+			try
+			{
+				List<KeteringMeni> meniji = Controller.Instance.VratiMenijeFirme((KeteringFirma)request.RequestObject);
+				response.Result = meniji;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja menija odabrane firme.";
+			}
+		}
+
+		private void VratiSveKeteringFirme(Response response)
+		{
+			try
+			{
+				List<KeteringFirma> firme = Controller.Instance.VratiSveKeteringFirme();
+				response.Result = firme;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih ketering firmi.";
+			}
+		}
+
+
+		#endregion
 
 		#region Mesto i TipProslave
 
@@ -187,6 +245,7 @@ namespace Project.Server.Main
 				else
 				{
 					response.Message = "Sistem ne može da nađe stolove po zadatoj vrednosti.";
+					response.IsSuccessful = false;
 				}
 			}
 			catch (Exception)
@@ -234,6 +293,7 @@ namespace Project.Server.Main
 			}
 			catch (Exception)
 			{
+				response.IsSuccessful = false;
 				response.Message = "Sistem ne može da zapamti sto.";
 			}
 		}
@@ -269,6 +329,7 @@ namespace Project.Server.Main
                 }
                 else
                 {
+					response.IsSuccessful = false;
 					response.Message = "Sistem ne može da nađe klijenta po zadatoj vrednosti.";
 				}
 			}
@@ -302,6 +363,7 @@ namespace Project.Server.Main
 			}
 			catch (Exception)
             {
+				response.IsSuccessful = false;
 				response.Message = "Sistem ne može da zapamti klijenta.";
 			}
 		}

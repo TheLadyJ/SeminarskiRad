@@ -1,6 +1,7 @@
 ﻿using Project.Client.Forms.Dialogs;
 using Project.Client.Forms.Exceptions;
 using Project.Client.Forms.ServerCommunication;
+using Project.Client.Forms.Session;
 using Project.Client.Forms.UserControls.UCKlijent;
 using Project.Client.Forms.UserControls.UCRezervacija;
 using Project.Common.Communication;
@@ -19,11 +20,11 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 	public class RadSaRezervacijomController
 	{
 		private UCRadSaRezervacijom uCRadSaRezervacijom;
-		private List<RezervisanSto> rezervisaniStolovi = new List<RezervisanSto>();
 
-		public RadSaRezervacijomController(UCRadSaRezervacijom uCRadSaRezervacijom)
+        public RadSaRezervacijomController(UCRadSaRezervacijom uCRadSaRezervacijom)
 		{
 			this.uCRadSaRezervacijom = uCRadSaRezervacijom;
+			uCRadSaRezervacijom.LblRadnikVrednost.Text = SessionData.Instance.Radnik.ToString();
 		}
 
 		#region Ucitavanje ComboBox Polja
@@ -102,12 +103,12 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				MessageBox.Show("Morate izabrati neki sto za dodavanje u listu.");
 				return;
 			}
-			rezervisaniStolovi.Add(new RezervisanSto
+			uCRadSaRezervacijom.RezervisaniStolovi.Add(new RezervisanSto
 			{
 				Sto = (Sto)uCRadSaRezervacijom.CbStolovi.SelectedItem,
-				RbStola = rezervisaniStolovi.Count+1
+				RbStola = uCRadSaRezervacijom.RezervisaniStolovi.Count+1
 			});
-			UcitajDgvStolovi(rezervisaniStolovi);
+			UcitajDgvStolovi(uCRadSaRezervacijom.RezervisaniStolovi);
 		}
 
 		internal void ObrisiStolove()
@@ -122,7 +123,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 
 			AzurirajRedneBrojeve();
 
-			UcitajDgvStolovi(rezervisaniStolovi);
+			UcitajDgvStolovi(uCRadSaRezervacijom.RezervisaniStolovi);
 		}
 
 		private void IzbrisiOdabraneStolove()
@@ -130,15 +131,15 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			for (int i = uCRadSaRezervacijom.DgvStolovi.SelectedRows.Count - 1; i >= 0; i--)
 			{
 				RezervisanSto rezStoZaBrisanje = (RezervisanSto)uCRadSaRezervacijom.DgvStolovi.SelectedRows[i].DataBoundItem;
-				rezervisaniStolovi.Remove(rezStoZaBrisanje);
+				uCRadSaRezervacijom.RezervisaniStolovi.Remove(rezStoZaBrisanje);
 			}
 		}
 
 		private void AzurirajRedneBrojeve()
 		{
-			for (int i = 1; i <= rezervisaniStolovi.Count; i++)
+			for (int i = 1; i <= uCRadSaRezervacijom.RezervisaniStolovi.Count; i++)
 			{
-				rezervisaniStolovi[i - 1].RbStola = i;
+				uCRadSaRezervacijom.RezervisaniStolovi[i - 1].RbStola = i;
 			}
 		}
 
@@ -146,7 +147,36 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 		{
 			FrmIzaberiKeteringMeni frmIzaberiKeteringMeni = new FrmIzaberiKeteringMeni();
 			frmIzaberiKeteringMeni.ShowDialog();
+			if (frmIzaberiKeteringMeni.DialogResult == DialogResult.OK)
+			{
+				uCRadSaRezervacijom.IzabraniMeni = frmIzaberiKeteringMeni.IzabraniMeni;
+				uCRadSaRezervacijom.LblKeteringMeniVrednost.Text = uCRadSaRezervacijom.IzabraniMeni.ToString();
+			}
 		}
 
+		internal void AzurirajUkupnuCenu()
+		{
+			if (String.IsNullOrEmpty(uCRadSaRezervacijom.LblKeteringMeniVrednost.Text) || uCRadSaRezervacijom.RezervisaniStolovi == null || uCRadSaRezervacijom.RezervisaniStolovi.Count == 0)
+			{
+				uCRadSaRezervacijom.LblUkupnaCenaVrednost.Text = "";
+				return;
+			}
+
+			uCRadSaRezervacijom.LblUkupnaCenaVrednost.Text = IzracunajUkupnuCenu().ToString();
+		}
+
+		private double IzracunajUkupnuCenu()
+		{
+			double cenaSvihStolova = 0;
+			int brojSvihLjudi = 0;
+
+			uCRadSaRezervacijom.RezervisaniStolovi.ForEach(rs =>
+			{
+				cenaSvihStolova += rs.Sto.CenaStola;
+				brojSvihLjudi += rs.Sto.Kapacitet;
+			});
+
+			return cenaSvihStolova + uCRadSaRezervacijom.IzabraniMeni.CenaHranePoOsobi * brojSvihLjudi;
+		}
 	}
 }

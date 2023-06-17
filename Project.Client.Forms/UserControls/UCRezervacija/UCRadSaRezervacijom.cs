@@ -1,5 +1,6 @@
 ﻿using Project.Client.Forms.Dialogs;
 using Project.Client.Forms.GUIController.RezervacijaGUIController;
+using Project.Common.Domain;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,7 +16,11 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
     public partial class UCRadSaRezervacijom : UserControl
     {
 		RadSaRezervacijomController radSaRezervacijomController;
-		public UCRadSaRezervacijom()
+
+		public KeteringMeni IzabraniMeni { get; set; }
+
+		public List<RezervisanSto> RezervisaniStolovi { get; set; }
+        public UCRadSaRezervacijom()
         {
             InitializeComponent();
 			radSaRezervacijomController = new RadSaRezervacijomController(this);
@@ -40,6 +45,21 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 		private void UCRadSaRezervacijom_Load(object sender, EventArgs e)
 		{
 			radSaRezervacijomController.UcitajSvaComboBoxPolja();
+		}
+
+		private void lblKeteringMeniVrednost_TextChanged(object sender, EventArgs e)
+		{
+			radSaRezervacijomController.AzurirajUkupnuCenu();
+		}
+
+		private void dgvStolovi_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+		{
+			radSaRezervacijomController.AzurirajUkupnuCenu();
+		}
+
+		private void dgvStolovi_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+		{
+			radSaRezervacijomController.AzurirajUkupnuCenu();
 		}
 	}
 }

@@ -28,7 +28,7 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Predjelo = '{Predjelo}', GlavnoJelo = '{GlavnoJelo}', Dezert = '{Dezert}', CenaHranePoOsobi = {CenaHranePoOsobi}, KeteringFirmaID = {KeteringFirma.KeteringFirmaID}";
 
-        public string SearchCondition => "";
+        public string SearchCondition => "CAST(KeteringFirmaID AS VARCHAR(100)) = @Kriterijum";
 
 		public string Join => "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 

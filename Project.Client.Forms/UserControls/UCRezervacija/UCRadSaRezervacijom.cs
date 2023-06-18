@@ -24,7 +24,6 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
         {
             InitializeComponent();
 			radSaRezervacijomController = new RadSaRezervacijomController(this);
-
 		}
 
 		private void btnIzaberiKeteringMeni_Click(object sender, EventArgs e)

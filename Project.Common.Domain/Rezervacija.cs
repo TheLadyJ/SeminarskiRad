@@ -27,7 +27,17 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Datum = {Datum}, TipProslaveID = {TipProslave.TipProslaveID}, UkupnaCena = {UkupnaCena}, RadnikID = {Radnik.RadnikID}, KlijentID = {Klijent.KlijentID}, MestoID = {Mesto.MestoID}, KeteringMeniID = {KeteringMeni.KeteringMeniID}";
 
-        public string SearchCondition => "";
+        public string SearchCondition =>    $"CONVERT(VARCHAR(100), Datum, 34) LIKE '%' + @Kriterijum + '%' OR " +
+			                                $"CONVERT(VARCHAR(100), Datum, 8) LIKE '%' + @Kriterijum + '%' OR " +
+											$"CAST(UkupnaCena AS VARCHAR(100)) LIKE '%' + @Kriterijum + '%' OR " +
+											$"NazivTipaProslave LIKE '%' + @Kriterijum + '%' OR " +
+											$"Grad LIKE '%' + @Kriterijum + '%' OR " +
+											$"PostanskiBroj LIKE '%' + @Kriterijum + '%' OR " +
+											$"Adresa LIKE '%' + @Kriterijum + '%' OR " +
+											$"Radnik.Ime LIKE '%' + @Kriterijum + '%' OR " +
+											$"Radnik.Prezime LIKE '%' + @Kriterijum + '%' OR " +
+											$"Klijent.Ime LIKE '%' + @Kriterijum + '%' OR " +
+			                                $"Klijent.Prezime LIKE '%' + @Kriterijum + '%'";
 
 		public string IdCondition => $"RezervacijaID = {RezervacijaID}";
 
@@ -35,7 +45,7 @@ namespace Project.Common.Domain
                                 "join Radnik on Radnik.RadnikID = Rezervacija.RadnikID " +
                                 "join Klijent on Klijent.KlijentID = Rezervacija.KlijentID " +
                                 "join Mesto on Mesto.MestoID = Rezervacija.MestoID " +
-                                "join KeteringMeni on KeteringMeni.KeteringMeniID = Rezervacija.KeteringMeniID" +
+                                "join KeteringMeni on KeteringMeni.KeteringMeniID = Rezervacija.KeteringMeniID " +
                                 "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
 		public string Id => $"RezervacijaID";

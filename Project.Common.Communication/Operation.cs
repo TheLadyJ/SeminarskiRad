@@ -23,6 +23,8 @@ namespace Project.Common.Communication
 		VratiSveTipoveProslave,
 		VratiSveKeteringFirme,
 		VratiMenijeFirme,
-		KreirajRezervaciju
+		KreirajRezervaciju,
+		VratiSveRezervacije,
+		PretraziRezervaciju
 	}
 }

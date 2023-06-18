@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.Dialogs
+﻿using Project.Client.Forms.UserControls.UCRezervacija;
+
+namespace Project.Client.Forms.Dialogs
 {
 	partial class FrmIzmeniRezervaciju
 	{
@@ -61,5 +63,7 @@
 		#endregion
 
 		private UserControls.UCRezervacija.UCIzmeniRezervaciju ucIzmeniRezervaciju1;
+
+		public UCIzmeniRezervaciju UcIzmeniRezervaciju { get => ucIzmeniRezervaciju1; set => ucIzmeniRezervaciju1 = value; }
 	}
 }

@@ -1,4 +1,5 @@
 ﻿using Project.Client.Forms.Dialogs;
+using Project.Client.Forms.GUIController.RezervacijaGUIController;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,11 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 {
 	public partial class UCPretragaRezervacija : UserControl
 	{
+		private PretragaRezervacijaController pretragaRezervacijaController;
 		public UCPretragaRezervacija()
 		{
 			InitializeComponent();
+			pretragaRezervacijaController = new PretragaRezervacijaController(this);
 		}
 
 		private void btnIzaberiKeteringMeni_Click(object sender, EventArgs e)
@@ -23,5 +26,16 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			FrmIzaberiKeteringMeni frmIzaberiKeteringMeni = new FrmIzaberiKeteringMeni();
 			frmIzaberiKeteringMeni.ShowDialog();
 		}
+
+		private void btnPretrazi_Click(object sender, EventArgs e)
+		{
+			pretragaRezervacijaController.PretraziRezervaciju();
+		}
+
+		private void UCPretragaRezervacija_Load(object sender, EventArgs e)
+		{
+			pretragaRezervacijaController.UcitajSveRezervacije();
+		}
+
 	}
 }

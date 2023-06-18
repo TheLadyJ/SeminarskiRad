@@ -14,6 +14,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 	public partial class UCKreirajNovuRezervaciju : UserControl
 	{
 		private KreirajRezervacijuController kreirajRezervacijuController;
+		
 		public UCKreirajNovuRezervaciju()
 		{
 			InitializeComponent();

@@ -45,49 +45,49 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			bool valid = true;
 			string message ="";
 
-			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbKlijent.SelectedItem == null)
+			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.CbKlijent.SelectedItem == null)
 			{
 				message += "Rezervacija mora da sadrži klijenta na koga se ona odnosi.\n";
 				valid = false;
 			}
 
-			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbMesto.SelectedItem == null)
+			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.CbMesto.SelectedItem == null)
 			{
 				message += "Rezervacija mora da sadrži mesto.\n";
 				valid = false;
 			}
 
-			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbTipProslave.SelectedItem == null)
+			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.CbTipProslave.SelectedItem == null)
 			{
 				message += "Rezervacija mora da sadrži tip proslave.\n";
 				valid = false;
 			}
 
-			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom.RezervisaniStolovi.Count == 0)
+			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.RezervisaniStolovi.Count == 0)
 			{
 				message += "Rezervacija mora da sadrži barem jedan sto u listi rezervisanih stolova.\n";
 				valid = false;
 			}
 
-			if (String.IsNullOrEmpty(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblKeteringMeniVrednost.Text))
+			if (String.IsNullOrEmpty(uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.LblKeteringMeniVrednost.Text))
 			{
 				message += "Rezervacija mora da sadrži ketering meni.\n";
 				valid = false;
 			}
 
 
-			if (String.IsNullOrEmpty(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtDatumVreme.Text))
+			if (String.IsNullOrEmpty(uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.TxtDatumVreme.Text))
 			{
 				message += "Rezervacija mora da sadrži datum i vreme.\n";
 				valid = false;
 			}
-			else if(!DateTime.TryParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtDatumVreme.Text,"dd.MM.yyyy. HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime dt))
+			else if(!DateTime.TryParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.TxtDatumVreme.Text,"dd.MM.yyyy. HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime dt))
 			{
 				message += "Datum i vreme nisu u validnom formatu.\n";
 				valid = false;
 			}
 
-			if(!Double.TryParse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblUkupnaCenaVrednost.Text, out double res))
+			if(!Double.TryParse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.LblUkupnaCenaVrednost.Text, out double res))
 			{
 				message += "Greška prilikom konvertovanja ukupne cene u numeričku vrednost.\n";
 				valid = false;
@@ -102,13 +102,13 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			rezervacija = new Rezervacija
 			{
 				Radnik = SessionData.Instance.Radnik,
-				Klijent = (Klijent)uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbKlijent.SelectedItem,
-				TipProslave = (TipProslave)uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbTipProslave.SelectedItem,
-				Datum = DateTime.ParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtDatumVreme.Text, "dd.MM.yyyy. HH:mm", null),
-				UkupnaCena = Double.Parse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblUkupnaCenaVrednost.Text),
-				Mesto = (Mesto)uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbMesto.SelectedItem,
-				KeteringMeni = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.IzabraniMeni,
-				RezervisaniStolovi = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.RezervisaniStolovi
+				Klijent = (Klijent)uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.CbKlijent.SelectedItem,
+				TipProslave = (TipProslave)uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.CbTipProslave.SelectedItem,
+				Datum = DateTime.ParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.TxtDatumVreme.Text, "dd.MM.yyyy. HH:mm", null),
+				UkupnaCena = Double.Parse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.LblUkupnaCenaVrednost.Text),
+				Mesto = (Mesto)uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.CbMesto.SelectedItem,
+				KeteringMeni = uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.IzabraniMeni,
+				RezervisaniStolovi = uCKreirajNovuRezervaciju.UcRadSaRezervacijom1.RezervisaniStolovi
 			};
 		}
 

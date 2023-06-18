@@ -78,7 +78,10 @@
     <Compile Include="GUIController\KlijentGUIController\PretraziKlijentaController.cs" />
     <Compile Include="GUIController\PrijaviRadnikaController.cs" />
     <Compile Include="GUIController\RadnikGUIController\RadnikovaGlavnaController.cs" />
+    <Compile Include="GUIController\RezervacijaGUIController\IzmeniRezervacijuController.cs" />
     <Compile Include="GUIController\RezervacijaGUIController\KreirajRezervacijuController.cs" />
+    <Compile Include="GUIController\RezervacijaGUIController\PretragaRezervacijaController.cs" />
+    <Compile Include="GUIController\RezervacijaGUIController\PretraziRezervacijuZaIzmenuController.cs" />
     <Compile Include="GUIController\RezervacijaGUIController\RadSaRezervacijomController.cs" />
     <Compile Include="GUIController\StoGUIController\ObrisiStoController.cs" />
     <Compile Include="GUIController\StoGUIController\PretraziStoController.cs" />
@@ -195,6 +198,8 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.resx">
       <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>UCKreirajNovuRezervaciju1.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCRezervacija\UCPretragaRezervacija.resx">
       <DependentUpon>UCPretragaRezervacija.cs</DependentUpon>

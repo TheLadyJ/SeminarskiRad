@@ -241,5 +241,33 @@ namespace Project.Server.ApplicationLogic
 				throw;
 			}
 		}
+
+		public List<Rezervacija> VratiSveRezervacije()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSveRezervacijeSO();
+				so.ExecuteTemplate();
+				return (List<Rezervacija>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Rezervacija> PretraziRezervaciju(string kriterijum)
+		{
+			try
+			{
+				SystemOperationBase so = new PretraziRezervacijuSO(kriterijum);
+				so.ExecuteTemplate();
+				return (List<Rezervacija>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 	}
 }

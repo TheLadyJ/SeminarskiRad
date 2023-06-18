@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCRezervacija
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCRezervacija
 {
 	partial class UCIzmeniRezervaciju
 	{
@@ -74,5 +76,8 @@
 
 		private UCRadSaRezervacijom ucRadSaRezervacijom;
 		private System.Windows.Forms.Button btnIzmeniRezervaciju;
+
+		public UCRadSaRezervacijom UcRadSaRezervacijom { get => ucRadSaRezervacijom; set => ucRadSaRezervacijom = value; }
+		public Button BtnIzmeniRezervaciju { get => btnIzmeniRezervaciju; set => btnIzmeniRezervaciju = value; }
 	}
 }

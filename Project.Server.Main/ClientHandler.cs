@@ -119,6 +119,12 @@ namespace Project.Server.Main
 					case Operation.KreirajRezervaciju:
 						KreirajRezervaciju(response, request);
 						break;
+					case Operation.VratiSveRezervacije:
+						VratiSveRezervacije(response);
+						break;
+					case Operation.PretraziRezervaciju:
+						PretraziRezervaciju(response, request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -135,6 +141,7 @@ namespace Project.Server.Main
             return response;
         }
 
+
 		#region Rezervacija
 		private void KreirajRezervaciju(Response response, Request request)
 		{
@@ -149,6 +156,44 @@ namespace Project.Server.Main
 				response.Message = "Sistem ne može da zapamti podatke o rezervaciji.";
 			}
 		}
+
+		private void VratiSveRezervacije(Response response)
+		{
+			try
+			{
+				List<Rezervacija> rezervacije = Controller.Instance.VratiSveRezervacije();
+				response.Result = rezervacije;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih rezervacija.";
+			}
+		}
+
+		private void PretraziRezervaciju(Response response, Request request)
+		{
+			try
+			{
+				List<Rezervacija> nadjeneRezervacije = Controller.Instance.PretraziRezervaciju((string)request.RequestObject);
+				response.Result = nadjeneRezervacije;
+				if (nadjeneRezervacije != null && nadjeneRezervacije.Count != 0)
+				{
+					response.Message = "Sistem je našao rezervacije po zadatoj vrednosti.";
+				}
+				else
+				{
+					response.IsSuccessful = false;
+					response.Message = "Sistem ne može da nađe rezervaciju po zadatoj vrednosti.";
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom pretrage rezervacije.";
+			}
+		}
+
 
 		#endregion
 

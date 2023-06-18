@@ -82,6 +82,6 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 		private UCRadSaRezervacijom ucRadSaRezervacijom1;
 
 		public Button BtnKreirajNovuRezervaciju { get => btnKreirajNovuRezervaciju; set => btnKreirajNovuRezervaciju = value; }
-		public UCRadSaRezervacijom UcRadSaRezervacijom { get => ucRadSaRezervacijom1; set => ucRadSaRezervacijom1 = value; }
+		public UCRadSaRezervacijom UcRadSaRezervacijom1 { get => ucRadSaRezervacijom1; set => ucRadSaRezervacijom1 = value; }
 	}
 }

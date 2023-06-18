@@ -108,12 +108,6 @@
     <Compile Include="UserControls\UCKlijent\UCPretraziKlijetnta.Designer.cs">
       <DependentUpon>UCPretraziKlijetnta.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UCRezervacija\UCIzmeniRezervaciju.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UCRezervacija\UCIzmeniRezervaciju.Designer.cs">
-      <DependentUpon>UCIzmeniRezervaciju.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -193,9 +187,6 @@
     <EmbeddedResource Include="UserControls\UCKlijent\UCPretraziKlijetnta.resx">
       <DependentUpon>UCPretraziKlijetnta.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCRezervacija\UCIzmeniRezervaciju.resx">
-      <DependentUpon>UCIzmeniRezervaciju.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCRezervacija\UCKreirajNovuRezervaciju.resx">
       <DependentUpon>UCKreirajNovuRezervaciju.cs</DependentUpon>
       <Generator>PublicResXFileCodeGenerator</Generator>
@@ -209,9 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaIzmenu.resx">
       <DependentUpon>UCPretraziRezervacijuZaIzmenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UCRezervacija\UCRadSaRezervacijom.resx">
-      <DependentUpon>UCRadSaRezervacijom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCSto\UCObrisiSto.resx">
       <DependentUpon>UCObrisiSto.cs</DependentUpon>

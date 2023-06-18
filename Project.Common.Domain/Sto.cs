@@ -10,7 +10,7 @@ namespace Project.Common.Domain
     [Serializable]
 	public class Sto : IDomainObject
     {
-        public int StoID { get; set; }
+        public int RbStola { get; set; }
         public int Kapacitet { get; set; }
         public double CenaStola { get; set; }
 
@@ -28,11 +28,11 @@ namespace Project.Common.Domain
 											$"CAST(CenaStola AS VARCHAR(100)) LIKE '%' + @Kriterijum + '%' OR " + 
 											$"NazivProizvodjaca LIKE '%' + @Kriterijum + '%'";
 
-		public string IdCondition => $"StoID = {StoID}";
+		public string IdCondition => $"RbStola = {RbStola}";
 
         public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID";
 
-        public string Id => $"StoID";
+        public string Id => $"RbStola";
 
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
@@ -45,7 +45,7 @@ namespace Project.Common.Domain
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Sto s = new Sto();
-            s.StoID = (int)reader["StoID"];
+            s.RbStola = (int)reader["RbStola"];
             s.Kapacitet = (int)reader["Kapacitet"];
             s.CenaStola = (double)reader["CenaStola"];
             s.Proizvodjac = new Proizvodjac
@@ -58,7 +58,7 @@ namespace Project.Common.Domain
         public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
         {
             Sto s = new Sto();
-            s.StoID = (int)reader["StoID"];
+            s.RbStola = (int)reader["RbStola"];
             s.Kapacitet = (int)reader["Kapacitet"];
             s.CenaStola = (double)reader["CenaStola"];
             s.Proizvodjac = new Proizvodjac
@@ -75,7 +75,7 @@ namespace Project.Common.Domain
 		{
 			if (obj is Sto s)
 			{
-				return s.StoID == StoID;
+				return s.RbStola == RbStola;
 			}
 			return false;
 		}
@@ -90,7 +90,7 @@ namespace Project.Common.Domain
 
 		public void SetId(object id)
 		{
-            StoID = (int)id;
+            RbStola = (int)id;
 		}
 	}
 }

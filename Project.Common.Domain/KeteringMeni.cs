@@ -34,11 +34,6 @@ namespace Project.Common.Domain
 
         public string Id => $"KeteringMeniID";
 
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-			
-		}
-
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             KeteringMeni km = new KeteringMeni();

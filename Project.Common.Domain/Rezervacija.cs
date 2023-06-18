@@ -25,7 +25,7 @@ namespace Project.Common.Domain
 
         public string InsertValues => $"'{Datum}', {TipProslave.TipProslaveID}, {UkupnaCena}, {Mesto.MestoID}, {Radnik.RadnikID}, {Klijent.KlijentID}, {KeteringMeni.KeteringMeniID}";
 
-        public string UpdateValues => $"Datum = {Datum}, TipProslaveID = {TipProslave.TipProslaveID}, UkupnaCena = {UkupnaCena}, RadnikID = {Radnik.RadnikID}, KlijentID = {Klijent.KlijentID}, MestoID = {Mesto.MestoID}, KeteringMeniID = {KeteringMeni.KeteringMeniID}";
+        public string UpdateValues => $"Datum = '{Datum}', TipProslaveID = {TipProslave.TipProslaveID}, UkupnaCena = {UkupnaCena}, RadnikID = {Radnik.RadnikID}, KlijentID = {Klijent.KlijentID}, MestoID = {Mesto.MestoID}, KeteringMeniID = {KeteringMeni.KeteringMeniID}";
 
         public string SearchCondition =>    $"CONVERT(VARCHAR(100), Datum, 34) LIKE '%' + @Kriterijum + '%' OR " +
 			                                $"CONVERT(VARCHAR(100), Datum, 8) LIKE '%' + @Kriterijum + '%' OR " +
@@ -46,14 +46,9 @@ namespace Project.Common.Domain
                                 "join Klijent on Klijent.KlijentID = Rezervacija.KlijentID " +
                                 "join Mesto on Mesto.MestoID = Rezervacija.MestoID " +
                                 "join KeteringMeni on KeteringMeni.KeteringMeniID = Rezervacija.KeteringMeniID " +
-                                "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
+                                "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID ";
 
 		public string Id => $"RezervacijaID";
-
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-
-		}
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {

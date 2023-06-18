@@ -12,27 +12,22 @@ namespace Project.Common.Domain
     {
         public Rezervacija Rezervacija { get; set; } = new Rezervacija();
         public Sto Sto { get; set; }
-        public int RbStola { get; set; }
 
         public string TableName => "RezervisanSto";
 
-        public string InsertValues => $"{Rezervacija.RezervacijaID}, {Sto.StoID}, {RbStola}";
+        public string InsertValues => $"{Rezervacija.RezervacijaID}, {Sto.RbStola}";
 
-        public string UpdateValues => $"RezervacijaID = {Rezervacija.RezervacijaID}, StoID = {Sto.StoID}";
+        public string UpdateValues => $"RezervacijaID = {Rezervacija.RezervacijaID}, RbStola = {Sto.RbStola}";
 
-        public string SearchCondition => "";
+        public string SearchCondition => "CAST(Rezervacija.RezervacijaID AS VARCHAR(100)) = @Kriterijum";
 
-		public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID}, StoID = {Sto.StoID}, RbStola = {RbStola}";
+		public string IdCondition => $"RezervacijaID = {Rezervacija.RezervacijaID} AND RbStola = {Sto.RbStola}";
 
         public string Join => "join Rezervacija on Rezervacija.RezervacijaID = RezervisanSto.RezervacijaID " +
-								"join Sto on Sto.StoID=RezervisanSto.StoID";
+								"join Sto on Sto.RbStola =RezervisanSto.RbStola " +
+								"join Proizvodjac on Sto.ProizvodjacID = Proizvodjac.ProizvodjacID";
 
 		public string Id => $"RbStola";
-
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-			
-		}
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
@@ -43,9 +38,8 @@ namespace Project.Common.Domain
             };
             sr.Sto = new Sto
             {
-                StoID = (int)reader["StoID"]
+				RbStola = (int)reader["RbStola"]
             };
-            sr.RbStola = (int)reader["RbStola"];
 
 			return sr;
         }
@@ -55,41 +49,43 @@ namespace Project.Common.Domain
             RezervisanSto sr = new RezervisanSto();
             sr.Rezervacija = new Rezervacija
             {
-                RezervacijaID = reader.GetInt32(2),
-                Datum = reader.GetDateTime(3),
+                RezervacijaID = reader.GetInt32(0),
+                Datum = (DateTime)reader["Datum"],
                 TipProslave = new TipProslave
                 {
-                    TipProslaveID = reader.GetInt32(4)
-                },
-                UkupnaCena = reader.GetDouble(5),
+                    TipProslaveID = (int)reader["TipProslaveID"]
+				},
+                UkupnaCena = (double)reader["UkupnaCena"],
+				Mesto = new Mesto
+                {
+                    MestoID = (int)reader["MestoID"]
+				},
                 Radnik = new Radnik
                 {
-                    RadnikID = reader.GetInt32(6)
-                },
+                    RadnikID = (int)reader["RadnikID"]
+				},
                 Klijent = new Klijent
                 {
-                    KlijentID = reader.GetInt32(7)
-                },
-                Mesto = new Mesto
-                {
-                    MestoID = reader.GetInt32(8)
-                },
+                    KlijentID = (int)reader["KlijentID"]
+				},
                 KeteringMeni = new KeteringMeni
                 {
-                    KeteringMeniID = reader.GetInt32(9)
-                }
+                    KeteringMeniID = (int)reader["KeteringMeniID"]
+				}
             };
             sr.Sto = new Sto
             {
-                StoID = (int)reader["StoID"],
+				RbStola = reader.GetInt32(1),
                 Kapacitet = (int)reader["Kapacitet"],
                 CenaStola = (double)reader["CenaStola"],
                 Proizvodjac = new Proizvodjac
                 {
-                    ProizvodjacID = (int)reader["ProizvodjacID"],
-                }
+                    ProizvodjacID = reader.GetInt32(14),
+                    NazivProizvodjaca = (string)reader["NazivProizvodjaca"],
+                    Telefon = (string)reader["Telefon"],
+                    Email = (string)reader["Email"],
+				}
             };
-			sr.RbStola = (int)reader["RbStola"];
 
 
 			return sr;
@@ -99,13 +95,13 @@ namespace Project.Common.Domain
 		{
 			if (obj is RezervisanSto sr)
 			{
-				return (sr.Sto.StoID == Sto.StoID && sr.Rezervacija.RezervacijaID == Rezervacija.RezervacijaID);
+				return (sr.Sto.RbStola == Sto.RbStola && sr.Rezervacija.RezervacijaID == Rezervacija.RezervacijaID);
 			}
 			return false;
 		}
 		public override string ToString()
 		{
-			return $"Sto: [{Sto}] za rezervaciju: [{Rezervacija}], redni broj: {RbStola}";
+			return $"Sto: [{Sto}] za rezervaciju: [{Rezervacija}]";
 		}
 		public override int GetHashCode()
 		{
@@ -114,7 +110,7 @@ namespace Project.Common.Domain
 
 		public void SetId(object id)
 		{
-            RbStola = (int)id;
+            Sto.RbStola = (int)id;
 		}
 	}
 }

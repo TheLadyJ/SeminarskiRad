@@ -125,6 +125,12 @@ namespace Project.Server.Main
 					case Operation.PretraziRezervaciju:
 						PretraziRezervaciju(response, request);
 						break;
+					case Operation.VratiStoloveRezervacije:
+						VratiStoloveRezervacije(response, request);
+						break;
+					case Operation.IzmeniRezervaciju:
+						IzmeniRezervaciju(response, request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -142,7 +148,7 @@ namespace Project.Server.Main
         }
 
 
-		#region Rezervacija
+		#region Rezervacija i RezervisanSto
 		private void KreirajRezervaciju(Response response, Request request)
 		{
 			try
@@ -191,6 +197,34 @@ namespace Project.Server.Main
 			{
 				response.IsSuccessful = false;
 				response.Message = "Došlo je do greške prilikom pretrage rezervacije.";
+			}
+		}
+
+		private void VratiStoloveRezervacije(Response response, Request request)
+		{
+			try
+			{
+				List<RezervisanSto> rezervisaniStolovi = Controller.Instance.VratiStoloveRezervacije((Rezervacija)request.RequestObject);
+				response.Result = rezervisaniStolovi;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja rezervisanih stolova.";
+			}
+		}
+
+		private void IzmeniRezervaciju(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.IzmeniRezervaciju((Rezervacija)request.RequestObject);
+				response.Message = "Sistem je zapamtio rezervaciju.";
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da zapamti rezervaciju.";
 			}
 		}
 

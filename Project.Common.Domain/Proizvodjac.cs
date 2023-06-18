@@ -31,11 +31,6 @@ namespace Project.Common.Domain
 
 		public string Id => $"ProizvodjacID";
 
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-
-		}
-
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Proizvodjac p = new Proizvodjac();

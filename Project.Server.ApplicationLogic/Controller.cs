@@ -7,6 +7,7 @@ using Project.Server.SystemOperations.KlijentSO;
 using Project.Server.SystemOperations.MestoSO;
 using Project.Server.SystemOperations.RadnikSO;
 using Project.Server.SystemOperations.RezervacijaSO;
+using Project.Server.SystemOperations.RezervisanStoSO;
 using Project.Server.SystemOperations.StoSO;
 using Project.Server.SystemOperations.TipProslaveSO;
 using System;
@@ -263,6 +264,33 @@ namespace Project.Server.ApplicationLogic
 				SystemOperationBase so = new PretraziRezervacijuSO(kriterijum);
 				so.ExecuteTemplate();
 				return (List<Rezervacija>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<RezervisanSto> VratiStoloveRezervacije(Rezervacija rezervacija)
+		{
+			try
+			{
+				SystemOperationBase so = new VratiStoloveRezervacijeSO(rezervacija);
+				so.ExecuteTemplate();
+				return (List<RezervisanSto>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public void IzmeniRezervaciju(Rezervacija rezervacija)
+		{
+			try
+			{
+				SystemOperationBase so = new IzmeniRezervacijuSO(rezervacija);
+				so.ExecuteTemplate();
 			}
 			catch (Exception)
 			{

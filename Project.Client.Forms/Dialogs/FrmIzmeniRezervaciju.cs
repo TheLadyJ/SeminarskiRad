@@ -22,13 +22,17 @@ namespace Project.Client.Forms.Dialogs
 			InitializeComponent();
 			Rezervacija = rezervacija;
 			izmeniRezervacijuController = new IzmeniRezervacijuController(this);
-
 		}
 
 		private void FrmIzmeniRezervaciju_Load(object sender, EventArgs e)
 		{
 			this.FormBorderStyle = FormBorderStyle.FixedSingle;
 			izmeniRezervacijuController.UcitajRezervaciju();
+		}
+
+		public void btnIzmeniRezervaciju_Click(object sender, EventArgs e)
+		{
+			izmeniRezervacijuController.IzmeniRezervaciju();
 		}
 	}
 }

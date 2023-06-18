@@ -1,5 +1,4 @@
-﻿using Project.Client.Forms.Dialogs;
-using Project.Client.Forms.GUIController.RezervacijaGUIController;
+﻿using Project.Client.Forms.GUIController.RezervacijaGUIController;
 using Project.Common.Domain;
 using System;
 using System.Collections.Generic;
@@ -13,17 +12,16 @@ using System.Windows.Forms;
 
 namespace Project.Client.Forms.UserControls.UCRezervacija
 {
-    public partial class UCRadSaRezervacijom : UserControl
-    {
+	public partial class UCRadSaRezervacijom : UserControl
+	{
+
 		RadSaRezervacijomController radSaRezervacijomController;
-
 		public KeteringMeni IzabraniMeni { get; set; } = new KeteringMeni();
+		public List<Sto> StoloviRezervacije { get; set; } = new List<Sto>();
 
-		public List<RezervisanSto> RezervisaniStolovi { get; set; } = new List<RezervisanSto>();
-        public UCRadSaRezervacijom()
-        {
-            InitializeComponent();
-			radSaRezervacijomController = new RadSaRezervacijomController(this);
+		public UCRadSaRezervacijom()
+		{
+			InitializeComponent();
 		}
 
 		private void btnIzaberiKeteringMeni_Click(object sender, EventArgs e)
@@ -43,6 +41,8 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 
 		private void UCRadSaRezervacijom_Load(object sender, EventArgs e)
 		{
+			radSaRezervacijomController = new RadSaRezervacijomController(this);
+			radSaRezervacijomController.UcitajImeRadnika();
 			radSaRezervacijomController.UcitajSvaComboBoxPolja();
 		}
 

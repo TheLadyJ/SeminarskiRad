@@ -21,8 +21,6 @@ namespace Project.Common.Domain
 
         IDomainObject ReadObjectRow(SqlDataReader reader);
         IDomainObject ReadObjectRowJoin(SqlDataReader reader);
-        void AddParameters(SqlCommand command, string kriterijum);
-
         void SetId(object id);
 	}
 }

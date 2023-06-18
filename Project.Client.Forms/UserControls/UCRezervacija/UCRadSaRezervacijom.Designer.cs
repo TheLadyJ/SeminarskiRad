@@ -2,34 +2,37 @@
 
 namespace Project.Client.Forms.UserControls.UCRezervacija
 {
-    partial class UCRadSaRezervacijom
-    {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class UCRadSaRezervacijom
+	{
+		/// <summary> 
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary> 
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Component Designer generated code
+		#region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary> 
+		/// Required method for Designer support - do not modify 
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			//components = new System.ComponentModel.Container();
+			//this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -391,34 +394,34 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.gbUnosStola.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStolovi)).EndInit();
 			this.ResumeLayout(false);
+		}
 
-        }
+		#endregion
 
-        #endregion
-
-        private System.Windows.Forms.GroupBox gbUnosStola;
-        private System.Windows.Forms.Label lblUkupnaCenaNapomena;
-        private System.Windows.Forms.Label lblDatumVremeNapomena;
-        private System.Windows.Forms.TextBox txtDatumVreme;
-        private System.Windows.Forms.Label lblUkupnaCena;
-        private System.Windows.Forms.Label lblDatumVreme;
-        private System.Windows.Forms.ComboBox cbTipProslave;
-        private System.Windows.Forms.Label lblTipProslave;
-        private System.Windows.Forms.Label lblUkupnaCenaVrednost;
-        private System.Windows.Forms.Label lblRadnikVrednost;
-        private System.Windows.Forms.Label lblRadnik;
-        private System.Windows.Forms.ComboBox cbKlijent;
-        private System.Windows.Forms.Label lblKlijent;
-        private System.Windows.Forms.ComboBox cbMesto;
-        private System.Windows.Forms.Label lblMesto;
-        private System.Windows.Forms.Button btnIzaberiKeteringMeni;
-        private System.Windows.Forms.Label lblKeteringMeniVrednost;
-        private System.Windows.Forms.Label lblKeteringMeni;
-        private System.Windows.Forms.Button btnDodajSto;
-        private System.Windows.Forms.DataGridView dgvStolovi;
-        private System.Windows.Forms.Button btnObrisiStolove;
+		private System.Windows.Forms.GroupBox gbUnosStola;
+		private System.Windows.Forms.Label lblUkupnaCenaNapomena;
+		private System.Windows.Forms.Label lblDatumVremeNapomena;
+		private System.Windows.Forms.TextBox txtDatumVreme;
+		private System.Windows.Forms.Label lblUkupnaCena;
+		private System.Windows.Forms.Label lblDatumVreme;
+		private System.Windows.Forms.ComboBox cbTipProslave;
+		private System.Windows.Forms.Label lblTipProslave;
+		private System.Windows.Forms.Label lblUkupnaCenaVrednost;
+		private System.Windows.Forms.Label lblRadnikVrednost;
+		private System.Windows.Forms.Label lblRadnik;
+		private System.Windows.Forms.ComboBox cbKlijent;
+		private System.Windows.Forms.Label lblKlijent;
+		private System.Windows.Forms.ComboBox cbMesto;
+		private System.Windows.Forms.Label lblMesto;
+		private System.Windows.Forms.Button btnIzaberiKeteringMeni;
+		private System.Windows.Forms.Label lblKeteringMeniVrednost;
+		private System.Windows.Forms.Label lblKeteringMeni;
+		private System.Windows.Forms.Button btnDodajSto;
+		private System.Windows.Forms.DataGridView dgvStolovi;
+		private System.Windows.Forms.Button btnObrisiStolove;
 		private System.Windows.Forms.ComboBox cbStolovi;
 		private System.Windows.Forms.Label lblSto;
+
 
 		public GroupBox GbUnosStola { get => gbUnosStola; set => gbUnosStola = value; }
 		public Label LblUkupnaCenaNapomena { get => lblUkupnaCenaNapomena; set => lblUkupnaCenaNapomena = value; }

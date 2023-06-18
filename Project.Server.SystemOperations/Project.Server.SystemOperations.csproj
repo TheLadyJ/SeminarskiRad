@@ -49,9 +49,11 @@
     <Compile Include="KlijentSO\VratiSveKlijenteSO.cs" />
     <Compile Include="MestoSO\VratiSvaMestaSO.cs" />
     <Compile Include="RadnikSO\PrijaviRadnikaSO.cs" />
+    <Compile Include="RezervacijaSO\IzmeniRezervacijuSO.cs" />
     <Compile Include="RezervacijaSO\KreirajRezervacijuSO.cs" />
     <Compile Include="RezervacijaSO\PretraziRezervacijuSO.cs" />
     <Compile Include="RezervacijaSO\VratiSveRezervacijeSO.cs" />
+    <Compile Include="RezervisanStoSO\VratiStoloveRezervacijeSO.cs" />
     <Compile Include="StoSO\ObrisiStoSO.cs" />
     <Compile Include="StoSO\PretraziStoSO.cs" />
     <Compile Include="StoSO\UnesiStoSO.cs" />

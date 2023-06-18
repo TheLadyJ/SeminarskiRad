@@ -30,12 +30,6 @@ namespace Project.Common.Domain
 
 		public string Id => $"KeteringFirmaID";
 
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-			
-		}
-
-
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             KeteringFirma kf = new KeteringFirma();

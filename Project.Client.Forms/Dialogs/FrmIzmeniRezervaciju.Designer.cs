@@ -1,4 +1,5 @@
 ﻿using Project.Client.Forms.UserControls.UCRezervacija;
+using System.Windows.Forms;
 
 namespace Project.Client.Forms.Dialogs
 {
@@ -30,17 +31,35 @@ namespace Project.Client.Forms.Dialogs
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.ucIzmeniRezervaciju1 = new Project.Client.Forms.UserControls.UCRezervacija.UCIzmeniRezervaciju();
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmIzmeniRezervaciju));
+			this.btnIzmeniRezervaciju = new System.Windows.Forms.Button();
+			this.ucRadSaRezervacijom = new Project.Client.Forms.UserControls.UCRezervacija.UCRadSaRezervacijom();
 			this.SuspendLayout();
 			// 
-			// ucIzmeniRezervaciju1
+			// btnIzmeniRezervaciju
 			// 
-			this.ucIzmeniRezervaciju1.BackColor = System.Drawing.Color.Transparent;
-			this.ucIzmeniRezervaciju1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ucIzmeniRezervaciju1.Location = new System.Drawing.Point(25, 12);
-			this.ucIzmeniRezervaciju1.Name = "ucIzmeniRezervaciju1";
-			this.ucIzmeniRezervaciju1.Size = new System.Drawing.Size(1415, 783);
-			this.ucIzmeniRezervaciju1.TabIndex = 0;
+			this.btnIzmeniRezervaciju.BackColor = System.Drawing.Color.White;
+			this.btnIzmeniRezervaciju.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			this.btnIzmeniRezervaciju.ForeColor = System.Drawing.Color.Brown;
+			this.btnIzmeniRezervaciju.Location = new System.Drawing.Point(1122, 671);
+			this.btnIzmeniRezervaciju.Name = "btnIzmeniRezervaciju";
+			this.btnIzmeniRezervaciju.Size = new System.Drawing.Size(267, 50);
+			this.btnIzmeniRezervaciju.TabIndex = 25;
+			this.btnIzmeniRezervaciju.Text = "Izmeni rezervaciju";
+			this.btnIzmeniRezervaciju.UseVisualStyleBackColor = false;
+			this.btnIzmeniRezervaciju.Click += new System.EventHandler(this.btnIzmeniRezervaciju_Click); ;
+			// 
+			// ucRadSaRezervacijom
+			// 
+			this.ucRadSaRezervacijom.BackColor = System.Drawing.Color.Transparent;
+			this.ucRadSaRezervacijom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ucRadSaRezervacijom.IzabraniMeni = ((Project.Common.Domain.KeteringMeni)(resources.GetObject("ucRadSaRezervacijom.IzabraniMeni")));
+			this.ucRadSaRezervacijom.Location = new System.Drawing.Point(26, 16);
+			this.ucRadSaRezervacijom.Margin = new System.Windows.Forms.Padding(4);
+			this.ucRadSaRezervacijom.Name = "ucRadSaRezervacijom";
+			this.ucRadSaRezervacijom.StoloviRezervacije = ((System.Collections.Generic.List<Project.Common.Domain.RezervisanSto>)(resources.GetObject("ucRadSaRezervacijom.RezervisaniStolovi")));
+			this.ucRadSaRezervacijom.Size = new System.Drawing.Size(1411, 778);
+			this.ucRadSaRezervacijom.TabIndex = 24;
 			// 
 			// FrmIzmeniRezervaciju
 			// 
@@ -49,7 +68,8 @@ namespace Project.Client.Forms.Dialogs
 			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.UCRezervacija;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.ClientSize = new System.Drawing.Size(1463, 810);
-			this.Controls.Add(this.ucIzmeniRezervaciju1);
+			this.Controls.Add(this.btnIzmeniRezervaciju);
+			this.Controls.Add(this.ucRadSaRezervacijom);
 			this.MaximizeBox = false;
 			this.Name = "FrmIzmeniRezervaciju";
 			this.ShowIcon = false;
@@ -62,8 +82,10 @@ namespace Project.Client.Forms.Dialogs
 
 		#endregion
 
-		private UserControls.UCRezervacija.UCIzmeniRezervaciju ucIzmeniRezervaciju1;
+		private System.Windows.Forms.Button btnIzmeniRezervaciju;
+		private UCRadSaRezervacijom ucRadSaRezervacijom;
 
-		public UCIzmeniRezervaciju UcIzmeniRezervaciju { get => ucIzmeniRezervaciju1; set => ucIzmeniRezervaciju1 = value; }
+		public Button BtnIzmeniRezervaciju { get => btnIzmeniRezervaciju; set => btnIzmeniRezervaciju = value; }
+		public UCRadSaRezervacijom UcRadSaRezervacijom { get => ucRadSaRezervacijom; set => ucRadSaRezervacijom = value; }
 	}
 }

@@ -19,12 +19,11 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 {
 	public class RadSaRezervacijomController
 	{
-		private UCRadSaRezervacijom uCRadSaRezervacijom;
+		private UCRadSaRezervacijom uCRadSaRezervacijom = new UCRadSaRezervacijom();
 
         public RadSaRezervacijomController(UCRadSaRezervacijom uCRadSaRezervacijom)
 		{
 			this.uCRadSaRezervacijom = uCRadSaRezervacijom;
-			uCRadSaRezervacijom.LblRadnikVrednost.Text = SessionData.Instance.Radnik.ToString();
 		}
 
 		#region Ucitavanje ComboBox Polja
@@ -74,8 +73,8 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 		#region Ucitavanje DgvStolovi
 		private void SakrijKolone(DataGridView dgv)
 		{
+			dgv.Columns["RbStola"].Visible = false;
 			dgv.Columns["Id"].Visible = false;
-			dgv.Columns["Rezervacija"].Visible = false;
 			dgv.Columns["TableName"].Visible = false;
 			dgv.Columns["InsertValues"].Visible = false;
 			dgv.Columns["IdCondition"].Visible = false;
@@ -84,13 +83,13 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			dgv.Columns["Join"].Visible = false;
 		}
 
-		private void UcitajDgvStolovi(List<RezervisanSto> rezStolovi = null)
+		private void UcitajDgvStolovi(List<Sto> stoloviRezervacije = null)
 		{
 			DataGridView dgv = uCRadSaRezervacijom.DgvStolovi;
-			if (rezStolovi == null)
-				dgv.DataSource = new BindingList<RezervisanSto>(new List<RezervisanSto>());
+			if (stoloviRezervacije == null)
+				dgv.DataSource = new BindingList<Sto>(new List<Sto>());
 
-			else dgv.DataSource = new BindingList<RezervisanSto>(rezStolovi);
+			else dgv.DataSource = new BindingList<Sto>(stoloviRezervacije);
 
 			SakrijKolone(dgv);
 		}
@@ -104,12 +103,8 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				MessageBox.Show("Morate izabrati neki sto za dodavanje u listu.");
 				return;
 			}
-			uCRadSaRezervacijom.RezervisaniStolovi.Add(new RezervisanSto
-			{
-				Sto = (Sto)uCRadSaRezervacijom.CbStolovi.SelectedItem,
-				RbStola = uCRadSaRezervacijom.RezervisaniStolovi.Count+1
-			});
-			UcitajDgvStolovi(uCRadSaRezervacijom.RezervisaniStolovi);
+			uCRadSaRezervacijom.StoloviRezervacije.Add((Sto)uCRadSaRezervacijom.CbStolovi.SelectedItem);
+			UcitajDgvStolovi(uCRadSaRezervacijom.StoloviRezervacije);
 		}
 
 		internal void ObrisiStolove()
@@ -122,25 +117,15 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 
 			IzbrisiOdabraneStolove();
 
-			AzurirajRedneBrojeve();
-
-			UcitajDgvStolovi(uCRadSaRezervacijom.RezervisaniStolovi);
+			UcitajDgvStolovi(uCRadSaRezervacijom.StoloviRezervacije);
 		}
 
 		private void IzbrisiOdabraneStolove()
 		{
 			for (int i = uCRadSaRezervacijom.DgvStolovi.SelectedRows.Count - 1; i >= 0; i--)
 			{
-				RezervisanSto rezStoZaBrisanje = (RezervisanSto)uCRadSaRezervacijom.DgvStolovi.SelectedRows[i].DataBoundItem;
-				uCRadSaRezervacijom.RezervisaniStolovi.Remove(rezStoZaBrisanje);
-			}
-		}
-
-		private void AzurirajRedneBrojeve()
-		{
-			for (int i = 1; i <= uCRadSaRezervacijom.RezervisaniStolovi.Count; i++)
-			{
-				uCRadSaRezervacijom.RezervisaniStolovi[i - 1].RbStola = i;
+				Sto stoZaBrisanje = (Sto)uCRadSaRezervacijom.DgvStolovi.SelectedRows[i].DataBoundItem;
+				uCRadSaRezervacijom.StoloviRezervacije.Remove(stoZaBrisanje);
 			}
 		}
 
@@ -157,7 +142,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 
 		internal void AzurirajUkupnuCenu()
 		{
-			if (String.IsNullOrEmpty(uCRadSaRezervacijom.LblKeteringMeniVrednost.Text) || uCRadSaRezervacijom.RezervisaniStolovi == null || uCRadSaRezervacijom.RezervisaniStolovi.Count == 0)
+			if (String.IsNullOrEmpty(uCRadSaRezervacijom.LblKeteringMeniVrednost.Text) || uCRadSaRezervacijom.StoloviRezervacije == null || uCRadSaRezervacijom.StoloviRezervacije.Count == 0)
 			{
 				uCRadSaRezervacijom.LblUkupnaCenaVrednost.Text = "";
 				return;
@@ -171,13 +156,18 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			double cenaSvihStolova = 0;
 			int brojSvihLjudi = 0;
 
-			uCRadSaRezervacijom.RezervisaniStolovi.ForEach(rs =>
+			uCRadSaRezervacijom.StoloviRezervacije.ForEach(sto =>
 			{
-				cenaSvihStolova += rs.Sto.CenaStola;
-				brojSvihLjudi += rs.Sto.Kapacitet;
+				cenaSvihStolova += sto.CenaStola;
+				brojSvihLjudi += sto.Kapacitet;
 			});
 
 			return cenaSvihStolova + uCRadSaRezervacijom.IzabraniMeni.CenaHranePoOsobi * brojSvihLjudi;
+		}
+
+		internal void UcitajImeRadnika()
+		{
+			uCRadSaRezervacijom.LblRadnikVrednost.Text = SessionData.Instance.Radnik.ToString();
 		}
 	}
 }

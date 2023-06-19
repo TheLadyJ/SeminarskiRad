@@ -29,17 +29,46 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			{
 				UnesiPodatkeORezervaciji();
 
-				try
-				{
-					Response response = Communication.Instance.SendRequestGetResponse(Operation.KreirajRezervaciju, rezervacija);
-					MessageBox.Show(response.Message);
-				}
-				catch (SystemOperationException e)
-				{
-					MessageBox.Show(e.Message);
-				}
+				if(MoguceCuvanjeRezervacije())
+					SacuvajRezervaciju();
 			}
 		}
+
+		private bool MoguceCuvanjeRezervacije()
+		{
+			try
+			{
+				Response response = Communication.Instance.SendRequestGetResponse(Operation.ProveraCuvanjaRezervacije, rezervacija);
+				if ((bool)response.Result)
+				{
+					return true;
+				}
+				else
+				{
+					MessageBox.Show(response.Message);
+					return false;
+				}
+			}
+			catch (SystemOperationException e)
+			{
+				MessageBox.Show(e.Message);
+				return false;
+			}
+		}
+
+		private void SacuvajRezervaciju()
+		{
+			try
+			{
+				Response response = Communication.Instance.SendRequestGetResponse(Operation.KreirajRezervaciju, rezervacija);
+				MessageBox.Show(response.Message);
+			}
+			catch (SystemOperationException e)
+			{
+				MessageBox.Show(e.Message);
+			}
+		}
+
 		private bool ValidanUnosRezervacije()
 		{
 			bool valid = true;
@@ -75,19 +104,32 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				valid = false;
 			}
 
-
-			if (String.IsNullOrEmpty(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtDatumVreme.Text))
+			if(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.DtpDatum.Value == null)
 			{
-				message += "Rezervacija mora da sadrži datum i vreme.\n";
-				valid = false;
-			}
-			else if(!DateTime.TryParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtDatumVreme.Text,"dd.MM.yyyy. HH:mm", null, System.Globalization.DateTimeStyles.None, out DateTime dt))
-			{
-				message += "Datum i vreme nisu u validnom formatu.\n";
+				message += "Rezervacija mora da sadrži datum.\n";
 				valid = false;
 			}
 
-			if(!Double.TryParse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblUkupnaCenaVrednost.Text, out double res))
+			bool vremeOdFormat = TimeSpan.TryParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtVremeOd.Text, "hh\\:mm", null, System.Globalization.TimeSpanStyles.None, out TimeSpan vremeOd);
+			bool vremeDoFormat = TimeSpan.TryParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtVremeDo.Text, "hh\\:mm", null, System.Globalization.TimeSpanStyles.None, out TimeSpan vremeDo);
+			if (!vremeOdFormat)
+			{
+				message += "Vreme od nije u validnom formatu.\n";
+				valid = false;
+			}
+			if (!vremeDoFormat)
+			{
+				message += "Vreme do nije u validnom formatu.\n";
+				valid = false;
+			}
+
+			if((vremeOdFormat && vremeDoFormat) && vremeOd >= vremeDo)
+			{
+				message += "Vreme do mora biti posle vremena od.\n";
+				valid = false;
+			}
+
+			if (!Double.TryParse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblUkupnaCenaVrednost.Text, out double res))
 			{
 				message += "Greška prilikom konvertovanja ukupne cene u numeričku vrednost.\n";
 				valid = false;
@@ -99,12 +141,19 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 
 		private void UnesiPodatkeORezervaciji()
 		{
+			DateTime DatumVremeOd = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.DtpDatum.Value.Date;
+			DatumVremeOd = DatumVremeOd.Add(TimeSpan.ParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtVremeOd.Text, "hh\\:mm", null));
+
+			DateTime DatumVremeDo = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.DtpDatum.Value.Date;
+			DatumVremeDo=DatumVremeDo.Add(TimeSpan.ParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtVremeDo.Text, "hh\\:mm", null));
+			
 			rezervacija = new Rezervacija
 			{
 				Radnik = SessionData.Instance.Radnik,
 				Klijent = (Klijent)uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbKlijent.SelectedItem,
 				TipProslave = (TipProslave)uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbTipProslave.SelectedItem,
-				Datum = DateTime.ParseExact(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.TxtDatumVreme.Text, "dd.MM.yyyy. HH:mm", null),
+				DatumVremeOd = DatumVremeOd,
+				DatumVremeDo = DatumVremeDo,
 				UkupnaCena = Double.Parse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblUkupnaCenaVrednost.Text),
 				Mesto = (Mesto)uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbMesto.SelectedItem,
 				KeteringMeni = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.IzabraniMeni,

@@ -12,6 +12,7 @@ namespace Project.Common.Domain
         string TableName { get; }
         string InsertValues { get; }
         string UpdateValues { get; }
+        string InsertUpdateCondition { get; }
         string Join { get; }
 
         string SearchCondition { get; }

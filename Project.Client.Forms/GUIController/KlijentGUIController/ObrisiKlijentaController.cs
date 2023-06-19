@@ -27,6 +27,7 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 		{
 			uCObrisiKlijenta.DgvKlijenti.Columns["KlijentID"].Visible = false;
 			uCObrisiKlijenta.DgvKlijenti.Columns["Id"].Visible = false;
+			uCObrisiKlijenta.DgvKlijenti.Columns["InsertUpdateCondition"].Visible = false;
 			uCObrisiKlijenta.DgvKlijenti.Columns["TableName"].Visible = false;
 			uCObrisiKlijenta.DgvKlijenti.Columns["InsertValues"].Visible = false;
 			uCObrisiKlijenta.DgvKlijenti.Columns["IdCondition"].Visible = false;

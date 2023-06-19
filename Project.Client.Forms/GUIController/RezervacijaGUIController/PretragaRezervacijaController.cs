@@ -28,6 +28,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 		{
 			dgv.Columns["RezervacijaID"].Visible = false;
 			dgv.Columns["Id"].Visible = false;
+			dgv.Columns["InsertUpdateCondition"].Visible = false;
 			dgv.Columns["TableName"].Visible = false;
 			dgv.Columns["InsertValues"].Visible = false;
 			dgv.Columns["IdCondition"].Visible = false;
@@ -41,10 +42,11 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			dgv.Columns["Radnik"].DisplayIndex = 0;
 			dgv.Columns["Klijent"].DisplayIndex = 1;
 			dgv.Columns["Mesto"].DisplayIndex = 2;
-			dgv.Columns["Datum"].DisplayIndex = 3;
-			dgv.Columns["TipProslave"].DisplayIndex = 4;
-			dgv.Columns["KeteringMeni"].DisplayIndex = 5;
-			dgv.Columns["UkupnaCena"].DisplayIndex = 6;
+			dgv.Columns["DatumVremeOd"].DisplayIndex = 3;
+			dgv.Columns["DatumVremeDo"].DisplayIndex = 4;
+			dgv.Columns["TipProslave"].DisplayIndex = 5;
+			dgv.Columns["KeteringMeni"].DisplayIndex = 6;
+			dgv.Columns["UkupnaCena"].DisplayIndex = 7;
 		}
 		
 		private void UrediNaslovKolona(DataGridView dgv)
@@ -52,6 +54,8 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			dgv.Columns["TipProslave"].HeaderText = "Tip proslave";
 			dgv.Columns["KeteringMeni"].HeaderText = "Ketering meni";
 			dgv.Columns["UkupnaCena"].HeaderText = "Ukupna cena";
+			dgv.Columns["DatumVremeOd"].HeaderText = "Datum i vreme od";
+			dgv.Columns["DatumVremeDo"].HeaderText = "Datum i vreme do";
 		}
 
 		private void UrediKoloneDgv(DataGridView dgv)

@@ -29,10 +29,8 @@ namespace Project.Common.Domain
 
 		public string Id => $"TipProslaveID";
 
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-			
-		}
+		public string InsertUpdateCondition => "";
+
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {

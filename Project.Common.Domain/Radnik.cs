@@ -32,6 +32,9 @@ namespace Project.Common.Domain
 
 		public string Id => $"RadnikID";
 
+		public string InsertUpdateCondition => "";
+
+
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
             Radnik r = new Radnik();

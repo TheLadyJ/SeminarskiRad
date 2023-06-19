@@ -116,6 +116,9 @@ namespace Project.Server.Main
 					case Operation.VratiMenijeFirme:
 						VratiMenijeFirme(response, request);
 						break;
+					case Operation.ProveraCuvanjaRezervacije:
+						ProveraCuvanjaRezervacije(response, request);
+						break;
 					case Operation.KreirajRezervaciju:
 						KreirajRezervaciju(response, request);
 						break;
@@ -151,8 +154,28 @@ namespace Project.Server.Main
         }
 
 
-
 		#region Rezervacija i RezervisanSto
+
+
+		private void ProveraCuvanjaRezervacije(Response response, Request request)
+		{
+			try
+			{
+				bool moguce = Controller.Instance.ProveraCuvanjaRezervacije((Rezervacija)request.RequestObject);
+				response.Result = moguce;
+				if(!moguce)
+				{
+					response.Message = "Nije moguće sačuvati rezervaciju. Već postoji rezervacija sa unetim mestom čije se vreme poklapa sa Vašim.";
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom provere mogućnosti čuvanja rezervacije.";
+			}
+		}
+
+
 		private void KreirajRezervaciju(Response response, Request request)
 		{
 			try

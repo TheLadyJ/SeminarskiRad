@@ -108,6 +108,9 @@ namespace Project.Client.Forms.UserControls.UCSto
 			// cbProizvodjac
 			// 
 			this.cbProizvodjac.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.cbProizvodjac.BackColor = System.Drawing.Color.White;
+			this.cbProizvodjac.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cbProizvodjac.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
 			this.cbProizvodjac.FormattingEnabled = true;
 			this.cbProizvodjac.Location = new System.Drawing.Point(495, 377);
 			this.cbProizvodjac.Margin = new System.Windows.Forms.Padding(4);

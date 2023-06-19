@@ -8,6 +8,7 @@ using Project.Server.ApplicationLogic;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,7 @@ namespace Project.Client.Forms.GUIController.KeteringMeniGUIController
 	{
 		private FrmIzaberiKeteringMeni frmIzaberiKeteringMeni;
 
-        public IzabreiKeteringMeniController(FrmIzaberiKeteringMeni frmIzaberiKeteringMeni)
+		public IzabreiKeteringMeniController(FrmIzaberiKeteringMeni frmIzaberiKeteringMeni)
 		{
 			this.frmIzaberiKeteringMeni = frmIzaberiKeteringMeni;
 		}
@@ -58,7 +59,7 @@ namespace Project.Client.Forms.GUIController.KeteringMeniGUIController
 				List<KeteringMeni> meniji = (List<KeteringMeni>)response.Result;
 				UcitajDgvMeni(meniji);
 			}
-			catch(SystemOperationException e)
+			catch (SystemOperationException e)
 			{
 				MessageBox.Show(e.Message);
 				UcitajDgvMeni();
@@ -69,6 +70,8 @@ namespace Project.Client.Forms.GUIController.KeteringMeniGUIController
 		{
 			dgv.Columns["KeteringMeniID"].Visible = false;
 			dgv.Columns["KeteringFirma"].Visible = false;
+			dgv.Columns["Id"].Visible = false;
+			dgv.Columns["InsertUpdateCondition"].Visible = false;
 			dgv.Columns["TableName"].Visible = false;
 			dgv.Columns["InsertValues"].Visible = false;
 			dgv.Columns["IdCondition"].Visible = false;
@@ -77,20 +80,29 @@ namespace Project.Client.Forms.GUIController.KeteringMeniGUIController
 			dgv.Columns["Join"].Visible = false;
 		}
 
+		private void PreimenujKolone(DataGridView dgv)
+		{
+			dgv.Columns["GlavnoJelo"].HeaderText = "Glavno Jelo";
+			dgv.Columns["CenaHranePoOsobi"].HeaderText = "Cena Hrane Po Osobi";
+		}
+
 		private void UcitajDgvMeni(List<KeteringMeni> meniji = null)
 		{
 			DataGridView dgv = frmIzaberiKeteringMeni.DgvMeni;
+
 			if (meniji == null)
 				dgv.DataSource = new BindingList<KeteringMeni>(new List<KeteringMeni>());
 
 			else dgv.DataSource = new BindingList<KeteringMeni>(meniji);
 
+
 			SakrijKolone(dgv);
+			PreimenujKolone(dgv);
 		}
 
 		internal void IzvrsiOdabirMenija()
 		{
-			if(frmIzaberiKeteringMeni.DgvMeni.SelectedRows.Count == 0)
+			if (frmIzaberiKeteringMeni.DgvMeni.SelectedRows.Count == 0)
 			{
 				MessageBox.Show("Morate izabrati neki meni sa liste.");
 				return;

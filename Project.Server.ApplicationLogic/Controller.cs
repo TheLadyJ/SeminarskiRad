@@ -310,5 +310,19 @@ namespace Project.Server.ApplicationLogic
 				throw;
 			}
 		}
+
+		public bool ProveraCuvanjaRezervacije(Rezervacija rezervacija)
+		{
+			try
+			{
+				SystemOperationBase so = new ProveraCuvanjaRezervacijeSO(rezervacija);
+				so.ExecuteTemplate();
+				return (bool)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 	}
 }

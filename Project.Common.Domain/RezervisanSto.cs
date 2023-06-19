@@ -28,6 +28,9 @@ namespace Project.Common.Domain
 								"join Proizvodjac on Sto.ProizvodjacID = Proizvodjac.ProizvodjacID";
 
 		public string Id => $"RbStola";
+		public string InsertUpdateCondition => "";
+
+
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
@@ -50,7 +53,7 @@ namespace Project.Common.Domain
             sr.Rezervacija = new Rezervacija
             {
                 RezervacijaID = reader.GetInt32(0),
-                Datum = (DateTime)reader["Datum"],
+                DatumVremeOd = (DateTime)reader["Datum"],
                 TipProslave = new TipProslave
                 {
                     TipProslaveID = (int)reader["TipProslaveID"]

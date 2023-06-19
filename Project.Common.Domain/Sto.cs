@@ -34,6 +34,9 @@ namespace Project.Common.Domain
 
         public string Id => $"RbStola";
 
+		public string InsertUpdateCondition => "";
+
+
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
 			if (kriterijum != null)			

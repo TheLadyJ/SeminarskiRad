@@ -53,6 +53,7 @@
     <Compile Include="RezervacijaSO\KreirajRezervacijuSO.cs" />
     <Compile Include="RezervacijaSO\ObrisiRezervacijuSO.cs" />
     <Compile Include="RezervacijaSO\PretraziRezervacijuSO.cs" />
+    <Compile Include="RezervacijaSO\ProveraCuvanjaRezervacijeSO.cs" />
     <Compile Include="RezervacijaSO\VratiSveRezervacijeSO.cs" />
     <Compile Include="RezervisanStoSO\VratiStoloveRezervacijeSO.cs" />
     <Compile Include="StoSO\ObrisiStoSO.cs" />

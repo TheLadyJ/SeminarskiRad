@@ -61,5 +61,6 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 		{
 			radSaRezervacijomController.AzurirajUkupnuCenu();
 		}
+
 	}
 }

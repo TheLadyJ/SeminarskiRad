@@ -89,7 +89,7 @@ namespace Project.Client.Forms
 			// btnPrijaviSe
 			// 
 			this.btnPrijaviSe.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnPrijaviSe.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnPrijaviSe.BackColor = System.Drawing.Color.White;
 			this.btnPrijaviSe.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnPrijaviSe.ForeColor = System.Drawing.Color.DarkSlateBlue;
 			this.btnPrijaviSe.Location = new System.Drawing.Point(160, 270);

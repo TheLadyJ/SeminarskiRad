@@ -81,6 +81,8 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			dgv.Columns["UpdateValues"].Visible = false;
 			dgv.Columns["SearchCondition"].Visible = false;
 			dgv.Columns["Join"].Visible = false;
+
+			dgv.Columns["Sto"].HeaderText = "Rezervisani stolovi";
 		}
 
 		private void UcitajDgvStolovi(List<RezervisanSto> rezervisaniStolovi = null)

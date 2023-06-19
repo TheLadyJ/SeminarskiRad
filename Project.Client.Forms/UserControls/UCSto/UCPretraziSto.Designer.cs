@@ -126,6 +126,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			// dgvStolovi
 			// 
 			this.dgvStolovi.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.dgvStolovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvStolovi.BackgroundColor = System.Drawing.Color.White;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -139,6 +140,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.dgvStolovi.Location = new System.Drawing.Point(681, 32);
 			this.dgvStolovi.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvStolovi.Name = "dgvStolovi";
+			this.dgvStolovi.ReadOnly = true;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
 			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));

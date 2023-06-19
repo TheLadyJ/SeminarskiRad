@@ -202,6 +202,9 @@
     <EmbeddedResource Include="UserControls\UCRezervacija\UCPretraziRezervacijuZaIzmenu.resx">
       <DependentUpon>UCPretraziRezervacijuZaIzmenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UCRezervacija\UCRadSaRezervacijom.resx">
+      <DependentUpon>UCRadSaRezervacijom.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UCSto\UCObrisiSto.resx">
       <DependentUpon>UCObrisiSto.cs</DependentUpon>
     </EmbeddedResource>

@@ -30,9 +30,6 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 		/// </summary>
 		private void InitializeComponent()
 		{
-			//components = new System.ComponentModel.Container();
-			//this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -124,6 +121,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			// dgvStolovi
 			// 
 			this.dgvStolovi.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.dgvStolovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvStolovi.BackgroundColor = System.Drawing.Color.White;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -394,6 +392,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.gbUnosStola.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStolovi)).EndInit();
 			this.ResumeLayout(false);
+
 		}
 
 		#endregion

@@ -36,6 +36,31 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			dgv.Columns["Join"].Visible = false;
 		}
 
+		private void UrediRedosledKolona(DataGridView dgv)
+		{
+			dgv.Columns["Radnik"].DisplayIndex = 0;
+			dgv.Columns["Klijent"].DisplayIndex = 1;
+			dgv.Columns["Mesto"].DisplayIndex = 2;
+			dgv.Columns["Datum"].DisplayIndex = 3;
+			dgv.Columns["TipProslave"].DisplayIndex = 4;
+			dgv.Columns["KeteringMeni"].DisplayIndex = 5;
+			dgv.Columns["UkupnaCena"].DisplayIndex = 6;
+		}
+		
+		private void UrediNaslovKolona(DataGridView dgv)
+		{
+			dgv.Columns["TipProslave"].HeaderText = "Tip proslave";
+			dgv.Columns["KeteringMeni"].HeaderText = "Ketering meni";
+			dgv.Columns["UkupnaCena"].HeaderText = "Ukupna cena";
+		}
+
+		private void UrediKoloneDgv(DataGridView dgv)
+		{
+			SakrijKolone(dgv);
+			UrediRedosledKolona(dgv);
+			UrediNaslovKolona(dgv);
+		}
+
 		private void UcitajDgvRezervacije(List<Rezervacija> rezervacije = null)
 		{
 			DataGridView dgv = uCPretragaRezervacija.DgvRezervacije;
@@ -44,7 +69,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 
 			else dgv.DataSource = new BindingList<Rezervacija>(rezervacije);
 
-			SakrijKolone(dgv);
+			UrediKoloneDgv(dgv);
 		}
 
 		#endregion

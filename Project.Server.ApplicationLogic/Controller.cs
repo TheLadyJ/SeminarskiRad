@@ -1,8 +1,15 @@
-﻿using Project.Common.Domain;
+﻿using Microsoft.SqlServer.Server;
+using Project.Common.Domain;
 using Project.Server.SystemOperations;
+using Project.Server.SystemOperations.KeteringFirmaSO;
+using Project.Server.SystemOperations.KeteringMeniSO;
 using Project.Server.SystemOperations.KlijentSO;
+using Project.Server.SystemOperations.MestoSO;
 using Project.Server.SystemOperations.RadnikSO;
+using Project.Server.SystemOperations.RezervacijaSO;
+using Project.Server.SystemOperations.RezervisanStoSO;
 using Project.Server.SystemOperations.StoSO;
+using Project.Server.SystemOperations.TipProslaveSO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -159,6 +166,143 @@ namespace Project.Server.ApplicationLogic
 			try
 			{
 				SystemOperationBase so = new ObrisiStoSO(sto);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Mesto> VratiSvaMesta()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSvaMestaSO();
+				so.ExecuteTemplate();
+				return (List<Mesto>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<TipProslave> VratiSveTipoveProslave()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSveTipoveProslaveSO();
+				so.ExecuteTemplate();
+				return (List<TipProslave>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<KeteringFirma> VratiSveKeteringFirme()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSveKeteringFirmeSO();
+				so.ExecuteTemplate();
+				return (List<KeteringFirma>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<KeteringMeni> VratiMenijeFirme(KeteringFirma firma)
+		{
+			try
+			{
+				SystemOperationBase so = new VratiMenijeFirmeSO(firma);
+				so.ExecuteTemplate();
+				return (List<KeteringMeni>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public void KreirajRezervaciju(Rezervacija rezervacija)
+		{
+			try
+			{
+				SystemOperationBase so = new KreirajRezervacijuSO(rezervacija);
+				so.ExecuteTemplate();				
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Rezervacija> VratiSveRezervacije()
+		{
+			try
+			{
+				SystemOperationBase so = new VratiSveRezervacijeSO();
+				so.ExecuteTemplate();
+				return (List<Rezervacija>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<Rezervacija> PretraziRezervaciju(string kriterijum)
+		{
+			try
+			{
+				SystemOperationBase so = new PretraziRezervacijuSO(kriterijum);
+				so.ExecuteTemplate();
+				return (List<Rezervacija>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public List<RezervisanSto> VratiStoloveRezervacije(Rezervacija rezervacija)
+		{
+			try
+			{
+				SystemOperationBase so = new VratiStoloveRezervacijeSO(rezervacija);
+				so.ExecuteTemplate();
+				return (List<RezervisanSto>)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public void IzmeniRezervaciju(Rezervacija rezervacija)
+		{
+			try
+			{
+				SystemOperationBase so = new IzmeniRezervacijuSO(rezervacija);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public void ObrisiRezervaciju(Rezervacija rezervacija)
+		{
+			try
+			{
+				SystemOperationBase so = new ObrisiRezervacijuSO(rezervacija);
 				so.ExecuteTemplate();
 			}
 			catch (Exception)

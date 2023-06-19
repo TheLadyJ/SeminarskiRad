@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCRezervacija
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCRezervacija
 {
 	partial class UCPretraziRezervacijuZaIzmenu
 	{
@@ -76,5 +78,8 @@
 		#endregion
 		private System.Windows.Forms.Button btnIzmeniRezervaciju;
 		private UCPretragaRezervacija ucPretragaRezervacija;
+
+		public Button BtnIzmeniRezervaciju { get => btnIzmeniRezervaciju; set => btnIzmeniRezervaciju = value; }
+		public UCPretragaRezervacija UcPretragaRezervacija { get => ucPretragaRezervacija; set => ucPretragaRezervacija = value; }
 	}
 }

@@ -30,5 +30,7 @@ namespace Project.Client.Forms.Session
         }
 
         public Radnik Radnik { get; set; }
+
+        public Rezervacija Rezervacija { get; set; } = new Rezervacija();
     }
 }

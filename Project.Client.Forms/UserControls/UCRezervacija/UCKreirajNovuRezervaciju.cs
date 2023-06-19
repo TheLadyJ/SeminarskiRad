@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Client.Forms.GUIController.RezervacijaGUIController;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,19 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 {
 	public partial class UCKreirajNovuRezervaciju : UserControl
 	{
+		private KreirajRezervacijuController kreirajRezervacijuController;
+		
 		public UCKreirajNovuRezervaciju()
 		{
 			InitializeComponent();
+			kreirajRezervacijuController = new KreirajRezervacijuController(this);
 		}
+
+
+		private void btnKreirajNovuRezervaciju_Click(object sender, EventArgs e)
+		{
+			kreirajRezervacijuController.KreirajRezervaciju();
+		}
+
 	}
 }

@@ -18,13 +18,11 @@ namespace Project.Client.Forms.UserControls.UCSto
         {
             InitializeComponent();
 			pretraziStoController = new PretraziStoController(this);
-
 		}
 
 		private void btnPretraziSto_Click(object sender, EventArgs e)
 		{
 			pretraziStoController.PretraziSto();
-
 		}
 
 		private void btnPrikaziDetalje_Click(object sender, EventArgs e)

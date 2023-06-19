@@ -1,37 +1,41 @@
-﻿namespace Project.Client.Forms.UserControls.UCRezervacija
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCRezervacija
 {
-    partial class UCRadSaRezervacijom
-    {
-        /// <summary> 
-        /// Required designer variable.
-        /// </summary>
-        private System.ComponentModel.IContainer components = null;
+	partial class UCRadSaRezervacijom
+	{
+		/// <summary> 
+		/// Required designer variable.
+		/// </summary>
+		private System.ComponentModel.IContainer components = null;
 
-        /// <summary> 
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)
-        {
-            if (disposing && (components != null))
-            {
-                components.Dispose();
-            }
-            base.Dispose(disposing);
-        }
+		/// <summary> 
+		/// Clean up any resources being used.
+		/// </summary>
+		/// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+		protected override void Dispose(bool disposing)
+		{
+			if (disposing && (components != null))
+			{
+				components.Dispose();
+			}
+			base.Dispose(disposing);
+		}
 
-        #region Component Designer generated code
+		#region Component Designer generated code
 
-        /// <summary> 
-        /// Required method for Designer support - do not modify 
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
-        {
+		/// <summary> 
+		/// Required method for Designer support - do not modify 
+		/// the contents of this method with the code editor.
+		/// </summary>
+		private void InitializeComponent()
+		{
+			//components = new System.ComponentModel.Container();
+			//this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.gbUnosStola = new System.Windows.Forms.GroupBox();
 			this.cbStolovi = new System.Windows.Forms.ComboBox();
 			this.lblSto = new System.Windows.Forms.Label();
@@ -130,34 +134,28 @@
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.dgvStolovi.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvStolovi.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvStolovi.Location = new System.Drawing.Point(27, 322);
 			this.dgvStolovi.Name = "dgvStolovi";
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvStolovi.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvStolovi.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvStolovi.RowHeadersWidth = 51;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvStolovi.RowTemplate.Height = 24;
 			this.dgvStolovi.Size = new System.Drawing.Size(598, 384);
 			this.dgvStolovi.TabIndex = 24;
+			this.dgvStolovi.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvStolovi_RowsAdded);
+			this.dgvStolovi.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvStolovi_RowsRemoved);
 			// 
 			// btnObrisiStolove
 			// 
@@ -170,6 +168,7 @@
 			this.btnObrisiStolove.TabIndex = 23;
 			this.btnObrisiStolove.Text = "Obriši sto/stolove";
 			this.btnObrisiStolove.UseVisualStyleBackColor = false;
+			this.btnObrisiStolove.Click += new System.EventHandler(this.btnObrisiStolove_Click);
 			// 
 			// btnDodajSto
 			// 
@@ -190,11 +189,13 @@
 			this.lblKeteringMeniVrednost.BackColor = System.Drawing.Color.White;
 			this.lblKeteringMeniVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblKeteringMeniVrednost.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			this.lblKeteringMeniVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblKeteringMeniVrednost.Location = new System.Drawing.Point(977, 276);
 			this.lblKeteringMeniVrednost.Name = "lblKeteringMeniVrednost";
-			this.lblKeteringMeniVrednost.Size = new System.Drawing.Size(383, 27);
+			this.lblKeteringMeniVrednost.Size = new System.Drawing.Size(383, 71);
 			this.lblKeteringMeniVrednost.TabIndex = 20;
 			this.lblKeteringMeniVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblKeteringMeniVrednost.TextChanged += new System.EventHandler(this.lblKeteringMeniVrednost_TextChanged);
 			// 
 			// lblKeteringMeni
 			// 
@@ -212,7 +213,7 @@
 			this.btnIzaberiKeteringMeni.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.btnIzaberiKeteringMeni.BackColor = System.Drawing.Color.White;
 			this.btnIzaberiKeteringMeni.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(1111, 322);
+			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(1111, 369);
 			this.btnIzaberiKeteringMeni.Name = "btnIzaberiKeteringMeni";
 			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(249, 42);
 			this.btnIzaberiKeteringMeni.TabIndex = 18;
@@ -248,6 +249,7 @@
 			this.lblRadnikVrednost.BackColor = System.Drawing.Color.White;
 			this.lblRadnikVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblRadnikVrednost.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			this.lblRadnikVrednost.ForeColor = System.Drawing.Color.Black;
 			this.lblRadnikVrednost.Location = new System.Drawing.Point(242, 53);
 			this.lblRadnikVrednost.Name = "lblRadnikVrednost";
 			this.lblRadnikVrednost.Size = new System.Drawing.Size(383, 27);
@@ -293,7 +295,8 @@
 			this.lblUkupnaCenaVrednost.BackColor = System.Drawing.Color.White;
 			this.lblUkupnaCenaVrednost.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.lblUkupnaCenaVrednost.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			this.lblUkupnaCenaVrednost.Location = new System.Drawing.Point(977, 408);
+			this.lblUkupnaCenaVrednost.ForeColor = System.Drawing.Color.Black;
+			this.lblUkupnaCenaVrednost.Location = new System.Drawing.Point(977, 474);
 			this.lblUkupnaCenaVrednost.Name = "lblUkupnaCenaVrednost";
 			this.lblUkupnaCenaVrednost.Size = new System.Drawing.Size(383, 27);
 			this.lblUkupnaCenaVrednost.TabIndex = 11;
@@ -325,7 +328,7 @@
 			// 
 			this.lblUkupnaCenaNapomena.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblUkupnaCenaNapomena.Font = new System.Drawing.Font("Century Gothic", 8.150944F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			this.lblUkupnaCenaNapomena.Location = new System.Drawing.Point(722, 449);
+			this.lblUkupnaCenaNapomena.Location = new System.Drawing.Point(722, 515);
 			this.lblUkupnaCenaNapomena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblUkupnaCenaNapomena.Name = "lblUkupnaCenaNapomena";
 			this.lblUkupnaCenaNapomena.Size = new System.Drawing.Size(226, 71);
@@ -358,7 +361,7 @@
 			// 
 			this.lblUkupnaCena.Anchor = System.Windows.Forms.AnchorStyles.None;
 			this.lblUkupnaCena.AutoSize = true;
-			this.lblUkupnaCena.Location = new System.Drawing.Point(721, 416);
+			this.lblUkupnaCena.Location = new System.Drawing.Point(721, 482);
 			this.lblUkupnaCena.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblUkupnaCena.Name = "lblUkupnaCena";
 			this.lblUkupnaCena.Size = new System.Drawing.Size(124, 19);
@@ -386,37 +389,62 @@
 			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "UCRadSaRezervacijom";
 			this.Size = new System.Drawing.Size(1415, 786);
+			this.Load += new System.EventHandler(this.UCRadSaRezervacijom_Load);
 			this.gbUnosStola.ResumeLayout(false);
 			this.gbUnosStola.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dgvStolovi)).EndInit();
 			this.ResumeLayout(false);
+		}
 
-        }
+		#endregion
 
-        #endregion
-
-        private System.Windows.Forms.GroupBox gbUnosStola;
-        private System.Windows.Forms.Label lblUkupnaCenaNapomena;
-        private System.Windows.Forms.Label lblDatumVremeNapomena;
-        private System.Windows.Forms.TextBox txtDatumVreme;
-        private System.Windows.Forms.Label lblUkupnaCena;
-        private System.Windows.Forms.Label lblDatumVreme;
-        private System.Windows.Forms.ComboBox cbTipProslave;
-        private System.Windows.Forms.Label lblTipProslave;
-        private System.Windows.Forms.Label lblUkupnaCenaVrednost;
-        private System.Windows.Forms.Label lblRadnikVrednost;
-        private System.Windows.Forms.Label lblRadnik;
-        private System.Windows.Forms.ComboBox cbKlijent;
-        private System.Windows.Forms.Label lblKlijent;
-        private System.Windows.Forms.ComboBox cbMesto;
-        private System.Windows.Forms.Label lblMesto;
-        private System.Windows.Forms.Button btnIzaberiKeteringMeni;
-        private System.Windows.Forms.Label lblKeteringMeniVrednost;
-        private System.Windows.Forms.Label lblKeteringMeni;
-        private System.Windows.Forms.Button btnDodajSto;
-        private System.Windows.Forms.DataGridView dgvStolovi;
-        private System.Windows.Forms.Button btnObrisiStolove;
+		private System.Windows.Forms.GroupBox gbUnosStola;
+		private System.Windows.Forms.Label lblUkupnaCenaNapomena;
+		private System.Windows.Forms.Label lblDatumVremeNapomena;
+		private System.Windows.Forms.TextBox txtDatumVreme;
+		private System.Windows.Forms.Label lblUkupnaCena;
+		private System.Windows.Forms.Label lblDatumVreme;
+		private System.Windows.Forms.ComboBox cbTipProslave;
+		private System.Windows.Forms.Label lblTipProslave;
+		private System.Windows.Forms.Label lblUkupnaCenaVrednost;
+		private System.Windows.Forms.Label lblRadnikVrednost;
+		private System.Windows.Forms.Label lblRadnik;
+		private System.Windows.Forms.ComboBox cbKlijent;
+		private System.Windows.Forms.Label lblKlijent;
+		private System.Windows.Forms.ComboBox cbMesto;
+		private System.Windows.Forms.Label lblMesto;
+		private System.Windows.Forms.Button btnIzaberiKeteringMeni;
+		private System.Windows.Forms.Label lblKeteringMeniVrednost;
+		private System.Windows.Forms.Label lblKeteringMeni;
+		private System.Windows.Forms.Button btnDodajSto;
+		private System.Windows.Forms.DataGridView dgvStolovi;
+		private System.Windows.Forms.Button btnObrisiStolove;
 		private System.Windows.Forms.ComboBox cbStolovi;
 		private System.Windows.Forms.Label lblSto;
+
+
+		public GroupBox GbUnosStola { get => gbUnosStola; set => gbUnosStola = value; }
+		public Label LblUkupnaCenaNapomena { get => lblUkupnaCenaNapomena; set => lblUkupnaCenaNapomena = value; }
+		public Label LblDatumVremeNapomena { get => lblDatumVremeNapomena; set => lblDatumVremeNapomena = value; }
+		public TextBox TxtDatumVreme { get => txtDatumVreme; set => txtDatumVreme = value; }
+		public Label LblUkupnaCena { get => lblUkupnaCena; set => lblUkupnaCena = value; }
+		public Label LblDatumVreme { get => lblDatumVreme; set => lblDatumVreme = value; }
+		public ComboBox CbTipProslave { get => cbTipProslave; set => cbTipProslave = value; }
+		public Label LblTipProslave { get => lblTipProslave; set => lblTipProslave = value; }
+		public Label LblUkupnaCenaVrednost { get => lblUkupnaCenaVrednost; set => lblUkupnaCenaVrednost = value; }
+		public Label LblRadnikVrednost { get => lblRadnikVrednost; set => lblRadnikVrednost = value; }
+		public Label LblRadnik { get => lblRadnik; set => lblRadnik = value; }
+		public ComboBox CbKlijent { get => cbKlijent; set => cbKlijent = value; }
+		public Label LblKlijent { get => lblKlijent; set => lblKlijent = value; }
+		public ComboBox CbMesto { get => cbMesto; set => cbMesto = value; }
+		public Label LblMesto { get => lblMesto; set => lblMesto = value; }
+		public Button BtnIzaberiKeteringMeni { get => btnIzaberiKeteringMeni; set => btnIzaberiKeteringMeni = value; }
+		public Label LblKeteringMeniVrednost { get => lblKeteringMeniVrednost; set => lblKeteringMeniVrednost = value; }
+		public Label LblKeteringMeni { get => lblKeteringMeni; set => lblKeteringMeni = value; }
+		public Button BtnDodajSto { get => btnDodajSto; set => btnDodajSto = value; }
+		public DataGridView DgvStolovi { get => dgvStolovi; set => dgvStolovi = value; }
+		public Button BtnObrisiStolove { get => btnObrisiStolove; set => btnObrisiStolove = value; }
+		public ComboBox CbStolovi { get => cbStolovi; set => cbStolovi = value; }
+		public Label LblSto { get => lblSto; set => lblSto = value; }
 	}
 }

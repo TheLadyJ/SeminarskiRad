@@ -31,7 +31,7 @@ namespace Project.Client.Forms.GUIController
             {
                 Communication.Instance.Connect();
             }
-            catch(SocketException ex)
+            catch(SocketException)
             {
 				MessageBox.Show("Greška prilikom povezivanja sa serverom");
 				frmPrijavljivanje.DialogResult = DialogResult.Abort;
@@ -85,11 +85,11 @@ namespace Project.Client.Forms.GUIController
             {
                 MessageBox.Show(e.Message);
             }
-            catch (NullReferenceException ex)
+            catch (NullReferenceException)
             {
                 MessageBox.Show("Trenutno nije moguće obaviti prijavljivanje.");
             }
-            catch (SocketException ex)
+            catch (SocketException)
             {
                 MessageBox.Show("Greska pri radu sa serverom!");
             }

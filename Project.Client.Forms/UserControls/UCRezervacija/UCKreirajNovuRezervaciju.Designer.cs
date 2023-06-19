@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCRezervacija
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCRezervacija
 {
 	partial class UCKreirajNovuRezervaciju
 	{
@@ -29,7 +31,7 @@
 		private void InitializeComponent()
 		{
 			this.btnKreirajNovuRezervaciju = new System.Windows.Forms.Button();
-			this.ucRadSaRezervacijom1 = new Project.Client.Forms.UserControls.UCRezervacija.UCRadSaRezervacijom();
+			this.ucRadSaRezervacijom = new Project.Client.Forms.UserControls.UCRezervacija.UCRadSaRezervacijom();
 			this.SuspendLayout();
 			// 
 			// btnKreirajNovuRezervaciju
@@ -45,19 +47,20 @@
 			this.btnKreirajNovuRezervaciju.TabIndex = 24;
 			this.btnKreirajNovuRezervaciju.Text = "Kreiraj novu rezervaciju";
 			this.btnKreirajNovuRezervaciju.UseVisualStyleBackColor = false;
+			this.btnKreirajNovuRezervaciju.Click += new System.EventHandler(this.btnKreirajNovuRezervaciju_Click);
 			// 
-			// ucRadSaRezervacijom1
+			// ucRadSaRezervacijom
 			// 
-			this.ucRadSaRezervacijom1.AllowDrop = true;
-			this.ucRadSaRezervacijom1.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.ucRadSaRezervacijom1.BackColor = System.Drawing.Color.Transparent;
-			this.ucRadSaRezervacijom1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-			this.ucRadSaRezervacijom1.ForeColor = System.Drawing.Color.WhiteSmoke;
-			this.ucRadSaRezervacijom1.Location = new System.Drawing.Point(71, 55);
-			this.ucRadSaRezervacijom1.Margin = new System.Windows.Forms.Padding(4);
-			this.ucRadSaRezervacijom1.Name = "ucRadSaRezervacijom1";
-			this.ucRadSaRezervacijom1.Size = new System.Drawing.Size(1446, 763);
-			this.ucRadSaRezervacijom1.TabIndex = 25;
+			this.ucRadSaRezervacijom.AllowDrop = true;
+			this.ucRadSaRezervacijom.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.ucRadSaRezervacijom.BackColor = System.Drawing.Color.Transparent;
+			this.ucRadSaRezervacijom.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+			this.ucRadSaRezervacijom.ForeColor = System.Drawing.Color.WhiteSmoke;
+			this.ucRadSaRezervacijom.Location = new System.Drawing.Point(71, 55);
+			this.ucRadSaRezervacijom.Margin = new System.Windows.Forms.Padding(4);
+			this.ucRadSaRezervacijom.Name = "ucRadSaRezervacijom";
+			this.ucRadSaRezervacijom.Size = new System.Drawing.Size(1446, 763);
+			this.ucRadSaRezervacijom.TabIndex = 25;
 			// 
 			// UCKreirajNovuRezervaciju
 			// 
@@ -66,7 +69,7 @@
 			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.UCRezervacija;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Controls.Add(this.btnKreirajNovuRezervaciju);
-			this.Controls.Add(this.ucRadSaRezervacijom1);
+			this.Controls.Add(this.ucRadSaRezervacijom);
 			this.Name = "UCKreirajNovuRezervaciju";
 			this.Size = new System.Drawing.Size(1597, 908);
 			this.ResumeLayout(false);
@@ -76,6 +79,9 @@
 		#endregion
 
 		private System.Windows.Forms.Button btnKreirajNovuRezervaciju;
-		private UCRadSaRezervacijom ucRadSaRezervacijom1;
+		private UCRadSaRezervacijom ucRadSaRezervacijom;
+
+		public Button BtnKreirajNovuRezervaciju { get => btnKreirajNovuRezervaciju; set => btnKreirajNovuRezervaciju = value; }
+		public UCRadSaRezervacijom UcRadSaRezervacijom { get => ucRadSaRezervacijom; set => ucRadSaRezervacijom = value; }
 	}
 }

@@ -17,8 +17,10 @@ namespace Project.Common.Domain
         string SearchCondition { get; }
         string IdCondition { get; }
 
+        string Id { get; }
+
         IDomainObject ReadObjectRow(SqlDataReader reader);
         IDomainObject ReadObjectRowJoin(SqlDataReader reader);
-        void AddParameters(SqlCommand command, string kriterijum);
+        void SetId(object id);
 	}
 }

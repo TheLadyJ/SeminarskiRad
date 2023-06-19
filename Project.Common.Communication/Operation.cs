@@ -18,6 +18,16 @@ namespace Project.Common.Communication
 		VratiProizvodjace,
 		VratiSveStolove,
 		PretraziSto,
-		ObrisiSto
+		ObrisiSto,
+		VratiSvaMesta,
+		VratiSveTipoveProslave,
+		VratiSveKeteringFirme,
+		VratiMenijeFirme,
+		KreirajRezervaciju,
+		VratiSveRezervacije,
+		PretraziRezervaciju,
+		VratiStoloveRezervacije,
+		IzmeniRezervaciju,
+		ObrisiRezervaciju
 	}
 }

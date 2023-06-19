@@ -30,10 +30,7 @@ namespace Project.Common.Domain
 
         public string Join => "";
 
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-
-		}
+		public string Id => $"RadnikID";
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
@@ -69,5 +66,9 @@ namespace Project.Common.Domain
 			return base.GetHashCode();
 		}
 
+		public void SetId(object id)
+		{
+            RadnikID = (int)id;
+		}
 	}
 }

@@ -25,7 +25,7 @@ namespace Project.Client.Forms.GUIController.StoGUIController
 
 		private void SakrijKolone()
 		{
-			uCObrisiSto.DgvStolovi.Columns["RbStola"].Visible = false;
+			uCObrisiSto.DgvStolovi.Columns["StoID"].Visible = false;
 			uCObrisiSto.DgvStolovi.Columns["CenaStola"].Visible = false;
 			uCObrisiSto.DgvStolovi.Columns["TableName"].Visible = false;
 			uCObrisiSto.DgvStolovi.Columns["InsertValues"].Visible = false;

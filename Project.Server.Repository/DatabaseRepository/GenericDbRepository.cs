@@ -68,8 +68,9 @@ namespace Project.Server.Repository.DatabaseRepository
         public void Insert(IDomainObject obj)
         {
             SqlCommand command = broker.CreateCommand();
-            command.CommandText = $"insert into {obj.TableName} values ({obj.InsertValues})";
-            command.ExecuteNonQuery();
+            command.CommandText = $"insert into {obj.TableName} output inserted.{obj.Id} values ({obj.InsertValues})";
+            object id = command.ExecuteScalar();
+            obj.SetId(id);
         }
         public void Update(IDomainObject obj)
         {

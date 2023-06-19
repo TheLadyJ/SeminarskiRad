@@ -35,12 +35,6 @@ namespace Project.Client.Forms.ServerCommunication
             return GetResponse();
         }
 
-        public void SendRequestNoResult(Operation op, object i)
-        {
-            SendRequest(op, i);
-            GetResponseNoResult();
-        }
-
         private Response GetResponse()
         {
             Response response = helper.Receive<Response>();
@@ -49,15 +43,6 @@ namespace Project.Client.Forms.ServerCommunication
                 return response;
             }
             else
-            {
-                throw new SystemOperationException(response.Message);
-            }
-        }
-
-        private void GetResponseNoResult()
-        {
-            Response response = helper.Receive<Response>();
-            if (!response.IsSuccessful)
             {
                 throw new SystemOperationException(response.Message);
             }

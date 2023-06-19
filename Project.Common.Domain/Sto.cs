@@ -16,7 +16,7 @@ namespace Project.Common.Domain
 
         public Proizvodjac Proizvodjac { get; set; }
 
-        public List<StoRezervacije> StoRezervacija { get; set; }
+        public List<RezervisanSto> StoRezervacija { get; set; }
 
         public string TableName => "Sto";
 
@@ -31,6 +31,8 @@ namespace Project.Common.Domain
 		public string IdCondition => $"RbStola = {RbStola}";
 
         public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID";
+
+        public string Id => $"RbStola";
 
 		public void AddParameters(SqlCommand command, string kriterijum)
 		{
@@ -79,11 +81,16 @@ namespace Project.Common.Domain
 		}
 		public override string ToString()
 		{
-			return $"Proizvodjac: {Proizvodjac}, Kapacitet: {Kapacitet}, Cena stola: {CenaStola}";
+			return $"Kapacitet: {Kapacitet}, Cena: {CenaStola} ({Proizvodjac})";
 		}
 		public override int GetHashCode()
 		{
 			return base.GetHashCode();
+		}
+
+		public void SetId(object id)
+		{
+            RbStola = (int)id;
 		}
 	}
 }

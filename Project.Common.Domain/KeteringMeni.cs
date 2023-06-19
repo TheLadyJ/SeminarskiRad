@@ -28,14 +28,11 @@ namespace Project.Common.Domain
 
         public string UpdateValues => $"Predjelo = '{Predjelo}', GlavnoJelo = '{GlavnoJelo}', Dezert = '{Dezert}', CenaHranePoOsobi = {CenaHranePoOsobi}, KeteringFirmaID = {KeteringFirma.KeteringFirmaID}";
 
-        public string SearchCondition => "";
+        public string SearchCondition => "CAST(KeteringFirmaID AS VARCHAR(100)) = @Kriterijum";
 
 		public string Join => "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-			
-		}
+        public string Id => $"KeteringMeniID";
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
@@ -84,6 +81,11 @@ namespace Project.Common.Domain
 		public override int GetHashCode()
 		{
 			return base.GetHashCode();
+		}
+
+		public void SetId(object id)
+		{
+            KeteringMeniID = (int)id;
 		}
 	}
 }

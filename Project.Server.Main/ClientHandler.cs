@@ -104,6 +104,36 @@ namespace Project.Server.Main
 					case Operation.ObrisiSto:
 						ObrisiSto(response, request);
 						break;
+					case Operation.VratiSvaMesta:
+						VratiSvaMesta(response);
+						break;
+					case Operation.VratiSveTipoveProslave:
+						VratiSveTipoveProslave(response);
+						break;
+					case Operation.VratiSveKeteringFirme:
+						VratiSveKeteringFirme(response);
+						break;
+					case Operation.VratiMenijeFirme:
+						VratiMenijeFirme(response, request);
+						break;
+					case Operation.KreirajRezervaciju:
+						KreirajRezervaciju(response, request);
+						break;
+					case Operation.VratiSveRezervacije:
+						VratiSveRezervacije(response);
+						break;
+					case Operation.PretraziRezervaciju:
+						PretraziRezervaciju(response, request);
+						break;
+					case Operation.VratiStoloveRezervacije:
+						VratiStoloveRezervacije(response, request);
+						break;
+					case Operation.IzmeniRezervaciju:
+						IzmeniRezervaciju(response, request);
+						break;
+					case Operation.ObrisiRezervaciju:
+						ObrisiRezervaciju(response, request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -120,6 +150,172 @@ namespace Project.Server.Main
             return response;
         }
 
+
+
+		#region Rezervacija i RezervisanSto
+		private void KreirajRezervaciju(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.KreirajRezervaciju((Rezervacija)request.RequestObject);
+				response.Message = "Sistem je zapamtio rezervaciju.";
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da zapamti podatke o rezervaciji.";
+			}
+		}
+
+		private void VratiSveRezervacije(Response response)
+		{
+			try
+			{
+				List<Rezervacija> rezervacije = Controller.Instance.VratiSveRezervacije();
+				response.Result = rezervacije;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih rezervacija.";
+			}
+		}
+
+		private void PretraziRezervaciju(Response response, Request request)
+		{
+			try
+			{
+				List<Rezervacija> nadjeneRezervacije = Controller.Instance.PretraziRezervaciju((string)request.RequestObject);
+				response.Result = nadjeneRezervacije;
+				if (nadjeneRezervacije != null && nadjeneRezervacije.Count != 0)
+				{
+					response.Message = "Sistem je našao rezervacije po zadatoj vrednosti.";
+				}
+				else
+				{
+					response.IsSuccessful = false;
+					response.Message = "Sistem ne može da nađe rezervaciju po zadatoj vrednosti.";
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom pretrage rezervacije.";
+			}
+		}
+
+		private void VratiStoloveRezervacije(Response response, Request request)
+		{
+			try
+			{
+				List<RezervisanSto> rezervisaniStolovi = Controller.Instance.VratiStoloveRezervacije((Rezervacija)request.RequestObject);
+				response.Result = rezervisaniStolovi;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja rezervisanih stolova.";
+			}
+		}
+
+		private void IzmeniRezervaciju(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.IzmeniRezervaciju((Rezervacija)request.RequestObject);
+				response.Message = "Sistem je zapamtio rezervaciju.";
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da zapamti rezervaciju.";
+			}
+		}
+
+
+		private void ObrisiRezervaciju(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.ObrisiRezervaciju((Rezervacija)request.RequestObject);
+				response.Message = "Sistem je obrisao rezervaciju.";
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da obriše rezervaciju.";
+			}
+		}
+
+
+
+		#endregion
+
+		#region KeteringFirma i KeteringMeni
+		private void VratiMenijeFirme(Response response, Request request)
+		{
+			try
+			{
+				List<KeteringMeni> meniji = Controller.Instance.VratiMenijeFirme((KeteringFirma)request.RequestObject);
+				response.Result = meniji;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja menija odabrane firme.";
+			}
+		}
+
+		private void VratiSveKeteringFirme(Response response)
+		{
+			try
+			{
+				List<KeteringFirma> firme = Controller.Instance.VratiSveKeteringFirme();
+				response.Result = firme;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih ketering firmi.";
+			}
+		}
+
+
+		#endregion
+
+		#region Mesto i TipProslave
+
+		private void VratiSvaMesta(Response response)
+		{
+			try
+			{
+				List<Mesto> mesta = Controller.Instance.VratiSvaMesta();
+				response.Result = mesta;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih mesta.";
+			}
+		}
+
+		private void VratiSveTipoveProslave(Response response)
+		{
+			try
+			{
+				List<TipProslave> tipoviProslave = Controller.Instance.VratiSveTipoveProslave();
+				response.Result = tipoviProslave;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih tipova proslava.";
+			}
+		}
+
+		#endregion
+
+		#region Sto i proizvodjac
 		private void ObrisiSto(Response response, Request request)
 		{
 			try
@@ -148,6 +344,7 @@ namespace Project.Server.Main
 				else
 				{
 					response.Message = "Sistem ne može da nađe stolove po zadatoj vrednosti.";
+					response.IsSuccessful = false;
 				}
 			}
 			catch (Exception)
@@ -170,6 +367,7 @@ namespace Project.Server.Main
 				response.Message = "Došlo je do greške prilikom učitavanja svih stolova.";
 			}
 		}
+
 
 		private void VratiProizvodjace(Response response)
 		{
@@ -194,9 +392,14 @@ namespace Project.Server.Main
 			}
 			catch (Exception)
 			{
+				response.IsSuccessful = false;
 				response.Message = "Sistem ne može da zapamti sto.";
 			}
 		}
+
+		#endregion
+
+		#region Klijent
 
 		private void ObrisiKlijenta(Response response, Request request)
 		{
@@ -225,6 +428,7 @@ namespace Project.Server.Main
                 }
                 else
                 {
+					response.IsSuccessful = false;
 					response.Message = "Sistem ne može da nađe klijenta po zadatoj vrednosti.";
 				}
 			}
@@ -258,10 +462,14 @@ namespace Project.Server.Main
 			}
 			catch (Exception)
             {
+				response.IsSuccessful = false;
 				response.Message = "Sistem ne može da zapamti klijenta.";
 			}
 		}
 
+		#endregion
+
+		#region Radnik
 		private void PrijaviRadnika(Response response, Request request)
         {
             try
@@ -296,5 +504,7 @@ namespace Project.Server.Main
         {
             return ClientsSessionData.Instance.Clients.Any(handler=>handler.Radnik.RadnikID == radnik.RadnikID);
         }
-    }
+
+		#endregion
+	}
 }

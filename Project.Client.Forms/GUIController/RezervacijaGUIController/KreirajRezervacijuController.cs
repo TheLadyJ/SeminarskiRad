@@ -128,6 +128,10 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				message += "Vreme do mora biti posle vremena od.\n";
 				valid = false;
 			}
+			else if(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.DtpDatum.Value.Date == DateTime.Now.Date && vremeOd < DateTime.Now.Subtract(DateTime.Now.Date)){
+				message += "Vreme od mora biti iz budućnosti.\n";
+				valid = false;
+			}
 
 			if (!Double.TryParse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblUkupnaCenaVrednost.Text, out double res))
 			{

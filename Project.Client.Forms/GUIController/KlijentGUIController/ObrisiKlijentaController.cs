@@ -91,7 +91,30 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 			else
 			{
 				Klijent klijentZaBrisanje = (Klijent)uCObrisiKlijenta.DgvKlijenti.SelectedRows[0].DataBoundItem;
-				ObrisiOdabranogKlijenta(klijentZaBrisanje);
+				if (MoguceBrisanjeKlijenta(klijentZaBrisanje))
+					ObrisiOdabranogKlijenta(klijentZaBrisanje);
+			}
+		}
+
+		private bool MoguceBrisanjeKlijenta(Klijent klijentZaBrisanje)
+		{
+			try
+			{
+				Response response = Communication.Instance.SendRequestGetResponse(Operation.ProveriBrisanjeKlijenta, klijentZaBrisanje);
+				if ((bool)response.Result)
+				{
+					return true;
+				}
+				else
+				{
+					MessageBox.Show(response.Message);
+					return false;
+				}
+			}
+			catch (SystemOperationException e)
+			{
+				MessageBox.Show(e.Message);
+				return false;
 			}
 		}
 

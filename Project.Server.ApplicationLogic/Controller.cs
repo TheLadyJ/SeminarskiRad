@@ -324,5 +324,33 @@ namespace Project.Server.ApplicationLogic
 				throw;
 			}
 		}
+
+		public bool ProveriBrisanjeKlijenta(Klijent klijent)
+		{
+			try
+			{
+				SystemOperationBase so = new ProveriBrisanjeKlijentaSO(klijent);
+				so.ExecuteTemplate();
+				return (bool)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
+
+		public bool ProveriBrisanjeStola(Sto sto)
+		{
+			try
+			{
+				SystemOperationBase so = new ProveriBrisanjeStolaSO(sto);
+				so.ExecuteTemplate();
+				return (bool)so.Result;
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 	}
 }

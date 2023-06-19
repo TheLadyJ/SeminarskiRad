@@ -29,6 +29,8 @@ namespace Project.Common.Communication
 		VratiStoloveRezervacije,
 		IzmeniRezervaciju,
 		ObrisiRezervaciju,
-		ProveraCuvanjaRezervacije
+		ProveraCuvanjaRezervacije,
+		ProveriBrisanjeKlijenta,
+		ProveriBrisanjeStola
 	}
 }

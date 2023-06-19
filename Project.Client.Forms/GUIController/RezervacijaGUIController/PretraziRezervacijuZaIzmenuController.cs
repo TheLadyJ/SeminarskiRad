@@ -40,6 +40,11 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				MessageBox.Show("Rezervaciju nije moguće menjati jer je niste vi kreirali.");
 				return;
 			}
+			else if (odabranaRezervacija.DatumVremeOd < DateTime.Now)
+			{
+				MessageBox.Show("Rezervaciju nije moguće menjati jer je već obavljena.");
+				return;
+			}
 
 			SessionData.Instance.Rezervacija = odabranaRezervacija;
 			FrmIzmeniRezervaciju frmIzmeniRezervaciju = new FrmIzmeniRezervaciju();

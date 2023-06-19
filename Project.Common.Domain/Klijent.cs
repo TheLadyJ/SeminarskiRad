@@ -29,11 +29,11 @@ namespace Project.Common.Domain
 											$"Telefon LIKE '%' + @Kriterijum + '%' OR " +
 											$"Email LIKE '%' + @Kriterijum + '%'";
 
-		public string Join => "";
+		public string Join => $"join Rezervacija on Rezervacija.KlijentID = Klijent.KlijentID";
 
 		public string Id => $"KlijentID";
 
-		public string InsertUpdateCondition => "";
+		public string InsertUpdateDeleteCondition => $"Klijent.KlijentID = {KlijentID}";
 
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
@@ -49,8 +49,13 @@ namespace Project.Common.Domain
 
         public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
         {
-            return ReadObjectRow(reader);
-        }
+			Rezervacija r = new Rezervacija
+			{
+				RezervacijaID = (int)reader["RezervacijaID"]
+			};
+
+			return r;
+		}
 
 		public override bool Equals(object obj)
 		{

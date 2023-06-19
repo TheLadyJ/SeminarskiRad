@@ -108,7 +108,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			}
 
 			Sto izabraniSto = (Sto)uCRadSaRezervacijom.CbStolovi.SelectedItem;
-			if (uCRadSaRezervacijom.RezervisaniStolovi.Any(rs=>rs.Sto == izabraniSto))
+			if (uCRadSaRezervacijom.RezervisaniStolovi.Any(rs=>rs.Sto.RbStola == izabraniSto.RbStola))
 			{
 				MessageBox.Show("Neki sto sme da se pojavi samo jednom na listi rezervisanih stolova.");
 				return;

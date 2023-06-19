@@ -93,8 +93,30 @@ namespace Project.Client.Forms.GUIController.StoGUIController
 			}
 			else
 			{
-				Sto StoZaBrisanje = (Sto)uCObrisiSto.DgvStolovi.SelectedRows[0].DataBoundItem;
-				ObrisiOdabraniSto(StoZaBrisanje);
+				Sto stoZaBrisanje = (Sto)uCObrisiSto.DgvStolovi.SelectedRows[0].DataBoundItem;
+				ObrisiOdabraniSto(stoZaBrisanje);
+			}
+		}
+
+		private bool MoguceBrisanjeStola(Sto stoZaBrisanje)
+		{
+			try
+			{
+				Response response = Communication.Instance.SendRequestGetResponse(Operation.ProveriBrisanjeStola, stoZaBrisanje);
+				if ((bool)response.Result)
+				{
+					return true;
+				}
+				else
+				{
+					MessageBox.Show(response.Message);
+					return false;
+				}
+			}
+			catch (SystemOperationException e)
+			{
+				MessageBox.Show(e.Message);
+				return false;
 			}
 		}
 

@@ -31,7 +31,7 @@ namespace Project.Common.Domain
 
 		public string Id => $"MestoID";
 
-		public string InsertUpdateCondition => "";
+		public string InsertUpdateDeleteCondition => "";
 
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)

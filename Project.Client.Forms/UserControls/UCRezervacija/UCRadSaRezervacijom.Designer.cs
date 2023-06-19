@@ -108,11 +108,11 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			// dtpDatum
 			// 
 			this.dtpDatum.Location = new System.Drawing.Point(977, 174);
-			this.dtpDatum.MinDate = new System.DateTime(2023, 6, 19, 17, 5, 20, 610);
+			this.dtpDatum.MinDate = new System.DateTime(2023, 6, 19, 19, 33, 49, 162);
 			this.dtpDatum.Name = "dtpDatum";
 			this.dtpDatum.Size = new System.Drawing.Size(383, 28);
 			this.dtpDatum.TabIndex = 30;
-			this.dtpDatum.Value = new System.DateTime(2023, 6, 19, 17, 5, 20, 610);
+			this.dtpDatum.Value = new System.DateTime(2023, 6, 19, 19, 33, 49, 162);
 			// 
 			// label1
 			// 

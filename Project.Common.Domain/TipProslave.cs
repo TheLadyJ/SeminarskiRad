@@ -29,7 +29,7 @@ namespace Project.Common.Domain
 
 		public string Id => $"TipProslaveID";
 
-		public string InsertUpdateCondition => "";
+		public string InsertUpdateDeleteCondition => "";
 
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)

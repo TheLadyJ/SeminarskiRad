@@ -126,11 +126,11 @@ namespace Project.Server.Repository.DatabaseRepository
 				command.Parameters.AddWithValue("@Kriterijum", "");
 		}
 
-		public List<IDomainObject> CheckInsertUpdate(IDomainObject obj)
+		public List<IDomainObject> CheckInsertUpdateDelete(IDomainObject obj)
 		{
 			SqlCommand command = broker.CreateCommand();
-			command.CommandText = $"select * from {obj.TableName} where {obj.InsertUpdateCondition}";
-			return ReadList(command, obj);
+			command.CommandText = $"select * from {obj.TableName} {obj.Join} where {obj.InsertUpdateDeleteCondition}";
+			return ReadListJoin(command, obj);
 		}
 	}
 }

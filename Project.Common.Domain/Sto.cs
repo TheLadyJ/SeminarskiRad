@@ -30,11 +30,12 @@ namespace Project.Common.Domain
 
 		public string IdCondition => $"RbStola = {RbStola}";
 
-        public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID";
+        public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID " +
+								"join RezervisanSto on RezervisanSto.RbStola = Sto.RbStola";
 
         public string Id => $"RbStola";
 
-		public string InsertUpdateCondition => "";
+		public string InsertUpdateDeleteCondition => $"Sto.RbStola = {RbStola}";
 
 
 		public void AddParameters(SqlCommand command, string kriterijum)

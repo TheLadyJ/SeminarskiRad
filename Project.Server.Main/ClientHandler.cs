@@ -137,6 +137,12 @@ namespace Project.Server.Main
 					case Operation.ObrisiRezervaciju:
 						ObrisiRezervaciju(response, request);
 						break;
+					case Operation.ProveriBrisanjeKlijenta:
+						ProveriBrisanjeKlijenta(response, request);
+						break;
+					case Operation.ProveriBrisanjeStola:
+						ProveriBrisanjeStola(response, request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -152,6 +158,10 @@ namespace Project.Server.Main
             }
             return response;
         }
+
+		
+
+
 
 
 		#region Rezervacija i RezervisanSto
@@ -339,6 +349,24 @@ namespace Project.Server.Main
 		#endregion
 
 		#region Sto i proizvodjac
+
+		private void ProveriBrisanjeStola(Response response, Request request)
+		{
+			try
+			{
+				bool moguce = Controller.Instance.ProveriBrisanjeStola((Sto)request.RequestObject);
+				response.Result = moguce;
+				if (!moguce)
+				{
+					response.Message = "Nije moguće obrisati sto jer još uvek postoji neka rezervacija koja ga koristi.";
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom provere mogućnosti brisanja stola.";
+			}
+		}
 		private void ObrisiSto(Response response, Request request)
 		{
 			try
@@ -424,6 +452,23 @@ namespace Project.Server.Main
 
 		#region Klijent
 
+		private void ProveriBrisanjeKlijenta(Response response, Request request)
+		{
+			try
+			{
+				bool moguce = Controller.Instance.ProveriBrisanjeKlijenta((Klijent)request.RequestObject);
+				response.Result = moguce;
+				if (!moguce)
+				{
+					response.Message = "Nije moguće obrisati klijenta jer još uvek postoji neka rezervacija za njega.";
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom provere mogućnosti brisanja klijenta.";
+			}
+		}
 		private void ObrisiKlijenta(Response response, Request request)
 		{
 			try

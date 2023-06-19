@@ -33,7 +33,7 @@ namespace Project.Common.Domain
 		public string Join => "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
         public string Id => $"KeteringMeniID";
-		public string InsertUpdateCondition => "";
+		public string InsertUpdateDeleteCondition => "";
 
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)

@@ -30,7 +30,7 @@ namespace Project.Common.Domain
 
 		public string Id => $"KeteringFirmaID";
 
-		public string InsertUpdateCondition => "";
+		public string InsertUpdateDeleteCondition => "";
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {

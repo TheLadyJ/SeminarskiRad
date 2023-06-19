@@ -28,7 +28,7 @@ namespace Project.Common.Domain
 								"join Proizvodjac on Sto.ProizvodjacID = Proizvodjac.ProizvodjacID";
 
 		public string Id => $"RbStola";
-		public string InsertUpdateCondition => "";
+		public string InsertUpdateDeleteCondition => "";
 
 
 

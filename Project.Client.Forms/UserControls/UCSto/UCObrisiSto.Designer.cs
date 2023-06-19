@@ -90,11 +90,13 @@ namespace Project.Client.Forms.UserControls.UCSto
 			// dgvStolovi
 			// 
 			this.dgvStolovi.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.dgvStolovi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvStolovi.BackgroundColor = System.Drawing.Color.White;
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvStolovi.Location = new System.Drawing.Point(91, 191);
 			this.dgvStolovi.Margin = new System.Windows.Forms.Padding(4);
 			this.dgvStolovi.Name = "dgvStolovi";
+			this.dgvStolovi.ReadOnly = true;
 			this.dgvStolovi.RowHeadersWidth = 45;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);

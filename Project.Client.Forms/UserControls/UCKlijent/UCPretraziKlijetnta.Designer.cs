@@ -220,6 +220,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// dgvKlijenti
 			// 
 			this.dgvKlijenti.Anchor = System.Windows.Forms.AnchorStyles.None;
+			this.dgvKlijenti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvKlijenti.BackgroundColor = System.Drawing.Color.White;
 			this.dgvKlijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvKlijenti.Location = new System.Drawing.Point(689, 54);

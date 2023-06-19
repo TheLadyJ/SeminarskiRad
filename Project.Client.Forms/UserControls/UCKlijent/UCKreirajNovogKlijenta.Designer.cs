@@ -70,7 +70,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// btnKreirajKlijenta
 			// 
 			this.btnKreirajKlijenta.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnKreirajKlijenta.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnKreirajKlijenta.BackColor = System.Drawing.Color.White;
 			this.btnKreirajKlijenta.Font = new System.Drawing.Font("Century Gothic", 10.86792F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.btnKreirajKlijenta.ForeColor = System.Drawing.Color.SlateBlue;
 			this.btnKreirajKlijenta.Location = new System.Drawing.Point(441, 464);

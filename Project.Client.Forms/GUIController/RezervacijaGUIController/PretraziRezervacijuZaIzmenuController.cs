@@ -33,7 +33,15 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				return;
 			}
 
-			SessionData.Instance.Rezervacija = (Rezervacija)uCPretraziRezervacijuZaIzmenu.UcPretragaRezervacija.DgvRezervacije.SelectedRows[0].DataBoundItem;
+			Rezervacija odabranaRezervacija = (Rezervacija)uCPretraziRezervacijuZaIzmenu.UcPretragaRezervacija.DgvRezervacije.SelectedRows[0].DataBoundItem;
+
+			if (odabranaRezervacija.Radnik != SessionData.Instance.Radnik)
+			{
+				MessageBox.Show("Rezervaciju nije moguće menjati jer je niste vi kreirali.");
+				return;
+			}
+
+			SessionData.Instance.Rezervacija = odabranaRezervacija;
 			FrmIzmeniRezervaciju frmIzmeniRezervaciju = new FrmIzmeniRezervaciju();
 			frmIzmeniRezervaciju.ShowDialog();
 			SessionData.Instance.Rezervacija = new Rezervacija();

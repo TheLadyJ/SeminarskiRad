@@ -94,7 +94,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			// btnUnesiNoviSto
 			// 
 			this.btnUnesiNoviSto.Anchor = System.Windows.Forms.AnchorStyles.None;
-			this.btnUnesiNoviSto.BackColor = System.Drawing.Color.WhiteSmoke;
+			this.btnUnesiNoviSto.BackColor = System.Drawing.Color.White;
 			this.btnUnesiNoviSto.ForeColor = System.Drawing.Color.RoyalBlue;
 			this.btnUnesiNoviSto.Location = new System.Drawing.Point(393, 506);
 			this.btnUnesiNoviSto.Margin = new System.Windows.Forms.Padding(4);

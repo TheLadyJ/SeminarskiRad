@@ -297,5 +297,18 @@ namespace Project.Server.ApplicationLogic
 				throw;
 			}
 		}
+
+		public void ObrisiRezervaciju(Rezervacija rezervacija)
+		{
+			try
+			{
+				SystemOperationBase so = new ObrisiRezervacijuSO(rezervacija);
+				so.ExecuteTemplate();
+			}
+			catch (Exception)
+			{
+				throw;
+			}
+		}
 	}
 }

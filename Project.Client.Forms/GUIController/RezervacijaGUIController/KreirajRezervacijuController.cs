@@ -63,7 +63,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				valid = false;
 			}
 
-			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom.StoloviRezervacije.Count == 0)
+			if (uCKreirajNovuRezervaciju.UcRadSaRezervacijom.RezervisaniStolovi.Count == 0)
 			{
 				message += "Rezervacija mora da sadrži barem jedan sto u listi rezervisanih stolova.\n";
 				valid = false;
@@ -108,7 +108,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				UkupnaCena = Double.Parse(uCKreirajNovuRezervaciju.UcRadSaRezervacijom.LblUkupnaCenaVrednost.Text),
 				Mesto = (Mesto)uCKreirajNovuRezervaciju.UcRadSaRezervacijom.CbMesto.SelectedItem,
 				KeteringMeni = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.IzabraniMeni,
-				RezervisaniStolovi = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.StoloviRezervacije
+				RezervisaniStolovi = uCKreirajNovuRezervaciju.UcRadSaRezervacijom.RezervisaniStolovi
 			};
 		}
 

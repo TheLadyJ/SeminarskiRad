@@ -18,7 +18,6 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 	public class IzmeniRezervacijuController
 	{
 		private FrmIzmeniRezervaciju frmIzmeniRezervaciju;
-		private Rezervacija rezervacija;
 
 		public IzmeniRezervacijuController(FrmIzmeniRezervaciju frmIzmeniRezervaciju)
 		{
@@ -55,9 +54,11 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 		{
 			try
 			{
-				Response response = Communication.Instance.SendRequestGetResponse(Operation.VratiStoloveRezervacije, frmIzmeniRezervaciju.Rezervacija);
+				Response response = Communication.Instance.SendRequestGetResponse(Operation.VratiStoloveRezervacije, SessionData.Instance.Rezervacija);
 				List<RezervisanSto> rezStolovi = (List<RezervisanSto>)response.Result;
-				frmIzmeniRezervaciju.UcRadSaRezervacijom.StoloviRezervacije = rezStolovi;
+				SessionData.Instance.Rezervacija.RezervisaniStolovi = rezStolovi.ToList();
+			
+				frmIzmeniRezervaciju.UcRadSaRezervacijom.RezervisaniStolovi = rezStolovi;
 				UcitajDgvStolovi(rezStolovi);
 			}
 			catch (SystemOperationException e)
@@ -73,14 +74,14 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			{
 				UcitajStoloveRezervacije();
 				UCRadSaRezervacijom radSaRezervacijom = frmIzmeniRezervaciju.UcRadSaRezervacijom;
-				radSaRezervacijom.LblRadnikVrednost.Text = frmIzmeniRezervaciju.Rezervacija.Radnik.ToString();
-				radSaRezervacijom.CbKlijent.SelectedItem = frmIzmeniRezervaciju.Rezervacija.Klijent;
-				radSaRezervacijom.CbMesto.SelectedItem = frmIzmeniRezervaciju.Rezervacija.Mesto;
-				radSaRezervacijom.CbTipProslave.SelectedItem = frmIzmeniRezervaciju.Rezervacija.TipProslave;
-				radSaRezervacijom.TxtDatumVreme.Text = frmIzmeniRezervaciju.Rezervacija.Datum.ToString("dd.MM.yyyy. HH:mm");
-				radSaRezervacijom.IzabraniMeni = frmIzmeniRezervaciju.Rezervacija.KeteringMeni;
-				radSaRezervacijom.LblKeteringMeniVrednost.Text = frmIzmeniRezervaciju.Rezervacija.KeteringMeni.ToString();
-				radSaRezervacijom.LblUkupnaCenaVrednost.Text = frmIzmeniRezervaciju.Rezervacija.UkupnaCena.ToString();
+				radSaRezervacijom.LblRadnikVrednost.Text = SessionData.Instance.Rezervacija.Radnik.ToString();
+				radSaRezervacijom.CbKlijent.SelectedItem = SessionData.Instance.Rezervacija.Klijent;
+				radSaRezervacijom.CbMesto.SelectedItem = SessionData.Instance.Rezervacija.Mesto;
+				radSaRezervacijom.CbTipProslave.SelectedItem = SessionData.Instance.Rezervacija.TipProslave;
+				radSaRezervacijom.TxtDatumVreme.Text = SessionData.Instance.Rezervacija.Datum.ToString("dd.MM.yyyy. HH:mm");
+				radSaRezervacijom.IzabraniMeni = SessionData.Instance.Rezervacija.KeteringMeni;
+				radSaRezervacijom.LblKeteringMeniVrednost.Text = SessionData.Instance.Rezervacija.KeteringMeni.ToString();
+				radSaRezervacijom.LblUkupnaCenaVrednost.Text = SessionData.Instance.Rezervacija.UkupnaCena.ToString();
 				MessageBox.Show("Odabrana rezervacija je prikazana.");
 			}
 			catch (Exception)
@@ -115,7 +116,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				valid = false;
 			}
 
-			if (radSaRezervacijom.StoloviRezervacije.Count == 0)
+			if (radSaRezervacijom.RezervisaniStolovi.Count == 0)
 			{
 				message += "Rezervacija mora da sadrži barem jedan sto u listi rezervisanih stolova.\n";
 				valid = false;
@@ -152,30 +153,27 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 		private void UnesiPodatkeORezervaciji()
 		{
 			UCRadSaRezervacijom radSaRezervacijom = frmIzmeniRezervaciju.UcRadSaRezervacijom;
+			SessionData.Instance.Rezervacija.Radnik = SessionData.Instance.Radnik;
+			SessionData.Instance.Rezervacija.Klijent = (Klijent)radSaRezervacijom.CbKlijent.SelectedItem;
+			SessionData.Instance.Rezervacija.TipProslave = (TipProslave)radSaRezervacijom.CbTipProslave.SelectedItem;
+			SessionData.Instance.Rezervacija.Datum = DateTime.ParseExact(radSaRezervacijom.TxtDatumVreme.Text, "dd.MM.yyyy. HH:mm", null);
+			SessionData.Instance.Rezervacija.UkupnaCena = Double.Parse(radSaRezervacijom.LblUkupnaCenaVrednost.Text);
+			SessionData.Instance.Rezervacija.Mesto = (Mesto)radSaRezervacijom.CbMesto.SelectedItem;
+			SessionData.Instance.Rezervacija.KeteringMeni = radSaRezervacijom.IzabraniMeni;
+			SessionData.Instance.Rezervacija.NoviRezervisaniStolovi = radSaRezervacijom.RezervisaniStolovi;
 
-			rezervacija = new Rezervacija
-			{
-				RezervacijaID = frmIzmeniRezervaciju.Rezervacija.RezervacijaID,
-				Radnik = SessionData.Instance.Radnik,
-				Klijent = (Klijent)radSaRezervacijom.CbKlijent.SelectedItem,
-				TipProslave = (TipProslave)radSaRezervacijom.CbTipProslave.SelectedItem,
-				Datum = DateTime.ParseExact(radSaRezervacijom.TxtDatumVreme.Text, "dd.MM.yyyy. HH:mm", null),
-				UkupnaCena = Double.Parse(radSaRezervacijom.LblUkupnaCenaVrednost.Text),
-				Mesto = (Mesto)radSaRezervacijom.CbMesto.SelectedItem,
-				KeteringMeni = radSaRezervacijom.IzabraniMeni,
-				RezervisaniStolovi = radSaRezervacijom.StoloviRezervacije
-			};
 		}
 
 		internal void IzmeniRezervaciju()
 		{
+
 			if (ValidanUnosRezervacije())
 			{
 				UnesiPodatkeORezervaciji();
 
 				try
 				{
-					Response response = Communication.Instance.SendRequestGetResponse(Operation.IzmeniRezervaciju, rezervacija);
+					Response response = Communication.Instance.SendRequestGetResponse(Operation.IzmeniRezervaciju, SessionData.Instance.Rezervacija);
 					MessageBox.Show(response.Message);
 				}
 				catch (SystemOperationException e)
@@ -184,5 +182,6 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				}
 			}
 		}
+
 	}
 }

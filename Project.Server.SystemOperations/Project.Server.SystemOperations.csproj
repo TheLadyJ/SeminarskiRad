@@ -51,6 +51,7 @@
     <Compile Include="RadnikSO\PrijaviRadnikaSO.cs" />
     <Compile Include="RezervacijaSO\IzmeniRezervacijuSO.cs" />
     <Compile Include="RezervacijaSO\KreirajRezervacijuSO.cs" />
+    <Compile Include="RezervacijaSO\ObrisiRezervacijuSO.cs" />
     <Compile Include="RezervacijaSO\PretraziRezervacijuSO.cs" />
     <Compile Include="RezervacijaSO\VratiSveRezervacijeSO.cs" />
     <Compile Include="RezervisanStoSO\VratiStoloveRezervacijeSO.cs" />

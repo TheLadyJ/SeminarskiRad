@@ -27,6 +27,7 @@ namespace Project.Common.Communication
 		VratiSveRezervacije,
 		PretraziRezervaciju,
 		VratiStoloveRezervacije,
-		IzmeniRezervaciju
+		IzmeniRezervaciju,
+		ObrisiRezervaciju
 	}
 }

@@ -57,7 +57,7 @@ namespace Project.Client.Forms.Dialogs
 			this.ucRadSaRezervacijom.Location = new System.Drawing.Point(26, 16);
 			this.ucRadSaRezervacijom.Margin = new System.Windows.Forms.Padding(4);
 			this.ucRadSaRezervacijom.Name = "ucRadSaRezervacijom";
-			this.ucRadSaRezervacijom.StoloviRezervacije = ((System.Collections.Generic.List<Project.Common.Domain.RezervisanSto>)(resources.GetObject("ucRadSaRezervacijom.RezervisaniStolovi")));
+			this.ucRadSaRezervacijom.RezervisaniStolovi = ((System.Collections.Generic.List<Project.Common.Domain.RezervisanSto>)(resources.GetObject("ucRadSaRezervacijom.RezervisaniStolovi")));
 			this.ucRadSaRezervacijom.Size = new System.Drawing.Size(1411, 778);
 			this.ucRadSaRezervacijom.TabIndex = 24;
 			// 

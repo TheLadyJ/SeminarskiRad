@@ -103,10 +103,10 @@ namespace Project.Common.Domain
 		{
 			return $"Sto: [{Sto}] za rezervaciju: [{Rezervacija}]";
 		}
-		public override int GetHashCode()
-		{
-			return base.GetHashCode();
-		}
+		//public override int GetHashCode()
+		//{
+		//	return base.GetHashCode();
+		//}
 
 		public void SetId(object id)
 		{

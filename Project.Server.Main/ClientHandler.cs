@@ -131,6 +131,9 @@ namespace Project.Server.Main
 					case Operation.IzmeniRezervaciju:
 						IzmeniRezervaciju(response, request);
 						break;
+					case Operation.ObrisiRezervaciju:
+						ObrisiRezervaciju(response, request);
+						break;
 					case Operation.Kraj:
                         kraj = true;
                         break;
@@ -146,6 +149,7 @@ namespace Project.Server.Main
             }
             return response;
         }
+
 
 
 		#region Rezervacija i RezervisanSto
@@ -227,6 +231,22 @@ namespace Project.Server.Main
 				response.Message = "Sistem ne može da zapamti rezervaciju.";
 			}
 		}
+
+
+		private void ObrisiRezervaciju(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.ObrisiRezervaciju((Rezervacija)request.RequestObject);
+				response.Message = "Sistem je obrisao rezervaciju.";
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da obriše rezervaciju.";
+			}
+		}
+
 
 
 		#endregion

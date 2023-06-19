@@ -20,6 +20,7 @@ namespace Project.Common.Domain
         public KeteringMeni KeteringMeni { get; set; }
 
         public List<RezervisanSto> RezervisaniStolovi { get; set; }
+        public List<RezervisanSto> NoviRezervisaniStolovi { get; set; }
 
         public string TableName => "Rezervacija";
 

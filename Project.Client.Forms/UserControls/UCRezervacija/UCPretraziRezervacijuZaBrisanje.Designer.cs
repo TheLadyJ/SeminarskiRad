@@ -1,4 +1,6 @@
-﻿namespace Project.Client.Forms.UserControls.UCRezervacija
+﻿using System.Windows.Forms;
+
+namespace Project.Client.Forms.UserControls.UCRezervacija
 {
 	partial class UCPretraziRezervacijuZaBrisanje
 	{
@@ -45,6 +47,7 @@
 			this.btnObrisiRezervaciju.TabIndex = 25;
 			this.btnObrisiRezervaciju.Text = "Obriši rezervaciju";
 			this.btnObrisiRezervaciju.UseVisualStyleBackColor = false;
+			this.btnObrisiRezervaciju.Click += new System.EventHandler(this.btnObrisiRezervaciju_Click);
 			// 
 			// ucPretragaRezervacija1
 			// 
@@ -75,5 +78,8 @@
 		#endregion
 		private System.Windows.Forms.Button btnObrisiRezervaciju;
 		private UCPretragaRezervacija ucPretragaRezervacija1;
+
+		public Button BtnObrisiRezervaciju { get => btnObrisiRezervaciju; set => btnObrisiRezervaciju = value; }
+		public UCPretragaRezervacija UcPretragaRezervacija { get => ucPretragaRezervacija1; set => ucPretragaRezervacija1 = value; }
 	}
 }

@@ -81,6 +81,7 @@
     <Compile Include="GUIController\RezervacijaGUIController\IzmeniRezervacijuController.cs" />
     <Compile Include="GUIController\RezervacijaGUIController\KreirajRezervacijuController.cs" />
     <Compile Include="GUIController\RezervacijaGUIController\PretragaRezervacijaController.cs" />
+    <Compile Include="GUIController\RezervacijaGUIController\PretraziRezervacijuZaBrisanjeController.cs" />
     <Compile Include="GUIController\RezervacijaGUIController\PretraziRezervacijuZaIzmenuController.cs" />
     <Compile Include="GUIController\RezervacijaGUIController\RadSaRezervacijomController.cs" />
     <Compile Include="GUIController\StoGUIController\ObrisiStoController.cs" />

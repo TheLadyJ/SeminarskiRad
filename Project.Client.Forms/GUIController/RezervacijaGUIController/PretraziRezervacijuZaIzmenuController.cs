@@ -1,4 +1,5 @@
 ﻿using Project.Client.Forms.Dialogs;
+using Project.Client.Forms.Session;
 using Project.Client.Forms.UserControls.UCRezervacija;
 using Project.Common.Domain;
 using System;
@@ -32,10 +33,12 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				return;
 			}
 
-			Rezervacija rezervacija = (Rezervacija)uCPretraziRezervacijuZaIzmenu.UcPretragaRezervacija.DgvRezervacije.SelectedRows[0].DataBoundItem;
-
-			FrmIzmeniRezervaciju frmIzmeniRezervaciju = new FrmIzmeniRezervaciju(rezervacija);
+			SessionData.Instance.Rezervacija = (Rezervacija)uCPretraziRezervacijuZaIzmenu.UcPretragaRezervacija.DgvRezervacije.SelectedRows[0].DataBoundItem;
+			FrmIzmeniRezervaciju frmIzmeniRezervaciju = new FrmIzmeniRezervaciju();
 			frmIzmeniRezervaciju.ShowDialog();
+			SessionData.Instance.Rezervacija = new Rezervacija();
+
+			uCPretraziRezervacijuZaIzmenu.UcPretragaRezervacija.PretragaRezervacijaController.UcitajSveRezervacije();
 		}
 	}
 }

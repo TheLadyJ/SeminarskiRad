@@ -1,4 +1,5 @@
 ﻿using Project.Client.Forms.GUIController.RezervacijaGUIController;
+using Project.Client.Forms.Session;
 using Project.Common.Domain;
 using System;
 using System.Collections.Generic;
@@ -14,13 +15,11 @@ namespace Project.Client.Forms.Dialogs
 {
 	public partial class FrmIzmeniRezervaciju : Form
 	{
-        public Rezervacija Rezervacija { get; set; }
         
 		private IzmeniRezervacijuController izmeniRezervacijuController;
-		public FrmIzmeniRezervaciju(Rezervacija rezervacija)
+		public FrmIzmeniRezervaciju()
 		{
 			InitializeComponent();
-			Rezervacija = rezervacija;
 			izmeniRezervacijuController = new IzmeniRezervacijuController(this);
 		}
 

@@ -14,11 +14,11 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 {
 	public partial class UCPretragaRezervacija : UserControl
 	{
-		private PretragaRezervacijaController pretragaRezervacijaController;
+        public PretragaRezervacijaController PretragaRezervacijaController { get; set; }
 		public UCPretragaRezervacija()
 		{
 			InitializeComponent();
-			pretragaRezervacijaController = new PretragaRezervacijaController(this);
+			PretragaRezervacijaController = new PretragaRezervacijaController(this);
 		}
 
 		private void btnIzaberiKeteringMeni_Click(object sender, EventArgs e)
@@ -29,12 +29,12 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 
 		private void btnPretrazi_Click(object sender, EventArgs e)
 		{
-			pretragaRezervacijaController.PretraziRezervaciju();
+			PretragaRezervacijaController.PretraziRezervaciju();
 		}
 
 		private void UCPretragaRezervacija_Load(object sender, EventArgs e)
 		{
-			pretragaRezervacijaController.UcitajSveRezervacije();
+			PretragaRezervacijaController.UcitajSveRezervacije();
 		}
 
 	}

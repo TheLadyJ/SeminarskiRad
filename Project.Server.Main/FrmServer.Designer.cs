@@ -104,9 +104,10 @@
 			this.Controls.Add(this.btnZaustaviServer);
 			this.Controls.Add(this.btnPokreniServer);
 			this.Margin = new System.Windows.Forms.Padding(4);
+			this.MaximizeBox = false;
 			this.Name = "FrmServer";
 			this.ShowIcon = false;
-			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Server";
 			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmServer_FormClosed);
 			this.Load += new System.EventHandler(this.FrmServer_Load);

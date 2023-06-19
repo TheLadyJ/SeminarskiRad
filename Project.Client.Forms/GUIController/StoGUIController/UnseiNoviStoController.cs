@@ -77,12 +77,12 @@ namespace Project.Client.Forms.GUIController.StoGUIController
 
 			if (!validCenaStola)
 			{
-				message += "Cena sto;la nije u validnom formatu.\n";
+				message += "Cena stola nije u validnom formatu.\n";
 				valid = false;
 			}
 			else if (cenaStola < 0)
 			{
-				message += "Cena sto;la mora biti nenegativan broj.\n";
+				message += "Cena stola mora biti nenegativan broj.\n";
 				valid = false;
 			}
 

@@ -53,7 +53,8 @@ namespace Project.Common.Domain
             sr.Rezervacija = new Rezervacija
             {
                 RezervacijaID = reader.GetInt32(0),
-                DatumVremeOd = (DateTime)reader["Datum"],
+                DatumVremeOd = (DateTime)reader["DatumVremeOd"],
+                DatumVremeDo = (DateTime)reader["DatumVremeDo"],
                 TipProslave = new TipProslave
                 {
                     TipProslaveID = (int)reader["TipProslaveID"]
@@ -83,7 +84,7 @@ namespace Project.Common.Domain
                 CenaStola = (double)reader["CenaStola"],
                 Proizvodjac = new Proizvodjac
                 {
-                    ProizvodjacID = reader.GetInt32(14),
+                    ProizvodjacID = reader.GetInt32(15),
                     NazivProizvodjaca = (string)reader["NazivProizvodjaca"],
                     Telefon = (string)reader["Telefon"],
                     Email = (string)reader["Email"],
@@ -106,12 +107,12 @@ namespace Project.Common.Domain
 		{
 			return $"Sto: [{Sto}] za rezervaciju: [{Rezervacija}]";
 		}
-		//public override int GetHashCode()
-		//{
-		//	return base.GetHashCode();
-		//}
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
 
-		public void SetId(object id)
+        public void SetId(object id)
 		{
             Sto.RbStola = (int)id;
 		}

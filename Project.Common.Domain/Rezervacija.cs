@@ -27,7 +27,7 @@ namespace Project.Common.Domain
 
         public string InsertValues => $"'{DatumVremeOd}', {TipProslave.TipProslaveID}, {UkupnaCena}, {Mesto.MestoID}, {Radnik.RadnikID}, {Klijent.KlijentID}, {KeteringMeni.KeteringMeniID}, '{DatumVremeDo}'";
 
-        public string UpdateValues => $"Datum = '{DatumVremeOd}', TipProslaveID = {TipProslave.TipProslaveID}, UkupnaCena = {UkupnaCena}, RadnikID = {Radnik.RadnikID}, KlijentID = {Klijent.KlijentID}, MestoID = {Mesto.MestoID}, KeteringMeniID = {KeteringMeni.KeteringMeniID}";
+        public string UpdateValues => $"DatumVremeOd = '{DatumVremeOd}', DatumVremeDo = '{DatumVremeDo}', TipProslaveID = {TipProslave.TipProslaveID}, UkupnaCena = {UkupnaCena}, RadnikID = {Radnik.RadnikID}, KlijentID = {Klijent.KlijentID}, MestoID = {Mesto.MestoID}, KeteringMeniID = {KeteringMeni.KeteringMeniID}";
 
         public string SearchCondition =>    $"CONVERT(VARCHAR(100), DatumVremeOd, 34) LIKE '%' + @Kriterijum + '%' OR " +
 			                                $"CONVERT(VARCHAR(100), DatumVremeOd, 8) LIKE '%' + @Kriterijum + '%' OR " +
@@ -53,7 +53,8 @@ namespace Project.Common.Domain
 
 		public string Id => $"RezervacijaID";
 
-		public string InsertUpdateCondition => $"MestoID = {Mesto.MestoID} AND " +
+		public string InsertUpdateCondition => $"RezervacijaID != {RezervacijaID} AND " +
+                                                $"MestoID = {Mesto.MestoID} AND " +
                                                 $"(DatumVremeOd BETWEEN '{DatumVremeOd}' AND '{DatumVremeDo}' OR " +
                                                 $"DatumVremeDo BETWEEN '{DatumVremeOd}' AND '{DatumVremeDo}' OR " +
                                                 $"'{DatumVremeOd}' BETWEEN DatumVremeOd AND DatumVremeDo)";

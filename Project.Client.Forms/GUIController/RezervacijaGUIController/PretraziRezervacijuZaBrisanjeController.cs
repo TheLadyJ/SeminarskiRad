@@ -39,7 +39,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 			}
 
 			rezervacijaZaBrisanje = (Rezervacija)uCPretraziRezervacijuZaBrisanje.UcPretragaRezervacija.DgvRezervacije.SelectedRows[0].DataBoundItem;
-			if (rezervacijaZaBrisanje.Radnik != SessionData.Instance.Radnik)
+			if (rezervacijaZaBrisanje.Radnik.RadnikID != SessionData.Instance.Radnik.RadnikID)
 			{
 				MessageBox.Show("Rezervaciju nije moguće obrisati jer je niste vi kreirali.");
 				return;

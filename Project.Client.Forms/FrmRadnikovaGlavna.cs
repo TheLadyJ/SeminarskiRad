@@ -32,7 +32,6 @@ namespace Project.Client.Forms
 
         private void ChangePanel(UserControl userControl)
         {
-            pnlMain.BackgroundImage = null;
 			pnlMain.Controls.Clear();
             userControl.Dock = DockStyle.Fill;
             pnlMain.Controls.Add(userControl);

@@ -175,6 +175,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.BackColor = System.Drawing.Color.Transparent;
 			this.BackgroundImage = global::Project.Client.Forms.Properties.Resources.UCKlijent;
 			this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
 			this.Controls.Add(this.gbKreirajKlijenta);

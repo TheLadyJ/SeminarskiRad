@@ -75,12 +75,16 @@ namespace Project.Client.Forms.GUIController
 
 
                 Response response = Communication.Instance.SendRequestGetResponse(Operation.PrijaviRadnika, radnik);
+                if (!response.IsSuccessful)
+                {
+					MessageBox.Show(response.Message);
+                    return;
+				}
+				SessionData.Instance.Radnik = (Radnik)response.Result;
+				MessageBox.Show(response.Message);
+				frmPrijavljivanje.DialogResult = DialogResult.OK;
 
-                SessionData.Instance.Radnik = (Radnik)response.Result;
-                MessageBox.Show(response.Message);
-                frmPrijavljivanje.DialogResult = DialogResult.OK;
-                
-            }
+			}
             catch (SystemOperationException e)
             {
                 MessageBox.Show(e.Message);

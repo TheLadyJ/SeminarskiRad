@@ -119,7 +119,6 @@ namespace Project.Client.Forms
 			this.ShowIcon = false;
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
 			this.Text = "Prijavljivanje radnika";
-			this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmPrijavljivanje_FormClosed);
 			this.Load += new System.EventHandler(this.FrmPrijavljivanje_Load);
 			this.ResumeLayout(false);
 			this.PerformLayout();

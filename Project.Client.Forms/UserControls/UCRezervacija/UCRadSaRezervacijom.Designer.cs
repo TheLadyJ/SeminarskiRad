@@ -108,11 +108,11 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			// dtpDatum
 			// 
 			this.dtpDatum.Location = new System.Drawing.Point(977, 174);
-			this.dtpDatum.MinDate = new System.DateTime(2023, 6, 19, 19, 33, 49, 162);
+			this.dtpDatum.MinDate = new System.DateTime(2023, 6, 20, 3, 39, 20, 529);
 			this.dtpDatum.Name = "dtpDatum";
 			this.dtpDatum.Size = new System.Drawing.Size(383, 28);
-			this.dtpDatum.TabIndex = 30;
-			this.dtpDatum.Value = new System.DateTime(2023, 6, 19, 19, 33, 49, 162);
+			this.dtpDatum.TabIndex = 9;
+			this.dtpDatum.Value = new System.DateTime(2023, 6, 20, 3, 39, 20, 529);
 			// 
 			// label1
 			// 
@@ -133,7 +133,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.txtVremeDo.Margin = new System.Windows.Forms.Padding(4);
 			this.txtVremeDo.Name = "txtVremeDo";
 			this.txtVremeDo.Size = new System.Drawing.Size(383, 28);
-			this.txtVremeDo.TabIndex = 28;
+			this.txtVremeDo.TabIndex = 11;
 			// 
 			// lblDatumVremeDo
 			// 
@@ -158,7 +158,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.cbStolovi.Margin = new System.Windows.Forms.Padding(4);
 			this.cbStolovi.Name = "cbStolovi";
 			this.cbStolovi.Size = new System.Drawing.Size(383, 27);
-			this.cbStolovi.TabIndex = 26;
+			this.cbStolovi.TabIndex = 3;
 			// 
 			// lblSto
 			// 
@@ -187,6 +187,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvStolovi.Location = new System.Drawing.Point(27, 322);
 			this.dgvStolovi.Name = "dgvStolovi";
+			this.dgvStolovi.ReadOnly = true;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
 			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -203,8 +204,9 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
 			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvStolovi.RowTemplate.Height = 24;
+			this.dgvStolovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvStolovi.Size = new System.Drawing.Size(598, 384);
-			this.dgvStolovi.TabIndex = 24;
+			this.dgvStolovi.TabIndex = 6;
 			this.dgvStolovi.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvStolovi_RowsAdded);
 			this.dgvStolovi.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvStolovi_RowsRemoved);
 			// 
@@ -216,7 +218,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.btnObrisiStolove.Location = new System.Drawing.Point(376, 249);
 			this.btnObrisiStolove.Name = "btnObrisiStolove";
 			this.btnObrisiStolove.Size = new System.Drawing.Size(249, 40);
-			this.btnObrisiStolove.TabIndex = 23;
+			this.btnObrisiStolove.TabIndex = 5;
 			this.btnObrisiStolove.Text = "Obriši sto/stolove";
 			this.btnObrisiStolove.UseVisualStyleBackColor = false;
 			this.btnObrisiStolove.Click += new System.EventHandler(this.btnObrisiStolove_Click);
@@ -229,7 +231,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.btnDodajSto.Location = new System.Drawing.Point(27, 249);
 			this.btnDodajSto.Name = "btnDodajSto";
 			this.btnDodajSto.Size = new System.Drawing.Size(249, 40);
-			this.btnDodajSto.TabIndex = 22;
+			this.btnDodajSto.TabIndex = 4;
 			this.btnDodajSto.Text = "Dodaj sto";
 			this.btnDodajSto.UseVisualStyleBackColor = false;
 			this.btnDodajSto.Click += new System.EventHandler(this.btnDodajSto_Click);
@@ -267,7 +269,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.btnIzaberiKeteringMeni.Location = new System.Drawing.Point(1111, 442);
 			this.btnIzaberiKeteringMeni.Name = "btnIzaberiKeteringMeni";
 			this.btnIzaberiKeteringMeni.Size = new System.Drawing.Size(249, 42);
-			this.btnIzaberiKeteringMeni.TabIndex = 18;
+			this.btnIzaberiKeteringMeni.TabIndex = 12;
 			this.btnIzaberiKeteringMeni.Text = "Izaberi ketering meni";
 			this.btnIzaberiKeteringMeni.UseVisualStyleBackColor = false;
 			this.btnIzaberiKeteringMeni.Click += new System.EventHandler(this.btnIzaberiKeteringMeni_Click);
@@ -284,7 +286,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.cbMesto.Margin = new System.Windows.Forms.Padding(4);
 			this.cbMesto.Name = "cbMesto";
 			this.cbMesto.Size = new System.Drawing.Size(383, 27);
-			this.cbMesto.TabIndex = 17;
+			this.cbMesto.TabIndex = 7;
 			// 
 			// lblMesto
 			// 
@@ -307,7 +309,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.lblRadnikVrednost.Location = new System.Drawing.Point(242, 53);
 			this.lblRadnikVrednost.Name = "lblRadnikVrednost";
 			this.lblRadnikVrednost.Size = new System.Drawing.Size(383, 27);
-			this.lblRadnikVrednost.TabIndex = 15;
+			this.lblRadnikVrednost.TabIndex = 1;
 			this.lblRadnikVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblRadnik
@@ -333,7 +335,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.cbKlijent.Margin = new System.Windows.Forms.Padding(4);
 			this.cbKlijent.Name = "cbKlijent";
 			this.cbKlijent.Size = new System.Drawing.Size(383, 27);
-			this.cbKlijent.TabIndex = 13;
+			this.cbKlijent.TabIndex = 2;
 			// 
 			// lblKlijent
 			// 
@@ -356,7 +358,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.lblUkupnaCenaVrednost.Location = new System.Drawing.Point(977, 525);
 			this.lblUkupnaCenaVrednost.Name = "lblUkupnaCenaVrednost";
 			this.lblUkupnaCenaVrednost.Size = new System.Drawing.Size(383, 27);
-			this.lblUkupnaCenaVrednost.TabIndex = 11;
+			this.lblUkupnaCenaVrednost.TabIndex = 21;
 			this.lblUkupnaCenaVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// cbTipProslave
@@ -371,7 +373,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.cbTipProslave.Margin = new System.Windows.Forms.Padding(4);
 			this.cbTipProslave.Name = "cbTipProslave";
 			this.cbTipProslave.Size = new System.Drawing.Size(383, 27);
-			this.cbTipProslave.TabIndex = 10;
+			this.cbTipProslave.TabIndex = 8;
 			// 
 			// lblTipProslave
 			// 
@@ -415,7 +417,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.txtVremeOd.Margin = new System.Windows.Forms.Padding(4);
 			this.txtVremeOd.Name = "txtVremeOd";
 			this.txtVremeOd.Size = new System.Drawing.Size(383, 28);
-			this.txtVremeOd.TabIndex = 3;
+			this.txtVremeOd.TabIndex = 10;
 			// 
 			// lblUkupnaCena
 			// 

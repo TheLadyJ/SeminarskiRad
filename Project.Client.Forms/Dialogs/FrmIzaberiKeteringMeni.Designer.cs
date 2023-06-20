@@ -33,7 +33,6 @@ namespace Project.Client.Forms.Dialogs
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.lblKeteringFirma = new System.Windows.Forms.Label();
 			this.cbKeteringFirme = new System.Windows.Forms.ComboBox();
 			this.btnPrikazi = new System.Windows.Forms.Button();
@@ -78,6 +77,9 @@ namespace Project.Client.Forms.Dialogs
 			// 
 			// dgvMeni
 			// 
+			this.dgvMeni.AccessibleName = "dgvMeni";
+			this.dgvMeni.AllowUserToAddRows = false;
+			this.dgvMeni.AllowUserToDeleteRows = false;
 			this.dgvMeni.BackgroundColor = System.Drawing.Color.White;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -88,33 +90,26 @@ namespace Project.Client.Forms.Dialogs
 			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
 			this.dgvMeni.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvMeni.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvMeni.DefaultCellStyle = dataGridViewCellStyle2;
 			this.dgvMeni.Location = new System.Drawing.Point(53, 145);
 			this.dgvMeni.Name = "dgvMeni";
 			this.dgvMeni.ReadOnly = true;
-			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dgvMeni.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+			this.dgvMeni.RowHeadersWidth = 51;
 			dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
 			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
 			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dgvMeni.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-			this.dgvMeni.RowHeadersWidth = 51;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-			this.dgvMeni.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			this.dgvMeni.RowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvMeni.RowTemplate.Height = 24;
+			this.dgvMeni.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvMeni.Size = new System.Drawing.Size(820, 277);
 			this.dgvMeni.TabIndex = 3;
 			// 

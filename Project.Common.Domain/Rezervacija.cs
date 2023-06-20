@@ -54,7 +54,7 @@ namespace Project.Common.Domain
 		public string Id => $"RezervacijaID";
 
 		public string InsertUpdateDeleteCondition => Join +$" where RezervacijaID != {RezervacijaID} AND " +
-                                                $"MestoID = {Mesto.MestoID} AND " +
+                                                $"Mesto.MestoID = {Mesto.MestoID} AND " +
                                                 $"(DatumVremeOd BETWEEN '{DatumVremeOd}' AND '{DatumVremeDo}' OR " +
                                                 $"DatumVremeDo BETWEEN '{DatumVremeOd}' AND '{DatumVremeDo}' OR " +
                                                 $"'{DatumVremeOd}' BETWEEN DatumVremeOd AND DatumVremeDo)";

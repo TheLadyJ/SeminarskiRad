@@ -96,7 +96,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.lblProizvodjacPrikaziVrednost.Location = new System.Drawing.Point(249, 567);
 			this.lblProizvodjacPrikaziVrednost.Name = "lblProizvodjacPrikaziVrednost";
 			this.lblProizvodjacPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
-			this.lblProizvodjacPrikaziVrednost.TabIndex = 24;
+			this.lblProizvodjacPrikaziVrednost.TabIndex = 6;
 			this.lblProizvodjacPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblCenaStolaPrikaziVrednost
@@ -108,7 +108,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.lblCenaStolaPrikaziVrednost.Location = new System.Drawing.Point(249, 506);
 			this.lblCenaStolaPrikaziVrednost.Name = "lblCenaStolaPrikaziVrednost";
 			this.lblCenaStolaPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
-			this.lblCenaStolaPrikaziVrednost.TabIndex = 23;
+			this.lblCenaStolaPrikaziVrednost.TabIndex = 5;
 			this.lblCenaStolaPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblKapacitetPrikaziVrednost
@@ -120,7 +120,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.lblKapacitetPrikaziVrednost.Location = new System.Drawing.Point(249, 447);
 			this.lblKapacitetPrikaziVrednost.Name = "lblKapacitetPrikaziVrednost";
 			this.lblKapacitetPrikaziVrednost.Size = new System.Drawing.Size(360, 27);
-			this.lblKapacitetPrikaziVrednost.TabIndex = 22;
+			this.lblKapacitetPrikaziVrednost.TabIndex = 4;
 			this.lblKapacitetPrikaziVrednost.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// dgvStolovi
@@ -139,6 +139,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvStolovi.Location = new System.Drawing.Point(681, 32);
 			this.dgvStolovi.Margin = new System.Windows.Forms.Padding(4);
+			this.dgvStolovi.MultiSelect = false;
 			this.dgvStolovi.Name = "dgvStolovi";
 			this.dgvStolovi.ReadOnly = true;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -156,8 +157,9 @@ namespace Project.Client.Forms.UserControls.UCSto
 			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
 			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle3;
+			this.dgvStolovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvStolovi.Size = new System.Drawing.Size(436, 641);
-			this.dgvStolovi.TabIndex = 18;
+			this.dgvStolovi.TabIndex = 2;
 			// 
 			// btnPrikaziDetalje
 			// 
@@ -168,7 +170,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.btnPrikaziDetalje.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPrikaziDetalje.Name = "btnPrikaziDetalje";
 			this.btnPrikaziDetalje.Size = new System.Drawing.Size(361, 43);
-			this.btnPrikaziDetalje.TabIndex = 13;
+			this.btnPrikaziDetalje.TabIndex = 3;
 			this.btnPrikaziDetalje.Text = "Prikaži sto detaljnije";
 			this.btnPrikaziDetalje.UseVisualStyleBackColor = false;
 			this.btnPrikaziDetalje.Click += new System.EventHandler(this.btnPrikaziDetalje_Click);
@@ -180,7 +182,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.txtKriterijum.Margin = new System.Windows.Forms.Padding(4);
 			this.txtKriterijum.Name = "txtKriterijum";
 			this.txtKriterijum.Size = new System.Drawing.Size(485, 28);
-			this.txtKriterijum.TabIndex = 12;
+			this.txtKriterijum.TabIndex = 0;
 			// 
 			// btnPretraziSto
 			// 
@@ -191,7 +193,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.btnPretraziSto.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPretraziSto.Name = "btnPretraziSto";
 			this.btnPretraziSto.Size = new System.Drawing.Size(361, 43);
-			this.btnPretraziSto.TabIndex = 6;
+			this.btnPretraziSto.TabIndex = 1;
 			this.btnPretraziSto.Text = "Pretraži sto";
 			this.btnPretraziSto.UseVisualStyleBackColor = false;
 			this.btnPretraziSto.Click += new System.EventHandler(this.btnPretraziSto_Click);

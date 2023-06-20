@@ -100,7 +100,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.btnUnesiNoviSto.Margin = new System.Windows.Forms.Padding(4);
 			this.btnUnesiNoviSto.Name = "btnUnesiNoviSto";
 			this.btnUnesiNoviSto.Size = new System.Drawing.Size(391, 44);
-			this.btnUnesiNoviSto.TabIndex = 6;
+			this.btnUnesiNoviSto.TabIndex = 4;
 			this.btnUnesiNoviSto.Text = "Unesi novi sto";
 			this.btnUnesiNoviSto.UseVisualStyleBackColor = false;
 			this.btnUnesiNoviSto.Click += new System.EventHandler(this.btnUnesiNoviSto_Click);
@@ -116,7 +116,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.cbProizvodjac.Margin = new System.Windows.Forms.Padding(4);
 			this.cbProizvodjac.Name = "cbProizvodjac";
 			this.cbProizvodjac.Size = new System.Drawing.Size(417, 27);
-			this.cbProizvodjac.TabIndex = 5;
+			this.cbProizvodjac.TabIndex = 3;
 			// 
 			// txtCenaStola
 			// 
@@ -125,7 +125,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.txtCenaStola.Margin = new System.Windows.Forms.Padding(4);
 			this.txtCenaStola.Name = "txtCenaStola";
 			this.txtCenaStola.Size = new System.Drawing.Size(417, 28);
-			this.txtCenaStola.TabIndex = 4;
+			this.txtCenaStola.TabIndex = 2;
 			// 
 			// txtKapacitet
 			// 
@@ -134,7 +134,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.txtKapacitet.Margin = new System.Windows.Forms.Padding(4);
 			this.txtKapacitet.Name = "txtKapacitet";
 			this.txtKapacitet.Size = new System.Drawing.Size(417, 28);
-			this.txtKapacitet.TabIndex = 3;
+			this.txtKapacitet.TabIndex = 1;
 			// 
 			// lblProizvodjac
 			// 

@@ -26,10 +26,6 @@ namespace Project.Client.Forms
             prijaviRadnikaController.PrijaviRadnika();
         }
 
-        private void FrmPrijavljivanje_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //prijaviRadnikaController.ZatvoriKonekciju();
-        }
 
         private void FrmPrijavljivanje_Load(object sender, EventArgs e)
         {

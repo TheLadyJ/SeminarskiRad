@@ -497,7 +497,7 @@ namespace Project.Server.Main
 				response.Result = moguce;
 				if (!moguce)
 				{
-					response.Message = "Nije moguće obrisati klijenta jer još uvek postoji neka rezervacija za njega.";
+					response.Message = "Nije moguće obrisati klijenta jer još uvek postoji neka rezervacija za nju/njega.";
 				}
 			}
 			catch (Exception)
@@ -536,8 +536,8 @@ namespace Project.Server.Main
 				}
 				else if (VecPrijavljen((Radnik)response.Result))
 				{
+					response.IsSuccessful = false;
 					response.Message = "Radnik je vec prijavljen!";
-					response.Result = null;
 				}
 				else
 				{

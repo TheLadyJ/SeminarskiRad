@@ -80,8 +80,8 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 				radSaRezervacijom.CbMesto.SelectedItem = SessionData.Instance.Rezervacija.Mesto;
 				radSaRezervacijom.CbTipProslave.SelectedItem = SessionData.Instance.Rezervacija.TipProslave;
 				radSaRezervacijom.DtpDatum.Value = SessionData.Instance.Rezervacija.DatumVremeOd.Date;
-				radSaRezervacijom.TxtVremeOd.Text = SessionData.Instance.Rezervacija.DatumVremeOd.ToString("hh\\:mm");
-				radSaRezervacijom.TxtVremeDo.Text = SessionData.Instance.Rezervacija.DatumVremeDo.ToString("hh\\:mm");
+				radSaRezervacijom.TxtVremeOd.Text = SessionData.Instance.Rezervacija.DatumVremeOd.ToString("HH\\:mm");
+				radSaRezervacijom.TxtVremeDo.Text = SessionData.Instance.Rezervacija.DatumVremeDo.ToString("HH\\:mm");
 				radSaRezervacijom.IzabraniMeni = SessionData.Instance.Rezervacija.KeteringMeni;
 				radSaRezervacijom.LblKeteringMeniVrednost.Text = SessionData.Instance.Rezervacija.KeteringMeni.ToString();
 				radSaRezervacijom.LblUkupnaCenaVrednost.Text = SessionData.Instance.Rezervacija.UkupnaCena.ToString();

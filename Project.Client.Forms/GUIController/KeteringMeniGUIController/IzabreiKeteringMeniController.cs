@@ -82,8 +82,13 @@ namespace Project.Client.Forms.GUIController.KeteringMeniGUIController
 
 		private void PreimenujKolone(DataGridView dgv)
 		{
-			dgv.Columns["GlavnoJelo"].HeaderText = "Glavno Jelo";
-			dgv.Columns["CenaHranePoOsobi"].HeaderText = "Cena Hrane Po Osobi";
+			dgv.Columns["GlavnoJelo"].HeaderText = "Glavno jelo";
+			dgv.Columns["GlavnoJelo"].Width = 150;
+			dgv.Columns["CenaHranePoOsobi"].HeaderText = "Cena hrane po osobi";
+			dgv.Columns["CenaHranePoOsobi"].Width = 200;
+
+			dgv.Columns["Predjelo"].Width = 150;
+			dgv.Columns["Dezert"].Width = 150;
 		}
 
 		private void UcitajDgvMeni(List<KeteringMeni> meniji = null)

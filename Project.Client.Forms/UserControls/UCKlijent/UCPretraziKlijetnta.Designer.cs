@@ -198,7 +198,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnPrikaziDetaljno.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPrikaziDetaljno.Name = "btnPrikaziDetaljno";
 			this.btnPrikaziDetaljno.Size = new System.Drawing.Size(323, 39);
-			this.btnPrikaziDetaljno.TabIndex = 19;
+			this.btnPrikaziDetaljno.TabIndex = 3;
 			this.btnPrikaziDetaljno.Text = "Prikaži klijenta detaljnije";
 			this.btnPrikaziDetaljno.UseVisualStyleBackColor = false;
 			this.btnPrikaziDetaljno.Click += new System.EventHandler(this.btnPrikaziDetaljno_Click);
@@ -212,7 +212,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnPretraziKlijenta.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPretraziKlijenta.Name = "btnPretraziKlijenta";
 			this.btnPretraziKlijenta.Size = new System.Drawing.Size(323, 39);
-			this.btnPretraziKlijenta.TabIndex = 14;
+			this.btnPretraziKlijenta.TabIndex = 1;
 			this.btnPretraziKlijenta.Text = "Pretraži klijenta";
 			this.btnPretraziKlijenta.UseVisualStyleBackColor = false;
 			this.btnPretraziKlijenta.Click += new System.EventHandler(this.btnPretraziKlijenta_Click);
@@ -225,6 +225,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.dgvKlijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvKlijenti.Location = new System.Drawing.Point(689, 54);
 			this.dgvKlijenti.Margin = new System.Windows.Forms.Padding(4);
+			this.dgvKlijenti.MultiSelect = false;
 			this.dgvKlijenti.Name = "dgvKlijenti";
 			this.dgvKlijenti.ReadOnly = true;
 			this.dgvKlijenti.RowHeadersWidth = 45;
@@ -232,8 +233,9 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
 			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			this.dgvKlijenti.RowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dgvKlijenti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvKlijenti.Size = new System.Drawing.Size(383, 629);
-			this.dgvKlijenti.TabIndex = 13;
+			this.dgvKlijenti.TabIndex = 2;
 			// 
 			// txtKriterijum
 			// 

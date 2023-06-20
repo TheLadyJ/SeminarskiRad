@@ -30,8 +30,8 @@ namespace Project.Client.Forms.UserControls.UCKlijent
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.txtKriterijum = new System.Windows.Forms.TextBox();
 			this.dgvKlijenti = new System.Windows.Forms.DataGridView();
 			this.btnPretraziKlijenta = new System.Windows.Forms.Button();
@@ -58,25 +58,27 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.dgvKlijenti.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dgvKlijenti.BackgroundColor = System.Drawing.Color.White;
 			this.dgvKlijenti.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-			dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Orchid;
-			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.dgvKlijenti.DefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+			dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+			dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Orchid;
+			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.dgvKlijenti.DefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvKlijenti.Location = new System.Drawing.Point(53, 177);
 			this.dgvKlijenti.Margin = new System.Windows.Forms.Padding(4);
+			this.dgvKlijenti.MultiSelect = false;
 			this.dgvKlijenti.Name = "dgvKlijenti";
 			this.dgvKlijenti.ReadOnly = true;
 			this.dgvKlijenti.RowHeadersWidth = 45;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			this.dgvKlijenti.RowsDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 8.830189F, System.Drawing.FontStyle.Bold);
+			dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+			dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			this.dgvKlijenti.RowsDefaultCellStyle = dataGridViewCellStyle4;
+			this.dgvKlijenti.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvKlijenti.Size = new System.Drawing.Size(1043, 402);
-			this.dgvKlijenti.TabIndex = 13;
+			this.dgvKlijenti.TabIndex = 2;
 			// 
 			// btnPretraziKlijenta
 			// 
@@ -87,7 +89,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnPretraziKlijenta.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPretraziKlijenta.Name = "btnPretraziKlijenta";
 			this.btnPretraziKlijenta.Size = new System.Drawing.Size(323, 39);
-			this.btnPretraziKlijenta.TabIndex = 14;
+			this.btnPretraziKlijenta.TabIndex = 1;
 			this.btnPretraziKlijenta.Text = "Pretraži klijenta za brisanje";
 			this.btnPretraziKlijenta.UseVisualStyleBackColor = false;
 			this.btnPretraziKlijenta.Click += new System.EventHandler(this.btnPretraziKlijenta_Click);
@@ -101,7 +103,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnObrisiKlijenta.Margin = new System.Windows.Forms.Padding(4);
 			this.btnObrisiKlijenta.Name = "btnObrisiKlijenta";
 			this.btnObrisiKlijenta.Size = new System.Drawing.Size(323, 39);
-			this.btnObrisiKlijenta.TabIndex = 19;
+			this.btnObrisiKlijenta.TabIndex = 3;
 			this.btnObrisiKlijenta.Text = "Obriši klijenta";
 			this.btnObrisiKlijenta.UseVisualStyleBackColor = false;
 			this.btnObrisiKlijenta.Click += new System.EventHandler(this.btnObrisiKlijenta_Click);

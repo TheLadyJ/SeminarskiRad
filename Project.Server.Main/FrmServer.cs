@@ -40,9 +40,11 @@ namespace Project.Server.Main
 
                 try
                 {
-                    Thread nit = new Thread(server.HandleClients);
-                    nit.IsBackground = true;
-                    nit.Start();
+                    
+                     Thread nit = new Thread(server.HandleClients);
+                     nit.IsBackground = true;
+                     nit.Start(); 
+                    
                 }
                 catch (Exception ex)
                 {

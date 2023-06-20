@@ -77,7 +77,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.btnKreirajKlijenta.Margin = new System.Windows.Forms.Padding(4);
 			this.btnKreirajKlijenta.Name = "btnKreirajKlijenta";
 			this.btnKreirajKlijenta.Size = new System.Drawing.Size(301, 47);
-			this.btnKreirajKlijenta.TabIndex = 8;
+			this.btnKreirajKlijenta.TabIndex = 5;
 			this.btnKreirajKlijenta.Text = "Kreiraj novog klijenta";
 			this.btnKreirajKlijenta.UseVisualStyleBackColor = false;
 			this.btnKreirajKlijenta.Click += new System.EventHandler(this.btnKreirajKlijenta_Click);
@@ -91,7 +91,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblEmail.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblEmail.Name = "lblEmail";
 			this.lblEmail.Size = new System.Drawing.Size(66, 23);
-			this.lblEmail.TabIndex = 7;
+			this.lblEmail.TabIndex = 9;
 			this.lblEmail.Text = "Email:";
 			// 
 			// txtEmail
@@ -102,7 +102,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
 			this.txtEmail.Name = "txtEmail";
 			this.txtEmail.Size = new System.Drawing.Size(321, 30);
-			this.txtEmail.TabIndex = 6;
+			this.txtEmail.TabIndex = 4;
 			// 
 			// lblTelefon
 			// 
@@ -114,7 +114,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblTelefon.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblTelefon.Name = "lblTelefon";
 			this.lblTelefon.Size = new System.Drawing.Size(80, 23);
-			this.lblTelefon.TabIndex = 5;
+			this.lblTelefon.TabIndex = 8;
 			this.lblTelefon.Text = "Telefon:";
 			// 
 			// txtTelefon
@@ -125,7 +125,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.txtTelefon.Margin = new System.Windows.Forms.Padding(4);
 			this.txtTelefon.Name = "txtTelefon";
 			this.txtTelefon.Size = new System.Drawing.Size(321, 30);
-			this.txtTelefon.TabIndex = 4;
+			this.txtTelefon.TabIndex = 3;
 			// 
 			// lblPrezime
 			// 
@@ -136,7 +136,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblPrezime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblPrezime.Name = "lblPrezime";
 			this.lblPrezime.Size = new System.Drawing.Size(88, 23);
-			this.lblPrezime.TabIndex = 3;
+			this.lblPrezime.TabIndex = 7;
 			this.lblPrezime.Text = "Prezime:";
 			// 
 			// txtPrezime
@@ -158,7 +158,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.lblIme.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
 			this.lblIme.Name = "lblIme";
 			this.lblIme.Size = new System.Drawing.Size(50, 23);
-			this.lblIme.TabIndex = 1;
+			this.lblIme.TabIndex = 6;
 			this.lblIme.Text = "Ime:";
 			// 
 			// txtIme
@@ -169,7 +169,7 @@ namespace Project.Client.Forms.UserControls.UCKlijent
 			this.txtIme.Margin = new System.Windows.Forms.Padding(4);
 			this.txtIme.Name = "txtIme";
 			this.txtIme.Size = new System.Drawing.Size(321, 30);
-			this.txtIme.TabIndex = 0;
+			this.txtIme.TabIndex = 1;
 			// 
 			// UCKreirajNovogKlijenta
 			// 

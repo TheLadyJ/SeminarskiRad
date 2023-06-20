@@ -95,6 +95,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.dgvStolovi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvStolovi.Location = new System.Drawing.Point(91, 191);
 			this.dgvStolovi.Margin = new System.Windows.Forms.Padding(4);
+			this.dgvStolovi.MultiSelect = false;
 			this.dgvStolovi.Name = "dgvStolovi";
 			this.dgvStolovi.ReadOnly = true;
 			this.dgvStolovi.RowHeadersWidth = 45;
@@ -104,8 +105,9 @@ namespace Project.Client.Forms.UserControls.UCSto
 			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
 			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
 			this.dgvStolovi.RowsDefaultCellStyle = dataGridViewCellStyle1;
+			this.dgvStolovi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvStolovi.Size = new System.Drawing.Size(1090, 400);
-			this.dgvStolovi.TabIndex = 18;
+			this.dgvStolovi.TabIndex = 3;
 			// 
 			// txtKriterijum
 			// 
@@ -114,7 +116,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.txtKriterijum.Margin = new System.Windows.Forms.Padding(4);
 			this.txtKriterijum.Name = "txtKriterijum";
 			this.txtKriterijum.Size = new System.Drawing.Size(663, 28);
-			this.txtKriterijum.TabIndex = 12;
+			this.txtKriterijum.TabIndex = 1;
 			// 
 			// btnPretraziSto
 			// 
@@ -125,7 +127,7 @@ namespace Project.Client.Forms.UserControls.UCSto
 			this.btnPretraziSto.Margin = new System.Windows.Forms.Padding(4);
 			this.btnPretraziSto.Name = "btnPretraziSto";
 			this.btnPretraziSto.Size = new System.Drawing.Size(361, 43);
-			this.btnPretraziSto.TabIndex = 6;
+			this.btnPretraziSto.TabIndex = 2;
 			this.btnPretraziSto.Text = "Pretraži sto";
 			this.btnPretraziSto.UseVisualStyleBackColor = false;
 			this.btnPretraziSto.Click += new System.EventHandler(this.btnPretraziSto_Click);

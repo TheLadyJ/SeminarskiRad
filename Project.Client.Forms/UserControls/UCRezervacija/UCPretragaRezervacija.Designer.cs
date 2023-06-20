@@ -56,7 +56,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.dgvRezervacije.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.dgvRezervacije.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dgvRezervacije.Location = new System.Drawing.Point(36, 231);
-			this.dgvRezervacije.MinimumSize = new System.Drawing.Size(1407, 319);
+			this.dgvRezervacije.MultiSelect = false;
 			this.dgvRezervacije.Name = "dgvRezervacije";
 			this.dgvRezervacije.ReadOnly = true;
 			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -75,8 +75,9 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
 			this.dgvRezervacije.RowsDefaultCellStyle = dataGridViewCellStyle3;
 			this.dgvRezervacije.RowTemplate.Height = 24;
+			this.dgvRezervacije.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
 			this.dgvRezervacije.Size = new System.Drawing.Size(1408, 455);
-			this.dgvRezervacije.TabIndex = 32;
+			this.dgvRezervacije.TabIndex = 3;
 			// 
 			// btnPretrazi
 			// 
@@ -86,7 +87,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.btnPretrazi.MinimumSize = new System.Drawing.Size(443, 51);
 			this.btnPretrazi.Name = "btnPretrazi";
 			this.btnPretrazi.Size = new System.Drawing.Size(444, 51);
-			this.btnPretrazi.TabIndex = 31;
+			this.btnPretrazi.TabIndex = 2;
 			this.btnPretrazi.Text = "Pretraži rezervaciju na osnovu kriterijuma";
 			this.btnPretrazi.UseVisualStyleBackColor = false;
 			this.btnPretrazi.Click += new System.EventHandler(this.btnPretrazi_Click);
@@ -130,7 +131,7 @@ namespace Project.Client.Forms.UserControls.UCRezervacija
 			this.txtKriterijum.Margin = new System.Windows.Forms.Padding(4);
 			this.txtKriterijum.Name = "txtKriterijum";
 			this.txtKriterijum.Size = new System.Drawing.Size(876, 28);
-			this.txtKriterijum.TabIndex = 33;
+			this.txtKriterijum.TabIndex = 1;
 			// 
 			// UCPretragaRezervacija
 			// 

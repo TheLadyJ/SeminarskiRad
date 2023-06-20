@@ -28,7 +28,7 @@ namespace Project.Client.Forms.GUIController.StoGUIController
 			uCPretraziSto.DgvStolovi.Columns["RbStola"].Visible = false;
 			uCPretraziSto.DgvStolovi.Columns["CenaStola"].Visible = false;
 			uCPretraziSto.DgvStolovi.Columns["Id"].Visible = false;
-			uCPretraziSto.DgvStolovi.Columns["InsertUpdateCondition"].Visible = false;
+			uCPretraziSto.DgvStolovi.Columns["InsertUpdateDeleteCondition"].Visible = false;
 			uCPretraziSto.DgvStolovi.Columns["TableName"].Visible = false;
 			uCPretraziSto.DgvStolovi.Columns["InsertValues"].Visible = false;
 			uCPretraziSto.DgvStolovi.Columns["IdCondition"].Visible = false;

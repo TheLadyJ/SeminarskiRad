@@ -28,7 +28,7 @@ namespace Project.Client.Forms.GUIController.RezervacijaGUIController
 		{
 			dgv.Columns["RezervacijaID"].Visible = false;
 			dgv.Columns["Id"].Visible = false;
-			dgv.Columns["InsertUpdateCondition"].Visible = false;
+			dgv.Columns["InsertUpdateDeleteCondition"].Visible = false;
 			dgv.Columns["TableName"].Visible = false;
 			dgv.Columns["InsertValues"].Visible = false;
 			dgv.Columns["IdCondition"].Visible = false;

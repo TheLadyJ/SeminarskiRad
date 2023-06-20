@@ -29,7 +29,7 @@ namespace Project.Client.Forms.GUIController.KlijentGUIController
 			uCPretraziKlijetnta.DgvKlijenti.Columns["Email"].Visible = false;
 			uCPretraziKlijetnta.DgvKlijenti.Columns["Telefon"].Visible = false;
 			uCPretraziKlijetnta.DgvKlijenti.Columns["Id"].Visible = false;
-			uCPretraziKlijetnta.DgvKlijenti.Columns["InsertUpdateCondition"].Visible = false;
+			uCPretraziKlijetnta.DgvKlijenti.Columns["InsertUpdateDeleteCondition"].Visible = false;
 			uCPretraziKlijetnta.DgvKlijenti.Columns["TableName"].Visible = false;
 			uCPretraziKlijetnta.DgvKlijenti.Columns["InsertValues"].Visible = false;
 			uCPretraziKlijetnta.DgvKlijenti.Columns["IdCondition"].Visible = false;

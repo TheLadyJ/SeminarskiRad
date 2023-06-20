@@ -33,7 +33,7 @@ namespace Project.Common.Domain
 
 		public string Id => $"KlijentID";
 
-		public string InsertUpdateDeleteCondition => $"Klijent.KlijentID = {KlijentID}";
+		public string InsertUpdateDeleteCondition => Join +$" where Klijent.KlijentID = {KlijentID}";
 
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
@@ -49,12 +49,7 @@ namespace Project.Common.Domain
 
         public IDomainObject ReadObjectRowJoin(SqlDataReader reader)
         {
-			Rezervacija r = new Rezervacija
-			{
-				RezervacijaID = (int)reader["RezervacijaID"]
-			};
-
-			return r;
+			return null;
 		}
 
 		public override bool Equals(object obj)

@@ -18,7 +18,7 @@ namespace Project.Server.SystemOperations.KlijentSO
 
 		protected override void Execute()
 		{
-			List<Rezervacija> rezervacijeKlijenta = repository.CheckInsertUpdateDelete(klijent).OfType<Rezervacija>().ToList();
+			List<Klijent> rezervacijeKlijenta = repository.CheckInsertUpdateDelete(klijent).OfType<Klijent>().ToList();
 			Result = (rezervacijeKlijenta == null || rezervacijeKlijenta.Count == 0);
 		}
 	}

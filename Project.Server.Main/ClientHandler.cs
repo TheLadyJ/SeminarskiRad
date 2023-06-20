@@ -159,10 +159,6 @@ namespace Project.Server.Main
             return response;
         }
 
-		
-
-
-
 
 		#region Rezervacija i RezervisanSto
 
@@ -184,7 +180,6 @@ namespace Project.Server.Main
 				response.Message = "Došlo je do greške prilikom provere mogućnosti čuvanja rezervacije.";
 			}
 		}
-
 
 		private void KreirajRezervaciju(Response response, Request request)
 		{
@@ -265,7 +260,6 @@ namespace Project.Server.Main
 			}
 		}
 
-
 		private void ObrisiRezervaciju(Response response, Request request)
 		{
 			try
@@ -331,7 +325,6 @@ namespace Project.Server.Main
 				response.Message = "Došlo je do greške prilikom učitavanja svih mesta.";
 			}
 		}
-
 		private void VratiSveTipoveProslave(Response response)
 		{
 			try
@@ -346,10 +339,72 @@ namespace Project.Server.Main
 			}
 		}
 
+
 		#endregion
 
 		#region Sto i proizvodjac
 
+		private void UnesiSto(Response response, Request request)
+		{
+			try
+			{
+				Controller.Instance.UnesiSto((Sto)request.RequestObject);
+				response.Message = "Sistem je zapamtio sto.";
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da zapamti sto.";
+			}
+		}
+		private void VratiProizvodjace(Response response)
+		{
+			try
+			{
+				List<Proizvodjac> proizvodjaci = Controller.Instance.VratiProizvodjace();
+				response.Result = proizvodjaci;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja proizvodjaca.";
+			}
+		}
+		private void VratiSveStolove(Response response)
+		{
+			try
+			{
+				List<Sto> stolovi = Controller.Instance.VratiSveStolove();
+				response.Result = stolovi;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih stolova.";
+			}
+		}
+		private void PretraziSto(Response response, Request request)
+		{
+			try
+			{
+				List<Sto> nadjeniStolovi = Controller.Instance.PretraziSto((string)request.RequestObject);
+				response.Result = nadjeniStolovi;
+				if (nadjeniStolovi != null && nadjeniStolovi.Count != 0)
+				{
+					response.Message = "Sistem je našao stolove po zadatoj vrednosti.";
+				}
+				else
+				{
+					response.Message = "Sistem ne može da nađe stolove po zadatoj vrednosti.";
+					response.IsSuccessful = false;
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom pretrage stolova.";
+			}
+		}
 		private void ProveriBrisanjeStola(Response response, Request request)
 		{
 			try
@@ -358,7 +413,7 @@ namespace Project.Server.Main
 				response.Result = moguce;
 				if (!moguce)
 				{
-					response.Message = "Nije moguće obrisati sto jer još uvek postoji neka rezervacija koja ga koristi.";
+					response.Message = "Sto nije moguće obrisati jer je naveden u listi rezervisanih stolova neke rezervacije.";
 				}
 			}
 			catch (Exception)
@@ -382,76 +437,58 @@ namespace Project.Server.Main
 			}
 		}
 
-		private void PretraziSto(Response response, Request request)
-		{
-			try
-			{
-				List<Sto> nadjeniStolovi = Controller.Instance.PretraziSto((string)request.RequestObject);
-				response.Result = nadjeniStolovi;
-				if (nadjeniStolovi != null && nadjeniStolovi.Count != 0)
-				{
-					response.Message = "Sistem je našao stolove po zadatoj vrednosti.";
-				}
-				else
-				{
-					response.Message = "Sistem ne može da nađe stolove po zadatoj vrednosti.";
-					response.IsSuccessful = false;
-				}
-			}
-			catch (Exception)
-			{
-				response.IsSuccessful = false;
-				response.Message = "Došlo je do greške prilikom pretrage stolova.";
-			}
-		}
-
-		private void VratiSveStolove(Response response)
-		{
-			try
-			{
-				List<Sto> stolovi = Controller.Instance.VratiSveStolove();
-				response.Result = stolovi;
-			}
-			catch (Exception)
-			{
-				response.IsSuccessful = false;
-				response.Message = "Došlo je do greške prilikom učitavanja svih stolova.";
-			}
-		}
-
-
-		private void VratiProizvodjace(Response response)
-		{
-			try
-			{
-				List<Proizvodjac> proizvodjaci = Controller.Instance.VratiProizvodjace();
-				response.Result = proizvodjaci;
-			}
-			catch (Exception)
-			{
-				response.IsSuccessful = false;
-				response.Message = "Došlo je do greške prilikom učitavanja proizvodjaca.";
-			}
-		}
-
-		private void UnesiSto(Response response, Request request)
-		{
-			try
-			{
-				Controller.Instance.UnesiSto((Sto)request.RequestObject);
-				response.Message = "Sistem je zapamtio sto.";
-			}
-			catch (Exception)
-			{
-				response.IsSuccessful = false;
-				response.Message = "Sistem ne može da zapamti sto.";
-			}
-		}
-
 		#endregion
 
 		#region Klijent
 
+		private void KreirajKlijenta(Response response, Request request)
+		{
+            try
+            {
+                Controller.Instance.KreirajKlijenta((Klijent)request.RequestObject);
+				response.Message = "Sistem je zapamtio klijenta.";
+			}
+			catch (Exception)
+            {
+				response.IsSuccessful = false;
+				response.Message = "Sistem ne može da zapamti klijenta.";
+			}
+		}
+		private void VratiSveKlijente(Response response)
+		{
+			try
+			{
+				List<Klijent> sviKlijenti = Controller.Instance.VratiSveKlijente();
+                response.Result = sviKlijenti;
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom učitavanja svih klijenata.";
+			}
+		}
+		private void PretraziKlijenta(Response response, Request request)
+		{
+			try
+			{
+				List<Klijent> nadjeniKlijenti = Controller.Instance.PretraziKlijenta((string)request.RequestObject);
+				response.Result = nadjeniKlijenti;
+                if(nadjeniKlijenti!=null && nadjeniKlijenti.Count!=0)
+                {
+				    response.Message = "Sistem je našao klijente po zadatoj vrednosti.";
+                }
+                else
+                {
+					response.IsSuccessful = false;
+					response.Message = "Sistem ne može da nađe klijenta po zadatoj vrednosti.";
+				}
+			}
+			catch (Exception)
+			{
+				response.IsSuccessful = false;
+				response.Message = "Došlo je do greške prilikom pretrage klijenata.";
+			}
+		}
 		private void ProveriBrisanjeKlijenta(Response response, Request request)
 		{
 			try
@@ -481,57 +518,6 @@ namespace Project.Server.Main
 			{
 				response.IsSuccessful = false;
 				response.Message = "Sistem ne može da obriše klijenta.";
-			}
-		}
-
-		private void PretraziKlijenta(Response response, Request request)
-		{
-			try
-			{
-				List<Klijent> nadjeniKlijenti = Controller.Instance.PretraziKlijenta((string)request.RequestObject);
-				response.Result = nadjeniKlijenti;
-                if(nadjeniKlijenti!=null && nadjeniKlijenti.Count!=0)
-                {
-				    response.Message = "Sistem je našao klijente po zadatoj vrednosti.";
-                }
-                else
-                {
-					response.IsSuccessful = false;
-					response.Message = "Sistem ne može da nađe klijenta po zadatoj vrednosti.";
-				}
-			}
-			catch (Exception)
-			{
-				response.IsSuccessful = false;
-				response.Message = "Došlo je do greške prilikom pretrage klijenata.";
-			}
-		}
-
-		private void VratiSveKlijente(Response response)
-		{
-			try
-			{
-				List<Klijent> sviKlijenti = Controller.Instance.VratiSveKlijente();
-                response.Result = sviKlijenti;
-			}
-			catch (Exception)
-			{
-				response.IsSuccessful = false;
-				response.Message = "Došlo je do greške prilikom učitavanja svih klijenata.";
-			}
-		}
-
-		private void KreirajKlijenta(Response response, Request request)
-		{
-            try
-            {
-                Controller.Instance.KreirajKlijenta((Klijent)request.RequestObject);
-				response.Message = "Sistem je zapamtio klijenta.";
-			}
-			catch (Exception)
-            {
-				response.IsSuccessful = false;
-				response.Message = "Sistem ne može da zapamti klijenta.";
 			}
 		}
 

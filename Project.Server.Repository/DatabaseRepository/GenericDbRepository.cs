@@ -129,8 +129,8 @@ namespace Project.Server.Repository.DatabaseRepository
 		public List<IDomainObject> CheckInsertUpdateDelete(IDomainObject obj)
 		{
 			SqlCommand command = broker.CreateCommand();
-			command.CommandText = $"select * from {obj.TableName} {obj.Join} where {obj.InsertUpdateDeleteCondition}";
-			return ReadListJoin(command, obj);
+			command.CommandText = $"select * from {obj.TableName} {obj.InsertUpdateDeleteCondition}";
+			return ReadList(command, obj);
 		}
 	}
 }

@@ -18,8 +18,8 @@ namespace Project.Server.SystemOperations.StoSO
 
 		protected override void Execute()
 		{
-			List<Rezervacija> rezervacijeStola = repository.CheckInsertUpdateDelete(sto).OfType<Rezervacija>().ToList();
-			Result = (rezervacijeStola == null || rezervacijeStola.Count == 0);
+			List<Sto> rezervisaniStolovi = repository.CheckInsertUpdateDelete(sto).OfType<Sto>().ToList();
+			Result = (rezervisaniStolovi == null || rezervisaniStolovi.Count == 0);
 		}
 	}
 }

@@ -27,7 +27,7 @@ namespace Project.Client.Forms.GUIController.StoGUIController
 		{
 			uCObrisiSto.DgvStolovi.Columns["RbStola"].Visible = false;
 			uCObrisiSto.DgvStolovi.Columns["Id"].Visible = false;
-			uCObrisiSto.DgvStolovi.Columns["InsertUpdateCondition"].Visible = false;
+			uCObrisiSto.DgvStolovi.Columns["InsertUpdateDeleteCondition"].Visible = false;
 			uCObrisiSto.DgvStolovi.Columns["TableName"].Visible = false;
 			uCObrisiSto.DgvStolovi.Columns["InsertValues"].Visible = false;
 			uCObrisiSto.DgvStolovi.Columns["IdCondition"].Visible = false;
@@ -94,7 +94,8 @@ namespace Project.Client.Forms.GUIController.StoGUIController
 			else
 			{
 				Sto stoZaBrisanje = (Sto)uCObrisiSto.DgvStolovi.SelectedRows[0].DataBoundItem;
-				ObrisiOdabraniSto(stoZaBrisanje);
+				if(MoguceBrisanjeStola(stoZaBrisanje))
+					ObrisiOdabraniSto(stoZaBrisanje);
 			}
 		}
 

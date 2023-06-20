@@ -30,21 +30,12 @@ namespace Project.Common.Domain
 
 		public string IdCondition => $"RbStola = {RbStola}";
 
-        public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID " +
-								"join RezervisanSto on RezervisanSto.RbStola = Sto.RbStola";
+        public string Join => "join Proizvodjac on Proizvodjac.ProizvodjacID = Sto.ProizvodjacID";
 
         public string Id => $"RbStola";
 
-		public string InsertUpdateDeleteCondition => $"Sto.RbStola = {RbStola}";
-
-
-		public void AddParameters(SqlCommand command, string kriterijum)
-		{
-			if (kriterijum != null)			
-				command.Parameters.AddWithValue("@Kriterijum", kriterijum);			
-			else		
-				command.Parameters.AddWithValue("@Kriterijum", "");			
-		}
+		public string InsertUpdateDeleteCondition => $"join RezervisanSto on RezervisanSto.RbStola = Sto.RbStola " +
+                                                        $"where Sto.RbStola = {RbStola}";
 
 		public IDomainObject ReadObjectRow(SqlDataReader reader)
         {
@@ -54,7 +45,7 @@ namespace Project.Common.Domain
             s.CenaStola = (double)reader["CenaStola"];
             s.Proizvodjac = new Proizvodjac
             {
-                ProizvodjacID = (int)reader["ProizvodnjacID"]
+                ProizvodjacID = (int)reader["ProizvodjacID"]
             };
             return s;
         }

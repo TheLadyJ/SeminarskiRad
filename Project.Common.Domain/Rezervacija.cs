@@ -49,12 +49,12 @@ namespace Project.Common.Domain
                                 "join Klijent on Klijent.KlijentID = Rezervacija.KlijentID " +
                                 "join Mesto on Mesto.MestoID = Rezervacija.MestoID " +
                                 "join KeteringMeni on KeteringMeni.KeteringMeniID = Rezervacija.KeteringMeniID " +
-                                "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID ";
+                                "join KeteringFirma on KeteringMeni.KeteringFirmaID=KeteringFirma.KeteringFirmaID";
 
 		public string Id => $"RezervacijaID";
 
-		public string InsertUpdateDeleteCondition => $"RezervacijaID != {RezervacijaID} AND " +
-                                                $"Mesto.MestoID = {Mesto.MestoID} AND " +
+		public string InsertUpdateDeleteCondition => Join +$" where RezervacijaID != {RezervacijaID} AND " +
+                                                $"MestoID = {Mesto.MestoID} AND " +
                                                 $"(DatumVremeOd BETWEEN '{DatumVremeOd}' AND '{DatumVremeDo}' OR " +
                                                 $"DatumVremeDo BETWEEN '{DatumVremeOd}' AND '{DatumVremeDo}' OR " +
                                                 $"'{DatumVremeOd}' BETWEEN DatumVremeOd AND DatumVremeDo)";

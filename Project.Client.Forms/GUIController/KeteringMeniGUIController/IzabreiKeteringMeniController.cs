@@ -71,7 +71,7 @@ namespace Project.Client.Forms.GUIController.KeteringMeniGUIController
 			dgv.Columns["KeteringMeniID"].Visible = false;
 			dgv.Columns["KeteringFirma"].Visible = false;
 			dgv.Columns["Id"].Visible = false;
-			dgv.Columns["InsertUpdateCondition"].Visible = false;
+			dgv.Columns["InsertUpdateDeleteCondition"].Visible = false;
 			dgv.Columns["TableName"].Visible = false;
 			dgv.Columns["InsertValues"].Visible = false;
 			dgv.Columns["IdCondition"].Visible = false;

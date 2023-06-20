@@ -44,6 +44,7 @@ namespace Project.Client.Forms
 			this.izmeniRezervacijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.obrisiRezervacijuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.pnlMain = new System.Windows.Forms.Panel();
+			this.lblPrijavljeniRadnik = new System.Windows.Forms.Label();
 			this.menuStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -72,7 +73,7 @@ namespace Project.Client.Forms
 			this.menuStrip.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.menuStrip.ForeColor = System.Drawing.SystemColors.MenuText;
 			this.menuStrip.Name = "menuStrip";
-			this.menuStrip.Size = new System.Drawing.Size(74, 25);
+			this.menuStrip.Size = new System.Drawing.Size(74, 26);
 			this.menuStrip.Text = "Klijenti";
 			// 
 			// kreirajNovogKlijentaToolStripMenuItem
@@ -103,7 +104,7 @@ namespace Project.Client.Forms
             this.pretraziStoToolStripMenuItem,
             this.obrisiStoToolStripMenuItem});
 			this.stoToolStripMenuItem.Name = "stoToolStripMenuItem";
-			this.stoToolStripMenuItem.Size = new System.Drawing.Size(50, 25);
+			this.stoToolStripMenuItem.Size = new System.Drawing.Size(50, 26);
 			this.stoToolStripMenuItem.Text = "Sto";
 			// 
 			// unesiNoviStoToolStripMenuItem
@@ -134,7 +135,7 @@ namespace Project.Client.Forms
             this.izmeniRezervacijuToolStripMenuItem,
             this.obrisiRezervacijuToolStripMenuItem});
 			this.rezervacijeToolStripMenuItem.Name = "rezervacijeToolStripMenuItem";
-			this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(119, 25);
+			this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(119, 26);
 			this.rezervacijeToolStripMenuItem.Text = "Rezervacije";
 			// 
 			// kreirajNovuRezervacijuToolStripMenuItem
@@ -169,11 +170,25 @@ namespace Project.Client.Forms
 			this.pnlMain.Size = new System.Drawing.Size(1172, 621);
 			this.pnlMain.TabIndex = 1;
 			// 
+			// lblPrijavljeniRadnik
+			// 
+			this.lblPrijavljeniRadnik.AutoSize = true;
+			this.lblPrijavljeniRadnik.BackColor = System.Drawing.Color.Lavender;
+			this.lblPrijavljeniRadnik.Dock = System.Windows.Forms.DockStyle.Bottom;
+			this.lblPrijavljeniRadnik.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPrijavljeniRadnik.Location = new System.Drawing.Point(0, 629);
+			this.lblPrijavljeniRadnik.Name = "lblPrijavljeniRadnik";
+			this.lblPrijavljeniRadnik.Size = new System.Drawing.Size(154, 21);
+			this.lblPrijavljeniRadnik.TabIndex = 2;
+			this.lblPrijavljeniRadnik.Text = "Prijavljeni radnik: ";
+			this.lblPrijavljeniRadnik.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// FrmRadnikovaGlavna
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1172, 650);
+			this.Controls.Add(this.lblPrijavljeniRadnik);
 			this.Controls.Add(this.pnlMain);
 			this.Controls.Add(this.menuStrip1);
 			this.MainMenuStrip = this.menuStrip1;
@@ -207,6 +222,7 @@ namespace Project.Client.Forms
         private System.Windows.Forms.ToolStripMenuItem kreirajNovuRezervacijuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem izmeniRezervacijuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem obrisiRezervacijuToolStripMenuItem;
+		private Label lblPrijavljeniRadnik;
 
 		public Panel PnlMain { get => pnlMain; set => pnlMain = value; }
 	}

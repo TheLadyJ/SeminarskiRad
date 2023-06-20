@@ -1,6 +1,7 @@
 ﻿using Project.Client.Forms.GUIController;
 using Project.Client.Forms.GUIController.RadnikGUIController;
 using Project.Client.Forms.ServerCommunication;
+using Project.Client.Forms.Session;
 using Project.Client.Forms.UserControls.UCKlijent;
 using Project.Client.Forms.UserControls.UCRezervacija;
 using Project.Client.Forms.UserControls.UCSto;
@@ -28,6 +29,7 @@ namespace Project.Client.Forms
         private void FrmRadnikovaGlavna_Load(object sender, EventArgs e)
         {
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            lblPrijavljeniRadnik.Text += SessionData.Instance.Radnik.ToString();
         }
 
         private void ChangePanel(UserControl userControl)

@@ -73,7 +73,7 @@ namespace Project.Client.Forms
 			this.menuStrip.Font = new System.Drawing.Font("Century Gothic", 10.18868F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
 			this.menuStrip.ForeColor = System.Drawing.SystemColors.MenuText;
 			this.menuStrip.Name = "menuStrip";
-			this.menuStrip.Size = new System.Drawing.Size(74, 26);
+			this.menuStrip.Size = new System.Drawing.Size(74, 25);
 			this.menuStrip.Text = "Klijenti";
 			// 
 			// kreirajNovogKlijentaToolStripMenuItem
@@ -104,7 +104,7 @@ namespace Project.Client.Forms
             this.pretraziStoToolStripMenuItem,
             this.obrisiStoToolStripMenuItem});
 			this.stoToolStripMenuItem.Name = "stoToolStripMenuItem";
-			this.stoToolStripMenuItem.Size = new System.Drawing.Size(50, 26);
+			this.stoToolStripMenuItem.Size = new System.Drawing.Size(50, 25);
 			this.stoToolStripMenuItem.Text = "Sto";
 			// 
 			// unesiNoviStoToolStripMenuItem
@@ -135,7 +135,7 @@ namespace Project.Client.Forms
             this.izmeniRezervacijuToolStripMenuItem,
             this.obrisiRezervacijuToolStripMenuItem});
 			this.rezervacijeToolStripMenuItem.Name = "rezervacijeToolStripMenuItem";
-			this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(119, 26);
+			this.rezervacijeToolStripMenuItem.Size = new System.Drawing.Size(119, 25);
 			this.rezervacijeToolStripMenuItem.Text = "Rezervacije";
 			// 
 			// kreirajNovuRezervacijuToolStripMenuItem
